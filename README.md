@@ -5,7 +5,7 @@ It is a highly customizable plugin. Almost all functions have corresponding comm
 Management system and security system, data processing system, detailed configuration file annotations and wiki, ensure the operation of the plugin.
 This is a **premium** plugin, you need to purchase to be able to download:: https://www.spigotmc.org/resources/authors/trcredstoner.532261/
 
---
+---
 
 ### Requires 
 - Runtime environment for *Java8* or above.
@@ -14,6 +14,6 @@ This is a **premium** plugin, you need to purchase to be able to download:: http
 - PlayerPoints (optional)
 and more... 
 
---
+---
 
 ### Features 
