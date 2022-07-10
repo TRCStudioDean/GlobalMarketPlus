@@ -1,3 +1,2 @@
 # GlobalMarketPlus
-A premium GlobalMarket plugin of minecraft bukkit server.
-In development, comming soon...
+---
