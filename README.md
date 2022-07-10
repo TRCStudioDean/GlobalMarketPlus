@@ -17,3 +17,7 @@ and more...
 ---
 
 ### Features 
+- GlobalMarket
+  - A
+  - B
+  - C
