@@ -10,4 +10,6 @@ This is a **premium** plugin, you need to pay a certain amount to be able to dow
 - PlaceholderAPI (optional)
 - Vault (optional)
 - PlayerPoints (optional)
-- *and more...
+and more...
+
+### Features
