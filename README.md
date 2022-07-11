@@ -87,4 +87,4 @@ and more...
 ### Support
 - [**Issues**](https://github.com/TRCStudioDean/GlobalMarketPlus/issues)
 - [**Discord**](https://discord.gg/VbW3n22g8K)
-- [**QQ**]: 群号714363113
+- **QQ群号714363113**
