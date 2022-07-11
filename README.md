@@ -44,5 +44,6 @@ and more...
 ---
 
 ### Other Features
-- Function module switch (optionally disable some unwanted functions)
-- Internal economic system (Works independently without installing an economy plugin)
+- **Function module switch** (optionally disable some unwanted functions)
+- **Internal economic system** (Works independently without installing an economy plugin)
+- **Support different economic system plugins** (like Vault, PlayerPoints, etc)
