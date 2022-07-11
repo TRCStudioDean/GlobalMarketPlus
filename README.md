@@ -17,7 +17,7 @@ and more...
 ---
 
 ### Main Features 
-- *GlobalMarket*
+- **GlobalMarket**
   - Upload your items on the global market (sell, buy)
   - Merchandises tax rate (different permission groups have different tax rates)
   - Sell/Buy inventory (put items into GUI to upload multiple items at once)
@@ -30,5 +30,17 @@ and more...
   - Item blacklist (Prohibit specific items)
   - Support price limit (Item prices must be within a certain range to allow uploading)
   - Support merchandises/mails sort (according to upload time, according to expire time, etc)
-- *Player profiles & stores*
-  - A
+- **Player profiles & stores**
+  - Player personal store GUI (personal merchandises will be displayed here)
+  - Support different permission groups (different tax rate, different price limits, etc)
+  - Support profile settings (personal information such as store name, profile, etc)
+  - Personal balance management (payment, balance transfer, etc)
+  - Global store list GUI (similar to Amazon, etc)
+- **Player Mailbox**
+  - Send items in hand to other player's mailboxes
+  - Status display (email source, expiration time, etc)
+  - Purchased merchandises or acquired items will be sent to the mailbox
+
+### Other Features
+- Function module switch (optionally disable some unwanted functions)
+- Internal economic system (Works independently without installing an economy plugin)
