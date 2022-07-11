@@ -1,4 +1,4 @@
-# What is GlobalMarketPlus?
+# GlobalMarketPlus
 GlobalMarketPlus is a multi-functional virtual store bukkit & spigot plugin with **Global Market** as its main function.
 It can be used to trade items of various transaction types, and trade merchandises with other players in the server anytime and anywhere through commands and GUI.
 It is a highly customizable plugin. Almost all functions have corresponding commands.
