@@ -47,3 +47,7 @@ and more...
 - **Function module switch** (optionally disable some unwanted functions)
 - **Internal economic system** (Works independently without installing an economy plugin)
 - **Support different economic system plugins** (like Vault, PlayerPoints, etc)
+- **Supports the coexistence of multiple currency systems** (upload items to the market in different currency system)
+- **Support PlaceholderAPI**
+- **Built-in custom menu plugin** (In addition to the GUI that comes with some functions, you can create other GUIs)
+
