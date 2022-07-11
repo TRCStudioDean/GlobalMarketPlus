@@ -23,4 +23,10 @@ and more...
   - Sell/Buy inventory (put items into GUI to upload multiple items at once)
   - Retail transaction (if the items are stacked, you can trade a single item at a custom price)
   - Support uploading merchandises using different currency systems 
-  - 
+  - Support merchandises attribute editing (Such as unlimited transactions, never expires, hide merchant's name, etc)
+  - Support search merchandises (Specify the merchant, price, item, etc)
+  - Support merchandises reprice (need to pay tax again)
+  - Category modules (Category by item parameters)
+  - Item blacklist (Prohibit specific items)
+  - Support price limit (Item prices must be within a certain range to allow uploading)
+  - Support merchandises/mails sort (according to upload time, according to expire time, etc)
