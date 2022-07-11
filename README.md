@@ -7,7 +7,7 @@ This is a **Premium** plugin, you need to purchase to be able to download: https
 
 ---
 
-### Requires 
+### Required
 - Runtime environment for **Java8** or above.
 - PlaceholderAPI (optional)
 - Vault (optional)
