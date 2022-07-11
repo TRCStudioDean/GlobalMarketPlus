@@ -77,3 +77,9 @@ and more...
 - **/gmp gui** | GUI management commands.
 - **/gmp reload** | Reload plugin or specific functions.
 - **/gmp admin** | Administrator & Operator commands.
+
+---
+
+### Bstats
+
+[![BigImage](https://bstats.org/signatures/bukkit/GlobalMarketPlus.svg)](https://bstats.org/plugin/bukkit/GlobalMarketPlus/12288)
