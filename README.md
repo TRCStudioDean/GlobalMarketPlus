@@ -18,4 +18,9 @@ and more...
 
 ### Features 
 - GlobalMarket
-  - comming soon...
+  - Upload your items on the global market (sell, buy)
+  - Merchandises tax rate (different permission groups have different tax rates)
+  - Sell/Buy inventory (put items into GUI to upload multiple items at once)
+  - Retail transaction (if the items are stacked, you can trade a single item at a custom price)
+  - Support uploading merchandises using different currency systems 
+  - 
