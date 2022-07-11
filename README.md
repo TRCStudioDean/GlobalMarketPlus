@@ -5,6 +5,8 @@ It is a highly customizable plugin. Almost all functions have corresponding comm
 Management system and security system, data processing system, detailed configuration file annotations and wiki, ensure the operation of the plugin.
 This is a **Premium** plugin, you need to purchase to be able to download: https://www.spigotmc.org/resources/authors/trcredstoner.532261/
 
+[![BigImage](https://bstats.org/signatures/bukkit/GlobalMarketPlus.svg)](https://bstats.org/plugin/bukkit/GlobalMarketPlus/12288)
+
 ---
 
 ### Required
@@ -79,7 +81,3 @@ and more...
 - **/gmp admin** | Administrator & Operator commands.
 
 ---
-
-### Bstats
-
-[![BigImage](https://bstats.org/signatures/bukkit/GlobalMarketPlus.svg)](https://bstats.org/plugin/bukkit/GlobalMarketPlus/12288)
