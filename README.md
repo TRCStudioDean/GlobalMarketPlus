@@ -66,14 +66,14 @@ and more...
 ---
 
 ### Commands
-- **/gmp help** View plugin help
-- **/gmp market** Global Market commands.
-- **/gmp money** Money management commands.
-- **/gmp merchandise** Merchandises management commands.
-- **/gmp transaction** Transaction commands.
-- **/gmp profile** Merchant profile commands.
-- **/gmp mailbox** Mailbox commands.
-- **/gmp category** Category commands.
-- **/gmp gui** GUI management commands.
-- **/gmp reload** Reload plugin or specific functions.
-- **/gmp admin** Administrator & Operator commands.
+- **/gmp help** | View plugin help
+- **/gmp market** | Global Market commands.
+- **/gmp money** | Money management commands.
+- **/gmp merchandise** | Merchandises management commands.
+- **/gmp transaction** | Transaction commands.
+- **/gmp profile** | Merchant profile commands.
+- **/gmp mailbox** | Mailbox commands.
+- **/gmp category** | Category commands.
+- **/gmp gui** | GUI management commands.
+- **/gmp reload** | Reload plugin or specific functions.
+- **/gmp admin** | Administrator & Operator commands.
