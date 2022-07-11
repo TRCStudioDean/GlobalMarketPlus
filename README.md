@@ -41,6 +41,8 @@ and more...
   - Status display (email source, expiration time, etc)
   - Purchased merchandises or acquired items will be sent to the mailbox
 
+---
+
 ### Other Features
 - Function module switch (optionally disable some unwanted functions)
 - Internal economic system (Works independently without installing an economy plugin)
