@@ -81,3 +81,10 @@ and more...
 ---
 
 [![BigImage](https://bstats.org/signatures/bukkit/GlobalMarketPlus.svg)](https://bstats.org/plugin/bukkit/GlobalMarketPlus/12288)
+
+---
+
+### Support
+- [**Issues**] (https://github.com/TRCStudioDean/GlobalMarketPlus/issues)
+- [**Discord**] (https://discord.gg/VbW3n22g8K)
+- [**QQ**] 群号714363113
