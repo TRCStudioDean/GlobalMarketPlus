@@ -62,3 +62,18 @@ and more...
 - **Controlled Asynchronous Threads** (Adjust the processing speed of asynchronous threads, enable global asynchrony, etc)
 - **Configuration file auto repair**
 - *and more...*
+
+---
+
+### Commands
+- **/gmp help** View plugin help
+- **/gmp market** Global Market commands.
+- **/gmp money** Money management commands.
+- **/gmp merchandise** Merchandises management commands.
+- **/gmp transaction** Transaction commands.
+- **/gmp profile** Merchant profile commands.
+- **/gmp mailbox** Mailbox commands.
+- **/gmp category** Category commands.
+- **/gmp gui** GUI management commands.
+- **/gmp reload** Reload plugin or specific functions.
+- **/gmp admin** Administrator & Operator commands.
