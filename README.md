@@ -8,7 +8,7 @@ This is a **premium** plugin, you need to purchase to be able to download: https
 ---
 
 ### Requires 
-- Runtime environment for *Java8* or above.
+- Runtime environment for **Java8** or above.
 - PlaceholderAPI (optional)
 - Vault (optional)
 - PlayerPoints (optional)
