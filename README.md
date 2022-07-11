@@ -16,8 +16,8 @@ and more...
 
 ---
 
-### Features 
-- GlobalMarket
+### Main Features 
+- *GlobalMarket*
   - Upload your items on the global market (sell, buy)
   - Merchandises tax rate (different permission groups have different tax rates)
   - Sell/Buy inventory (put items into GUI to upload multiple items at once)
@@ -30,3 +30,5 @@ and more...
   - Item blacklist (Prohibit specific items)
   - Support price limit (Item prices must be within a certain range to allow uploading)
   - Support merchandises/mails sort (according to upload time, according to expire time, etc)
+- *Player profiles & stores*
+  - A
