@@ -45,9 +45,20 @@ and more...
 
 ### Other Features
 - **Function module switch** (optionally disable some unwanted functions)
-- **Internal economic system** (Works independently without installing an economy plugin)
+- **Built-in economic system** (works independently without installing an economy plugin)
 - **Support different economic system plugins** (like Vault, PlayerPoints, etc)
 - **Supports the coexistence of multiple currency systems** (upload items to the market in different currency system)
 - **Support PlaceholderAPI**
-- **Built-in custom menu plugin** (In addition to the GUI that comes with some functions, you can create other GUIs)
-
+- **Built-in custom menu plugin** (in addition to the GUI that comes with some functions, you can create other GUIs)
+- **Recorder System** (record the merchandises, transactions, mail exchanges, transfer records, etc)
+- **Support SQLite & MySQL storage**
+- **Support multi-database storage mode, different databases store different types of data**
+- **Support split storage** (MySQL and SQLite coexist)
+- **Database management commands** (backup, rollback, download, upload, etc)
+- **Support for migrating data from other plugins**
+- **Admin commands** (view logger records, manage serialized items or item blacklists, etc)
+- **The text of all prompt messages is fully customizable** (Include JSON messages)
+- **Great command processing system** (Almost all major functions have corresponding commands)
+- **Controlled Asynchronous Threads** (Adjust the processing speed of asynchronous threads, enable global asynchrony, etc)
+- **Configuration file auto repair**
+- *and more...*
