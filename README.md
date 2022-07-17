@@ -7,6 +7,14 @@ This is a **Premium** plugin, you need to purchase to be able to download: https
 
 ---
 
+### Support
+- [**Issues**](https://github.com/TRCStudioDean/GlobalMarketPlus/issues)
+- [**Discord**](https://discord.gg/VbW3n22g8K)
+- [**Wiki**](https://github.com/TRCStudioDean/GlobalMarketPlus/wiki)
+- **QQ群号714363113**
+
+---
+
 ### Required
 - Runtime environment for **Java8** or above.
 - PlaceholderAPI (optional)
@@ -81,10 +89,3 @@ and more...
 ---
 
 [![BigImage](https://bstats.org/signatures/bukkit/GlobalMarketPlus.svg)](https://bstats.org/plugin/bukkit/GlobalMarketPlus/12288)
-
----
-
-### Support
-- [**Issues**](https://github.com/TRCStudioDean/GlobalMarketPlus/issues)
-- [**Discord**](https://discord.gg/VbW3n22g8K)
-- **QQ群号714363113**
