@@ -27,6 +27,7 @@ and more...
 ### Main Features 
 - **GlobalMarket**
   - Upload your items on the global market (sell, buy)
+  - Item auction on the global market (bid/auction)
   - Merchandises tax rate (different permission groups have different tax rates)
   - Sell/Buy inventory (put items into GUI to upload multiple items at once)
   - Retail transaction (if the items are stacked, you can trade a single item at a custom price)
@@ -76,6 +77,7 @@ and more...
 ### Commands
 - **/gmp help** | View plugin help
 - **/gmp market** | Global Market commands.
+- **/gmp auction** | Auction commands.
 - **/gmp money** | Money management commands.
 - **/gmp merchandise** | Merchandises management commands.
 - **/gmp transaction** | Transaction commands.
