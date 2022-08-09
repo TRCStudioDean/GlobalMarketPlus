@@ -3,7 +3,7 @@ GlobalMarketPlus is a multi-functional virtual store bukkit & spigot plugin with
 It can be used to trade items of various transaction types, and trade merchandises with other players in the server anytime and anywhere through commands and GUI.
 It is a highly customizable plugin. Almost all functions have corresponding commands.
 Management system and security system, data processing system, detailed configuration file annotations and wiki, ensure the operation of the plugin.
-This is a **Premium** plugin, you need to purchase to be able to download: https://www.spigotmc.org/resources/103503/
+This is a **Premium** plugin, you need to purchase to be able to download: https://www.spigotmc.org/resources/103648/
 
 ---
 
