@@ -1,0 +1,16 @@
+#Other permissions
+
+#All permission can be customized, please set or change according to the following format:
+#  Default: Default is available for all players, if set to true means all players have this permission
+#  Permission: You know :D
+#  Allowed-Groups: Default allowed groups (please set in Groups.yml)
+
+Item-Blacklist-Bypass:
+    Default: false
+    Permission: globalmarketplus.otherpermission.itemblacklistbypass
+Login-Command-Cooldown-Bypass:
+    Default: false
+    Permission: globalmarketplus.otherpermission.logincommandcooldownbypass
+Command-Cooldown-Bypass:
+    Default: false
+    Permission: globalmarketplus.otherpermission.commandcooldownbypass

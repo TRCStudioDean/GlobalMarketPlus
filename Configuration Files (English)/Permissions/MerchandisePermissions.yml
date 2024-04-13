@@ -1,0 +1,69 @@
+#All permission can be customized, please set or change according to the following format:
+#  Default: Default is available for all players, if set to true means all players have this permission
+#  Permission: You know :D
+#  Allowed-Groups: Default allowed groups (please set in Groups.yml)
+
+#Permission to edit all merchandises
+#Command: "/gmp merchandise set"
+#By default, players can only edit their own merchandises
+#After giving this permission, it will be able to edit the parameters of all merchandises
+Edit-All:
+    #Is it allowed by default?
+    Default: false
+    #Permission required
+    Permission: globalmarketplus.merchandise.options.editall
+    #What groups are allowed to use this
+    Allowed-Groups: 
+    - Admin
+
+#Permission to use marketing modes
+#When players do not have the corresponding permissions, 
+#they will not be able to specify this marketing mode during listing or repricing.
+Marketing-Mode:
+    Wholesale:
+        Default: true
+        Permission: globalmarketplus.merchandise.marketing-mode.wholesale
+    Retail:
+        Default: true
+        Permission: globalmarketplus.merchandise.marketing-mode.retail
+    
+#Cooldown bypass permission of "/gmp merchandise set"
+Cooldown-Bypass:
+    #Whether no cooldown by default
+    Default: false
+    #Bypass permission
+    Permission: globalmarketplus.merchandise.cooldown-bypass
+
+#Permission to setting merchandise parameters
+Parameters:
+    #Change price of merchandises
+    Change-Price:
+        Default: true
+        Permission: globalmarketplus.merchandise.options.change-price
+    #Change retail price of merchandises
+    Change-Retail-Price:
+        Default: true
+        Permission: globalmarketplus.merchandise.options.change-retail-price
+    #Hide merchandise on the market (Display in personal store only)
+    Hide-Merchandise:
+        Default: true
+        Permission: globalmarketplus.merchandise.options.hide-merchandise
+    #Hide merchant name on the market
+    Hide-Merchant-Name: 
+        Default: false
+        Permission: globalmarketplus.merchandise.options.hide-merchant-name
+        Allowed-Groups: 
+        - VIP
+        - Admin
+    #Set the merchandise to be unlimited
+    Unlimited:
+        Default: false
+        Permission: globalmarketplus.merchandise.options.set-to-unlimited
+        Allowed-Groups: 
+        - Admin
+    #Set the merchandise to never expired
+    Never-Expire:
+        Default: false
+        Permission: globalmarketplus.merchandise.options.set-to-never-expire
+        Allowed-Groups: 
+        - Admin

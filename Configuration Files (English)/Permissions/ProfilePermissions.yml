@@ -1,0 +1,74 @@
+#Permission to edit all merchant profiles
+#Command: "/gmp profile set"
+#By default players can only edit their own profile
+#After this permission is granted, all players' profiles will be able to be edited
+
+#All permission can be customized, please set or change according to the following format:
+#  Default: Default is available for all players, if set to true means all players have this permission
+#  Permission: You know :D
+#  Allowed-Groups: Default allowed groups (please set in Groups.yml)
+
+Edit-All:
+    #Is it allowed by default?
+    Default: false
+    #Permission required
+    Permission: globalmarketplus.merchant.options.editall
+    #What groups are allowed to use this
+    Allowed-Groups: 
+    - Admin
+
+#Cooldown bypass permission of "/gmp profile set"
+Cooldown-Bypass:
+    #Whether no cooldown by default
+    Default: false
+    #Bypass permission
+    Permission: globalmarketplus.merchant.cooldown-bypass
+
+#Permission to setting profile parameters
+Parameters:
+    #Set the store to be closed (others cannot access the store)
+    Store-Closed: 
+        Default: true
+        Permission: globalmarketplus.merchant.options.store-closed
+    #Set mailbox lock (reject all mail)
+    Mailbox-Locked: 
+        Default: true
+        Permission: globalmarketplus.merchant.options.mailbox-locked
+    #Set merchandise sort
+    Merchandise-Sort: 
+        Default: true
+        Permission: globalmarketplus.merchant.options.merchandise-sort
+    #Set mail sort
+    Item-Mail-Sort: 
+        Default: true
+        Permission: globalmarketplus.merchant.options.item-mail-sort
+    #Hide merchandises on the market (Only displayed in personal store)
+    Hide-Merchandises:
+        Default: true
+        Permission: globalmarketplus.merchant.options.hide-merchandises
+    #Hide merchant name on the market
+    Hide-Merchant-Name: 
+        Default: false
+        Permission: globalmarketplus.merchant.options.hide-merchant-name
+        Allowed-Groups: 
+        - VIP
+        - Admin
+    #Set store name
+    Store-Name: 
+        Default: false
+        Permission: globalmarketplus.merchant.options.set-store-name
+        Allowed-Groups: 
+        - VIP
+        - Admin
+    #Set store description
+    Store-Description: 
+        Default: false
+        Permission: globalmarketplus.merchant.options.set-store-description
+        Allowed-Groups: 
+        - VIP
+        - Admin
+
+#Updater
+Updater:
+    Default: false
+    Permission: globalmarketplus.updater
