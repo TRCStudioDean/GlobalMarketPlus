@@ -20,12 +20,16 @@ Categories:
         #Mail's state (NORMAL, PICKED_UP, EXPIRED）
         Item-Mail-State: []
         #Item ID list
+        #Elements with prefix 'regex:' will be considered as regular expression matches.
         Materials: []
         #Display Name (Items containing the following keywords in the display name will belong to this category)
+        #Elements with prefix 'regex:' will be considered as regular expression matches.
         Display-Name-Keywords: []
         #Display lore (item introduction line containing the following keywords will belong to this category)
+        #Elements with prefix 'regex:' will be considered as regular expression matches.
         Display-Lore-Keywords: []
         #Enchantment list (if the item contains any of the enchantments in the list, it will belong to this category)
+        #Elements with prefix 'regex:' will be considered as regular expression matches.
         Enchantments: []
         #Special Options (1.8+) (Items that contain any of the special options on the list will belong to this category)
         #Available (1.16.5): HIDE_ENCHANTS, HIDE_ATTRIBUTES, HIDE_UNBREAKABLE, HIDE_DESTROYS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS

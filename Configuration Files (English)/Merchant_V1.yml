@@ -1,6 +1,10 @@
 #Merchant/player profile settings
 #Command: "/gmp profile"
 
+#The minimum value of the balance, the player's balance cannot be lower than this value.
+#Note that this option will affect other economic plugins. Please do not modify it unless there are special requirements.
+Balance-Minimum-Value: 0
+
 #Cooldown time after using command to edit profile parameters
 #Since setting parameters will need to generate database IO, this option can prevent frequent clicks from causing lag.
 Cooldown-Of-Parameters-Setting: 5.0

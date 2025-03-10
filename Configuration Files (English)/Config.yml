@@ -31,8 +31,15 @@ Economy-Settings:
     Multiple-Currencies-Symbols:
         Vault: "$"
         PlayerPoints: "€"
+    #Separate servers (effective for merchandises on the market)
+    #After enabling this option, the money from transactions and auctions will be sent to the merchant account on the server where the merchant was listed the merchandise
+    #For example, if a merchant has listed a item on Server1 and a buyer purchased on Server2, the money will be sent to the merchant's account on Server1 instead of the merchant's account on Server2
+    Separate-Servers:
+        Enabled: false
+        #The name of the current server (cannot be duplicated with other servers)
+        Server-Name: Server1
     #Economic system administrator list, supports filling in player name or UUID
-    #Players in this list will not perform balance operations,
+    #Players in this list will not perform balance operations and receive new mails,
     #Usually, only when a certain merchant is used as a system store, the merchant name needs to be included in this list.
     Operators: []
 
@@ -68,8 +75,8 @@ Commands-Cooldown:
     Enabled: true
     #Command list. The format is: "[Command]: [Cooldown]"
     List:
-    - 'mailbox pickup': 1.0
-    - 'mailbox send': 1.0
+    - 'mailbox pickup': 5.0
+    - 'mailbox send': 5.0
     - 'mailbox delete': 1.0
     - 'market sell': 1.0
     - 'market buy': 1.0
@@ -127,7 +134,22 @@ Recorder:
     Auction: true
     #Balance changes
     Balance-Change: true
-
+    
+#Serialization settings
+#Serialization refers to the process of converting the state information of an object into a form that can be stored or transmitted. 
+#All stored data in this plugin, such as merchandise data, merchant profile, and other objects, need to be serialized into JSON before being stored in the database.
+Serialization-Settings:
+    #Whether to enable Unicode parsers for various serialized objects
+    #After activation, the corresponding serializable object will encode all special characters 
+    #except for English letters, numbers, and symbols in Unicode when storing and reading data,
+    #and decode Unicode strings during deserialization to avoid garbled characters caused by special characters affecting the operation of plugin data.
+    #Special characters refer to characters in other languages, special ASCII symbols, graphic symbols, etc.
+    Unicode-Parser: 
+        GlobalMarket: false
+        Merchant: false
+        Mailbox: false
+        Recorder: false
+        
 #SQLite storage (Default)
 SQLite-Storage:
     #Database file name
@@ -297,6 +319,23 @@ Database-Management:
         Backup-Before-Cleaning: true
         #whether to backup before cleaning all
         Backup-Before-Cleaning-All: true
+
+#Command Delay
+#After the player executes the command, the command will enter a delay and the player's online status will be rechecked after the delay before executing the command.
+#This option is used to prevent players from triggering bugs that only exist in certain special environments. It is recommended to use it with the help of developers.
+Commands-Delay:
+    Enabled: false 
+    #Command list, format: "[Command]:[Ticks]"
+    #20 tick = 1 seconds, which may be affected by server lag
+    List:
+    - 'mailbox pickup': 40
+    - 'mailbox send': 40
+    - 'market sell': 40
+    - 'market buy': 40
+    - 'market bid': 40
+    - 'transaction confirm': 40
+    - 'auction start': 40
+    - 'auction confirm': 40
 
 #Whether to check update
 #Only running at server starting. 

@@ -18,6 +18,9 @@ Join-Messages: true
 #Whether to clear cache when player quiting
 Clear-Cache-When-Quiting: true
 
+#Automatically delete mail when picking up
+Auto-Delete-When-Picking-Up: false
+
 #Whether return movable buttons to mailbox
 #By default, when the player's inventory is full, items will be dropped on the ground
 #When this option is enabled, items will be sent to the player mailbox
@@ -33,17 +36,23 @@ Item-Parameters-Blacklist:
     #Whether to scanning items in shulker box.
     Scan-Shulker-Box: true
     #List of item IDs (the following items will be banned)
+    #Below 1.12.2, some items can use "[Item ID]:[Data Number]" to distinguish different types of items under the same item ID
+    #For example, the Enchanted Golden Apple is "GOLDEN_APPLE:1", while the regular Golden Apple is "GOLDEN-APPLE:0"
+    #Elements with prefix 'regex:' will be considered as regular expression matches.
     Materials:
     - COMMAND_BLOCK
     - BEDROCK
     - BARRIER
     #Display Name (Items containing the following keywords in the display name will be banned)
+    #Elements with prefix 'regex:' will be considered as regular expression matches.
     Display-Name-Keywords: 
     - 'Private Item'
     #Display lore (item introduction line containing the following keywords will be banned)
+    #Elements with prefix 'regex:' will be considered as regular expression matches.
     Display-Lore-Keywords: 
     - 'Private'
     #Enchantment list (if the item contains any of the enchantments in the list, it will be banned)
+    #Elements with prefix 'regex:' will be considered as regular expression matches.
     Enchantments: []
     #Special Options (1.8+) (Items that contain any of the special options on the list will be banned)
     #Available (1.16.5): HIDE_ENCHANTS, HIDE_ATTRIBUTES, HIDE_UNBREAKABLE, HIDE_DESTROYS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS

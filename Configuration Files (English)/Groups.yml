@@ -65,6 +65,30 @@ Groups:
         #Merchandise expiry date (Auctions)
         #Format: [Duration+Unit]
         Expiration-Date:Bidding: 3m
+        #Multiple economic settings
+        #Explanation: This option is used to set restrictions on players having special attributes when using different currency units. 
+        #If this option is not set, the default parameters will be based on the restrictions of the attributes in the other settings above.
+        #If the relevant options are set, their properties will be independent of the limitations of default attributes, for example:
+        #- Limit: 10 selling items + Vault unit's 4 selling items = Actually a total of 14 items for sale can be upload to market.
+        #- Tax: no tax rate is set, but 1% tax rate in Vault unit -> Only Vault unit has tax rate, while other units will be exempt from taxes
+        Currencies: {}
+            #Default: 
+            #    #The effect of the following settings is consistent with the same named setting in the default properties above.
+            #    Maximum-Of-Merchandises:Selling: 10
+            #    Maximum-Of-Merchandises:Purchasing: 10
+            #    Maximum-Of-Merchandises:Bidding: 2
+            #    Tax-Rate:Selling: 0.05
+            #    Tax-Rate:Purchasing: 0.05
+            #    Tax-Rate:Bidding: 0.05
+            #    Lowest-Price:Selling: 1.0
+            #    Highest-Price:Selling: 10000000.0
+            #    Lowest-Price:Purchasing: 1.0
+            #    Highest-Price:Purchasing: 10000000.0
+            #    Lowest-Price:Bidding: 1.0
+            #    Highest-Price:Bidding: 10000000.0
+            #Currency units that do not require setting can be directly deleted, and the options are kept here for listing purposes only.
+            #Vault: {}
+            #PlayerPoints: {}
     'VIP':
         Permission: globalmarketplus.group.vip
         Default: false

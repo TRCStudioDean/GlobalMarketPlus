@@ -10,11 +10,13 @@ Help:
     Default: true
 #Reload plugin or functions
 Reload: 
+    Permission: globalmarketplus.command.reload
+    Default: false
     Help:
         Permission: globalmarketplus.command.reload.help
         Default: false
     All:
-        Permission: globalmarketplus.command.reload
+        Permission: globalmarketplus.command.reload.all
         Default: false
     Config:
         Permission: globalmarketplus.command.reload.config
@@ -155,6 +157,9 @@ Merchandise:
         Default: true
         For-Others:
             Permission: globalmarketplus.command.merchandise.remove.for-others
+            Default: false
+        Bidding:
+            Permission: globalmarketplus.command.merchandise.remove.bidding
             Default: false
     Info:
         Permission: globalmarketplus.command.merchandise.info

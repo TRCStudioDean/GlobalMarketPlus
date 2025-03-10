@@ -17,16 +17,26 @@ Cooldown-Of-Parameters-Setting: 5.0
 #This setting applies to the maximum number of decimal places for prices, balances, etc
 Retaining-Decimal-Places: 2
 
+#Distance length of number section marks
+#Number section marks can enhance the visualization of numbers such as prices and balances.
+#Example: 1000000 -> 1,000,000
+#Setting it to 0 means there is no section mark.
+Number-Section-Marks-Distance-Length: 3
+
 #Whether there is a corresponding item and prompt when the merchandise uploading
 #For example, Player123 sells a diamond, and there is an acquisition item for diamonds in the market, then ask the player whether to trade directly
 Merchandises-Match-When-Uploading: true
+
+#Whether to scan all items in the Shulker Box during uploading (equivalent to sell inventory)
+Scan-Shulker-Box-When-Uploading: true
 
 #Whether to enable post tax transactions (if yes, it means that the tax will be charged when the merchandise is uploaded)
 #Only sold and auctioned are valid.
 Transaction-After-Taxes: true
 
-#Whether to scan all items in the Shulker Box during uploading (equivalent to sell inventory)
-Scan-Shulker-Box-When-Uploading: true
+#Whether to refund the tax amount of the merchandise when removing
+#This option only takes effect when the 'Transaction After Taxes' option above is enabled.
+Refund-Taxes-Upon-Merchandise-Removal: false
 
 #Marketing mode name.
 #When using sell/buy command, you can specify a marketing mode to upload the corresponding merchandise.
@@ -91,6 +101,8 @@ Transaction:
         Retention-Times: 0s
         #When the new auction price appears, how long should the seller wait to confirm.
         Cooldown-Of-Bids-Confirm: 0s
+        #Whether allowed for auctions to be removed even after bidding.
+        Allow-Remove-After-Bidding: true
 
 #Merchandise default parameters (referring to the default parameters of the merchandise after the merchandise is upload to the global market)
 Default-Parameters:
@@ -117,19 +129,23 @@ Item-Parameters-Blacklist:
     #Whether to scanning items in shulker box.
     Scan-Shulker-Box: true
     #List of item IDs (the following items will be banned)
-    #Below 1.12.2, some items can use "[Item ID]:[Value]" to distinguish different types of items under the same item ID
+    #Below 1.12.2, some items can use "[Item ID]:[Data Number]" to distinguish different types of items under the same item ID
     #For example, the Enchanted Golden Apple is "GOLDEN_APPLE:1", while the regular Golden Apple is "GOLDEN-APPLE:0"
+    #Elements with prefix 'regex:' will be considered as regular expression matches.
     Materials:
     - COMMAND_BLOCK
     - BEDROCK
     - BARRIER
     #Display Name (Items containing the following keywords in the display name will be banned)
+    #Elements with prefix 'regex:' will be considered as regular expression matches.
     Display-Name-Keywords: 
     - 'Private Item'
     #Display lore (item introduction line containing the following keywords will be banned)
+    #Elements with prefix 'regex:' will be considered as regular expression matches.
     Display-Lore-Keywords: 
     - 'Private'
     #Enchantment list (if the item contains any of the enchantments in the list, it will be banned)
+    #Elements with prefix 'regex:' will be considered as regular expression matches.
     Enchantments: []
     #Special Options (1.8+) (Items that contain any of the special options on the list will be banned)
     #Available (1.16.5): HIDE_ENCHANTS, HIDE_ATTRIBUTES, HIDE_UNBREAKABLE, HIDE_DESTROYS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS
