@@ -65,39 +65,6 @@ Module-Switches:
     #Wooden sign store (Settings in the SignStore.yml)
     Sign-Store: false
 
-#Commands cooling after entering the server (unit: seconds)
-#How many seconds do players need to wait after entering the server to use the commands of this plugin
-Commands-Cooldown-After-Login: 3
-
-#Commands cooling (unit: seconds)
-#Writing down the sub commands that require adding cooling here can prevent players from frequently executing commands.
-Commands-Cooldown:
-    Enabled: true
-    #Command list. The format is: "[Command]: [Cooldown]"
-    List:
-    - 'mailbox pickup': 5.0
-    - 'mailbox send': 5.0
-    - 'mailbox delete': 1.0
-    - 'market sell': 1.0
-    - 'market buy': 1.0
-    - 'market bid': 1.0
-    - 'market sellinventory': 3.0
-    - 'market buyinventory': 3.0
-    - 'transaction confirm': 1.0
-    - 'auction start': 1.0
-    - 'auction bid': 1.0
-    - 'auction confirm': 1.0
-    - 'money pay': 1.0
-    - 'category set': 1.0
-    - 'profile set': 1.0
-
-#Whether to enable label recognition for all buttons in all GUIs
-#This feature will add identification codes to each button in the GUI on Lore,
-#which can prevent players from removing buttons from the GUI into inventory under the influence of special environments or MODs.
-#It is recommended to enable this option for MOD servers or servers with mixed plugins.
-#You can also enable the "Buttons-Label" option in the GUI settings to take effect separately for a particular GUI.
-Enabled-All-GUI-Buttons-Label: false
-
 #PlaceholderAPI settings
 PlaceholderAPI:
     #Whether to use the PlaceholderAPI
@@ -134,7 +101,36 @@ Recorder:
     Auction: true
     #Balance changes
     Balance-Change: true
-    
+
+#Text components setting
+#Text component refers to the word processing function executed by this plugin when processing all display related text. 
+#It generates additional operations during runtime and can be ignored when the text volume is small,
+#but there may be significant performance differences when the text content is particularly large.
+#You can selectively enable them here.
+Text-Components:
+    #Whether to enable Message Component (see official Wiki -> Message Component)
+    Message-Components: false
+    #Color components (About coloring)
+    Color-Components:
+        #Parse of hexadecimal color codes (RGB)
+        #Format: #[RValue][GValue][BValue]
+        #Example: "#FF0000 Here is an example text"
+        Hex-Color-Parser: true
+        #Multi functional color tag parser
+        #The currently available color labels are:
+        #1. Color tag: <color:[Color]>, <[Color]>
+        #   Example: <color:dark_red>, <color:#FF0000>
+        #2. Gradient tag: <gradient:[Color]:[Color]:...> (Requires 2 or more colors)
+        #   Example: <gradient:#0000FF:#FF0000>, <gradient:red:green:blue>
+        #3. Transition tag: <transition:[Color]:[Color]:...:[Value]> (Requires 2 or more colors, and the value range can only be any decimal between 0 and 1)
+        #   Example: <transition:#0000FF:#FF0000:0.5>, <transition:red:green:blue:0.8>
+        #4. Rainbow: <rainbow>, <rainbow:[Value]>
+        #Note: 
+        #   [Color] can be a color name (e.g. red), typeface (e.g. underline), color code (e.g. &a, a), Hexadecimal color symbol (e.g. #FF0000),
+        #   If the tag is closed (<TagName>[Text]</TagName>), only the text within the closed range will be colored.
+        #   When using colors other than the classic 16 colors in server versions 1.7.10 - 1.15.2, they will be automatically converted to the closest classic 16 color.
+        Functional-Color-Parser: true
+
 #Serialization settings
 #Serialization refers to the process of converting the state information of an object into a form that can be stored or transmitted. 
 #All stored data in this plugin, such as merchandise data, merchant profile, and other objects, need to be serialized into JSON before being stored in the database.
@@ -207,15 +203,16 @@ MySQL-Storage:
     #     Set to -1 to disabled
     Auto-Refresh:
         Enabled: false
-        GlobalMarket: 10.0
-        Merchant: 10.0
-        Mailbox: 10.0
+        GlobalMarket: 5.0
+        Merchant: 5.0
+        Mailbox: 5.0
     #Tables name
     Tables:
         GlobalMarket: GlobalMarket
         Merchant: Merchant
         Mailbox: Mailbox
         Recorder: Recorder
+        MessageChannel: MessageChannel
     #Connection options
     #If you are not a developer and are not familiar with JDBC, please do not modify it.
     Options:
@@ -235,7 +232,71 @@ MySQL-Storage:
             Merchant: GlobalMarketPlus_Merchant
             Mailbox: GlobalMarketPlus_Mailbox
             Recorder: GlobalMarketPlus_Recorder
+            MessageChannel: GlobalMarketPlus_MessageChannel
 
+#Multi server message channel
+#This feature requires MySQL storage mode to be enabled, and servers under the message channel need to be connected to the same MySQL server.
+#You can edit broadcast messages in the Message-Channel option of the Messages.yml file,
+#You can also add the tag "!Broadcast!" to any message text to make it a broadcast message.
+#Example:
+#Text: 'This text can only be seen by the current server'
+#Text: '!broadcast!This text can be viewed by servers that have enabled multi server message channels'
+Multi-Server-Message-Channel:
+    #Whether to enable
+    Enabled: false
+    #Message refresh interval
+    Refresh-Time: 5s
+    #Server name (cannot be the same as other servers)
+    Server-Name: 'Server1'
+    #Server display name ({serverName} can be added to the broadcast message settings to display which server the message is from)
+    Server-Display-Name: '&7[&6Broadcast No.1&7]'
+    #Message expiration time (expired messages will be automatically deleted from the database)
+    Expiration-Time: 30s
+    #Check the interval of expired messages (Setting it to -1 means no check, usually as long as ONE of the servers has set the expiration check time)
+    Check-Interval: 30s
+    #Server list (optional, fill in the names of all servers participating in the broadcast, used to determine whether the message has been processed by all servers and automatically deleted)
+    Server-List: []
+    #Broadcast messages configuration path
+    #Fill in [ConfigFile:ConfigPath] here to make the message broadcast.
+    #Attention: Some placeholders may not take effect!
+    #Example
+    #Broadcast-Messages-Config-Path:
+    #- 'Messages.yml:Command-Messages.Help' #Broadcast messages with the path Command-Messages.Help in the Messages.yml file
+    Broadcast-Messages-Config-Path: []
+
+#Commands cooling after entering the server (unit: seconds)
+#How many seconds do players need to wait after entering the server to use the commands of this plugin
+Commands-Cooldown-After-Login: 3
+
+#Whether to enable label recognition for all buttons in all GUIs
+#This feature will add identification codes to each button in the GUI on Lore,
+#which can prevent players from removing buttons from the GUI into inventory under the influence of special environments or MODs.
+#It is recommended to enable this option for MOD servers or servers with mixed plugins.
+#You can also enable the "Buttons-Label" option in the GUI settings to take effect separately for a particular GUI.
+Enabled-All-GUI-Buttons-Label: false
+
+#Commands cooling (unit: seconds)
+#Writing down the sub commands that require adding cooling here can prevent players from frequently executing commands.
+Commands-Cooldown:
+    Enabled: true
+    #Command list. The format is: "[Command]: [Cooldown]"
+    List:
+    - 'mailbox pickup': 5.0
+    - 'mailbox send': 5.0
+    - 'mailbox delete': 1.0
+    - 'market sell': 1.0
+    - 'market buy': 1.0
+    - 'market bid': 1.0
+    - 'market sellinventory': 3.0
+    - 'market buyinventory': 3.0
+    - 'transaction confirm': 1.0
+    - 'auction start': 1.0
+    - 'auction bid': 1.0
+    - 'auction confirm': 1.0
+    - 'money pay': 1.0
+    - 'category set': 1.0
+    - 'profile set': 1.0
+    
 #Async thread settings
 #If you don't know what an asynchronous thread is, please don't modify this option!
 Async-Thread-Settings: 
@@ -244,29 +305,15 @@ Async-Thread-Settings:
     Updater-Thread-Delay: 1.0
     #Task thread delay, which mainly handles new tasks submitted (mainly tasks such as commands, events, database IO operations, etc)
     Task-Thread-Delay: 0.1
-    #Async task settings
-    #You can choose to set certain tasks as asynchronous tasks.
-    Async-Task-Settings:
-        #Whether to enable global asynchronous task processing (that is, all tasks are performed on asynchronous threads)
-        #When this option is enabled, the other options below can be ignored.
-        Global-Async-Task: false
-        #Command task
-        #Description: The subcommand filled in this list means that the subcommand is an asynchronous task.
-        #Note: Some tasks are only allowed to be processed on the main thread, so this feature has limited effect.
-        #Example: 
-        #Commands:
-        #- 'admin recorder' meant command "/gmp admin recorder" is asynchronous task
-        Commands: 
-        - "admin recorder"
-        #Listener task
-        #Description: The name of the event filled in this list, if the plugin uses the relevant event listener,
-        #it means that the event is allowed to become an asynchronous event.
-        #Note: The setting of this option requires you to have a certain understanding of plugin development!
-        #      Some events are only allowed to be processed on the main thread, so this function has limited effect.
-        #Example: 
-        #Custom-Events: 
-        #- 'PlayerJoinEvent' means that all event listeners using "PlayerJoinEvent" event handler in this plugin are allowed to become asynchronous tasks.
-        Listener: []
+    #Asynchronous command settings
+    #After enabling the asynchrony of these commands, they will run on asynchronous threads.
+    #Some commands have not undergone asynchronous debugging, so under normal circumstances, 
+    #please change the following options with the support and assistance of technical personnel
+    #Example: 
+    #Async-Commands
+    #- 'admin recorder' represents that the command '/gmp admin recorder' is an asynchronous command task.
+    Async-Commands:
+    - 'admin recorder'
 
 #Database management settings
 #Use with the command "/gmp admin database"
@@ -278,11 +325,11 @@ Database-Management:
         #Backup type can be ALL(all), GLOBALMARKET(global market), MERCHANT(merchant/player data), MAILBOX(mailboxes), RECORDER(recorder)
         Auto-Backup-Types:
         - GLOBALMARKET
-        #Backup folder path (Cannot contain the following characters: / \ * " ? : > < |)
+        #Backup folder path (Cannot contain the following characters: * " ? : > < |)
         Backup-Folder-Path: 'plugins/GlobalMarketPlus/Database/Backup/'
-        #Backup file name (Cannot contain the following characters: / \ * " ? : > < |)
+        #Backup file name (Cannot contain the following characters: * " ? : > < |)
         Backup-File: 'Backup-{types}-{time}'
-        #Time format (Cannot contain the following characters: / \ * " ? : > < |)
+        #Time format (Cannot contain the following characters: * " ? : > < |)
         Time-Format: 'yyyy-MM-dd-HH-mm-ss'
     RollBack:
         #Backup folder path (backup files will be selected from here for rollback)
@@ -290,14 +337,14 @@ Database-Management:
         #Whether to perform a backup before performing the rollback
         Rollback-With-Backup: true
     Download:
-        #Time format (Cannot contain the following characters: / \ * " ? : > < |)
+        #Time format (Cannot contain the following characters: * " ? : > < |)
         Time-Format: 'yyyy-MM-dd-HH-mm-ss'
-        #Download folder path (Cannot contain the following characters: / \ * " ? : > < |)
+        #Download folder path (Cannot contain the following characters: * " ? : > < |)
         Download-Folder-Path:
             GlobalMarket: 'plugins/GlobalMarketPlus/Database/Downloads/GlobalMarket/'
             Merchant: 'plugins/GlobalMarketPlus/Database/Downloads/Merchant/'
             Mailbox: 'plugins/GlobalMarketPlus/Database/Downloads/Mailbox/'
-        #Download file name (Cannot contain the following characters: / \ * " ? : > < |)
+        #Download file name (Cannot contain the following characters: * " ? : > < |)
         Download-File: 
             GlobalMarket: 'UID={uid}-{time}.yml'
             Merchant: '{name}-{uuid}.yml'
@@ -307,7 +354,7 @@ Database-Management:
         #For example, if you want to upload a player file named Player123, but the player does not exist in the database,
         #create a new file and use the uploaded data
         Rewrite: true
-        #Download folder path (Cannot contain the following characters: / \ * " ? : > < |)
+        #Download folder path (Cannot contain the following characters: * " ? : > < |)
         #After executing the upload command, the file will be selected from this path to upload
         Download-Folder-Path:
             GlobalMarket: 'plugins/GlobalMarketPlus/Database/Downloads/GlobalMarket/'
@@ -336,6 +383,13 @@ Commands-Delay:
     - 'transaction confirm': 40
     - 'auction start': 40
     - 'auction confirm': 40
+
+#Automatically update item display name
+#When enabled, if the current selected language is not included in the Items.yml file when starting the server,
+#the corresponding language will be automatically downloaded from MojangAPI.
+#This feature is attached to the command "/gmp admin updateItemDisplayName", 
+#refer to the usage help of this command for details.
+Auto-Update-Item-Display-Name: true
 
 #Whether to check update
 #Only running at server starting. 

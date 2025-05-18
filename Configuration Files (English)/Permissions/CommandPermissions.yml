@@ -398,3 +398,6 @@ Admin:
     Item-Blacklist:
         Permission: globalmarketplus.command.admin.itemblacklist
         Default: false
+    Update-Item-Display-Name:
+        Permission: globalmarketplus.command.admin.updateitemdisplayname
+        Default: false
