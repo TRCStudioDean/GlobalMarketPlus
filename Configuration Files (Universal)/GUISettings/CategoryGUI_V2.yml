@@ -1,0 +1,1460 @@
+Simplified-Chinese:
+    GUI-Title: '&8&l商品分类 &5&l| &c&l{target_player}'
+    GUI-Size: 54
+    Allow-To-Return: true
+    Buttons-Label: false
+    Category-Buttons:
+        '默认-未选定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: ENDER_PORTAL_FRAME
+            Category: '默认'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击选择 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+        '默认-已选定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: ENDER_PORTAL_FRAME
+            Category: '默认'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已选定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+        '盔甲-未选定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: GOLD_CHESTPLATE
+            Category: '盔甲'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击选择 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 3
+        '盔甲-已选定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: GOLD_CHESTPLATE
+            Category: '盔甲'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已选定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 3
+        '武器-未选定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: DIAMOND_SWORD
+            Category: '武器'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击选择 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 3
+        '武器-已选定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: DIAMOND_SWORD
+            Category: '武器'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已选定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 3
+        '工具-未选定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: IRON_AXE
+            Category: '工具'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击选择 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 3
+        '工具-已选定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: IRON_AXE
+            Category: '工具'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已选定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 3
+        '食物-未选定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: APPLE
+            Category: '食物'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击选择 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 5
+        '食物-已选定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: APPLE
+            Category: '食物'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已选定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 5
+        '药水-未选定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: POTION
+            Category: '药水'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击选择 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 5
+        '药水-已选定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: POTION
+            Category: '药水'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已选定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 5
+        '方块-未选定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: GRASS
+            Category: '方块'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击选择 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 4
+        '方块-已选定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: GRASS
+            Category: '方块'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已选定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 4
+        '唱片-未选定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: RECORD_5
+            Category: '唱片'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击选择 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 4
+        '唱片-已选定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: RECORD_5
+            Category: '唱片'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已选定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 4
+        '资源-未选定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: EMERALD
+            Category: '资源'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击选择 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 4
+        '资源-已选定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: EMERALD
+            Category: '资源'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已选定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 4
+        '其它-未选定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: LAVA_BUCKET
+            Category: '其它'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击选择 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 5
+        '其它-已选定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: LAVA_BUCKET
+            Category: '其它'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前选择的分类: &a{category_selected}'
+            - '  &f&l▶ &6这个分类中共有: &d{categoryAmount} &6个商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已选定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 5
+    Custom-Buttons:
+        '返回菜单':
+            Name: '&b&l返回上一个菜单'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&e点击返回'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        '关闭界面':
+            Name: '&4&l关闭界面'
+            Item: STAINED_GLASS_PANE
+            Data: 14
+            Lores:
+            - ''
+            - '&e点击关闭'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        '背景黑板':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 15
+            Location:
+                Slots: [2, 8, 10, 11, 12, 13, 14, 16, 17, 18, 19, 27, 28, 36, 37, 45, 47, 48, 49, 50, 51, 52, 53]
+        '背景白板':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 0
+            Location:
+                Slots-Of-X: [2, 3, 7, 8]
+                Slots-Of-Y: [3, 4, 5]
+        '背景绿板':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 5
+            Enchantments:
+            - DURABILITY:10
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 2
+        '个人邮箱':
+            Name: '&d&l个人邮箱'
+            Item: CHEST
+            Lores:
+            - ''
+            - '&e点击打开'
+            Commands:
+            - 'gmp mailbox gui {player}'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 1
+        '个人商店':
+            Name: '&3&l个人商店'
+            Item: ENDER_CHEST
+            Lores:
+            - ''
+            - '&e点击打开个人商店'
+            Commands:
+            - 'gmp store view {player}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 1
+        '个人信息':
+            Name: '&c个人信息'
+            Item: SKULL_ITEM
+            Data: 3
+            Head-Owner: '{player}'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6商家名字: &d{player}'
+            - '  &f&l▶ &6用户组名: &c{group}'
+            - '  &f&l▶ &6当前分类: &3{category}'
+            - '  &f&l▶ &6账户余额: &e{displayBalance}￥'
+            - '  &f&l▶ &6邮箱物品: &a{mails}件'
+            - '  &f&l▶ &6商品件数: &5{merchandises}件'
+            - '  &f&l▶ &6交易次数: &9{statistics_totalTransactionsNumber}次'
+            - '  &f&l▶ &6拍卖次数: &b{statistics_totalAuctionNumber}次'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击打开档案页面'
+            Commands:
+            - 'gmp profile gui {player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 1
+        '设置分类':
+            Name: '&5&l设置分类'
+            Item: ENCHANTMENT_TABLE
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l说明: &7只有特定权限组能使用'
+            - '  &7分类可用于指定查看商品、邮件等物品'
+            - ''
+            - '  &f&l▶ &6当前分类: {category}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已是当前页面'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 1
+        '所有商店':
+            Name: '&9&l所有商店'
+            Item: COMPASS
+            Lores:
+            - ''
+            - '&e点击查看所有玩家商店'
+            Commands:
+            - 'gmp store list 1 GUI'
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 1
+        '说明':
+            Name: '&e&l说明'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7这里是商品分类界面'
+            - '  &7你可以在这里查看自己或他人的商品分类'
+            - '  &7以及更改自己或他人的商品分类设置'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6 
+Traditional-Chinese:
+    GUI-Title: '&8&l商品分類 &5&l| &c&l{target_player}'
+    GUI-Size: 54
+    Allow-To-Return: true
+    Buttons-Label: false
+    Category-Buttons:
+        '默認-未選定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: ENDER_PORTAL_FRAME
+            Category: '默認'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊選擇 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+        '默認-已選定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: ENDER_PORTAL_FRAME
+            Category: '默認'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已選定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+        '盔甲-未選定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: GOLD_CHESTPLATE
+            Category: '盔甲'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊選擇 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 3
+        '盔甲-已選定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: GOLD_CHESTPLATE
+            Category: '盔甲'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已選定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 3
+        '武器-未選定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: DIAMOND_SWORD
+            Category: '武器'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊選擇 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 3
+        '武器-已選定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: DIAMOND_SWORD
+            Category: '武器'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已選定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 3
+        '工具-未選定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: IRON_AXE
+            Category: '工具'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊選擇 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 3
+        '工具-已選定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: IRON_AXE
+            Category: '工具'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已選定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 3
+        '食物-未選定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: APPLE
+            Category: '食物'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊選擇 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 5
+        '食物-已選定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: APPLE
+            Category: '食物'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已選定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 5
+        '藥水-未選定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: POTION
+            Category: '藥水'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊選擇 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 5
+        '藥水-已選定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: POTION
+            Category: '藥水'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已選定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 5
+        '方塊-未選定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: GRASS
+            Category: '方塊'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊選擇 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 4
+        '方塊-已選定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: GRASS
+            Category: '方塊'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已選定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 4
+        '唱片-未選定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: RECORD_5
+            Category: '唱片'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊選擇 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 4
+        '唱片-已選定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: RECORD_5
+            Category: '唱片'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已選定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 4
+        '資源-未選定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: EMERALD
+            Category: '資源'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊選擇 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 4
+        '資源-已選定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: EMERALD
+            Category: '資源'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已選定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 4
+        '其它-未選定':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: LAVA_BUCKET
+            Category: '其它'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊選擇 &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 5
+        '其它-已選定':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: LAVA_BUCKET
+            Category: '其它'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前選擇的分類: &a{category_selected}'
+            - '  &f&l▶ &6這個分類中共有: &d{categoryAmount} &6個商品'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已選定: &6{category_selected}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 5
+    Custom-Buttons:
+        '返回菜單':
+            Name: '&b&l返回上一個菜單'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&e點擊返回'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        '關閉界面':
+            Name: '&4&l關閉界面'
+            Item: STAINED_GLASS_PANE
+            Data: 14
+            Lores:
+            - ''
+            - '&e點擊關閉'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        '背景黑板':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 15
+            Location:
+                Slots: [2, 8, 10, 11, 12, 13, 14, 16, 17, 18, 19, 27, 28, 36, 37, 45, 47, 48, 49, 50, 51, 52, 53]
+        '背景白板':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 0
+            Location:
+                Slots-Of-X: [2, 3, 7, 8]
+                Slots-Of-Y: [3, 4, 5]
+        '背景綠板':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 5
+            Enchantments:
+            - DURABILITY:10
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 2
+        '個人郵箱':
+            Name: '&d&l個人郵箱'
+            Item: CHEST
+            Lores:
+            - ''
+            - '&e點擊打開'
+            Commands:
+            - 'gmp mailbox gui {player}'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 1
+        '個人商店':
+            Name: '&3&l個人商店'
+            Item: ENDER_CHEST
+            Lores:
+            - ''
+            - '&e點擊打開個人商店'
+            Commands:
+            - 'gmp store view {player}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 1
+        '個人信息':
+            Name: '&c個人信息'
+            Item: SKULL_ITEM
+            Data: 3
+            Head-Owner: '{player}'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6商家名字: &d{player}'
+            - '  &f&l▶ &6用戶組名: &c{group}'
+            - '  &f&l▶ &6當前分類: &3{category}'
+            - '  &f&l▶ &6賬戶餘額: &e{displayBalance}￥'
+            - '  &f&l▶ &6郵箱物品: &a{mails}件'
+            - '  &f&l▶ &6商品件數: &5{merchandises}件'
+            - '  &f&l▶ &6交易次數: &9{statistics_totalTransactionsNumber}次'
+            - '  &f&l▶ &6拍賣次數: &b{statistics_totalAuctionNumber}次'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊打開檔案頁面'
+            Commands:
+            - 'gmp profile gui {player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 1
+        '設定分類':
+            Name: '&5&l設定分類'
+            Item: ENCHANTMENT_TABLE
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l說明: &7只有特定權限組能使用'
+            - '  &7分類可用於指定查看商品、郵件等物品'
+            - ''
+            - '  &f&l▶ &6當前分類: {category}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已是當前頁面'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 1
+        '所有商店':
+            Name: '&9&l所有商店'
+            Item: COMPASS
+            Lores:
+            - ''
+            - '&e點擊查看所有玩家商店'
+            Commands:
+            - 'gmp store list 1 GUI'
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 1
+        '說明':
+            Name: '&e&l說明'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7這裡是商品分類界面'
+            - '  &7你可以在這裡查看自己或他人的商品分類'
+            - '  &7以及更改自己或他人的商品分類設定'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6
+English:
+    GUI-Title: '&8&lCategories &5&l| &c&l{target_player}'
+    GUI-Size: 54
+    Allow-To-Return: true
+    Buttons-Label: false
+    Category-Buttons:
+        'Default-NotSelected':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: ENDER_PORTAL_FRAME
+            Category: 'Default'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to select &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+        'Default-Selected':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: ENDER_PORTAL_FRAME
+            Category: 'Default'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&aSelected: &6{category_selected}'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+        'Armors-NoSelected':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: GOLD_CHESTPLATE
+            Category: 'Armors'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to select &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 3
+        'Armors-Selected':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: GOLD_CHESTPLATE
+            Category: 'Armors'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&aSelected: &6{category_selected}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 3
+        'Weapons-NoSelected':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: DIAMOND_SWORD
+            Category: 'Weapons'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to select &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 3
+        'Weapons-Selected':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: DIAMOND_SWORD
+            Category: 'Weapons'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&aSelected: &6{category_selected}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 3
+        'Tools-NoSelected':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: IRON_AXE
+            Category: 'Tools'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to select &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 3
+        'Tools-Selected':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: IRON_AXE
+            Category: 'Tools'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&aSelected: &6{category_selected}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 3
+        'Foods-NoSelected':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: APPLE
+            Category: 'Foods'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to select &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 5
+        'Foods-Selected':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: APPLE
+            Category: 'Foods'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&aSelected: &6{category_selected}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 5
+        'Potions-NoSelected':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: POTION
+            Category: 'Potions'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to select &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 5
+        'Potions-Selected':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: POTION
+            Category: 'Potions'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&aSelected: &6{category_selected}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 5
+        'Blocks-NoSelected':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: GRASS
+            Category: 'Blocks'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to select &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 4
+        'Blocks-Selected':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: GRASS
+            Category: 'Blocks'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&aSelected: &6{category_selected}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 4
+        'Disc-NoSelected':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: RECORD_5
+            Category: 'Disc'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to select &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 4
+        'Disc-Selected':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: RECORD_5
+            Category: 'Disc'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&aSelected: &6{category_selected}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 4
+        'Materials-NoSelected':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: EMERALD
+            Category: 'Materials'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to select &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 4
+        'Materials-Selected':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: EMERALD
+            Category: 'Materials'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&aSelected: &6{category_selected}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 4
+        'Others-NoSelected':
+            Show-Only-When-Selected: false
+            Name: '{category_select}'
+            Item: LAVA_BUCKET
+            Category: 'Others'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to select &6{category_select}'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp category set {categoryName} {target_player}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 5
+        'Others-Selected':
+            Show-Only-When-Selected: true
+            Name: '{category_select}'
+            Item: LAVA_BUCKET
+            Category: 'Others'
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Now selected: &a{category_selected}'
+            - '  &f&l▶ &d{categoryAmount} &6items in this category'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&aSelected: &6{category_selected}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 5
+    Custom-Buttons:
+        'Return':
+            Name: '&b&lReturn to previous menu'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&eClick to return to previous menu'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        'Close':
+            Name: '&4&lClose menu'
+            Item: STAINED_GLASS_PANE
+            Data: 14
+            Lores:
+            - ''
+            - '&eClick to close menu'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        'Black boards':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 15
+            Location:
+                Slots: [2, 8, 10, 11, 12, 13, 14, 16, 17, 18, 19, 27, 28, 36, 37, 45, 47, 48, 49, 50, 51, 52, 53]
+        'White boards':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 0
+            Location:
+                Slots-Of-X: [2, 3, 7, 8]
+                Slots-Of-Y: [3, 4, 5]
+        'Green boards':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 5
+            Enchantments:
+            - DURABILITY:10
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 2
+        'Mailbox':
+            Name: '&d&lMailbox'
+            Item: CHEST
+            Lores:
+            - ''
+            - '&eClick to open'
+            Commands:
+            - 'gmp mailbox gui {player}'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 1
+        'Store':
+            Name: '&3&lStore'
+            Item: ENDER_CHEST
+            Lores:
+            - ''
+            - '&eClick to open the personal store'
+            Commands:
+            - 'gmp store view {player}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 1
+        'Profile':
+            Name: '&cProfile'
+            Item: SKULL_ITEM
+            Data: 3
+            Head-Owner: '{player}'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Merchant: &d{player}'
+            - '  &f&l▶ &6Group: &c{group}'
+            - '  &f&l▶ &6Category: &3{category}'
+            - '  &f&l▶ &6Balance: &e${displayBalance}'
+            - '  &f&l▶ &6Mails: &a{mails}'
+            - '  &f&l▶ &6Merchandises: &5{merchandises}'
+            - '  &f&l▶ &6Transactions: &9{statistics_totalTransactionsNumber}'
+            - '  &f&l▶ &6Actions: &b{statistics_totalAuctionNumber}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to open the profile'
+            Commands:
+            - 'gmp profile gui {player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 1
+        'Category':
+            Name: '&5&lCategory'
+            Item: ENCHANTMENT_TABLE
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lDescription: '
+            - '  &7Categories can be used to '
+            - '  &7filtered merchandises, mail, etc.'
+            - '  &c&lNotice: '
+            - '  &7Only specific groups can use!'
+            - ''
+            - '  &f&l▶ &6Category: {category}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&aIs already the current page'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 1
+        'All Stores':
+            Name: '&9&lAll Stores'
+            Item: COMPASS
+            Lores:
+            - ''
+            - '&eClick to view all stores'
+            Commands:
+            - 'gmp store list 1 GUI'
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 1
+        'Description':
+            Name: '&e&lDescription'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7Here is categories GUI'
+            - '  &7You can view or settings your category at here.'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6 

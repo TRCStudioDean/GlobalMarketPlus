@@ -1,0 +1,303 @@
+Simplified-Chinese:
+    'Reload Help':
+        Placeholder: '%gmp_command_reload_help%'
+        Text: '&c/gmp &6reload help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp reload help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出重载的类型'
+    'Reload Config':
+        Placeholder: '%gmp_command_reload_config%'
+        Text: '&c/gmp &6reload config'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload config'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重载配置文件'
+    'Reload Database':
+        Placeholder: '%gmp_command_reload_database%'
+        Text: '&c/gmp &6reload database'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload database'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重载数据库'
+    'Reload Messages':
+        Placeholder: '%gmp_command_reload_messages%'
+        Text: '&c/gmp &6reload messages'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload messages'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重载语言设置'
+    'Reload GUI':
+        Placeholder: '%gmp_command_reload_gui%'
+        Text: '&c/gmp &6reload gui'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload gui'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重载GUI界面'
+    'Reload PlayerData':
+        Placeholder: '%gmp_command_reload_playerdata%'
+        Text: '&c/gmp &6reload playerdata'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload playerdata'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重载玩家数据'
+    'Reload Market':
+        Placeholder: '%gmp_command_reload_market%'
+        Text: '&c/gmp &6reload market'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload market'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重载全球市场商品数据'
+    'Reload Recorder':
+        Placeholder: '%gmp_command_reload_recorder%'
+        Text: '&c/gmp &6reload recorder'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload recorder'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重载日志记录器数据'
+    'Reload Group':
+        Placeholder: '%gmp_command_reload_group%'
+        Text: '&c/gmp &6reload group'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload group'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重载用户组数据'
+    'Reload Category':
+        Placeholder: '%gmp_command_reload_category%'
+        Text: '&c/gmp &6reload category'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload category'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重载分类设置'
+Traditional-Chinese:
+    'Reload Help':
+        Placeholder: '%gmp_command_reload_help%'
+        Text: '&c/gmp &6reload help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp reload help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出重載的類型'
+    'Reload Config':
+        Placeholder: '%gmp_command_reload_config%'
+        Text: '&c/gmp &6reload config'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload config'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重載配置文件'
+    'Reload Database':
+        Placeholder: '%gmp_command_reload_database%'
+        Text: '&c/gmp &6reload database'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload database'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重載資料庫'
+    'Reload Messages':
+        Placeholder: '%gmp_command_reload_messages%'
+        Text: '&c/gmp &6reload messages'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload messages'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重載語言設定'
+    'Reload GUI':
+        Placeholder: '%gmp_command_reload_gui%'
+        Text: '&c/gmp &6reload gui'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload gui'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重載GUI界面'
+    'Reload PlayerData':
+        Placeholder: '%gmp_command_reload_playerdata%'
+        Text: '&c/gmp &6reload playerdata'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload playerdata'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重載玩家數據'
+    'Reload Market':
+        Placeholder: '%gmp_command_reload_market%'
+        Text: '&c/gmp &6reload market'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload market'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重載全球市場商品數據'
+    'Reload Recorder':
+        Placeholder: '%gmp_command_reload_recorder%'
+        Text: '&c/gmp &6reload recorder'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload recorder'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重載日誌記錄器數據'
+    'Reload Group':
+        Placeholder: '%gmp_command_reload_group%'
+        Text: '&c/gmp &6reload group'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload group'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重載用戶組數據'
+    'Reload Category':
+        Placeholder: '%gmp_command_reload_category%'
+        Text: '&c/gmp &6reload category'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload category'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重載分類設定'
+English:
+    'Reload Help':
+        Placeholder: '%gmp_command_reload_help%'
+        Text: '&c/gmp &6reload help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp reload help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bList all of reload types'
+    'Reload Config':
+        Placeholder: '%gmp_command_reload_config%'
+        Text: '&c/gmp &6reload config'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload config'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bReload configuration files'
+    'Reload Database':
+        Placeholder: '%gmp_command_reload_database%'
+        Text: '&c/gmp &6reload database'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload database'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bReload database'
+    'Reload Messages':
+        Placeholder: '%gmp_command_reload_messages%'
+        Text: '&c/gmp &6reload messages'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload messages'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bReload messages'
+    'Reload GUI':
+        Placeholder: '%gmp_command_reload_gui%'
+        Text: '&c/gmp &6reload gui'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload gui'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bReload all of GUIs'
+    'Reload PlayerData':
+        Placeholder: '%gmp_command_reload_playerdata%'
+        Text: '&c/gmp &6reload playerdata'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload playerdata'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bReload all of player data'
+    'Reload Market':
+        Placeholder: '%gmp_command_reload_market%'
+        Text: '&c/gmp &6reload market'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload market'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bReload global market''s data'
+    'Reload Recorder':
+        Placeholder: '%gmp_command_reload_recorder%'
+        Text: '&c/gmp &6reload recorder'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload recorder'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bReload recorder'
+    'Reload Group':
+        Placeholder: '%gmp_command_reload_group%'
+        Text: '&c/gmp &6reload group'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload group'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bReload user groups'
+    'Reload Category':
+        Placeholder: '%gmp_command_reload_category%'
+        Text: '&c/gmp &6reload category'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload category'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bReload categories'

@@ -1,0 +1,429 @@
+Simplified-Chinese:
+    'Mailbox Help':
+        Placeholder: '%gmp_command_mailbox_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b关于 &c/gmp &6mailbox &b的命令帮助'
+    'Mailbox Select':
+        Placeholder: '%gmp_command_mailbox_select%'
+        Text: '&2select [玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp mailbox select '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b选定某个玩家'
+            - '&b使用方法 &c/gmp &6mailbox select [玩家]'
+    'Mailbox Send':
+        Placeholder: '%gmp_command_mailbox_send%'
+        Text: '&2send [玩家/all] &7[数量]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp mailbox send '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b发送一个物品邮件'
+            - '&b使用方法 &c/gmp &6mailbox send [玩家/all] &7[数量]'
+    'Mailbox GUI':
+        Placeholder: '%gmp_command_mailbox_gui%'
+        Text: '&2gui &7[页数] &8[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp mailbox gui '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b打开商家邮箱界面'
+            - '&b使用方法 &c/gmp &6mailbox gui &7[页数] &8[玩家]'
+    'Mailbox PickUp':
+        Placeholder: '%gmp_command_mailbox_pickup%'
+        Text: '&2pickup &7[UID]/all &8[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp mailbox pickup '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b将指定邮件或全部邮件取至背包中'
+            - '&b使用方法 &c/gmp &6mailbox pickup &7[UID]/all &8[玩家]'
+    'Mailbox PickUp By Deleting':
+        Placeholder: '%gmp_command_mailbox_pickup_by_deleting%'
+        Text: '&a&l[点击这里签收]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox pickup {uid} {player}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击签收玩家 &e{player} &5编号为 &e{uid} &5的邮件'
+    'Mailbox Delete':
+        Placeholder: '%gmp_command_mailbox_delete%'
+        Text: '&2delete &7[UID]/all &8[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp mailbox delete '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b删除某个或全部邮件'
+            - '&b使用方法 &c/gmp &6mailbox delete &7[UID]/all &8[玩家]'
+    'Mailbox Delete Confirm':
+        Placeholder: '%gmp_command_mailbox_delete_confirm%'
+        Text: '&c&l[点击确认删除]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox delete {uid} {player} confirm'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击删除玩家 &e{player} &5编号为 &e{uid} &5的邮件'
+            - '&5本操作将&c&l不会返还未签收的邮件&5！'
+    'Mailbox List':
+        Placeholder: '%gmp_command_mailbox_list%'
+        Text: '&2list &7[页数] &8[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp mailbox list '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出自己或他人的所有邮件'
+            - '&b使用方法 &c/gmp &6mailbox list &7[页数] &8[玩家]'
+    'Mailbox List pickup':
+        Placeholder: '%gmp_command_mailbox_list_pickup%'
+        Text: '&a&l[签收]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox pickup {uid} {player}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击签收玩家 &e{player} &5编号为 &e{uid} &5的邮件'
+    'Mailbox List delete':
+        Placeholder: '%gmp_command_mailbox_list_delete%'
+        Text: '&c&l[删除]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox delete {uid} {player}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击删除玩家 &e{player} &5编号为 &e{uid} &5的邮件'
+            - '&5本操作将&c&l不会返还未签收的邮件&5！'
+    'Mailbox List nextPage':
+        Placeholder: '%gmp_command_mailbox_list_next%'
+        Text: '&b&l下一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox list {nextPage} {player}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到下一页'
+            - '&7当前页数: &e{page}'
+            - '&7下一页: &e{nextPage}'
+    'Mailbox List previousPage':
+        Placeholder: '%gmp_command_mailbox_list_previous%'
+        Text: '&b&l上一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox list {previousPage} {player}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到上一页'
+            - '&7当前页数: &e{page}'
+            - '&7上一页: &e{previousPage}'
+Traditional-Chinese:
+    'Mailbox Help':
+        Placeholder: '%gmp_command_mailbox_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b關於 &c/gmp &6mailbox &b的命令幫助'
+    'Mailbox Select':
+        Placeholder: '%gmp_command_mailbox_select%'
+        Text: '&2select [玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp mailbox select '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b選定某個玩家'
+            - '&b使用方法 &c/gmp &6mailbox select [玩家]'
+    'Mailbox Send':
+        Placeholder: '%gmp_command_mailbox_send%'
+        Text: '&2send [玩家/all] &7[數量]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp mailbox send '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b發送一個物品郵件'
+            - '&b使用方法 &c/gmp &6mailbox send [玩家/all] &7[數量]'
+    'Mailbox GUI':
+        Placeholder: '%gmp_command_mailbox_gui%'
+        Text: '&2gui &7[頁數] &8[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp mailbox gui '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b打開商家郵箱界面'
+            - '&b使用方法 &c/gmp &6mailbox gui &7[頁數] &8[玩家]'
+    'Mailbox PickUp':
+        Placeholder: '%gmp_command_mailbox_pickup%'
+        Text: '&2pickup &7[UID]/all &8[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp mailbox pickup '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b將指定郵件或全部郵件取至背包中'
+            - '&b使用方法 &c/gmp &6mailbox pickup &7[UID]/all &8[玩家]'
+    'Mailbox PickUp By Deleting':
+        Placeholder: '%gmp_command_mailbox_pickup_by_deleting%'
+        Text: '&a&l[點擊這裡簽收]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox pickup {uid} {player}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊簽收玩家 &e{player} &5編號為 &e{uid} &5的郵件'
+    'Mailbox Delete':
+        Placeholder: '%gmp_command_mailbox_delete%'
+        Text: '&2delete &7[UID]/all &8[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp mailbox delete '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b刪除某個或全部郵件'
+            - '&b使用方法 &c/gmp &6mailbox delete &7[UID]/all &8[玩家]'
+    'Mailbox Delete Confirm':
+        Placeholder: '%gmp_command_mailbox_delete_confirm%'
+        Text: '&c&l[點擊確認刪除]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox delete {uid} {player} confirm'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊刪除玩家 &e{player} &5編號為 &e{uid} &5的郵件'
+            - '&5本操作將&c&l不會返還未簽收的郵件&5！ '
+    'Mailbox List':
+        Placeholder: '%gmp_command_mailbox_list%'
+        Text: '&2list &7[頁數] &8[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp mailbox list '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出自己或他人的所有郵件'
+            - '&b使用方法 &c/gmp &6mailbox list &7[頁數] &8[玩家]'
+    'Mailbox List pickup':
+        Placeholder: '%gmp_command_mailbox_list_pickup%'
+        Text: '&a&l[簽收]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox pickup {uid} {player}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊簽收玩家 &e{player} &5編號為 &e{uid} &5的郵件'
+    'Mailbox List delete':
+        Placeholder: '%gmp_command_mailbox_list_delete%'
+        Text: '&c&l[刪除]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox delete {uid} {player}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊刪除玩家 &e{player} &5編號為 &e{uid} &5的郵件'
+            - '&5本操作將&c&l不會返還未簽收的郵件&5！ '
+    'Mailbox List nextPage':
+        Placeholder: '%gmp_command_mailbox_list_next%'
+        Text: '&b&l下一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox list {nextPage} {player}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到下一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7下一頁: &e{nextPage}'
+    'Mailbox List previousPage':
+        Placeholder: '%gmp_command_mailbox_list_previous%'
+        Text: '&b&l上一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox list {previousPage} {player}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到上一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7上一頁: &e{previousPage}'
+English:
+    'Mailbox Help':
+        Placeholder: '%gmp_command_mailbox_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bAbout &c/gmp &6mailbox&b''s subcommands help'
+    'Mailbox Select':
+        Placeholder: '%gmp_command_mailbox_select%'
+        Text: '&2select [Player]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp mailbox select '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSelect a player'
+            - '&bUsage: &c/gmp &6mailbox select [Player]'
+    'Mailbox Send':
+        Placeholder: '%gmp_command_mailbox_send%'
+        Text: '&2send [Player/all] &7[Amount]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp mailbox send '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSend an item mail'
+            - '&bUsage: &c/gmp &6mailbox send [Player/all] &7[Amount]'
+    'Mailbox GUI':
+        Placeholder: '%gmp_command_mailbox_gui%'
+        Text: '&2gui &7[Page] &8[Player]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp mailbox gui '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bOpen mailbox GUI'
+            - '&bUsage: &c/gmp &6mailbox gui &7[Page] &8[Player]'
+    'Mailbox PickUp':
+        Placeholder: '%gmp_command_mailbox_pickup%'
+        Text: '&2pickup &7[UID]/all &8[Player]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp mailbox pickup '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bPick up mails'
+            - '&bUsage: &c/gmp &6mailbox pickup &7[UID]/all &8[Player]'
+    'Mailbox PickUp By Deleting':
+        Placeholder: '%gmp_command_mailbox_pickup_by_deleting%'
+        Text: '&a&l[Pickup]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox pickup {uid} {player}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to pick up player &e{player}&5''s mail &eUID:{uid} &5'
+    'Mailbox Delete':
+        Placeholder: '%gmp_command_mailbox_delete%'
+        Text: '&2delete &7[UID]/all &8[Player]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp mailbox delete '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bDelete a mail or all mails'
+            - '&bUsage: &c/gmp &6mailbox delete &7[UID]/all &8[Player]'
+    'Mailbox Delete Confirm':
+        Placeholder: '%gmp_command_mailbox_delete_confirm%'
+        Text: '&c&l[Delete]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox delete {uid} {player} confirm'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to delete player &e{player}&5''s mail &eUID:{uid} &5.'
+            - '&5This action will &c&lnot return&5 mails that have not been picked up!'
+    'Mailbox List':
+        Placeholder: '%gmp_command_mailbox_list%'
+        Text: '&2list &7[Page] &8[Player]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp mailbox list '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bList all of mails'
+            - '&bUsage: &c/gmp &6mailbox list &7[Page] &8[Player]'
+    'Mailbox List pickup':
+        Placeholder: '%gmp_command_mailbox_list_pickup%'
+        Text: '&a&l[Pickup]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox pickup {uid} {player}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to pick up player &e{player}&5''s mail &eUID:{uid} &5'
+    'Mailbox List delete':
+        Placeholder: '%gmp_command_mailbox_list_delete%'
+        Text: '&c&l[Delete]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox delete {uid} {player}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to delete player &e{player}&5''s mail &eUID:{uid} &5.'
+            - '&5This action will &c&lnot return&5 mails that have not been picked up!'
+    'Mailbox List nextPage':
+        Placeholder: '%gmp_command_mailbox_list_next%'
+        Text: '&b&lNext Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox list {nextPage} {player}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to the next page'
+            - '&7Now page: &e{page}'
+            - '&7Next page: &e{nextPage}'
+    'Mailbox List previousPage':
+        Placeholder: '%gmp_command_mailbox_list_previous%'
+        Text: '&b&lPrevious Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox list {previousPage} {player}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to the previous page'
+            - '&7Now page: &e{page}'
+            - '&7Previous page: &e{previousPage}'

@@ -1,0 +1,690 @@
+Simplified-Chinese:
+    GUI-Title: '&8&l商品设置'
+    GUI-Size: 54
+    Buttons-Label: false
+    Auto-Refresh:
+        Enabled: true
+        Delay: 0.5
+    Merchandise-Button:
+        Display-Item-Meta: true
+        Auto-Refresh: true
+        Lores:
+        - '!lores!'
+        - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+        - '  &f&l▶ &6商品类型: {type}'
+        - '  &f&l▶ &6商家名称: &a{player}'
+        - '  &f&l▶ &6商品价格: &e{displayPrice}￥'
+        - '  &f&l▶ &6零售价格: &e{displayRetailPrice}￥'
+        - '  &f&l▶ &6收支方式: &r{currency}'
+        - '  &f&l▶ &6上市时间: &3{uploadTime}'
+        - '  &f&l▶ &6到期时间: &c{expireTime}'
+        - '  &f&l▶ &6剩余时间: &d{expireTimeLeft}'
+        - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+        Location:
+            Slot-Of-X: 5
+            Slot-Of-Y: 2
+    Custom-Buttons:
+        '返回菜单':
+            Name: '&b&l返回上一个菜单'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&e点击返回'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        '关闭界面':
+            Name: '&4&l关闭界面'
+            Item: RED_STAINED_GLASS_PANE
+            Lores:
+            - ''
+            - '&e点击关闭'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        '背景黑板':
+            Name: '&f'
+            Item: BLACK_STAINED_GLASS_PANE
+            Location:
+                Slots: [2, 3, 4, 5, 6, 7, 8, 10, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 36, 37, 45, 47, 48, 49, 50, 51, 52, 53]
+        '背景白板':
+            Name: '&f'
+            Item: WHITE_STAINED_GLASS_PANE
+            Location:
+                Slots: [11, 13, 15, 17, 29, 35, 38, 39, 40, 42, 43, 44]
+        '移除商品':
+            Name: '&c&l移除商品'
+            Item: BARRIER
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l注意: &7本操作不会返还商品税额！'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击移除'
+            Commands:
+            - 'gmp merchandise remove {uid}'
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 2
+        '打开交易页面':
+            Name: '&6&l打开交易页面'
+            Item: CHEST_MINECART
+            Lores:
+            - ''
+            - '&e点击打开'
+            Commands:
+            - 'gmp transaction gui {uid}'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 2
+        '更改价格':
+            Name: '&a更改价格'
+            Item: EMERALD
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l注意: &7本操作需要&c补充收取&7缺少的税额'
+            - '  &7如果是&d&l收购&7类商品，重定价后将返还原先的定金。'
+            - ''
+            - '  &f&l▶ &6当前价格: &a{displayPrice}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击更改'
+            Close-GUI: true
+            Commands:
+            - 'gmp merchandise set {uid} price'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 4
+        '更改零售价格':
+            Name: '&a更改零售价格'
+            Item: BLAZE_POWDER
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l说明: &7默认商品零售价为 &2-1 &7即不允许零售'
+            - '  &7若更改零售价格将&a允许&7其他玩家零购买/出售此商品'
+            - '  &7零售价改回 &2-1 &7可禁止零售。'
+            - ''
+            - '  &c&l注意: &7本操作&e每个物品&7都需要支付税额'
+            - '  &d&l收购&7类商品还需支付&e每个物品&b×&e零售价&7作为定金'
+            - '  &7若商品进行了一次零售交易，则将退还整售的定金'
+            - '  &7商品收购结束后将返还&a多余的定金&7。'
+            - ''
+            - '  &f&l▶ &6当前零售价: &a{displayRetailPrice}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击更改'
+            Close-GUI: true
+            Commands:
+            - 'gmp merchandise set {uid} retailprice'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 4
+        '设置永不过期':
+            Name: '&d设置永不过期'
+            Item: REDSTONE_TORCH
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l说明: &7只有特定权限组能使用'
+            - '  &7启用后商品将永远不会自动到期'
+            - '  &7除非主动或强制下架。'
+            - ''
+            - '  &f&l▶ &6状态: {neverExpire}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击切换状态'
+            Commands:
+            - 'gmp merchandise set {uid} neverexpire switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 4
+        '设置无限商品':
+            Name: '&d设置无限商品'
+            Item: ENDER_CHEST
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l说明: &7只有特定权限组能使用'
+            - '  &7启用后商品将可以无限交易'
+            - '  &7除非主动或强制下架'
+            - '  &7一般作为系统商店而存在。'
+            - ''
+            - '  &f&l▶ &6状态: {unlimited}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击切换状态'
+            Commands:
+            - 'gmp merchandise set {uid} unlimited switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 4
+        '隐藏商家名字':
+            Name: '&3隐藏商家名字'
+            Item: NAME_TAG
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l说明: &7只有特定权限组能使用'
+            - '  &7启用后商品将不会显示商家名字'
+            - '  &7除了在个人商店里。'
+            - ''
+            - '  &f&l▶ &6状态: {hiddingName}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击切换状态'
+            Commands:
+            - 'gmp merchandise set {uid} hidemerchantname switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 4
+        '隐藏商品':
+            Name: '&3隐藏商品'
+            Item: PAINTING
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l说明: &7只有特定权限组能使用'
+            - '  &7启用后商品将不会在市场上显示'
+            - '  &7除了在个人商店里。'
+            - ''
+            - '  &f&l▶ &6状态: {hiddingMerchandise}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击切换状态'
+            Commands:
+            - 'gmp merchandise set {uid} hideMerchandise switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 5
+        '说明':
+            Name: '&6&l说明'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7本界面用于设置商品的相关参数'
+            - '  &7开关类的设置需要特定权限组才可以使用'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6 
+        '打开市场主界面':
+            Name: '&a&l打开市场主界面'
+            Item: BEACON
+            Lores:
+            - ''
+            - '&e点击打开'
+            Commands:
+            - 'gmp market gui'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+Traditional-Chinese:
+    GUI-Title: '&8&l商品設定'
+    GUI-Size: 54
+    Buttons-Label: false
+    Auto-Refresh:
+        Enabled: true
+        Delay: 0.5
+    Merchandise-Button:
+        Display-Item-Meta: true
+        Auto-Refresh: true
+        Lores:
+        - '!lores!'
+        - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+        - '  &f&l▶ &6商品類型: {type}'
+        - '  &f&l▶ &6商家名稱: &a{player}'
+        - '  &f&l▶ &6商品價格: &e{displayPrice}￥'
+        - '  &f&l▶ &6零售價格: &e{displayRetailPrice}￥'
+        - '  &f&l▶ &6收支方式: &r{currency}'
+        - '  &f&l▶ &6上市時間: &3{uploadTime}'
+        - '  &f&l▶ &6到期時間: &c{expireTime}'
+        - '  &f&l▶ &6剩餘時間: &d{expireTimeLeft}'
+        - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+        Location:
+            Slot-Of-X: 5
+            Slot-Of-Y: 2
+    Custom-Buttons:
+        '返回菜單':
+            Name: '&b&l返回上一個菜單'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&e點擊返回'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        '關閉界面':
+            Name: '&4&l關閉界面'
+            Item: RED_STAINED_GLASS_PANE
+            Lores:
+            - ''
+            - '&e點擊關閉'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        '背景黑板':
+            Name: '&f'
+            Item: BLACK_STAINED_GLASS_PANE
+            Location:
+                Slots: [2, 3, 4, 5, 6, 7, 8, 10, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 36, 37, 45, 47, 48, 49, 50, 51, 52, 53]
+        '背景白板':
+            Name: '&f'
+            Item: WHITE_STAINED_GLASS_PANE
+            Location:
+                Slots: [11, 13, 15, 17, 29, 35, 38, 39, 40, 42, 43, 44]
+        '移除商品':
+            Name: '&c&l移除商品'
+            Item: BARRIER
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l注意: &7本操作不會返還商品稅額！ '
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊移除'
+            Commands:
+            - 'gmp merchandise remove {uid}'
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 2
+        '打開交易頁面':
+            Name: '&6&l打開交易頁面'
+            Item: CHEST_MINECART
+            Lores:
+            - ''
+            - '&e點擊打開'
+            Commands:
+            - 'gmp transaction gui {uid}'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 2
+        '更改價格':
+            Name: '&a更改價格'
+            Item: EMERALD
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l注意: &7本操作需要&c補充收取&7缺少的稅額'
+            - '  &7如果是&d&l收購&7類商品，重定價後將返還原先的定金。 '
+            - ''
+            - '  &f&l▶ &6當前價格: &a{displayPrice}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊更改'
+            Close-GUI: true
+            Commands:
+            - 'gmp merchandise set {uid} price'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 4
+        '更改零售價格':
+            Name: '&a更改零售價格'
+            Item: BLAZE_POWDER
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l說明: &7默認商品零售價為 &2-1 &7即不允許零售'
+            - '  &7若更改零售價格將&a允許&7其他玩家零購買/出售此商品'
+            - '  &7零售價改回 &2-1 &7可禁止零售。 '
+            - ''
+            - '  &c&l注意: &7本操作&e每個物品&7都需要支付稅額'
+            - '  &d&l收購&7類商品還需支付&e每個物品&b×&e零售價&7作為定金'
+            - '  &7若商品進行了一次零售交易，則將退還整售的定金'
+            - '  &7商品收購結束後將返還&a多餘的定金&7。 '
+            - ''
+            - '  &f&l▶ &6當前零售價: &a{displayRetailPrice}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊更改'
+            Close-GUI: true
+            Commands:
+            - 'gmp merchandise set {uid} retailprice'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 4
+        '設定永不過期':
+            Name: '&d設定永不過期'
+            Item: REDSTONE_TORCH
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l說明: &7只有特定權限組能使用'
+            - '  &7啟用後商品將永遠不會自動到期'
+            - '  &7除非主動或強制下架。 '
+            - ''
+            - '  &f&l▶ &6狀態: {neverExpire}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊切換狀態'
+            Commands:
+            - 'gmp merchandise set {uid} neverexpire switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 4
+        '設定無限商品':
+            Name: '&d設定無限商品'
+            Item: ENDER_CHEST
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l說明: &7只有特定權限組能使用'
+            - '  &7啟用後商品將可以無限交易'
+            - '  &7除非主動或強制下架'
+            - '  &7一般作為系統商店而存在。 '
+            - ''
+            - '  &f&l▶ &6狀態: {unlimited}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊切換狀態'
+            Commands:
+            - 'gmp merchandise set {uid} unlimited switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 4
+        '隱藏商家名字':
+            Name: '&3隱藏商家名字'
+            Item: NAME_TAG
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l說明: &7只有特定權限組能使用'
+            - '  &7啟用後商品將不會顯示商家名字'
+            - '  &7除了在個人商店裡。 '
+            - ''
+            - '  &f&l▶ &6狀態: {hiddingName}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊切換狀態'
+            Commands:
+            - 'gmp merchandise set {uid} hidemerchantname switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 4
+        '隱藏商品':
+            Name: '&3隱藏商品'
+            Item: PAINTING
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l說明: &7只有特定權限組能使用'
+            - '  &7啟用後商品將不會在市場上顯示'
+            - '  &7除了在個人商店裡。 '
+            - ''
+            - '  &f&l▶ &6狀態: {hiddingMerchandise}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊切換狀態'
+            Commands:
+            - 'gmp merchandise set {uid} hideMerchandise switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 5
+        '說明':
+            Name: '&6&l說明'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7本界面用於設定商品的相關參數'
+            - '  &7開關類的設定需要特定權限組才可以使用'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6 
+        '打開市場主界面':
+            Name: '&a&l打開市場主界面'
+            Item: BEACON
+            Lores:
+            - ''
+            - '&e點擊打開'
+            Commands:
+            - 'gmp market gui'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+English:
+    GUI-Title: '&8&lMerchandise Editor'
+    GUI-Size: 54
+    Buttons-Label: false
+    Auto-Refresh:
+        Enabled: true
+        Delay: 0.5
+    Merchandise-Button:
+        Display-Item-Meta: true
+        Auto-Refresh: true
+        Lores:
+        - '!lores!'
+        - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+        - '  &f&l▶ &6Type: {type}'
+        - '  &f&l▶ &6Merchant: &a{player}'
+        - '  &f&l▶ &6Price: &e${displayPrice}'
+        - '  &f&l▶ &6Retail price: &e${displayRetailPrice}'
+        - '  &f&l▶ &6Currency: &r{currency}'
+        - '  &f&l▶ &6Upload time: &3{uploadTime}'
+        - '  &f&l▶ &6Expiration time: &c{expireTime}'
+        - '  &f&l▶ &6Time left: &d{expireTimeLeft}'
+        - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+        Location:
+            Slot-Of-X: 5
+            Slot-Of-Y: 2
+    Custom-Buttons:
+        'Return':
+            Name: '&b&lReturn to previous menu'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&eClick to return to previous menu'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        'Close':
+            Name: '&4&lClose menu'
+            Item: RED_STAINED_GLASS_PANE
+            Lores:
+            - ''
+            - '&eClick to close menu'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        'Black boards':
+            Name: '&f'
+            Item: BLACK_STAINED_GLASS_PANE
+            Location:
+                Slots: [2, 3, 4, 5, 6, 7, 8, 10, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 36, 37, 45, 47, 48, 49, 50, 51, 52, 53]
+        'White boards':
+            Name: '&f'
+            Item: WHITE_STAINED_GLASS_PANE
+            Location:
+                Slots: [11, 13, 15, 17, 29, 35, 38, 39, 40, 42, 43, 44]
+        'Remove':
+            Name: '&c&lRemove merchandise'
+            Item: BARRIER
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lNote: &7This operation will not refund the tax!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击移除'
+            Commands:
+            - 'gmp merchandise remove {uid}'
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 2
+        'Transaction':
+            Name: '&6&lTransaction GUI'
+            Item: CHEST_MINECART
+            Lores:
+            - ''
+            - '&eClick to open'
+            Commands:
+            - 'gmp transaction gui {uid}'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 2
+        'Reprice':
+            Name: '&aReprice'
+            Item: EMERALD
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lDescription:'
+            - '  &7This operation requires &cadditional &7taxes,'
+            - '  &7If it is &d&lPurchasing&7 merchandise, '
+            - '  &7the original deposit will be returned.'
+            - ''
+            - '  &f&l▶ &6Now price: &a{displayPrice}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to change'
+            Close-GUI: true
+            Commands:
+            - 'gmp merchandise set {uid} price'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 4
+        'Reprice Retail':
+            Name: '&aChange retail price'
+            Item: BLAZE_POWDER
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lDescription:'
+            - '  &7The default retail price is &2-1 &7,'
+            - '  &7Change it to allow retail,'
+            - '  &7Or change to &2-1&7 to disable retail.'
+            - ''
+            - '  &c&lNote: '
+            - '  &eEach item &7needs to pay tax.'
+            - '  &d&lPurchasing&7 item also need to pay:'
+            - '  &eEach item&b×&eRetail price&7 as a deposit.'
+            - '  &7After the retail transaction,'
+            - '  &7the wholesale deposits will be returned.'
+            - '  &7After the purchase of the merchandise,'
+            - '  &7the excess deposit will be returned.'
+            - ''
+            - '  &f&l▶ &6Now retail price: &a{displayRetailPrice}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to change'
+            Close-GUI: true
+            Commands:
+            - 'gmp merchandise set {uid} retailprice'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 4
+        'Never Expire':
+            Name: '&dNever expire'
+            Item: REDSTONE_TORCH
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lDescription:'
+            - '  &7Items will never expire when enabled,'
+            - '  &7Unless actively or forcibly removed.'
+            - '  &c&lNotice: '
+            - '  &7Only specific groups can use!'
+            - ''
+            - '  &f&l▶ &6Status: {neverExpire}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to switch'
+            Commands:
+            - 'gmp merchandise set {uid} neverexpire switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 4
+        'Unlimited':
+            Name: '&dUnlimited'
+            Item: ENDER_CHEST
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lDescription: '
+            - '  &7Whether to able trade unlimitedly'
+            - '  &7Unless actively or forcibly removed.'
+            - '  &c&lNotice: '
+            - '  &7Only specific groups can use!'
+            - ''
+            - '  &f&l▶ &6Status: {unlimited}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to switch'
+            Commands:
+            - 'gmp merchandise set {uid} unlimited switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 4
+        'Hide Merchant Name':
+            Name: '&3Hide merchant''s name'
+            Item: NAME_TAG
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lDescription: '
+            - '  &7Whether to hide the merchant''s name,'
+            - '  &7Unless in the personal store.'
+            - '  &c&lNotice: '
+            - '  &7Only specific groups can use!'
+            - ''
+            - '  &f&l▶ &6Status: {hiddingName}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to switch'
+            Commands:
+            - 'gmp merchandise set {uid} hidemerchantname switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 4
+        'Hide Merchandise':
+            Name: '&3Hide merchandise'
+            Item: PAINTING
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lDescription: '
+            - '  &7Whether to hide the merchandise'
+            - '  &7Unless in the personal store.'
+            - '  &c&lNotice: '
+            - '  &7Only specific groups can use!'
+            - ''
+            - '  &f&l▶ &6Status: {hiddingMerchandise}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to switch'
+            Commands:
+            - 'gmp merchandise set {uid} hideMerchandise switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 5
+        'Description':
+            Name: '&6&lDescription'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7This GUI is about merchandise''s stats,'
+            - '  &7and set the parameters of this merchandise'
+            - '  &7Some settings require permissions to use.'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6 
+        'Open Global Market':
+            Name: '&a&lOpen global market'
+            Item: BEACON
+            Lores:
+            - ''
+            - '&eClick to open'
+            Commands:
+            - 'gmp market gui'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6

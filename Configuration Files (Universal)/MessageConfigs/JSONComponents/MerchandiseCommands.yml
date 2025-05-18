@@ -1,0 +1,766 @@
+Simplified-Chinese:
+    'Merchandise Help':
+        Placeholder: '%gmp_command_merchandise_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b关于 &c/gmp &6merchandise &b的命令帮助'
+    'Merchandise Set':
+        Placeholder: '%gmp_command_merchandise_set%'
+        Text: '&2set [商品UID] '
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置一件商品的属性'
+            - '&b使用方法 &c/gmp &6merchandise set [商品UID]'
+    'Merchandise Set GUI':
+        Placeholder: '%gmp_command_merchandise_set_gui%'
+        Text: '&c&lGUI'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise gui {uid} '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b点击打开商品编号为 &c{uid} &b的GUI'
+    'Merchandise Set Price':
+        Placeholder: '%gmp_command_merchandise_set_price%'
+        Text: '&2price [价格]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set {uid} price '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置一件商品的价格'
+            - '&b使用方法 &c/gmp &6merchandise set {uid} price [价格]'
+    'Merchandise Set RetailPrice':
+        Placeholder: '%gmp_command_merchandise_set_retailprice%'
+        Text: '&2retailPrice [价格]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set {uid} retailPrice '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置一件商品的零售价格'
+            - '&b设置成 &5-1 &b即禁止零售'
+            - '&b使用方法 &c/gmp &6merchandise set {uid} retailPrice [价格]'
+    'Merchandise Set hideMerchandise':
+        Placeholder: '%gmp_command_merchandise_set_hidemerchandise%'
+        Text: '&2hideMerchandise [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set {uid} hideMerchandise '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置商品是否在全球市场上显示'
+            - '&b使用方法 &c/gmp &6merchandise set {uid} hideMerchandise [true/false/switch]'
+    'Merchandise Set hideMerchantName':
+        Placeholder: '%gmp_command_merchandise_set_hidemerchantname%'
+        Text: '&2hideMerchantName [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set {uid} hideMerchantName '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置商品是否隐藏商家的名字'
+            - '&b使用方法 &c/gmp &6merchandise set {uid} hideMerchantName [true/false/switch]'
+    'Merchandise Set unlimited':
+        Placeholder: '%gmp_command_merchandise_set_unlimited%'
+        Text: '&2unlimited [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set {uid} unlimited '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置商品是否为无限个'
+            - '&b使用方法 &c/gmp &6merchandise set {uid} unlimited [true/false/switch]'
+    'Merchandise Set neverexpire':
+        Placeholder: '%gmp_command_merchandise_set_neverexpire%'
+        Text: '&2neverExpire [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set {uid} neverExpire '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置商品是否永不过期'
+            - '&b使用方法 &c/gmp &6merchandise set {uid} neverExpire [true/false/switch]'
+    'Merchandise Info':
+        Placeholder: '%gmp_command_merchandise_info%'
+        Text: '&2info [商品UID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise info '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看一件商品的数据'
+            - '&b使用方法 &c/gmp &6merchandise info [商品UID]'
+    'Merchandise ShulkerBox':
+        Placeholder: '%gmp_command_merchandise_shulkerBox%'
+        Text: '&2shulkerBox [商品UID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise shulkerBox '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看潜影盒商品中的物品'
+            - '&b使用方法 &c/gmp &6merchandise shulkerBox [商品UID]'
+    'Merchandise List':
+        Placeholder: '%gmp_command_merchandise_list%'
+        Text: '&2list [页数] &7[selling/purchasing/bidding]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise list '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有指定类型的商品'
+            - '&bAny即任意，Selling为所有出售类商品，Purchasing为所有收购类商品'
+            - '&b使用方法 &c/gmp &6merchandise list [页数] &7[selling/purchasing/bidding]'
+    'Merchandise ListAll':
+        Placeholder: '%gmp_command_merchandise_listall%'
+        Text: '&2listall [页数] &7[selling/purchasing/bidding]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise listall '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有商品'
+            - '&bAny即任意，Selling为所有出售类商品，Purchasing为所有收购类商品'
+            - '&b使用方法 &c/gmp &6merchandise listall [页数] &7[selling/purchasing/bidding]'
+    'Merchandise Remove':
+        Placeholder: '%gmp_command_merchandise_remove%'
+        Text: '&2remove [商品UID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise remove '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b移除一件商品'
+            - '&b使用方法 &c/gmp &6merchandise remove [商品UID]'
+    'Merchandise GUI':
+        Placeholder: '%gmp_command_merchandise_gui%'
+        Text: '&2gui [商品UID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise gui '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b打开商品编辑GUI'
+            - '&b使用方法 &c/gmp &6merchandise gui [商品UID]'
+            
+    'Merchandise List info':
+        Placeholder: '%gmp_command_merchandise_list_info%'
+        Text: '&8&l[&e&l信息&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise info {uid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击显示商品编号为 &e{uid} &5的信息'
+    'Merchandise List transaction':
+        Placeholder: '%gmp_command_merchandise_list_transaction%'
+        Text: '&8&l[&a&l交易&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp transaction gui {uid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击打开商品编号为 &e{uid} &5的交易界面'
+    'Merchandise List edit':
+        Placeholder: '%gmp_command_merchandise_list_edit%'
+        Text: '&8&l[&d&l编辑&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise gui {uid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击打开商品编号为 &e{uid} &5的编辑界面'
+    'Merchandise List remove':
+        Placeholder: '%gmp_command_merchandise_list_remove%'
+        Text: '&8&l[&c&l删除&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise remove {uid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击删除商品编号为 &e{uid} &5的商品'
+    'Merchandise List nextPage':
+        Placeholder: '%gmp_command_merchandise_list_next%'
+        Text: '&b&l下一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise list {nextPage} {type}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到下一页'
+            - '&7当前页数: &e{page}'
+            - '&7下一页: &e{nextPage}'
+    'Merchandise List previousPage':
+        Placeholder: '%gmp_command_merchandise_list_previous%'
+        Text: '&b&l上一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise list {previousPage} {type}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到上一页'
+            - '&7当前页数: &e{page}'
+            - '&7上一页: &e{previousPage}'
+    'Merchandise ListAll nextPage':
+        Placeholder: '%gmp_command_merchandise_listall_next%'
+        Text: '&b&l下一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise listall {nextPage} {type}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到下一页'
+            - '&7当前页数: &e{page}'
+            - '&7下一页: &e{nextPage}'
+    'Merchandise ListAll previousPage':
+        Placeholder: '%gmp_command_merchandise_listall_previous%'
+        Text: '&b&l上一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise listall {previousPage} {type}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到上一页'
+            - '&7当前页数: &e{page}'
+            - '&7上一页: &e{previousPage}'
+Traditional-Chinese:
+    'Merchandise Help':
+        Placeholder: '%gmp_command_merchandise_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b關於 &c/gmp &6merchandise &b的命令幫助'
+    'Merchandise Set':
+        Placeholder: '%gmp_command_merchandise_set%'
+        Text: '&2set [商品UID] '
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定一件商品的屬性'
+            - '&b使用方法 &c/gmp &6merchandise set [商品UID]'
+    'Merchandise Set GUI':
+        Placeholder: '%gmp_command_merchandise_set_gui%'
+        Text: '&c&lGUI'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise gui {uid} '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b點擊打開商品編號為 &c{uid} &b的GUI'
+    'Merchandise Set Price':
+        Placeholder: '%gmp_command_merchandise_set_price%'
+        Text: '&2price [價格]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set {uid} price '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定一件商品的價格'
+            - '&b使用方法 &c/gmp &6merchandise set {uid} price [價格]'
+    'Merchandise Set RetailPrice':
+        Placeholder: '%gmp_command_merchandise_set_retailprice%'
+        Text: '&2retailPrice [價格]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set {uid} retailPrice '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定一件商品的零售價格'
+            - '&b設定成 &5-1 &b即禁止零售'
+            - '&b使用方法 &c/gmp &6merchandise set {uid} retailPrice [價格]'
+    'Merchandise Set hideMerchandise':
+        Placeholder: '%gmp_command_merchandise_set_hidemerchandise%'
+        Text: '&2hideMerchandise [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set {uid} hideMerchandise '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定商品是否在全球市場上顯示'
+            - '&b使用方法 &c/gmp &6merchandise set {uid} hideMerchandise [true/false/switch]'
+    'Merchandise Set hideMerchantName':
+        Placeholder: '%gmp_command_merchandise_set_hidemerchantname%'
+        Text: '&2hideMerchantName [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set {uid} hideMerchantName '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定商品是否隱藏商家的名字'
+            - '&b使用方法 &c/gmp &6merchandise set {uid} hideMerchantName [true/false/switch]'
+    'Merchandise Set unlimited':
+        Placeholder: '%gmp_command_merchandise_set_unlimited%'
+        Text: '&2unlimited [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set {uid} unlimited '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定商品是否為無限個'
+            - '&b使用方法 &c/gmp &6merchandise set {uid} unlimited [true/false/switch]'
+    'Merchandise Set neverexpire':
+        Placeholder: '%gmp_command_merchandise_set_neverexpire%'
+        Text: '&2neverExpire [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set {uid} neverExpire '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定商品是否永不過期'
+            - '&b使用方法 &c/gmp &6merchandise set {uid} neverExpire [true/false/switch]'
+    'Merchandise Info':
+        Placeholder: '%gmp_command_merchandise_info%'
+        Text: '&2info [商品UID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise info '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看一件商品的數據'
+            - '&b使用方法 &c/gmp &6merchandise info [商品UID]'
+    'Merchandise ShulkerBox':
+        Placeholder: '%gmp_command_merchandise_shulkerBox%'
+        Text: '&2shulkerBox [商品UID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise shulkerBox '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看界伏盒商品中的物品'
+            - '&b使用方法 &c/gmp &6merchandise shulkerBox [商品UID]'
+    'Merchandise List':
+        Placeholder: '%gmp_command_merchandise_list%'
+        Text: '&2list [頁數] &7[selling/purchasing/bidding]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise list '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有指定類型的商品'
+            - '&bAny即任意，Selling為所有出售類商品，Purchasing為所有收購類商品'
+            - '&b使用方法 &c/gmp &6merchandise list [頁數] &7[selling/purchasing/bidding]'
+    'Merchandise ListAll':
+        Placeholder: '%gmp_command_merchandise_listall%'
+        Text: '&2listall [頁數] &7[selling/purchasing/bidding]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise listall '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有商品'
+            - '&bAny即任意，Selling為所有出售類商品，Purchasing為所有收購類商品'
+            - '&b使用方法 &c/gmp &6merchandise listall [頁數] &7[selling/purchasing/bidding]'
+    'Merchandise Remove':
+        Placeholder: '%gmp_command_merchandise_remove%'
+        Text: '&2remove [商品UID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise remove '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b移除一件商品'
+            - '&b使用方法 &c/gmp &6merchandise remove [商品UID]'
+    'Merchandise GUI':
+        Placeholder: '%gmp_command_merchandise_gui%'
+        Text: '&2gui [商品UID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise gui '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b打開商品編輯GUI'
+            - '&b使用方法 &c/gmp &6merchandise gui [商品UID]'
+            
+    'Merchandise List info':
+        Placeholder: '%gmp_command_merchandise_list_info%'
+        Text: '&8&l[&e&l信息&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise info {uid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊顯示商品編號為 &e{uid} &5的信息'
+    'Merchandise List transaction':
+        Placeholder: '%gmp_command_merchandise_list_transaction%'
+        Text: '&8&l[&a&l交易&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp transaction gui {uid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊打開商品編號為 &e{uid} &5的交易界面'
+    'Merchandise List edit':
+        Placeholder: '%gmp_command_merchandise_list_edit%'
+        Text: '&8&l[&d&l編輯&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise gui {uid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊打開商品編號為 &e{uid} &5的編輯界面'
+    'Merchandise List remove':
+        Placeholder: '%gmp_command_merchandise_list_remove%'
+        Text: '&8&l[&c&l刪除&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise remove {uid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊刪除商品編號為 &e{uid} &5的商品'
+    'Merchandise List nextPage':
+        Placeholder: '%gmp_command_merchandise_list_next%'
+        Text: '&b&l下一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise list {nextPage} {type}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到下一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7下一頁: &e{nextPage}'
+    'Merchandise List previousPage':
+        Placeholder: '%gmp_command_merchandise_list_previous%'
+        Text: '&b&l上一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise list {previousPage} {type}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到上一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7上一頁: &e{previousPage}'
+    'Merchandise ListAll nextPage':
+        Placeholder: '%gmp_command_merchandise_listall_next%'
+        Text: '&b&l下一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise listall {nextPage} {type}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到下一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7下一頁: &e{nextPage}'
+    'Merchandise ListAll previousPage':
+        Placeholder: '%gmp_command_merchandise_listall_previous%'
+        Text: '&b&l上一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise listall {previousPage} {type}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到上一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7上一頁: &e{previousPage}'
+English:
+    'Merchandise Help':
+        Placeholder: '%gmp_command_merchandise_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bAbout &c/gmp &6merchandise&b''s subcommands help'
+    'Merchandise Set':
+        Placeholder: '%gmp_command_merchandise_set%'
+        Text: '&2set [UID] '
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet the properties of an item'
+            - '&bUsage: &c/gmp &6merchandise set [UID]'
+    'Merchandise Set GUI':
+        Placeholder: '%gmp_command_merchandise_set_gui%'
+        Text: '&c&lGUI'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise gui {uid} '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bClick to open GUI with UID &c{uid} &b'
+    'Merchandise Set Price':
+        Placeholder: '%gmp_command_merchandise_set_price%'
+        Text: '&2price [Price]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set {uid} price '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet the price of a merchandise'
+            - '&bUsage: &c/gmp &6merchandise set {uid} price [Price]'
+    'Merchandise Set RetailPrice':
+        Placeholder: '%gmp_command_merchandise_set_retailprice%'
+        Text: '&2retailPrice [Price]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set {uid} retailPrice '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet the retail price of a merchandise'
+            - '&bSet to &5-1 &b to prohibit retail'
+            - '&bUsage: &c/gmp &6merchandise set {uid} retailPrice [Price]'
+    'Merchandise Set hideMerchandise':
+        Placeholder: '%gmp_command_merchandise_set_hidemerchandise%'
+        Text: '&2hideMerchandise [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set {uid} hideMerchandise '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet whether the item is displayed in the global market'
+            - '&bUsage: &c/gmp &6merchandise set {uid} hideMerchandise [true/false/switch]'
+    'Merchandise Set hideMerchantName':
+        Placeholder: '%gmp_command_merchandise_set_hidemerchantname%'
+        Text: '&2hideMerchantName [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set {uid} hideMerchantName '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet whether the merchandise hides the merchant''s name'
+            - '&bUsage: &c/gmp &6merchandise set {uid} hideMerchantName [true/false/switch]'
+    'Merchandise Set unlimited':
+        Placeholder: '%gmp_command_merchandise_set_unlimited%'
+        Text: '&2unlimited [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set {uid} unlimited '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet whether merchandise is unlimited'
+            - '&bUsage: &c/gmp &6merchandise set {uid} unlimited [true/false/switch]'
+    'Merchandise Set neverexpire':
+        Placeholder: '%gmp_command_merchandise_set_neverexpire%'
+        Text: '&2neverExpire [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise set {uid} neverExpire '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet whether merchandise is never expired'
+            - '&bUsage: &c/gmp &6merchandise set {uid} neverExpire [true/false/switch]'
+    'Merchandise Info':
+        Placeholder: '%gmp_command_merchandise_info%'
+        Text: '&2info [UID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise info '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bView data for a merchandise'
+            - '&bUsage: &c/gmp &6merchandise info [UID]'
+    'Merchandise ShulkerBox':
+        Placeholder: '%gmp_command_merchandise_shulkerBox%'
+        Text: '&2shulkerBox [UID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise shulkerBox '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bView a shulker box''s contents &7(Merchandise)'
+            - '&bUsage: &c/gmp &6merchandise shulkerBox [UID]'
+    'Merchandise List':
+        Placeholder: '%gmp_command_merchandise_list%'
+        Text: '&2list [Page] &7[selling/purchasing/bidding]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise list '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bList all merchandises of the specified type'
+            - '&bUsage: &c/gmp &6merchandise list [Page] &7[selling/purchasing/bidding]'
+    'Merchandise ListAll':
+        Placeholder: '%gmp_command_merchandise_listall%'
+        Text: '&2listall [Page] &7[selling/purchasing/bidding]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise listall '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bList all of merchandises'
+            - '&bUsage: &c/gmp &6merchandise listall [Page] &7[selling/purchasing/bidding]'
+    'Merchandise Remove':
+        Placeholder: '%gmp_command_merchandise_remove%'
+        Text: '&2remove [UID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise remove '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bRemove a merchandise'
+            - '&bUsage: &c/gmp &6merchandise remove [UID]'
+    'Merchandise GUI':
+        Placeholder: '%gmp_command_merchandise_gui%'
+        Text: '&2gui [UID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp merchandise gui '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bOpen merchandise''s editor GUI'
+            - '&bUsage: &c/gmp &6merchandise gui [UID]'
+            
+    'Merchandise List info':
+        Placeholder: '%gmp_command_merchandise_list_info%'
+        Text: '&8&l[&e&lInfo&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise info {uid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to display information with UID &e{uid} &5.'
+    'Merchandise List transaction':
+        Placeholder: '%gmp_command_merchandise_list_transaction%'
+        Text: '&8&l[&a&lTransaction&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp transaction gui {uid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to open the transaction GUI with the UID &e{uid} &5.'
+    'Merchandise List edit':
+        Placeholder: '%gmp_command_merchandise_list_edit%'
+        Text: '&8&l[&d&lEdit&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise gui {uid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to open the editing GUI with the UID &e{uid} &5.'
+    'Merchandise List remove':
+        Placeholder: '%gmp_command_merchandise_list_remove%'
+        Text: '&8&l[&c&lRemove&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise remove {uid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to remove merchandise with UID &e{uid} &5.'
+    'Merchandise List nextPage':
+        Placeholder: '%gmp_command_merchandise_list_next%'
+        Text: '&b&lNext Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise list {nextPage} {type}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to the next page'
+            - '&7Now page: &e{page}'
+            - '&7Next page: &e{nextPage}'
+    'Merchandise List previousPage':
+        Placeholder: '%gmp_command_merchandise_list_previous%'
+        Text: '&b&lPrevious Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise list {previousPage} {type}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to the previous page'
+            - '&7Now page: &e{page}'
+            - '&7Previous page: &e{previousPage}'
+    'Merchandise ListAll nextPage':
+        Placeholder: '%gmp_command_merchandise_listall_next%'
+        Text: '&b&lNext Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise listall {nextPage} {type}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to the next page'
+            - '&7Now page: &e{page}'
+            - '&7Next page: &e{nextPage}'
+    'Merchandise ListAll previousPage':
+        Placeholder: '%gmp_command_merchandise_listall_previous%'
+        Text: '&b&lPrevious Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise listall {previousPage} {type}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to the previous page'
+            - '&7Now page: &e{page}'
+            - '&7Previous page: &e{previousPage}'

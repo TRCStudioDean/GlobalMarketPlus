@@ -1,0 +1,162 @@
+Simplified-Chinese:
+    'GUI Help':
+        Placeholder: '%gmp_command_gui_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp gui help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b关于 &c/gmp &6gui &b的命令帮助'
+    'GUI Open':
+        Placeholder: '%gmp_command_gui_open%'
+        Text: '&2open [GUI名字] &7[玩家] &8[JSON参数]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp gui open '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b打开指定的GUI'
+            - '&b使用方法 &c/gmp &6gui open [GUI名字] &7[玩家] &8[JSON参数]'
+    'GUI Back':
+        Placeholder: '%gmp_command_gui_back%'
+        Text: '&2back'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp gui back'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b返回上一个打开的GUI'
+            - '&b使用方法 &c/gmp &6gui back'
+    'GUI List':
+        Placeholder: '%gmp_command_gui_list%'
+        Text: '&2list'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp gui list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有的GUI'
+            - '&b使用方法 &c/gmp &6gui list'
+    'GUI List GUI':
+        Placeholder: '%gmp_command_gui_list_gui%'
+        Text: '&b&l{guiName}'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp gui open {guiName}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击打开GUI &e{guiName}'
+Traditional-Chinese:
+    'GUI Help':
+        Placeholder: '%gmp_command_gui_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp gui help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b關於 &c/gmp &6gui &b的命令幫助'
+    'GUI Open':
+        Placeholder: '%gmp_command_gui_open%'
+        Text: '&2open [GUI名字] &7[玩家] &8[JSON參數]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp gui open '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b打開指定的GUI'
+            - '&b使用方法 &c/gmp &6gui open [GUI名字] &7[玩家] &8[JSON參數]'
+    'GUI Back':
+        Placeholder: '%gmp_command_gui_back%'
+        Text: '&2back'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp gui back'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b返回上一個打開的GUI'
+            - '&b使用方法 &c/gmp &6gui back'
+    'GUI List':
+        Placeholder: '%gmp_command_gui_list%'
+        Text: '&2list'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp gui list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有的GUI'
+            - '&b使用方法 &c/gmp &6gui list'
+    'GUI List GUI':
+        Placeholder: '%gmp_command_gui_list_gui%'
+        Text: '&b&l{guiName}'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp gui open {guiName}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊打開GUI &e{guiName}'
+English:
+    'GUI Help':
+        Placeholder: '%gmp_command_gui_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp gui help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bAbout &c/gmp &6gui&b''s subcommands help'
+    'GUI Open':
+        Placeholder: '%gmp_command_gui_open%'
+        Text: '&2open [GUI] &7[Player] &8[JSON]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp gui open '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bOpen specified GUI'
+            - '&bUsage: &c/gmp &6gui open [GUI] &7[Player] &8[JSON]'
+    'GUI Back':
+        Placeholder: '%gmp_command_gui_back%'
+        Text: '&2back'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp gui back'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bReturn to the last open GUI'
+            - '&bUsage: &c/gmp &6gui back'
+    'GUI List':
+        Placeholder: '%gmp_command_gui_list%'
+        Text: '&2list'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp gui list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bList all of GUIs'
+            - '&bUsage: &c/gmp &6gui list'
+    'GUI List GUI':
+        Placeholder: '%gmp_command_gui_list_gui%'
+        Text: '&b&l{guiName}'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp gui open {guiName}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to open GUI &e{guiName}'

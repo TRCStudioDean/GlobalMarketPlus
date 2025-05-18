@@ -1,0 +1,408 @@
+Simplified-Chinese:
+    ###############################
+    #           命令帮助           #
+    ###############################
+    'Help':
+        Placeholder: '%gmp_command_help%'
+        Text: '&c/gmp &6help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看插件帮助'
+            - '&b使用方法 &c/gmp &6help'
+    'Market':
+        Placeholder: '%gmp_command_market%'
+        Text: '&c/gmp &6market'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp market help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b全球市场综合命令'
+            - '&b使用方法 &c/gmp &6market'
+    'Transaction':
+        Placeholder: '%gmp_command_transaction%'
+        Text: '&c/gmp &6transaction'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp transaction help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商品交易综合命令'
+            - '&b使用方法 &c/gmp &6transaction'
+    'Auction':
+        Placeholder: '%gmp_command_auction%'
+        Text: '&c/gmp &6auction'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp transaction help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b拍卖综合命令'
+            - '&b使用方法 &c/gmp &6auction'
+    'Merchandise':
+        Placeholder: '%gmp_command_merchandise%'
+        Text: '&c/gmp &6merchandise'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b管理与查看商品'
+            - '&b使用方法 &c/gmp &6merchandise'
+    'Mailbox':
+        Placeholder: '%gmp_command_mailbox%'
+        Text: '&c/gmp &6mailbox'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b玩家邮箱综合命令'
+            - '&b使用方法 &c/gmp &6mailbox'
+    'Category':
+        Placeholder: '%gmp_command_category%'
+        Text: '&c/gmp &6category'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp category help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商品分类综合命令'
+            - '&b使用方法 &c/gmp &6category'
+    'Profile':
+        Placeholder: '%gmp_command_profile%'
+        Text: '&c/gmp &6profile'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp profile help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b管理商家个人档案'
+            - '&b使用方法 &c/gmp &6profile'
+    'GUI':
+        Placeholder: '%gmp_command_gui%'
+        Text: '&c/gmp &6gui'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp gui help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b管理和查看自定义GUI'
+            - '&b使用方法 &c/gmp &6gui'
+    'Money':
+        Placeholder: '%gmp_command_money%'
+        Text: '&c/gmp &6money'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp money help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b管理玩家的账户余额'
+            - '&b使用方法 &c/gmp &6money'
+    'Reload':
+        Placeholder: '%gmp_command_reload%'
+        Text: '&c/gmp &6reload'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重载插件'
+            - '&b使用方法 &c/gmp &6reload'
+    'Admin':
+        Placeholder: '%gmp_command_admin%'
+        Text: '&c/gmp &6admin'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b插件核心管理及插件管理员命令'
+            - '&b使用方法 &c/gmp &6admin'
+Traditional-Chinese:
+    ###############################
+    #           命令幫助           #
+    ###############################
+    'Help':
+        Placeholder: '%gmp_command_help%'
+        Text: '&c/gmp &6help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看插件幫助'
+            - '&b使用方法 &c/gmp &6help'
+    'Market':
+        Placeholder: '%gmp_command_market%'
+        Text: '&c/gmp &6market'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp market help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b全球市場綜合命令'
+            - '&b使用方法 &c/gmp &6market'
+    'Transaction':
+        Placeholder: '%gmp_command_transaction%'
+        Text: '&c/gmp &6transaction'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp transaction help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商品交易綜合命令'
+            - '&b使用方法 &c/gmp &6transaction'
+    'Auction':
+        Placeholder: '%gmp_command_auction%'
+        Text: '&c/gmp &6auction'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp transaction help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b拍賣綜合命令'
+            - '&b使用方法 &c/gmp &6auction'
+    'Merchandise':
+        Placeholder: '%gmp_command_merchandise%'
+        Text: '&c/gmp &6merchandise'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b管理與查看商品'
+            - '&b使用方法 &c/gmp &6merchandise'
+    'Mailbox':
+        Placeholder: '%gmp_command_mailbox%'
+        Text: '&c/gmp &6mailbox'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b玩家郵箱綜合命令'
+            - '&b使用方法 &c/gmp &6mailbox'
+    'Category':
+        Placeholder: '%gmp_command_category%'
+        Text: '&c/gmp &6category'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp category help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商品分類綜合命令'
+            - '&b使用方法 &c/gmp &6category'
+    'Profile':
+        Placeholder: '%gmp_command_profile%'
+        Text: '&c/gmp &6profile'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp profile help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b管理商家個人檔案'
+            - '&b使用方法 &c/gmp &6profile'
+    'GUI':
+        Placeholder: '%gmp_command_gui%'
+        Text: '&c/gmp &6gui'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp gui help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b管理和查看自定義GUI'
+            - '&b使用方法 &c/gmp &6gui'
+    'Money':
+        Placeholder: '%gmp_command_money%'
+        Text: '&c/gmp &6money'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp money help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b管理玩家的賬戶餘額'
+            - '&b使用方法 &c/gmp &6money'
+    'Reload':
+        Placeholder: '%gmp_command_reload%'
+        Text: '&c/gmp &6reload'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重載插件'
+            - '&b使用方法 &c/gmp &6reload'
+    'Admin':
+        Placeholder: '%gmp_command_admin%'
+        Text: '&c/gmp &6admin'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b插件核心管理及插件管理員命令'
+            - '&b使用方法 &c/gmp &6admin'
+English:
+    ###############################
+    #        Command Help         #
+    ###############################
+    'Help':
+        Placeholder: '%gmp_command_help%'
+        Text: '&c/gmp &6help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bPlugin commands help'
+            - '&bUsage: &c/gmp &6help'
+    'Market':
+        Placeholder: '%gmp_command_market%'
+        Text: '&c/gmp &6market'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp market help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bGlobal Market commands.'
+            - '&bUsage: &c/gmp &6market'
+    'Transaction':
+        Placeholder: '%gmp_command_transaction%'
+        Text: '&c/gmp &6transaction'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp transaction help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bTransaction commands.'
+            - '&bUsage: &c/gmp &6transaction'
+    'Auction':
+        Placeholder: '%gmp_command_auction%'
+        Text: '&c/gmp &6auction'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp transaction help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bAuction commands.'
+            - '&bUsage &c/gmp &6auction'
+    'Merchandise':
+        Placeholder: '%gmp_command_merchandise%'
+        Text: '&c/gmp &6merchandise'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp merchandise help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bMerchandises management commands.'
+            - '&bUsage: &c/gmp &6merchandise'
+    'Mailbox':
+        Placeholder: '%gmp_command_mailbox%'
+        Text: '&c/gmp &6mailbox'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bMailbox commands.'
+            - '&bUsage: &c/gmp &6mailbox'
+    'Category':
+        Placeholder: '%gmp_command_category%'
+        Text: '&c/gmp &6category'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp category help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bCategory commands.'
+            - '&bUsage: &c/gmp &6category'
+    'Profile':
+        Placeholder: '%gmp_command_profile%'
+        Text: '&c/gmp &6profile'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp profile help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bMerchant profile commands.'
+            - '&bUsage: &c/gmp &6profile'
+    'GUI':
+        Placeholder: '%gmp_command_gui%'
+        Text: '&c/gmp &6gui'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp gui help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bGUI management commands.'
+            - '&bUsage: &c/gmp &6gui'
+    'Money':
+        Placeholder: '%gmp_command_money%'
+        Text: '&c/gmp &6money'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp money help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bMoney management commands.'
+            - '&bUsage: &c/gmp &6money'
+    'Reload':
+        Placeholder: '%gmp_command_reload%'
+        Text: '&c/gmp &6reload'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp reload '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bReload plugin or specific functions'
+            - '&bUsage: &c/gmp &6reload'
+    'Admin':
+        Placeholder: '%gmp_command_admin%'
+        Text: '&c/gmp &6admin'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bAdministrator & Operator commands.'
+            - '&bUsage: &c/gmp &6admin'

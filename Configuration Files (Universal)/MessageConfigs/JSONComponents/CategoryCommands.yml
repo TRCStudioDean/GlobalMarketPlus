@@ -1,0 +1,228 @@
+Simplified-Chinese:
+    'Category Help':
+        Placeholder: '%gmp_command_category_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp category help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b关于 &c/gmp &6category &b的命令帮助'
+    'Category Set':
+        Placeholder: '%gmp_command_category_set%'
+        Text: '&2set [分类] &7[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp category set '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置玩家的商品分类'
+            - '&b使用方法 &c/gmp &6category set [分类] [玩家]'
+    'Category Reset':
+        Placeholder: '%gmp_command_category_reset%'
+        Text: '&2reset &7[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp category reset'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重置玩家的商品分类'
+            - '&b使用方法 &c/gmp &6category reset [玩家]'
+    'Category Info':
+        Placeholder: '%gmp_command_category_info%'
+        Text: '&2info &7[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp category info'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看玩家的商品分类'
+            - '&b使用方法 &c/gmp &6category info [玩家]'
+    'Category GUI':
+        Placeholder: '%gmp_command_category_gui%'
+        Text: '&2gui &7[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp category gui'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b打开自己或他人的分类设置GUI'
+            - '&b使用方法 &c/gmp &6category gui'
+    'Category List':
+        Placeholder: '%gmp_command_category_list%'
+        Text: '&2list'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp category list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有的商品分类模块'
+            - '&b使用方法 &c/gmp &6category list'
+    'Category List Modules':
+        Placeholder: '%gmp_command_category_list_modules%'
+        Text: '&b&l{categoryName}'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp category set {category}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击设置为 &e{categoryName} &5分类模块'
+Traditional-Chinese:
+    'Category Help':
+        Placeholder: '%gmp_command_category_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp category help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b關於 &c/gmp &6category &b的命令幫助'
+    'Category Set':
+        Placeholder: '%gmp_command_category_set%'
+        Text: '&2set [分類] &7[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp category set '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定玩家的商品分類'
+            - '&b使用方法 &c/gmp &6category set [分類] [玩家]'
+    'Category Reset':
+        Placeholder: '%gmp_command_category_reset%'
+        Text: '&2reset &7[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp category reset'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重置玩家的商品分類'
+            - '&b使用方法 &c/gmp &6category reset [玩家]'
+    'Category Info':
+        Placeholder: '%gmp_command_category_info%'
+        Text: '&2info &7[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp category info'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看玩家的商品分類'
+            - '&b使用方法 &c/gmp &6category info [玩家]'
+    'Category GUI':
+        Placeholder: '%gmp_command_category_gui%'
+        Text: '&2gui &7[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp category gui'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b打開自己或他人的分類設定GUI'
+            - '&b使用方法 &c/gmp &6category gui'
+    'Category List':
+        Placeholder: '%gmp_command_category_list%'
+        Text: '&2list'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp category list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有的商品分類模塊'
+            - '&b使用方法 &c/gmp &6category list'
+    'Category List Modules':
+        Placeholder: '%gmp_command_category_list_modules%'
+        Text: '&b&l{categoryName}'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp category set {category}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊設定為 &e{categoryName} &5分類模塊'
+English:
+    'Category Help':
+        Placeholder: '%gmp_command_category_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp category help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bAbout &c/gmp &6category&b''s subcommands help'
+    'Category Set':
+        Placeholder: '%gmp_command_category_set%'
+        Text: '&2set [Category] &7[Player]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp category set '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet the player''s category'
+            - '&bUsage: &c/gmp &6category set [Category] [Player]'
+    'Category Reset':
+        Placeholder: '%gmp_command_category_reset%'
+        Text: '&2reset &7[Player]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp category reset'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bReset the player''s category'
+            - '&bUsage: &c/gmp &6category reset [Player]'
+    'Category Info':
+        Placeholder: '%gmp_command_category_info%'
+        Text: '&2info &7[Player]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp category info'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bView the player''s category'
+            - '&bUsage: &c/gmp &6category info [Player]'
+    'Category GUI':
+        Placeholder: '%gmp_command_category_gui%'
+        Text: '&2gui &7[Player]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp category gui'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bOpen categories GUI'
+            - '&bUsage: &c/gmp &6category gui'
+    'Category List':
+        Placeholder: '%gmp_command_category_list%'
+        Text: '&2list'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp category list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bList all of categories'
+            - '&bUsage: &c/gmp &6category list'
+    'Category List Modules':
+        Placeholder: '%gmp_command_category_list_modules%'
+        Text: '&b&l{categoryName}'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp category set {category}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to set your category to &e{categoryName} &5.'
