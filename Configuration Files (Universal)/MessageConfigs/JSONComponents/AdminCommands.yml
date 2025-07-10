@@ -1,0 +1,3743 @@
+Simplified-Chinese:
+    ###############################
+    #           命令帮助           #
+    ###############################
+    'Admin Help':
+        Placeholder: '%gmp_command_admin_help%'
+        Text: '&c/gmp &6admin &2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b关于 &c/gmp &6admin &b的命令帮助'
+    ###############################
+    #           Item命令           #
+    ###############################
+    'Admin Item':
+        Placeholder: '%gmp_command_admin_item%'
+        Text: '&c/gmp &6admin &2item'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin item help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b管理与查看序列化的物品'
+            - '&b使用方法 &c/gmp &6admin item'
+    'Admin Item Example':
+        Placeholder: '%gmp_command_admin_item_help_example%'
+        Text: '&8&l[&b&l鼠标移至此处查看&8&l]'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - "&7......"
+            - "&2&lCustom-Buttons:"
+            - "&2&l    '示范':"
+            - "&2&l        Name: &7'返回上一个菜单'"
+            - "&2&l        &nSerialized-Item: &7&n'Earth'"
+            - "&2&l        Lores:"
+            - "&2&l        &7- &f''"
+            - "&2&l        &7- &f'点击返回'"
+            - "&2&l        Commands:"
+            - "&2&l        &7- &f'gmp gui back'"
+            - "&2&l        Location:"
+            - "&2&l            Slot-Of-X: &31"
+            - "&2&l            Slot-Of-Y: &31"
+            - '&7......'
+    'Admin Item Create':
+        Placeholder: '%gmp_command_admin_item_create%'
+        Text: '&2create [名字]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin item create '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b创建新的序列化物品&7（需要将物品拿在手中）'
+            - '&b使用方法 &c/gmp &6admin item create [名字]'
+    'Admin Item Delete':
+        Placeholder: '%gmp_command_admin_item_delete%'
+        Text: '&2delete [名字]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin item delete '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b删除指定的序列化物品'
+            - '&b使用方法 &c/gmp &6admin item delete [名字]'
+    'Admin Item Give':
+        Placeholder: '%gmp_command_admin_item_give%'
+        Text: '&2give [名字] &7[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin item give '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b将指定的物品给予玩家'
+            - '&b使用方法 &c/gmp &6admin item give [名字] &7[玩家]'
+    'Admin Item List':
+        Placeholder: '%gmp_command_admin_item_list%'
+        Text: '&2list &7[页数]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin item list '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有序列化物品'
+            - '&b使用方法 &c/gmp &6admin item list &7[页数]'
+    'Admin Item List Next':
+        Placeholder: '%gmp_command_admin_item_list_next%'
+        Text: '&b&l下一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin item list {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到下一页'
+            - '&7当前页数: &e{page}'
+            - '&7下一页: &e{nextPage}'
+    'Admin Item List Previous':
+        Placeholder: '%gmp_command_admin_item_list_previous%'
+        Text: '&b&l上一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin item list {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到上一页'
+            - '&7当前页数: &e{page}'
+            - '&7上一页: &e{previousPage}'
+    'Admin Item List Give':
+        Placeholder: '%gmp_command_admin_item_list_give%'
+        Text: '&8&l[&a&l点击获取&8]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin item give {name}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击获取物品 &e{name}'
+    ###############################
+    #          Cache命令           #
+    ###############################
+    'Admin Cache':
+        Placeholder: '%gmp_command_admin_cache%'
+        Text: '&c/gmp &6admin &2cache'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看与管理缓存数据'
+            - '&b使用方法 &c/gmp &6admin cache'
+    'Admin Cache Merchant':
+        Placeholder: '%gmp_command_admin_cache_merchant%'
+        Text: '&2merchant'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看与管理商家缓存数据'
+            - '&b使用方法 &c/gmp &6admin cache merchant help'
+    'Admin Cache Merchant Load':
+        Placeholder: '%gmp_command_admin_cache_merchant_load%'
+        Text: '&2load [玩家名字/UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache merchant load '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b加载商家缓存'
+            - '&b使用方法 &c/gmp &6admin cache merchant load [玩家名字/UUID]'
+    'Admin Cache Merchant Unload':
+        Placeholder: '%gmp_command_admin_cache_merchant_unload%'
+        Text: '&2unload [玩家名字/UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache merchant unload '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b卸载商家缓存'
+            - '&b使用方法 &c/gmp &6admin cache merchant unload [玩家名字/UUID]'
+    'Admin Cache Merchant List':
+        Placeholder: '%gmp_command_admin_cache_merchant_list%'
+        Text: '&2list &7[页数]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache merchant list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有已加载的商家缓存'
+            - '&b使用方法 &c/gmp &6admin cache merchant list &7[页数]'
+    'Admin Cache Merchant List Unload':
+        Placeholder: '%gmp_command_admin_cache_merchant_list_unload%'
+        Text: '&8&l[&c&l点击卸载&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant unload {uuid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击卸载标识符为 &e{merchant} &5的缓存'
+    'Admin Cache Merchant List Profile':
+        Placeholder: '%gmp_command_admin_cache_merchant_list_profile%'
+        Text: '&8&l[&a&l查看详细&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp profile info {merchant}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击查看商家 &e{merchant} &5的个人档案'
+    'Admin Cache Merchant List Next':
+        Placeholder: '%gmp_command_admin_cache_merchant_list_next%'
+        Text: '&b&l下一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant list {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到下一页'
+            - '&7当前页数: &e{page}'
+            - '&7下一页: &e{nextPage}'
+    'Admin Cache Merchant List Previous':
+        Placeholder: '%gmp_command_admin_cache_merchant_list_previous%'
+        Text: '&b&l上一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant list {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到上一页'
+            - '&7当前页数: &e{page}'
+            - '&7上一页: &e{previousPage}'
+    'Admin Cache Merchant ListAll':
+        Placeholder: '%gmp_command_admin_cache_merchant_listall%'
+        Text: '&2listall &7[页数]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache merchant listall'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出数据库中所有的数据'
+            - '&b使用方法 &c/gmp &6admin cache merchant listall &7[页数]'
+    'Admin Cache Merchant ListAll Load':
+        Placeholder: '%gmp_command_admin_cache_merchant_listall_load%'
+        Text: '&8&l[&a&l点击加载&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant load {uuid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击加载标识符为 &e{merchant} &5的缓存'
+    'Admin Cache Merchant ListAll Next':
+        Placeholder: '%gmp_command_admin_cache_merchant_listall_next%'
+        Text: '&b&l下一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant listall {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到下一页'
+            - '&7当前页数: &e{page}'
+            - '&7下一页: &e{nextPage}'
+    'Admin Cache Merchant ListAll Previous':
+        Placeholder: '%gmp_command_admin_cache_merchant_listall_previous%'
+        Text: '&b&l上一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant listall {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到上一页'
+            - '&7当前页数: &e{page}'
+            - '&7上一页: &e{previousPage}'
+    'Admin Cache Mailbox':
+        Placeholder: '%gmp_command_admin_cache_mailbox%'
+        Text: '&2mailbox'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看与管理邮箱缓存数据'
+            - '&b使用方法 &c/gmp &6admin cache mailbox help'
+    'Admin Cache Mailbox Load':
+        Placeholder: '%gmp_command_admin_cache_mailbox_load%'
+        Text: '&2load [玩家名字/UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache mailbox load '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b加载邮箱缓存'
+            - '&b使用方法 &c/gmp &6admin cache mailbox load [玩家名字/UUID]'
+    'Admin Cache Mailbox Unload':
+        Placeholder: '%gmp_command_admin_cache_mailbox_unload%'
+        Text: '&2unload [玩家名字/UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache mailbox unload '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b卸载邮箱缓存'
+            - '&b使用方法 &c/gmp &6admin cache mailbox unload [玩家名字/UUID]'
+    'Admin Cache Mailbox List':
+        Placeholder: '%gmp_command_admin_cache_mailbox_list%'
+        Text: '&2list &7[页数]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache mailbox list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有已加载的邮箱缓存'
+            - '&b使用方法 &c/gmp &6admin cache mailbox list &7[页数]'
+    'Admin Cache Mailbox List Unload':
+        Placeholder: '%gmp_command_admin_cache_mailbox_list_unload%'
+        Text: '&8&l[&c&l点击卸载&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox unload {uuid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击卸载标识符为 &e{mailbox} &5的缓存'
+    'Admin Cache Mailbox List List':
+        Placeholder: '%gmp_command_admin_cache_mailbox_list_list%'
+        Text: '&8&l[&a&l查看详细&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox list 1 {mailbox}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击查看识符为 &e{mailbox} &5的邮箱内容'
+    'Admin Cache Mailbox List Next':
+        Placeholder: '%gmp_command_admin_cache_mailbox_list_next%'
+        Text: '&b&l下一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox list {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到下一页'
+            - '&7当前页数: &e{page}'
+            - '&7下一页: &e{nextPage}'
+    'Admin Cache Mailbox List Previous':
+        Placeholder: '%gmp_command_admin_cache_mailbox_list_previous%'
+        Text: '&b&l上一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox list {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到上一页'
+            - '&7当前页数: &e{page}'
+            - '&7上一页: &e{previousPage}'
+    'Admin Cache Mailbox ListAll':
+        Placeholder: '%gmp_command_admin_cache_mailbox_listall%'
+        Text: '&2listall &7[页数]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache mailbox listall'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出数据库中所有的数据'
+            - '&b使用方法 &c/gmp &6admin cache mailbox listall &7[页数]'
+    'Admin Cache Mailbox ListAll Load':
+        Placeholder: '%gmp_command_admin_cache_mailbox_listall_load%'
+        Text: '&8&l[&a&l点击加载&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox load {uuid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击加载标识符为 &e{mailbox} &5的缓存'
+    'Admin Cache Mailbox ListAll Next':
+        Placeholder: '%gmp_command_admin_cache_mailbox_listall_next%'
+        Text: '&b&l下一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox listall {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到下一页'
+            - '&7当前页数: &e{page}'
+            - '&7下一页: &e{nextPage}'
+    'Admin Cache Mailbox ListAll Previous':
+        Placeholder: '%gmp_command_admin_cache_mailbox_listall_previous%'
+        Text: '&b&l上一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox listall {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到上一页'
+            - '&7当前页数: &e{page}'
+            - '&7上一页: &e{previousPage}'
+    ###############################
+    #          Group命令           #
+    ###############################
+    'Admin Group':
+        Placeholder: '%gmp_command_admin_group%'
+        Text: '&c/gmp &6admin &2group'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin group help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看用户组信息'
+            - '&b使用方法 &c/gmp &6admin group'
+    'Admin Group Info':
+        Placeholder: '%gmp_command_admin_group_info%'
+        Text: '&2info [用户组]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin group info '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b显示用户组信息'
+            - '&b使用方法 &c/gmp &6admin group info [用户组]'
+    'Admin Group List':
+        Placeholder: '%gmp_command_admin_group_list%'
+        Text: '&2list &7[页数]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin group list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有用户组'
+            - '&b使用方法 &c/gmp &6admin group list [页数]'
+    'Admin Group List Next':
+        Placeholder: '%gmp_command_admin_group_list_next%'
+        Text: '&b&l下一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin group list {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到下一页'
+            - '&7当前页数: &e{page}'
+            - '&7下一页: &e{nextPage}'
+    'Admin Group List Previous':
+        Placeholder: '%gmp_command_admin_group_list_previous%'
+        Text: '&b&l上一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin group list {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到上一页'
+            - '&7当前页数: &e{page}'
+            - '&7上一页: &e{previousPage}'
+    'Admin Group List Info':
+        Placeholder: '%gmp_command_admin_group_list_info%'
+        Text: '&8&l[&9&l查看信息&8]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin group info {groupName}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击查看用户组 &e{groupName} &5的详细信息'
+    ###############################
+    #         Recorder命令         #
+    ###############################
+    'Admin Recorder':
+        Placeholder: '%gmp_command_admin_recorder%'
+        Text: '&c/gmp &6admin &2recorder'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看与操作记录器'
+            - '&b使用方法 &c/gmp &6admin recorder'
+    'Admin Recorder Result':
+        Placeholder: '%gmp_command_admin_recorder_result%'
+        Text: '&2result'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder result help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查询结果相关命令'
+            - '&b使用方法 &c/gmp &6admin recorder result'
+    'Admin Recorder MailExchange':
+        Placeholder: '%gmp_command_admin_recorder_mailExchange%'
+        Text: '&2mailExchange'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder mailExchange'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b邮件交互相关记录'
+            - '&b使用方法 &c/gmp &6admin recorder mailExchange'
+    'Admin Recorder MailPickup':
+        Placeholder: '%gmp_command_admin_recorder_mailPickup%'
+        Text: '&2mailPickup'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder mailPickup'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b邮件签收相关记录'
+            - '&b使用方法 &c/gmp &6admin recorder mailPickup'
+    'Admin Recorder MerchandiseUpload':
+        Placeholder: '%gmp_command_admin_recorder_merchandiseUpload%'
+        Text: '&2merchandiseUpload'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder merchandiseUpload'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商品上架相关记录'
+            - '&b使用方法 &c/gmp &6admin recorder merchandiseUpload'
+    'Admin Recorder MerchandiseRemove':
+        Placeholder: '%gmp_command_admin_recorder_merchandiseRemove%'
+        Text: '&2merchandiseRemove'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder merchandiseRemove'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商品下架相关记录'
+            - '&b使用方法 &c/gmp &6admin recorder merchandiseRemove'
+    'Admin Recorder Payment':
+        Placeholder: '%gmp_command_admin_recorder_payment%'
+        Text: '&2payment'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder payment'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b玩家转账相关记录'
+            - '&b使用方法 &c/gmp &6admin recorder payment'
+    'Admin Recorder Transaction':
+        Placeholder: '%gmp_command_admin_recorder_transaction%'
+        Text: '&2transaction'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder transaction'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商品交易相关记录'
+            - '&b使用方法 &c/gmp &6admin recorder transaction'
+    'Admin Recorder Auction':
+        Placeholder: '%gmp_command_admin_recorder_auction%'
+        Text: '&2auction'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder auction'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b拍卖相关记录'
+            - '&b使用方法 &c/gmp &6admin recorder auction'
+    'Admin Recorder BalanceChange':
+        Placeholder: '%gmp_command_admin_recorder_balancechange%'
+        Text: '&2balanceChange'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder balanceChange'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b动账相关记录'
+            - '&b使用方法 &c/gmp &6admin recorder balanceChange'
+    'Admin Recorder Parameters Player':
+        Placeholder: '%gmp_command_admin_recorder_parameters_player%'
+        Text: '&2player:[玩家名]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} player:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b目标玩家的名称'
+    'Admin Recorder Parameters UUID':
+        Placeholder: '%gmp_command_admin_recorder_parameters_uuid%'
+        Text: '&2uuid:[玩家UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} uuid:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b目标玩家的UUID'
+    'Admin Recorder Parameters StartDate':
+        Placeholder: '%gmp_command_admin_recorder_parameters_startDate%'
+        Text: '&2startDate:[日期]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} startDate:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b开始的日期'
+            - '&b格式: &e[年-月-日]'
+    'Admin Recorder Parameters EndDate':
+        Placeholder: '%gmp_command_admin_recorder_parameters_endDate%'
+        Text: '&2endDate:[日期]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} endDate:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b结束的日期'
+            - '&b格式: &e[年-月-日]'
+    'Admin Recorder Parameters StartTime':
+        Placeholder: '%gmp_command_admin_recorder_parameters_startTime%'
+        Text: '&2startTime:[时间]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} startTime:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b开始的时间'
+            - '&b格式: &e[时:分:秒]'
+    'Admin Recorder Parameters EndTime':
+        Placeholder: '%gmp_command_admin_recorder_parameters_endTime%'
+        Text: '&2endTime:[时间]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} endTime:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b结束的时间'
+            - '&b格式: &e[时:分:秒]'
+    'Admin Recorder Parameters Date':
+        Placeholder: '%gmp_command_admin_recorder_parameters_date%'
+        Text: '&2date:[日期]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} date:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b具体日期'
+            - '&b格式: &e[年-月-日]'
+    'Admin Recorder Parameters MailExchange Sender':
+        Placeholder: '%gmp_command_admin_recorder_parameters_mailExchange_sender%'
+        Text: '&2sender:[发送者]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder mailExchange sender:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b发送邮件的人'
+    'Admin Recorder Parameters MailExchange Receiver':
+        Placeholder: '%gmp_command_admin_recorder_parameters_mailExchange_receiver%'
+        Text: '&2receiver:[接收者]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder mailExchange receiver:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b接收邮件的人'
+    'Admin Recorder Parameters MailPickUp Sender':
+        Placeholder: '%gmp_command_admin_recorder_parameters_mailPickUp_sender%'
+        Text: '&2sender:[发送者]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder mailPickUp sender:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b发送邮件的人'
+    'Admin Recorder Parameters MailPickUp Receiver':
+        Placeholder: '%gmp_command_admin_recorder_parameters_mailPickUp_receiver%'
+        Text: '&2receiver:[接收者]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder mailPickUp receiver:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b接收邮件的人'
+    'Admin Recorder Parameters MerchandiseRemove Merchant':
+        Placeholder: '%gmp_command_admin_recorder_parameters_merchandiseRemove_merchant%'
+        Text: '&2merchant:[商家名字]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder merchandiseRemove merchant:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商家的名字'
+    'Admin Recorder Parameters MerchandiseRemove Type':
+        Placeholder: '%gmp_command_admin_recorder_parameters_merchandiseRemove_type%'
+        Text: '&2type:[商品类型]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder merchandiseRemove type:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商品的类型'
+    'Admin Recorder Parameters MerchandiseUpload Merchant':
+        Placeholder: '%gmp_command_admin_recorder_parameters_merchandiseUpload_merchant%'
+        Text: '&2merchant:[商家名字]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder merchandiseUpload merchant:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商家的名字'
+    'Admin Recorder Parameters MerchandiseUpload Type':
+        Placeholder: '%gmp_command_admin_recorder_parameters_merchandiseUpload_type%'
+        Text: '&2type:[商品类型]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder merchandiseUpload type:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商品的类型'
+    'Admin Recorder Parameters Payment Payer':
+        Placeholder: '%gmp_command_admin_recorder_parameters_payment_payer%'
+        Text: '&2payer:[付款人]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder payment payer:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b转账的人'
+    'Admin Recorder Parameters Payment Payee':
+        Placeholder: '%gmp_command_admin_recorder_parameters_payment_payee%'
+        Text: '&2payee:[收款者]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder payment payee:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b收款的人'
+    'Admin Recorder Parameters Transaction Trader':
+        Placeholder: '%gmp_command_admin_recorder_parameters_transaction_trader%'
+        Text: '&2trader:[买家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder transaction trader:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b发起交易的人'
+    'Admin Recorder Parameters Transaction Merchant':
+        Placeholder: '%gmp_command_admin_recorder_parameters_transaction_merchant%'
+        Text: '&2merchant:[卖家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder transaction merchant:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商品的主人'
+    'Admin Recorder Parameters Transaction Action':
+        Placeholder: '%gmp_command_admin_recorder_parameters_transaction_action%'
+        Text: '&2action:[交易方式]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder transaction action:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b交易方式&2(出售、收购等)'
+    'Admin Recorder Parameters Auction TopBidder':
+        Placeholder: '%gmp_command_admin_recorder_parameters_auction_topBidder%'
+        Text: '&2topBidder:[买家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder auction topBidder:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b最高拍卖人'
+    'Admin Recorder Parameters Auction Merchant':
+        Placeholder: '%gmp_command_admin_recorder_parameters_auction_merchant%'
+        Text: '&2merchant:[卖家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder auction merchant:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商品的主人'
+    'Admin Recorder Parameters BalanceChange Currency':
+        Placeholder: '%gmp_command_admin_recorder_parameters_balanceChange_currency%'
+        Text: '&2currency:[货币]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder balanceChange currency:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b相关货币'
+    'Admin Recorder Parameters BalanceChange Type':
+        Placeholder: '%gmp_command_admin_recorder_parameters_balanceChange_type%'
+        Text: '&2type:[交易类型]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder balanceChange type:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b交易类型'
+    'Admin Recorder Parameters BalanceChange Succeed':
+        Placeholder: '%gmp_command_admin_recorder_parameters_balanceChange_succeed%'
+        Text: '&2succeed:[true/false]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder balanceChange succeed:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b是否成功'
+    'Admin Recorder Parameters BalanceChange Merchant':
+        Placeholder: '%gmp_command_admin_recorder_parameters_balanceChange_merchant%'
+        Text: '&2merchant:[商家名字]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder balanceChange merchant:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商家名字'
+    'Admin Recorder Parameters BalanceChange Trader':
+        Placeholder: '%gmp_command_admin_recorder_parameters_balanceChange_trader%'
+        Text: '&2trader:[卖家名字]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder balanceChange trader:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b卖家名字'
+    'Admin Recorder Result List Next':
+        Placeholder: '%gmp_command_admin_recorder_result_next%'
+        Text: '&b&l下一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder result list {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到下一页'
+            - '&7当前页数: &e{page}'
+            - '&7下一页: &e{nextPage}'
+    'Admin Recorder Result List Previous':
+        Placeholder: '%gmp_command_admin_recorder_result_previous%'
+        Text: '&b&l上一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder result list {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到上一页'
+            - '&7当前页数: &e{page}'
+            - '&7上一页: &e{previousPage}'
+    'Admin Recorder Result getItem':
+        Placeholder: '%gmp_command_admin_recorder_result_getItem%'
+        Text: '&2getItem [查询编号]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder result getItem '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b获取记录对应的物品'
+            - '&b使用方法 &c/gmp &6admin recorder result &2getItem [查询编号]'
+    'Admin Recorder Result View':
+        Placeholder: '%gmp_command_admin_recorder_result_view%'
+        Text: '&2info [查询编号]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder result info '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看记录的详细信息'
+            - '&b使用方法 &c/gmp &6admin recorder result &2info [查询编号]'
+    'Admin Recorder Result List':
+        Placeholder: '%gmp_command_admin_recorder_result_list%'
+        Text: '&2list [页数]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder result list '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出查询结果'
+            - '&b使用方法 &c/gmp &6admin recorder result &2list [页数]'
+    'Admin Recorder Result Info':
+        Placeholder: '%gmp_command_admin_recorder_result_info%'
+        Text: '&8&l[&9&l详细信息&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder result info {number}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击查看编号为 &e{number} &5的详细记录'
+    'Admin Recorder Result GettingItem':
+        Placeholder: '%gmp_command_admin_recorder_result_gettingItem%'
+        Text: '&8&l[&e&l获取物品&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder result getItem {number}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击获取记录 &e{number} &5对应的物品'
+    ###############################
+    #       ItemBlacklist命令      #
+    ###############################
+    'Admin ItemBlacklist':
+        Placeholder: '%gmp_command_admin_itemblacklist%'
+        Text: '&c/gmp &6admin &2itemblacklist'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin itemblacklist help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b管理物品黑名单'
+            - '&b使用方法 &c/gmp &6admin cache'
+    'Admin ItemBlacklist Add':
+        Placeholder: '%gmp_command_admin_itemblacklist_add%'
+        Text: '&2add [名字] &7[是否匹配NBT参数]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin itemblacklist add '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b添加新的黑名单物品&7（需要将物品拿在手中）'
+            - '&b使用方法 &c/gmp &6admin itemblacklist add [名字] &7[是否匹配NBT参数]'
+    'Admin ItemBlacklist Remove':
+        Placeholder: '%gmp_command_admin_itemblacklist_remove%'
+        Text: '&2remove [名字]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin itemblacklist remove '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b移除指定的黑名单物品'
+            - '&b使用方法 &c/gmp &6admin itemblacklist remove [名字]'
+    'Admin ItemBlacklist Give':
+        Placeholder: '%gmp_command_admin_itemblacklist_give%'
+        Text: '&2give [名字] &7[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin itemblacklist give '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b将指定的物品给予玩家'
+            - '&b使用方法 &c/gmp &6admin itemblacklist give [名字] &7[玩家]'
+    'Admin ItemBlacklist List':
+        Placeholder: '%gmp_command_admin_itemblacklist_list%'
+        Text: '&2list &7[页数]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin itemblacklist list '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有黑名单物品'
+            - '&b使用方法 &c/gmp &6admin itemblacklist list &7[页数]'
+    'Admin ItemBlacklist List Next':
+        Placeholder: '%gmp_command_admin_itemblacklist_list_next%'
+        Text: '&b&l下一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin itemblacklist list {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到下一页'
+            - '&7当前页数: &e{page}'
+            - '&7下一页: &e{nextPage}'
+    'Admin ItemBlacklist List Previous':
+        Placeholder: '%gmp_command_admin_itemblacklist_list_previous%'
+        Text: '&b&l上一页'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin itemblacklist list {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击转到上一页'
+            - '&7当前页数: &e{page}'
+            - '&7上一页: &e{previousPage}'
+    'Admin ItemBlacklist List Give':
+        Placeholder: '%gmp_command_admin_itemblacklist_list_give%'
+        Text: '&8&l[&a&l点击获取&8]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin itemblacklist give {name}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击获取物品 &e{name}'
+    ###############################
+    #         Database命令        #
+    ###############################
+    'Admin Database':
+        Placeholder: '%gmp_command_admin_database%'
+        Text: '&c/gmp &6admin &2database'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin database help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b数据库综合命令'
+            - '&b使用方法 &c/gmp &6admin database'
+    'Admin Database Migrate':
+        Placeholder: '%gmp_command_admin_database_migrate%'
+        Text: '&2migrate [插件名称]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin database migrate '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b从其他插件迁移数据'
+            - '&b使用方法 &c/gmp &6admin database &2migrate [插件名称]'
+    'Admin Database Download':
+        Placeholder: '%gmp_command_admin_database_download%'
+        Text: '&2download [数据类型] [数据对象]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin database download '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b从数据库中下载特定的数据'
+            - '&b使用方法 &c/gmp &6admin database &2download [数据类型] [数据对象]'
+    'Admin Database Download GlobalMarket':
+        Placeholder: '%gmp_command_admin_database_download_globalmarket%'
+        Text: '&2globalMarket [商品编号]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database download globalMarket '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b从全球市场中下载某个商品的数据到本地'
+            - '&b使用方法 &c/gmp &6admin database &2download globalMarket [商品编号]'
+    'Admin Database Download Merchant':
+        Placeholder: '%gmp_command_admin_database_download_merchant%'
+        Text: '&2merchant [商家名字/UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database download merchant '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b从数据库中下载某个商家的数据到本地'
+            - '&b使用方法 &c/gmp &6admin database &2download merchant [商家名字/UUID]'
+    'Admin Database Download Mailbox':
+        Placeholder: '%gmp_command_admin_database_download_mailbox%'
+        Text: '&2mailbox [商家名字/UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database download mailbox '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b从数据库中下载某个邮箱的数据到本地'
+            - '&b使用方法 &c/gmp &6admin database &2download mailbox [商家名字/UUID]'
+    'Admin Database Upload':
+        Placeholder: '%gmp_command_admin_database_upload%'
+        Text: '&2upload [数据类型] [文件名]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin database upload '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b上传特定的数据到数据库中'
+            - '&b使用方法 &c/gmp &6admin database &2upload [数据类型] [文件名]'
+    'Admin Database Upload GlobalMarket':
+        Placeholder: '%gmp_command_admin_database_upload_globalmarket%'
+        Text: '&2globalMarket [文件名]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database upload globalMarket '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b上传插件本地目录的商品数据到数据库'
+            - '&b使用方法 &c/gmp &6admin database &2upload globalMarket [文件名]'
+    'Admin Database Upload Merchant':
+        Placeholder: '%gmp_command_admin_database_upload_merchant%'
+        Text: '&2merchant [文件名]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database upload merchant '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b上传插件本地目录的商家档案到数据库'
+            - '&b使用方法 &c/gmp &6admin database &2upload merchant [文件名]'
+    'Admin Database Upload Mailbox':
+        Placeholder: '%gmp_command_admin_database_upload_mailbox%'
+        Text: '&2mailbox [文件名]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database upload mailbox '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b上传插件本地目录的邮箱数据到数据库'
+            - '&b使用方法 &c/gmp &6admin database &2upload mailbox [文件名]'
+    'Admin Database Clear':
+        Placeholder: '%gmp_command_admin_database_clear%'
+        Text: '&2clear [数据类型] [数据对象]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin database clear '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b清除数据库中特定的数据'
+            - '&b使用方法 &c/gmp &6admin database &2clear [数据类型] [数据对象]'
+    'Admin Database Clear GlobalMarket':
+        Placeholder: '%gmp_command_admin_database_clear_globalmarket%'
+        Text: '&2globalMarket [商品编号/ALL]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database clear globalMarket '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b清除某个商品，或者清空全球市场'
+            - '&b使用方法 &c/gmp &6admin database &2clear globalMarket [商品编号/ALL]'
+    'Admin Database Clear Merchant':
+        Placeholder: '%gmp_command_admin_database_clear_merchant%'
+        Text: '&2merchant [商家名字/UUID/ALL]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database clear merchant '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b清除某个玩家的档案，或者删除所有玩家档案'
+            - '&b使用方法 &c/gmp &6admin database &2clear merchant [商家名字/UUID/ALL]'
+    'Admin Database Clear Mailbox':
+        Placeholder: '%gmp_command_admin_database_clear_mailbox%'
+        Text: '&2mailbox [商家名字/UUID/ALL]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database clear mailbox '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b清除某个邮箱的数据，或者删除所有邮箱数据'
+            - '&b使用方法 &c/gmp &6admin database &2clear mailbox [商家名字/UUID/ALL]'
+    'Admin Database Backup':
+        Placeholder: '%gmp_command_admin_database_backup%'
+        Text: '&2backup [数据类型]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database backup '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b备份特定的数据到本地目录'
+            - '&b使用方法 &c/gmp &6admin database &2backup [数据类型]'
+    'Admin Database Rollback':
+        Placeholder: '%gmp_command_admin_database_rollback%'
+        Text: '&2rollback [备份文件]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database rollback '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b将数据库的按照备份的数据文件进行回滚'
+            - '&b使用方法 &c/gmp &6admin database &2rollback [备份文件]'
+    'Admin Database Confirm':
+        Placeholder: '%gmp_command_admin_database_confirm%'
+        Text: '&2confirm'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database confirm'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b确认操作'
+            - '&b使用方法 &c/gmp &6admin database &2confirm'
+    ###############################
+    #   UpdateItemDisplayName命令  #
+    ###############################
+    'Admin UpdateItemDisplayName':
+        Placeholder: '%gmp_command_admin_updateItemDisplayName%'
+        Text: '&c/gmp &6admin &2updateItemDisplayName [语言代码] [路径]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin updateItemDisplayName '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b更新所有物品的显示名'
+            - '&b使用方法 &c/gmp &6admin &2updateItemDisplayName [语言代码] [路径]'
+    'Admin UpdateItemDisplayName Confirm':
+        Placeholder: '%gmp_command_admin_updateItemDisplayName_confirm%'
+        Text: '&c/gmp &6admin &2updateItemDisplayName {arguments}'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin updateItemDisplayName {arguments}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击填充命令'
+Traditional-Chinese:
+    ###############################
+    #           命令幫助           #
+    ###############################
+    'Admin Help':
+        Placeholder: '%gmp_command_admin_help%'
+        Text: '&c/gmp &6admin &2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b關於 &c/gmp &6admin &b的命令幫助'
+    ###############################
+    #           Item命令           #
+    ###############################
+    'Admin Item':
+        Placeholder: '%gmp_command_admin_item%'
+        Text: '&c/gmp &6admin &2item'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin item help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b管理與查看序列化的物品'
+            - '&b使用方法 &c/gmp &6admin item'
+    'Admin Item Example':
+        Placeholder: '%gmp_command_admin_item_help_example%'
+        Text: '&8&l[&b&l鼠標移至此處查看&8&l]'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - "&7......"
+            - "&2&lCustom-Buttons:"
+            - "&2&l    '示範':"
+            - "&2&l        Name: &7'返回上一個菜單'"
+            - "&2&l        &nSerialized-Item: &7&n'Earth'"
+            - "&2&l        Lores:"
+            - "&2&l        &7- &f''"
+            - "&2&l        &7- &f'點擊返回'"
+            - "&2&l        Commands:"
+            - "&2&l        &7- &f'gmp gui back'"
+            - "&2&l        Location:"
+            - "&2&l            Slot-Of-X: &31"
+            - "&2&l            Slot-Of-Y: &31"
+            - '&7......'
+    'Admin Item Create':
+        Placeholder: '%gmp_command_admin_item_create%'
+        Text: '&2create [名字]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin item create '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b創建新的序列化物品&7（需要將物品拿在手中）'
+            - '&b使用方法 &c/gmp &6admin item create [名字]'
+    'Admin Item Delete':
+        Placeholder: '%gmp_command_admin_item_delete%'
+        Text: '&2delete [名字]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin item delete '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b刪除指定的序列化物品'
+            - '&b使用方法 &c/gmp &6admin item delete [名字]'
+    'Admin Item Give':
+        Placeholder: '%gmp_command_admin_item_give%'
+        Text: '&2give [名字] &7[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin item give '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b將指定的物品給予玩家'
+            - '&b使用方法 &c/gmp &6admin item give [名字] &7[玩家]'
+    'Admin Item List':
+        Placeholder: '%gmp_command_admin_item_list%'
+        Text: '&2list &7[頁數]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin item list '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有序列化物品'
+            - '&b使用方法 &c/gmp &6admin item list &7[頁數]'
+    'Admin Item List Next':
+        Placeholder: '%gmp_command_admin_item_list_next%'
+        Text: '&b&l下一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin item list {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到下一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7下一頁: &e{nextPage}'
+    'Admin Item List Previous':
+        Placeholder: '%gmp_command_admin_item_list_previous%'
+        Text: '&b&l上一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin item list {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到上一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7上一頁: &e{previousPage}'
+    'Admin Item List Give':
+        Placeholder: '%gmp_command_admin_item_list_give%'
+        Text: '&8&l[&a&l點擊獲取&8]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin item give {name}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊獲取物品 &e{name}'
+    ###############################
+    #          Cache命令           #
+    ###############################
+    'Admin Cache':
+        Placeholder: '%gmp_command_admin_cache%'
+        Text: '&c/gmp &6admin &2cache'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看與管理緩存數據'
+            - '&b使用方法 &c/gmp &6admin cache'
+            
+    'Admin Cache Merchant':
+        Placeholder: '%gmp_command_admin_cache_merchant%'
+        Text: '&2merchant'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看與管理商家緩存數據'
+            - '&b使用方法 &c/gmp &6admin cache merchant help'
+    'Admin Cache Merchant Load':
+        Placeholder: '%gmp_command_admin_cache_merchant_load%'
+        Text: '&2load [玩家名字/UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache merchant load '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b加載商家緩存'
+            - '&b使用方法 &c/gmp &6admin cache merchant load [玩家名字/UUID]'
+    'Admin Cache Merchant Unload':
+        Placeholder: '%gmp_command_admin_cache_merchant_unload%'
+        Text: '&2unload [玩家名字/UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache merchant unload '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b卸載商家緩存'
+            - '&b使用方法 &c/gmp &6admin cache merchant unload [玩家名字/UUID]'
+    'Admin Cache Merchant List':
+        Placeholder: '%gmp_command_admin_cache_merchant_list%'
+        Text: '&2list &7[頁數]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache merchant list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有已加載的商家緩存'
+            - '&b使用方法 &c/gmp &6admin cache merchant list &7[頁數]'
+    'Admin Cache Merchant List Unload':
+        Placeholder: '%gmp_command_admin_cache_merchant_list_unload%'
+        Text: '&8&l[&c&l點擊卸載&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant unload {uuid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊卸載標識符為 &e{merchant} &5的緩存'
+    'Admin Cache Merchant List Profile':
+        Placeholder: '%gmp_command_admin_cache_merchant_list_profile%'
+        Text: '&8&l[&a&l查看詳細&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp profile info {merchant}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊查看商家 &e{merchant} &5的個人檔案'
+    'Admin Cache Merchant List Next':
+        Placeholder: '%gmp_command_admin_cache_merchant_list_next%'
+        Text: '&b&l下一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant list {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到下一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7下一頁: &e{nextPage}'
+    'Admin Cache Merchant List Previous':
+        Placeholder: '%gmp_command_admin_cache_merchant_list_previous%'
+        Text: '&b&l上一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant list {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到上一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7上一頁: &e{previousPage}'
+    'Admin Cache Merchant ListAll':
+        Placeholder: '%gmp_command_admin_cache_merchant_listall%'
+        Text: '&2listall &7[頁數]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache merchant listall'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出資料庫中所有的數據'
+            - '&b使用方法 &c/gmp &6admin cache merchant listall &7[頁數]'
+    'Admin Cache Merchant ListAll Load':
+        Placeholder: '%gmp_command_admin_cache_merchant_listall_load%'
+        Text: '&8&l[&a&l點擊加載&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant load {uuid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊加載標識符為 &e{merchant} &5的緩存'
+    'Admin Cache Merchant ListAll Next':
+        Placeholder: '%gmp_command_admin_cache_merchant_listall_next%'
+        Text: '&b&l下一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant listall {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到下一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7下一頁: &e{nextPage}'
+    'Admin Cache Merchant ListAll Previous':
+        Placeholder: '%gmp_command_admin_cache_merchant_listall_previous%'
+        Text: '&b&l上一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant listall {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到上一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7上一頁: &e{previousPage}'
+            
+    'Admin Cache Mailbox':
+        Placeholder: '%gmp_command_admin_cache_mailbox%'
+        Text: '&2mailbox'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看與管理郵箱緩存數據'
+            - '&b使用方法 &c/gmp &6admin cache mailbox help'
+    'Admin Cache Mailbox Load':
+        Placeholder: '%gmp_command_admin_cache_mailbox_load%'
+        Text: '&2load [玩家名字/UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache mailbox load '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b加載郵箱緩存'
+            - '&b使用方法 &c/gmp &6admin cache mailbox load [玩家名字/UUID]'
+    'Admin Cache Mailbox Unload':
+        Placeholder: '%gmp_command_admin_cache_mailbox_unload%'
+        Text: '&2unload [玩家名字/UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache mailbox unload '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b卸載郵箱緩存'
+            - '&b使用方法 &c/gmp &6admin cache mailbox unload [玩家名字/UUID]'
+    'Admin Cache Mailbox List':
+        Placeholder: '%gmp_command_admin_cache_mailbox_list%'
+        Text: '&2list &7[頁數]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache mailbox list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有已加載的郵箱緩存'
+            - '&b使用方法 &c/gmp &6admin cache mailbox list &7[頁數]'
+    'Admin Cache Mailbox List Unload':
+        Placeholder: '%gmp_command_admin_cache_mailbox_list_unload%'
+        Text: '&8&l[&c&l點擊卸載&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox unload {uuid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊卸載標識符為 &e{mailbox} &5的緩存'
+    'Admin Cache Mailbox List List':
+        Placeholder: '%gmp_command_admin_cache_mailbox_list_list%'
+        Text: '&8&l[&a&l查看詳細&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox list 1 {mailbox}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊查看識符為 &e{mailbox} &5的郵箱內容'
+    'Admin Cache Mailbox List Next':
+        Placeholder: '%gmp_command_admin_cache_mailbox_list_next%'
+        Text: '&b&l下一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox list {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到下一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7下一頁: &e{nextPage}'
+    'Admin Cache Mailbox List Previous':
+        Placeholder: '%gmp_command_admin_cache_mailbox_list_previous%'
+        Text: '&b&l上一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox list {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到上一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7上一頁: &e{previousPage}'
+    'Admin Cache Mailbox ListAll':
+        Placeholder: '%gmp_command_admin_cache_mailbox_listall%'
+        Text: '&2listall &7[頁數]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache mailbox listall'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出資料庫中所有的數據'
+            - '&b使用方法 &c/gmp &6admin cache mailbox listall &7[頁數]'
+    'Admin Cache Mailbox ListAll Load':
+        Placeholder: '%gmp_command_admin_cache_mailbox_listall_load%'
+        Text: '&8&l[&a&l點擊加載&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox load {uuid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊加載標識符為 &e{mailbox} &5的緩存'
+    'Admin Cache Mailbox ListAll Next':
+        Placeholder: '%gmp_command_admin_cache_mailbox_listall_next%'
+        Text: '&b&l下一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox listall {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到下一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7下一頁: &e{nextPage}'
+    'Admin Cache Mailbox ListAll Previous':
+        Placeholder: '%gmp_command_admin_cache_mailbox_listall_previous%'
+        Text: '&b&l上一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox listall {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到上一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7上一頁: &e{previousPage}'
+    ###############################
+    #          Group命令           #
+    ###############################
+    'Admin Group':
+        Placeholder: '%gmp_command_admin_group%'
+        Text: '&c/gmp &6admin &2group'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin group help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看用戶組信息'
+            - '&b使用方法 &c/gmp &6admin group'
+    'Admin Group Info':
+        Placeholder: '%gmp_command_admin_group_info%'
+        Text: '&2info [用戶組]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin group info '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b顯示用戶組信息'
+            - '&b使用方法 &c/gmp &6admin group info [用戶組]'
+    'Admin Group List':
+        Placeholder: '%gmp_command_admin_group_list%'
+        Text: '&2list &7[頁數]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin group list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有用戶組'
+            - '&b使用方法 &c/gmp &6admin group list [頁數]'
+    'Admin Group List Next':
+        Placeholder: '%gmp_command_admin_group_list_next%'
+        Text: '&b&l下一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin group list {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到下一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7下一頁: &e{nextPage}'
+    'Admin Group List Previous':
+        Placeholder: '%gmp_command_admin_group_list_previous%'
+        Text: '&b&l上一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin group list {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到上一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7上一頁: &e{previousPage}'
+    'Admin Group List Info':
+        Placeholder: '%gmp_command_admin_group_list_info%'
+        Text: '&8&l[&9&l查看信息&8]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin group info {groupName}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊查看用戶組 &e{groupName} &5的詳細信息'
+    ###############################
+    #         Database命令         #
+    ###############################
+    'Admin Database':
+        Placeholder: '%gmp_command_admin_database%'
+        Text: '&c/gmp &6admin &2database'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin database help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b資料庫綜合命令'
+            - '&b使用方法 &c/gmp &6admin database'
+    ###############################
+    #         Recorder命令         #
+    ###############################
+    'Admin Recorder':
+        Placeholder: '%gmp_command_admin_recorder%'
+        Text: '&c/gmp &6admin &2recorder'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看與操作記錄器'
+            - '&b使用方法 &c/gmp &6admin recorder'
+    'Admin Recorder Result':
+        Placeholder: '%gmp_command_admin_recorder_result%'
+        Text: '&2result'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder result help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查詢結果相關命令'
+            - '&b使用方法 &c/gmp &6admin recorder result'
+    'Admin Recorder MailExchange':
+        Placeholder: '%gmp_command_admin_recorder_mailExchange%'
+        Text: '&2mailExchange'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder mailExchange'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b郵件交互相關記錄'
+            - '&b使用方法 &c/gmp &6admin recorder mailExchange'
+    'Admin Recorder MailPickup':
+        Placeholder: '%gmp_command_admin_recorder_mailPickup%'
+        Text: '&2mailPickup'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder mailPickup'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b郵件簽收相關記錄'
+            - '&b使用方法 &c/gmp &6admin recorder mailPickup'
+    'Admin Recorder MerchandiseUpload':
+        Placeholder: '%gmp_command_admin_recorder_merchandiseUpload%'
+        Text: '&2merchandiseUpload'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder merchandiseUpload'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商品上架相關記錄'
+            - '&b使用方法 &c/gmp &6admin recorder merchandiseUpload'
+    'Admin Recorder MerchandiseRemove':
+        Placeholder: '%gmp_command_admin_recorder_merchandiseRemove%'
+        Text: '&2merchandiseRemove'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder merchandiseRemove'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商品下架相關記錄'
+            - '&b使用方法 &c/gmp &6admin recorder merchandiseRemove'
+    'Admin Recorder Payment':
+        Placeholder: '%gmp_command_admin_recorder_payment%'
+        Text: '&2payment'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder payment'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b玩家轉賬相關記錄'
+            - '&b使用方法 &c/gmp &6admin recorder payment'
+    'Admin Recorder Transaction':
+        Placeholder: '%gmp_command_admin_recorder_transaction%'
+        Text: '&2transaction'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder transaction'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商品交易相關記錄'
+            - '&b使用方法 &c/gmp &6admin recorder transaction'
+    'Admin Recorder Auction':
+        Placeholder: '%gmp_command_admin_recorder_auction%'
+        Text: '&2auction'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder auction'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b拍賣相關記錄'
+            - '&b使用方法 &c/gmp &6admin recorder auction'
+    'Admin Recorder BalanceChange':
+        Placeholder: '%gmp_command_admin_recorder_balancechange%'
+        Text: '&2balanceChange'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder balanceChange'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b賬戶操作相關記錄'
+            - '&b使用方法 &c/gmp &6admin recorder balanceChange'
+    'Admin Recorder Parameters Player':
+        Placeholder: '%gmp_command_admin_recorder_parameters_player%'
+        Text: '&2player:[玩家名]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} player:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b目標玩家的名稱'
+    'Admin Recorder Parameters UUID':
+        Placeholder: '%gmp_command_admin_recorder_parameters_uuid%'
+        Text: '&2uuid:[玩家UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} uuid:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b目標玩家的UUID'
+    'Admin Recorder Parameters StartDate':
+        Placeholder: '%gmp_command_admin_recorder_parameters_startDate%'
+        Text: '&2startDate:[日期]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} startDate:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b開始的日期'
+            - '&b格式: &e[年-月-日]'
+    'Admin Recorder Parameters EndDate':
+        Placeholder: '%gmp_command_admin_recorder_parameters_endDate%'
+        Text: '&2endDate:[日期]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} endDate:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b結束的日期'
+            - '&b格式: &e[年-月-日]'
+    'Admin Recorder Parameters StartTime':
+        Placeholder: '%gmp_command_admin_recorder_parameters_startTime%'
+        Text: '&2startTime:[時間]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} startTime:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b開始的時間'
+            - '&b格式: &e[時:分:秒]'
+    'Admin Recorder Parameters EndTime':
+        Placeholder: '%gmp_command_admin_recorder_parameters_endTime%'
+        Text: '&2endTime:[時間]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} endTime:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b結束的時間'
+            - '&b格式: &e[時:分:秒]'
+    'Admin Recorder Parameters Date':
+        Placeholder: '%gmp_command_admin_recorder_parameters_date%'
+        Text: '&2date:[日期]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} date:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b具體日期'
+            - '&b格式: &e[年-月-日]'
+    'Admin Recorder Parameters MailExchange Sender':
+        Placeholder: '%gmp_command_admin_recorder_parameters_mailExchange_sender%'
+        Text: '&2sender:[發送者]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder mailExchange sender:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b發送郵件的人'
+    'Admin Recorder Parameters MailExchange Receiver':
+        Placeholder: '%gmp_command_admin_recorder_parameters_mailExchange_receiver%'
+        Text: '&2receiver:[接收者]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder mailExchange receiver:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b接收郵件的人'
+    'Admin Recorder Parameters MailPickUp Sender':
+        Placeholder: '%gmp_command_admin_recorder_parameters_mailPickUp_sender%'
+        Text: '&2sender:[發送者]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder mailPickUp sender:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b發送郵件的人'
+    'Admin Recorder Parameters MailPickUp Receiver':
+        Placeholder: '%gmp_command_admin_recorder_parameters_mailPickUp_receiver%'
+        Text: '&2receiver:[接收者]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder mailPickUp receiver:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b接收郵件的人'
+    'Admin Recorder Parameters MerchandiseRemove Merchant':
+        Placeholder: '%gmp_command_admin_recorder_parameters_merchandiseRemove_merchant%'
+        Text: '&2merchant:[商家名字]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder merchandiseRemove merchant:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商家的名字'
+    'Admin Recorder Parameters MerchandiseRemove Type':
+        Placeholder: '%gmp_command_admin_recorder_parameters_merchandiseRemove_type%'
+        Text: '&2type:[商品類型]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder merchandiseRemove type:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商品的類型'
+    'Admin Recorder Parameters MerchandiseUpload Merchant':
+        Placeholder: '%gmp_command_admin_recorder_parameters_merchandiseUpload_merchant%'
+        Text: '&2merchant:[商家名字]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder merchandiseUpload merchant:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商家的名字'
+    'Admin Recorder Parameters MerchandiseUpload Type':
+        Placeholder: '%gmp_command_admin_recorder_parameters_merchandiseUpload_type%'
+        Text: '&2type:[商品類型]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder merchandiseUpload type:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商品的類型'
+    'Admin Recorder Parameters Payment Payer':
+        Placeholder: '%gmp_command_admin_recorder_parameters_payment_payer%'
+        Text: '&2payer:[付款人]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder payment payer:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b轉賬的人'
+    'Admin Recorder Parameters Payment Payee':
+        Placeholder: '%gmp_command_admin_recorder_parameters_payment_payee%'
+        Text: '&2payee:[收款者]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder payment payee:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b收款的人'
+    'Admin Recorder Parameters Transaction Trader':
+        Placeholder: '%gmp_command_admin_recorder_parameters_transaction_trader%'
+        Text: '&2trader:[買家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder transaction trader:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b發起交易的人'
+    'Admin Recorder Parameters Transaction Merchant':
+        Placeholder: '%gmp_command_admin_recorder_parameters_transaction_merchant%'
+        Text: '&2merchant:[賣家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder transaction merchant:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商品的主人'
+    'Admin Recorder Parameters Transaction Action':
+        Placeholder: '%gmp_command_admin_recorder_parameters_transaction_action%'
+        Text: '&2action:[交易方式]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder transaction action:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b交易方式&2(出售、收購等)'
+    'Admin Recorder Parameters Auction TopBidder':
+        Placeholder: '%gmp_command_admin_recorder_parameters_auction_topBidder%'
+        Text: '&2topBidder:[買家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder auction topBidder:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b最高拍卖人'
+    'Admin Recorder Parameters Auction Merchant':
+        Placeholder: '%gmp_command_admin_recorder_parameters_auction_merchant%'
+        Text: '&2merchant:[賣家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder auction merchant:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商品的主人'
+    'Admin Recorder Parameters BalanceChange Currency':
+        Placeholder: '%gmp_command_admin_recorder_parameters_balanceChange_currency%'
+        Text: '&2currency:[貨幣]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder balanceChange currency:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b相關貨幣'
+    'Admin Recorder Parameters BalanceChange Type':
+        Placeholder: '%gmp_command_admin_recorder_parameters_balanceChange_type%'
+        Text: '&2type:[交易類型]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder balanceChange type:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b交易類型'
+    'Admin Recorder Parameters BalanceChange Succeed':
+        Placeholder: '%gmp_command_admin_recorder_parameters_balanceChange_succeed%'
+        Text: '&2succeed:[true/false]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder balanceChange succeed:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b是否成功'
+    'Admin Recorder Parameters BalanceChange Merchant':
+        Placeholder: '%gmp_command_admin_recorder_parameters_balanceChange_merchant%'
+        Text: '&2merchant:[商家名字]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder balanceChange merchant:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b商家名字'
+    'Admin Recorder Parameters BalanceChange Trader':
+        Placeholder: '%gmp_command_admin_recorder_parameters_balanceChange_trader%'
+        Text: '&2trader:[賣家名字]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder balanceChange trader:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b賣家名字'
+    'Admin Recorder Result List Next':
+        Placeholder: '%gmp_command_admin_recorder_result_next%'
+        Text: '&b&l下一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder result list {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到下一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7下一頁: &e{nextPage}'
+    'Admin Recorder Result List Previous':
+        Placeholder: '%gmp_command_admin_recorder_result_previous%'
+        Text: '&b&l上一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder result list {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到上一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7上一頁: &e{previousPage}'
+    'Admin Recorder Result getItem':
+        Placeholder: '%gmp_command_admin_recorder_result_getItem%'
+        Text: '&2getItem [查詢編號]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder result getItem '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b獲取記錄對應的物品'
+            - '&b使用方法 &c/gmp &6admin recorder result &2getItem [查詢編號]'
+    'Admin Recorder Result View':
+        Placeholder: '%gmp_command_admin_recorder_result_view%'
+        Text: '&2info [查詢編號]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder result info '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看記錄的詳細信息'
+            - '&b使用方法 &c/gmp &6admin recorder result &2info [查詢編號]'
+    'Admin Recorder Result List':
+        Placeholder: '%gmp_command_admin_recorder_result_list%'
+        Text: '&2list [頁數]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder result list '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出查詢結果'
+            - '&b使用方法 &c/gmp &6admin recorder result &2list [頁數]'
+    'Admin Recorder Result Info':
+        Placeholder: '%gmp_command_admin_recorder_result_info%'
+        Text: '&8&l[&9&l詳細信息&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder result info {number}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊查看編號為 &e{number} &5的詳細記錄'
+    'Admin Recorder Result GettingItem':
+        Placeholder: '%gmp_command_admin_recorder_result_gettingItem%'
+        Text: '&8&l[&e&l獲取物品&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder result getItem {number}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊獲取記錄 &e{number} &5對應的物品'
+    ###############################
+    #       ItemBlacklist命令      #
+    ###############################
+    'Admin ItemBlacklist':
+        Placeholder: '%gmp_command_admin_itemblacklist%'
+        Text: '&c/gmp &6admin &2itemblacklist'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin itemblacklist help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b管理物品黑名單'
+            - '&b使用方法 &c/gmp &6admin cache'
+    'Admin ItemBlacklist Add':
+        Placeholder: '%gmp_command_admin_itemblacklist_add%'
+        Text: '&2add [名字] &7[是否匹配NBT參數]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin itemblacklist add '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b添加新的黑名單物品&7（需要將物品拿在手中）'
+            - '&b使用方法 &c/gmp &6admin itemblacklist add [名字] &7[是否匹配NBT參數]'
+    'Admin ItemBlacklist Remove':
+        Placeholder: '%gmp_command_admin_itemblacklist_remove%'
+        Text: '&2remove [名字]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin itemblacklist remove '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b移除指定的黑名單物品'
+            - '&b使用方法 &c/gmp &6admin itemblacklist remove [名字]'
+    'Admin ItemBlacklist Give':
+        Placeholder: '%gmp_command_admin_itemblacklist_give%'
+        Text: '&2give [名字] &7[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin itemblacklist give '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b將指定的物品給予玩家'
+            - '&b使用方法 &c/gmp &6admin itemblacklist give [名字] &7[玩家]'
+    'Admin ItemBlacklist List':
+        Placeholder: '%gmp_command_admin_itemblacklist_list%'
+        Text: '&2list &7[頁數]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin itemblacklist list '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有黑名單物品'
+            - '&b使用方法 &c/gmp &6admin itemblacklist list &7[頁數]'
+    'Admin ItemBlacklist List Next':
+        Placeholder: '%gmp_command_admin_itemblacklist_list_next%'
+        Text: '&b&l下一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin itemblacklist list {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到下一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7下一頁: &e{nextPage}'
+    'Admin ItemBlacklist List Previous':
+        Placeholder: '%gmp_command_admin_itemblacklist_list_previous%'
+        Text: '&b&l上一頁'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin itemblacklist list {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊轉到上一頁'
+            - '&7當前頁數: &e{page}'
+            - '&7上一頁: &e{previousPage}'
+    'Admin ItemBlacklist List Give':
+        Placeholder: '%gmp_command_admin_itemblacklist_list_give%'
+        Text: '&8&l[&a&l點擊獲取&8]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin itemblacklist give {name}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊獲取物品 &e{name}'
+    ###############################
+    #         Database命令        #
+    ###############################
+    'Admin Database Migrate':
+        Placeholder: '%gmp_command_admin_database_migrate%'
+        Text: '&2migrate [插件名稱]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin database migrate '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b從其他插件遷移數據'
+            - '&b使用方法 &c/gmp &6admin database &2migrate [插件名稱]'
+    'Admin Database Download':
+        Placeholder: '%gmp_command_admin_database_download%'
+        Text: '&2download [數據類型] [數據對象]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin database download '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b從資料庫中下載特定的數據'
+            - '&b使用方法 &c/gmp &6admin database &2download [數據類型] [數據對象]'
+    'Admin Database Download GlobalMarket':
+        Placeholder: '%gmp_command_admin_database_download_globalmarket%'
+        Text: '&2globalMarket [商品編號]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database download globalMarket '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b從全球市場中下載某個商品的數據到本地'
+            - '&b使用方法 &c/gmp &6admin database &2download globalMarket [商品編號]'
+    'Admin Database Download Merchant':
+        Placeholder: '%gmp_command_admin_database_download_merchant%'
+        Text: '&2merchant [商家名字/UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database download merchant '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b從資料庫中下載某個商家的數據到本地'
+            - '&b使用方法 &c/gmp &6admin database &2download merchant [商家名字/UUID]'
+    'Admin Database Download Mailbox':
+        Placeholder: '%gmp_command_admin_database_download_mailbox%'
+        Text: '&2mailbox [商家名字/UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database download mailbox '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b從資料庫中下載某個郵箱的數據到本地'
+            - '&b使用方法 &c/gmp &6admin database &2download mailbox [商家名字/UUID]'
+    'Admin Database Upload':
+        Placeholder: '%gmp_command_admin_database_upload%'
+        Text: '&2upload [數據類型] [文件名]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin database upload '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b上傳特定的數據到資料庫中'
+            - '&b使用方法 &c/gmp &6admin database &2upload [數據類型] [文件名]'
+    'Admin Database Upload GlobalMarket':
+        Placeholder: '%gmp_command_admin_database_upload_globalmarket%'
+        Text: '&2globalMarket [文件名]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database upload globalMarket '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b上傳插件本地目錄的商品數據到資料庫'
+            - '&b使用方法 &c/gmp &6admin database &2upload globalMarket [文件名]'
+    'Admin Database Upload Merchant':
+        Placeholder: '%gmp_command_admin_database_upload_merchant%'
+        Text: '&2merchant [文件名]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database upload merchant '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b上傳插件本地目錄的商家檔案到資料庫'
+            - '&b使用方法 &c/gmp &6admin database &2upload merchant [文件名]'
+    'Admin Database Upload Mailbox':
+        Placeholder: '%gmp_command_admin_database_upload_mailbox%'
+        Text: '&2mailbox [文件名]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database upload mailbox '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b上傳插件本地目錄的郵箱數據到資料庫'
+            - '&b使用方法 &c/gmp &6admin database &2upload mailbox [文件名]'
+    'Admin Database Clear':
+        Placeholder: '%gmp_command_admin_database_clear%'
+        Text: '&2clear [數據類型] [數據對象]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin database clear '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b清除資料庫中特定的數據'
+            - '&b使用方法 &c/gmp &6admin database &2clear [數據類型] [數據對象]'
+    'Admin Database Clear GlobalMarket':
+        Placeholder: '%gmp_command_admin_database_clear_globalmarket%'
+        Text: '&2globalMarket [商品編號/ALL]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database clear globalMarket '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b清除某個商品，或者清空全球市場'
+            - '&b使用方法 &c/gmp &6admin database &2clear globalMarket [商品編號/ALL]'
+    'Admin Database Clear Merchant':
+        Placeholder: '%gmp_command_admin_database_clear_merchant%'
+        Text: '&2merchant [商家名字/UUID/ALL]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database clear merchant '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b清除某個玩家的檔案，或者刪除所有玩家檔案'
+            - '&b使用方法 &c/gmp &6admin database &2clear merchant [商家名字/UUID/ALL]'
+    'Admin Database Clear Mailbox':
+        Placeholder: '%gmp_command_admin_database_clear_mailbox%'
+        Text: '&2mailbox [商家名字/UUID/ALL]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database clear mailbox '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b清除某個郵箱的數據，或者刪除所有郵箱數據'
+            - '&b使用方法 &c/gmp &6admin database &2clear mailbox [商家名字/UUID/ALL]'
+    'Admin Database Backup':
+        Placeholder: '%gmp_command_admin_database_backup%'
+        Text: '&2backup [數據類型]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database backup '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b備份特定的數據到本地目錄'
+            - '&b使用方法 &c/gmp &6admin database &2backup [數據類型]'
+    'Admin Database Rollback':
+        Placeholder: '%gmp_command_admin_database_rollback%'
+        Text: '&2rollback [備份文件]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database rollback '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b將資料庫的按照備份的數據文件進行回滾'
+            - '&b使用方法 &c/gmp &6admin database &2rollback [備份文件]'
+    'Admin Database Confirm':
+        Placeholder: '%gmp_command_admin_database_confirm%'
+        Text: '&2confirm'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database confirm'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b確認操作'
+            - '&b使用方法 &c/gmp &6admin database &2confirm'
+    ###############################
+    #   UpdateItemDisplayName命令  #
+    ###############################
+    'Admin UpdateItemDisplayName':
+        Placeholder: '%gmp_command_admin_updateItemDisplayName%'
+        Text: '&c/gmp &6admin &2updateItemDisplayName [語言程式碼] [路徑]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin updateItemDisplayName '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b更新所有物品的顯示名'
+            - '&b使用方法 &c/gmp &6admin &2updateItemDisplayName [語言程式碼] [路徑]'
+    'Admin UpdateItemDisplayName Confirm':
+        Placeholder: '%gmp_command_admin_updateItemDisplayName_confirm%'
+        Text: '&c/gmp &6admin &2updateItemDisplayName {arguments}'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin updateItemDisplayName {arguments}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點選填充命令'
+English:
+    ###############################
+    #          Admin Help          #
+    ###############################
+    'Admin Help':
+        Placeholder: '%gmp_command_admin_help%'
+        Text: '&c/gmp &6admin &2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bAbout &c/gmp &6admin&b''s subcommands help'
+    ###############################
+    #         Item Command        #
+    ###############################
+    'Admin Item':
+        Placeholder: '%gmp_command_admin_item%'
+        Text: '&c/gmp &6admin &2item'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin item help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bManage and view serialized items'
+            - '&bUsage: &c/gmp &6admin item'
+    'Admin Item Example':
+        Placeholder: '%gmp_command_admin_item_help_example%'
+        Text: '&8&l[&b&lMouse over here to view&8&l]'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - "&7......"
+            - "&2&lCustom-Buttons:"
+            - "&2&l    'Example':"
+            - "&2&l        Name: &7'Return to previous menu'"
+            - "&2&l        &nSerialized-Item: &7&n'Earth'"
+            - "&2&l        Lores:"
+            - "&2&l        &7- &f''"
+            - "&2&l        &7- &f'Click to back'"
+            - "&2&l        Commands:"
+            - "&2&l        &7- &f'gmp gui back'"
+            - "&2&l        Location:"
+            - "&2&l            Slot-Of-X: &31"
+            - "&2&l            Slot-Of-Y: &31"
+            - '&7......'
+    'Admin Item Create':
+        Placeholder: '%gmp_command_admin_item_create%'
+        Text: '&2create [Name]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin item create '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bCreate a new serialized item'
+            - '&bUsage: &c/gmp &6admin item create [Name]'
+    'Admin Item Delete':
+        Placeholder: '%gmp_command_admin_item_delete%'
+        Text: '&2delete [Name]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin item delete '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bDelete a serialized item'
+            - '&bUsage: &c/gmp &6admin item delete [Name]'
+    'Admin Item Give':
+        Placeholder: '%gmp_command_admin_item_give%'
+        Text: '&2give [Name] &7[Player]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin item give '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bGive an item to player'
+            - '&bUsage: &c/gmp &6admin item give [Name] &7[Player]'
+    'Admin Item List':
+        Placeholder: '%gmp_command_admin_item_list%'
+        Text: '&2list &7[Page]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin item list '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bList all of serialized items'
+            - '&bUsage: &c/gmp &6admin item list &7[Page]'
+    'Admin Item List Next':
+        Placeholder: '%gmp_command_admin_item_list_next%'
+        Text: '&b&lNext Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin item list {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to next page'
+            - '&7Now page: &e{page}'
+            - '&7Next page: &e{nextPage}'
+    'Admin Item List Previous':
+        Placeholder: '%gmp_command_admin_item_list_previous%'
+        Text: '&b&lPrevious Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin item list {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to previous page'
+            - '&7Now page: &e{page}'
+            - '&7Previous page: &e{previousPage}'
+    'Admin Item List Give':
+        Placeholder: '%gmp_command_admin_item_list_give%'
+        Text: '&8&l[&a&lClick to get&8]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin item give {name}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to get item &e{name}'
+    ###############################
+    #        Cache Command        #
+    ###############################
+    'Admin Cache':
+        Placeholder: '%gmp_command_admin_cache%'
+        Text: '&c/gmp &6admin &2cache'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bView and manage cached data'
+            - '&bUsage: &c/gmp &6admin cache'
+            
+    'Admin Cache Merchant':
+        Placeholder: '%gmp_command_admin_cache_merchant%'
+        Text: '&2merchant'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bMerchant caches management'
+            - '&bUsage: &c/gmp &6admin cache merchant help'
+    'Admin Cache Merchant Load':
+        Placeholder: '%gmp_command_admin_cache_merchant_load%'
+        Text: '&2load [Player/UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache merchant load '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bLoad cache data'
+            - '&bUsage: &c/gmp &6admin cache merchant load [Player/UUID]'
+    'Admin Cache Merchant Unload':
+        Placeholder: '%gmp_command_admin_cache_merchant_unload%'
+        Text: '&2unload [Player/UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache merchant unload '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bUnload cached data'
+            - '&bUsage: &c/gmp &6admin cache merchant unload [Player/UUID]'
+    'Admin Cache Merchant List':
+        Placeholder: '%gmp_command_admin_cache_merchant_list%'
+        Text: '&2list &7[Page]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache merchant list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bList all of loaded cached data'
+            - '&bUsage: &c/gmp &6admin cache merchant list &7[Page]'
+    'Admin Cache Merchant List Unload':
+        Placeholder: '%gmp_command_admin_cache_merchant_list_unload%'
+        Text: '&8&l[&c&lUnload&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant unload {uuid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to unload &e{merchant}&5''s cache'
+    'Admin Cache Merchant List Profile':
+        Placeholder: '%gmp_command_admin_cache_merchant_list_profile%'
+        Text: '&8&l[&a&lView&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp profile info {merchant}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to view &e{merchant}&5''s profile'
+    'Admin Cache Merchant List Next':
+        Placeholder: '%gmp_command_admin_cache_merchant_list_next%'
+        Text: '&b&lNext Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant list {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to next page'
+            - '&7Now page: &e{page}'
+            - '&7Next page: &e{nextPage}'
+    'Admin Cache Merchant List Previous':
+        Placeholder: '%gmp_command_admin_cache_merchant_list_previous%'
+        Text: '&b&lPrevious Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant list {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to previous page'
+            - '&7Now page: &e{page}'
+            - '&7Previous page: &e{previousPage}'
+    'Admin Cache Merchant ListAll':
+        Placeholder: '%gmp_command_admin_cache_merchant_listall%'
+        Text: '&2listall &7[Page]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache merchant listall'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bList all of database data'
+            - '&bUsage: &c/gmp &6admin cache merchant listall &7[Page]'
+    'Admin Cache Merchant ListAll Load':
+        Placeholder: '%gmp_command_admin_cache_merchant_listall_load%'
+        Text: '&8&l[&a&lLoad&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant load {uuid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to load &e{merchant}&5''s cache'
+    'Admin Cache Merchant ListAll Next':
+        Placeholder: '%gmp_command_admin_cache_merchant_listall_next%'
+        Text: '&b&lNext Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant listall {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to next page'
+            - '&7Now page: &e{page}'
+            - '&7Next page: &e{nextPage}'
+    'Admin Cache Merchant ListAll Previous':
+        Placeholder: '%gmp_command_admin_cache_merchant_listall_previous%'
+        Text: '&b&lPrevious Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache merchant listall {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to previous page'
+            - '&7Now page: &e{page}'
+            - '&7Previous page: &e{previousPage}'
+            
+    'Admin Cache Mailbox':
+        Placeholder: '%gmp_command_admin_cache_mailbox%'
+        Text: '&2mailbox'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bMailbox caches management'
+            - '&bUsage: &c/gmp &6admin cache mailbox help'
+    'Admin Cache Mailbox Load':
+        Placeholder: '%gmp_command_admin_cache_mailbox_load%'
+        Text: '&2load [Player/UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache mailbox load '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bLoad cache data'
+            - '&bUsage: &c/gmp &6admin cache mailbox load [Player/UUID]'
+    'Admin Cache Mailbox Unload':
+        Placeholder: '%gmp_command_admin_cache_mailbox_unload%'
+        Text: '&2unload [Player/UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache mailbox unload '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bUnload cached data'
+            - '&bUsage: &c/gmp &6admin cache mailbox unload [Player/UUID]'
+    'Admin Cache Mailbox List':
+        Placeholder: '%gmp_command_admin_cache_mailbox_list%'
+        Text: '&2list &7[Page]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache mailbox list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bList all of loaded cached data'
+            - '&bUsage: &c/gmp &6admin cache mailbox list &7[Page]'
+    'Admin Cache Mailbox List Unload':
+        Placeholder: '%gmp_command_admin_cache_mailbox_list_unload%'
+        Text: '&8&l[&c&lUnload&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox unload {uuid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to unload &e{mailbox}&5''s cache'
+    'Admin Cache Mailbox List List':
+        Placeholder: '%gmp_command_admin_cache_mailbox_list_list%'
+        Text: '&8&l[&a&lView&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp mailbox list 1 {mailbox}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to view &e{mailbox}&5''s information'
+    'Admin Cache Mailbox List Next':
+        Placeholder: '%gmp_command_admin_cache_mailbox_list_next%'
+        Text: '&b&lNext Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox list {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to next page'
+            - '&7Now page: &e{page}'
+            - '&7Next page: &e{nextPage}'
+    'Admin Cache Mailbox List Previous':
+        Placeholder: '%gmp_command_admin_cache_mailbox_list_previous%'
+        Text: '&b&lPrevious Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox list {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to previous page'
+            - '&7Now page: &e{page}'
+            - '&7Previous page: &e{previousPage}'
+    'Admin Cache Mailbox ListAll':
+        Placeholder: '%gmp_command_admin_cache_mailbox_listall%'
+        Text: '&2listall &7[Page]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin cache mailbox listall'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bList all of database data'
+            - '&bUsage: &c/gmp &6admin cache mailbox listall &7[Page]'
+    'Admin Cache Mailbox ListAll Load':
+        Placeholder: '%gmp_command_admin_cache_mailbox_listall_load%'
+        Text: '&8&l[&a&lLoad&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox load {uuid}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to load &e{mailbox}&5''s cache'
+    'Admin Cache Mailbox ListAll Next':
+        Placeholder: '%gmp_command_admin_cache_mailbox_listall_next%'
+        Text: '&b&lNext Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox listall {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to next page'
+            - '&7Now page: &e{page}'
+            - '&7Next page: &e{nextPage}'
+    'Admin Cache Mailbox ListAll Previous':
+        Placeholder: '%gmp_command_admin_cache_mailbox_listall_previous%'
+        Text: '&b&lPrevious Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin cache mailbox listall {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to previous page'
+            - '&7Now page: &e{page}'
+            - '&7Previous page: &e{previousPage}'
+    ###############################
+    #       Group Commands        #
+    ###############################
+    'Admin Group':
+        Placeholder: '%gmp_command_admin_group%'
+        Text: '&c/gmp &6admin &2group'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin group help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bGroup management'
+            - '&bUsage: &c/gmp &6admin group'
+    'Admin Group Info':
+        Placeholder: '%gmp_command_admin_group_info%'
+        Text: '&2info [Group]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin group info '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bView group''s information'
+            - '&bUsage: &c/gmp &6admin group info [Group]'
+    'Admin Group List':
+        Placeholder: '%gmp_command_admin_group_list%'
+        Text: '&2list &7[Page]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin group list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bList all of groups'
+            - '&bUsage: &c/gmp &6admin group list [Page]'
+    'Admin Group List Next':
+        Placeholder: '%gmp_command_admin_group_list_next%'
+        Text: '&b&lNext Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin group list {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to next page'
+            - '&7Now page: &e{page}'
+            - '&7Next page: &e{nextPage}'
+    'Admin Group List Previous':
+        Placeholder: '%gmp_command_admin_group_list_previous%'
+        Text: '&b&lPrevious Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin group list {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to previous page'
+            - '&7Now page: &e{page}'
+            - '&7Previous page: &e{previousPage}'
+    'Admin Group List Info':
+        Placeholder: '%gmp_command_admin_group_list_info%'
+        Text: '&8&l[&9&lInfo&8]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin group info {groupName}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to view &e{groupName}&5''s information'
+    ###############################
+    #      Recorder Commands      #
+    ###############################
+    'Admin Recorder':
+        Placeholder: '%gmp_command_admin_recorder%'
+        Text: '&c/gmp &6admin &2recorder'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bRecorder commands'
+            - '&bUsage: &c/gmp &6admin recorder'
+    'Admin Recorder Result':
+        Placeholder: '%gmp_command_admin_recorder_result%'
+        Text: '&2result'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder result help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bRecords results'
+            - '&bUsage: &c/gmp &6admin recorder result'
+    'Admin Recorder MailExchange':
+        Placeholder: '%gmp_command_admin_recorder_mailExchange%'
+        Text: '&2mailExchange'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder mailExchange'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bRecords of mail exchange'
+            - '&bUsage: &c/gmp &6admin recorder mailExchange'
+    'Admin Recorder MailPickup':
+        Placeholder: '%gmp_command_admin_recorder_mailPickup%'
+        Text: '&2mailPickup'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder mailPickup'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bRecords of mail pickup'
+            - '&bUsage: &c/gmp &6admin recorder mailPickup'
+    'Admin Recorder MerchandiseUpload':
+        Placeholder: '%gmp_command_admin_recorder_merchandiseUpload%'
+        Text: '&2merchandiseUpload'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder merchandiseUpload'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bRecords of merchandise upload'
+            - '&bUsage: &c/gmp &6admin recorder merchandiseUpload'
+    'Admin Recorder MerchandiseRemove':
+        Placeholder: '%gmp_command_admin_recorder_merchandiseRemove%'
+        Text: '&2merchandiseRemove'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder merchandiseRemove'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bRecords of merchandise remove'
+            - '&bUsage: &c/gmp &6admin recorder merchandiseRemove'
+    'Admin Recorder Payment':
+        Placeholder: '%gmp_command_admin_recorder_payment%'
+        Text: '&2payment'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder payment'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bRecords of payment'
+            - '&bUsage: &c/gmp &6admin recorder payment'
+    'Admin Recorder Transaction':
+        Placeholder: '%gmp_command_admin_recorder_transaction%'
+        Text: '&2transaction'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder transaction'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bRecords of transaction'
+            - '&bUsage: &c/gmp &6admin recorder transaction'
+    'Admin Recorder Auction':
+        Placeholder: '%gmp_command_admin_recorder_auction%'
+        Text: '&2auction'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder auction'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bRecords of auction'
+            - '&bUsage: &c/gmp &6admin recorder transaction'
+    'Admin Recorder BalanceChange':
+        Placeholder: '%gmp_command_admin_recorder_balancechange%'
+        Text: '&2balanceChange'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder balanceChange'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bRecords of balance changes'
+            - '&bUsage: &c/gmp &6admin recorder balanceChange'
+    'Admin Recorder Parameters Player':
+        Placeholder: '%gmp_command_admin_recorder_parameters_player%'
+        Text: '&2player:[Player]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} player:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bTarget player''s name'
+    'Admin Recorder Parameters UUID':
+        Placeholder: '%gmp_command_admin_recorder_parameters_uuid%'
+        Text: '&2uuid:[UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} uuid:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bTarget player''s UUID'
+    'Admin Recorder Parameters StartDate':
+        Placeholder: '%gmp_command_admin_recorder_parameters_startDate%'
+        Text: '&2startDate:[Date]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} startDate:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bStart date&7(Format: [Year-Month-Day])'
+    'Admin Recorder Parameters EndDate':
+        Placeholder: '%gmp_command_admin_recorder_parameters_endDate%'
+        Text: '&2endDate:[Date]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} endDate:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bEnd date&7(Format: [Year-Month-Day])'
+    'Admin Recorder Parameters StartTime':
+        Placeholder: '%gmp_command_admin_recorder_parameters_startTime%'
+        Text: '&2startTime:[Time]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} startTime:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bStart time&7(Format: [Hour:Minute:Second])'
+    'Admin Recorder Parameters EndTime':
+        Placeholder: '%gmp_command_admin_recorder_parameters_endTime%'
+        Text: '&2endTime:[Time]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} endTime:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bEnd time&7(Format: [Hour:Minute:Second])'
+    'Admin Recorder Parameters Date':
+        Placeholder: '%gmp_command_admin_recorder_parameters_date%'
+        Text: '&2date:[Date]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder {type} date:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSpecific date&7(Format: [Year-Month-Day])'
+    'Admin Recorder Parameters MailExchange Sender':
+        Placeholder: '%gmp_command_admin_recorder_parameters_mailExchange_sender%'
+        Text: '&2sender:[Sender]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder mailExchange sender:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSender of mails'
+    'Admin Recorder Parameters MailExchange Receiver':
+        Placeholder: '%gmp_command_admin_recorder_parameters_mailExchange_receiver%'
+        Text: '&2receiver:[Receiver]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder mailExchange receiver:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bReceiver of mails'
+    'Admin Recorder Parameters MailPickUp Sender':
+        Placeholder: '%gmp_command_admin_recorder_parameters_mailPickUp_sender%'
+        Text: '&2sender:[Sender]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder mailPickUp sender:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSender of mails'
+    'Admin Recorder Parameters MailPickUp Receiver':
+        Placeholder: '%gmp_command_admin_recorder_parameters_mailPickUp_receiver%'
+        Text: '&2receiver:[Receiver]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder mailPickUp receiver:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bReceiver of mails'
+    'Admin Recorder Parameters MerchandiseRemove Merchant':
+        Placeholder: '%gmp_command_admin_recorder_parameters_merchandiseRemove_merchant%'
+        Text: '&2merchant:[Merchant]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder merchandiseRemove merchant:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bMerchant''s name'
+    'Admin Recorder Parameters MerchandiseRemove Type':
+        Placeholder: '%gmp_command_admin_recorder_parameters_merchandiseRemove_type%'
+        Text: '&2type:[Merchandise Type]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder merchandiseRemove type:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bMerchandise type'
+    'Admin Recorder Parameters MerchandiseUpload Merchant':
+        Placeholder: '%gmp_command_admin_recorder_parameters_merchandiseUpload_merchant%'
+        Text: '&2merchant:[Merchant]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder merchandiseUpload merchant:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bMerchant''s name'
+    'Admin Recorder Parameters MerchandiseUpload Type':
+        Placeholder: '%gmp_command_admin_recorder_parameters_merchandiseUpload_type%'
+        Text: '&2type:[Merchandise Type]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder merchandiseUpload type:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bMerchandise type'
+    'Admin Recorder Parameters Payment Payer':
+        Placeholder: '%gmp_command_admin_recorder_parameters_payment_payer%'
+        Text: '&2payer:[Payer]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder payment payer:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bPayer'
+    'Admin Recorder Parameters Payment Payee':
+        Placeholder: '%gmp_command_admin_recorder_parameters_payment_payee%'
+        Text: '&2payee:[Payee]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder payment payee:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bPayee'
+    'Admin Recorder Parameters Transaction Trader':
+        Placeholder: '%gmp_command_admin_recorder_parameters_transaction_trader%'
+        Text: '&2trader:[Trader]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder transaction trader:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bTrader of transaction'
+    'Admin Recorder Parameters Transaction Merchant':
+        Placeholder: '%gmp_command_admin_recorder_parameters_transaction_merchant%'
+        Text: '&2merchant:[Merchant]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder transaction merchant:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bMerchant''s name'
+    'Admin Recorder Parameters Transaction Action':
+        Placeholder: '%gmp_command_admin_recorder_parameters_transaction_action%'
+        Text: '&2action:[Action]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder transaction action:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bTransaction method&2(Selling, Purchasing, etc)'
+    'Admin Recorder Parameters Auction TopBidder':
+        Placeholder: '%gmp_command_admin_recorder_parameters_auction_topBidder%'
+        Text: '&2topBidder:[TopBidder]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder auction topBidder:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bTop bidder''s name'
+    'Admin Recorder Parameters Auction Merchant':
+        Placeholder: '%gmp_command_admin_recorder_parameters_auction_merchant%'
+        Text: '&2merchant:[Merchant]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder auction merchant:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bMerchant''s name'
+    'Admin Recorder Parameters BalanceChange Currency':
+        Placeholder: '%gmp_command_admin_recorder_parameters_balanceChange_currency%'
+        Text: '&2currency:[Currency]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder balanceChange currency:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bCurrency''s name'
+    'Admin Recorder Parameters BalanceChange Type':
+        Placeholder: '%gmp_command_admin_recorder_parameters_balanceChange_type%'
+        Text: '&2type:[Change''s Type]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder balanceChange type:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bChange''s type'
+    'Admin Recorder Parameters BalanceChange Succeed':
+        Placeholder: '%gmp_command_admin_recorder_parameters_balanceChange_succeed%'
+        Text: '&2succeed:[true/false]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder balanceChange succeed:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSuccess or not'
+    'Admin Recorder Parameters BalanceChange Merchant':
+        Placeholder: '%gmp_command_admin_recorder_parameters_balanceChange_merchant%'
+        Text: '&2merchant:[Merchant Name]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder balanceChange merchant:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bMerchant''s name'
+    'Admin Recorder Parameters BalanceChange Trader':
+        Placeholder: '%gmp_command_admin_recorder_parameters_balanceChange_trader%'
+        Text: '&2trader:[Trader Name]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder balanceChange trader:'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bTrader''s name'
+    'Admin Recorder Result List Next':
+        Placeholder: '%gmp_command_admin_recorder_result_next%'
+        Text: '&b&lNext Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder result list {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to next page'
+            - '&7Now page: &e{page}'
+            - '&7Next page: &e{nextPage}'
+    'Admin Recorder Result List Previous':
+        Placeholder: '%gmp_command_admin_recorder_result_previous%'
+        Text: '&b&lPrevious Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder result list {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to previous page'
+            - '&7Now page: &e{page}'
+            - '&7Previous page: &e{previousPage}'
+    'Admin Recorder Result getItem':
+        Placeholder: '%gmp_command_admin_recorder_result_getItem%'
+        Text: '&2getItem [Number]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder result getItem '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bGet item from record'
+            - '&bUsage: &c/gmp &6admin recorder result &2getItem [Number]'
+    'Admin Recorder Result View':
+        Placeholder: '%gmp_command_admin_recorder_result_view%'
+        Text: '&2info [Number]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder result info '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bView record''s information'
+            - '&bUsage: &c/gmp &6admin recorder result &2info [Number]'
+    'Admin Recorder Result List':
+        Placeholder: '%gmp_command_admin_recorder_result_list%'
+        Text: '&2list [Page]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin recorder result list '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bList all of records'
+            - '&bUsage: &c/gmp &6admin recorder result &2list [Page]'
+    'Admin Recorder Result Info':
+        Placeholder: '%gmp_command_admin_recorder_result_info%'
+        Text: '&8&l[&9&lView&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder result info {number}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to view the detailed record numbered &e{number} &5.'
+    'Admin Recorder Result GettingItem':
+        Placeholder: '%gmp_command_admin_recorder_result_gettingItem%'
+        Text: '&8&l[&e&lGet Item&8&l]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin recorder result getItem {number}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Get record &e{number}&5''s item'
+    ###############################
+    #    ItemBlacklist Command    #
+    ###############################
+    'Admin ItemBlacklist':
+        Placeholder: '%gmp_command_admin_itemblacklist%'
+        Text: '&c/gmp &6admin &2itemblacklist'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin itemblacklist help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bManage items blacklist'
+            - '&bUsage: &c/gmp &6admin cache'
+    'Admin ItemBlacklist Add':
+        Placeholder: '%gmp_command_admin_itemblacklist_add%'
+        Text: '&2add [Name]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin itemblacklist add '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bAdd a new item into blacklist'
+            - '&bUsage: &c/gmp &6admin itemblacklist add [Name]'
+    'Admin ItemBlacklist Remove':
+        Placeholder: '%gmp_command_admin_itemblacklist_remove%'
+        Text: '&2remove [Name]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin itemblacklist remove '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bRemove an item from blacklist'
+            - '&bUsage: &c/gmp &6admin itemblacklist remove [Name]'
+    'Admin ItemBlacklist Give':
+        Placeholder: '%gmp_command_admin_itemblacklist_give%'
+        Text: '&2give [Name] &7[Player]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin itemblacklist give '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bGive an item to player from blacklist'
+            - '&bUsage: &c/gmp &6admin itemblacklist give [Name] &7[Player]'
+    'Admin ItemBlacklist List':
+        Placeholder: '%gmp_command_admin_itemblacklist_list%'
+        Text: '&2list &7[Page]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin itemblacklist list '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bList all of item blacklist'
+            - '&bUsage: &c/gmp &6admin itemblacklist list &7[Page]'
+    'Admin ItemBlacklist List Next':
+        Placeholder: '%gmp_command_admin_itemblacklist_list_next%'
+        Text: '&b&lNext Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin itemblacklist list {nextPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to next page'
+            - '&7Now page: &e{page}'
+            - '&7Next page: &e{nextPage}'
+    'Admin ItemBlacklist List Previous':
+        Placeholder: '%gmp_command_admin_itemblacklist_list_previous%'
+        Text: '&b&lPrevious Page'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin itemblacklist list {previousPage}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to go to previous page'
+            - '&7Now page: &e{page}'
+            - '&7Previous page: &e{previousPage}'
+    'Admin ItemBlacklist List Give':
+        Placeholder: '%gmp_command_admin_itemblacklist_list_give%'
+        Text: '&8&l[&a&lClick to get&8]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin itemblacklist give {name}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to get item &e{name}'
+    ###############################
+    #      Database Commands      #
+    ###############################
+    'Admin Database':
+        Placeholder: '%gmp_command_admin_database%'
+        Text: '&c/gmp &6admin &2database'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin database help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bDatabase management'
+            - '&bUsage: &c/gmp &6admin database'
+    'Admin Database Migrate':
+        Placeholder: '%gmp_command_admin_database_migrate%'
+        Text: '&2migrate [Plugin]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin database migrate '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bMigrate data from other plugins'
+            - '&bUsage: &c/gmp &6admin database &2migrate [Plugin]'
+    'Admin Database Download':
+        Placeholder: '%gmp_command_admin_database_download%'
+        Text: '&2download [Data Type] [Target]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin database download '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bDownload data from database'
+            - '&bUsage: &c/gmp &6admin database &2download [Data Type] [Target]'
+    'Admin Database Download GlobalMarket':
+        Placeholder: '%gmp_command_admin_database_download_globalmarket%'
+        Text: '&2globalMarket [UID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database download globalMarket '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bDownload data from global market'
+            - '&bUsage: &c/gmp &6admin database &2download globalMarket [UID]'
+    'Admin Database Download Merchant':
+        Placeholder: '%gmp_command_admin_database_download_merchant%'
+        Text: '&2merchant [Merchant/UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database download merchant '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bDownload merchant''s data'
+            - '&bUsage: &c/gmp &6admin database &2download merchant [Merchant/UUID]'
+    'Admin Database Download Mailbox':
+        Placeholder: '%gmp_command_admin_database_download_mailbox%'
+        Text: '&2mailbox [Merchant/UUID]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database download mailbox '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bDownload mailbox''s data'
+            - '&bUsage: &c/gmp &6admin database &2download mailbox [Merchant/UUID]'
+    'Admin Database Upload':
+        Placeholder: '%gmp_command_admin_database_upload%'
+        Text: '&2upload [Data Type] [File Name]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin database upload '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bUpload data from local file'
+            - '&bUsage: &c/gmp &6admin database &2upload [Data Type] [File Name]'
+    'Admin Database Upload GlobalMarket':
+        Placeholder: '%gmp_command_admin_database_upload_globalmarket%'
+        Text: '&2globalMarket [File Name]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database upload globalMarket '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bUpload merchandise data'
+            - '&bUsage: &c/gmp &6admin database &2upload globalMarket [File Name]'
+    'Admin Database Upload Merchant':
+        Placeholder: '%gmp_command_admin_database_upload_merchant%'
+        Text: '&2merchant [File Name]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database upload merchant '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bUpload merchant data'
+            - '&bUsage: &c/gmp &6admin database &2upload merchant [File Name]'
+    'Admin Database Upload Mailbox':
+        Placeholder: '%gmp_command_admin_database_upload_mailbox%'
+        Text: '&2mailbox [File Name]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database upload mailbox '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bUpload mailbox data'
+            - '&bUsage: &c/gmp &6admin database &2upload mailbox [File Name]'
+    'Admin Database Clear':
+        Placeholder: '%gmp_command_admin_database_clear%'
+        Text: '&2clear [Data Type] [Target]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp admin database clear '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bClear specific data'
+            - '&bUsage: &c/gmp &6admin database &2clear [Data Type] [Target]'
+    'Admin Database Clear GlobalMarket':
+        Placeholder: '%gmp_command_admin_database_clear_globalmarket%'
+        Text: '&2globalMarket [UID/ALL]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database clear globalMarket '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bClear a merchandise data or global market'
+            - '&bUsage: &c/gmp &6admin database &2clear globalMarket [UID/ALL]'
+    'Admin Database Clear Merchant':
+        Placeholder: '%gmp_command_admin_database_clear_merchant%'
+        Text: '&2merchant [Merchant/UUID/ALL]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database clear merchant '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bClear a merchant''s data or all merchants'
+            - '&bUsage: &c/gmp &6admin database &2clear merchant [Merchant/UUID/ALL]'
+    'Admin Database Clear Mailbox':
+        Placeholder: '%gmp_command_admin_database_clear_mailbox%'
+        Text: '&2mailbox [Merchant/UUID/ALL]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database clear mailbox '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bClear a mailbox''s data or all mailboxes'
+            - '&bUsage: &c/gmp &6admin database &2clear mailbox [Merchant/UUID/ALL]'
+    'Admin Database Backup':
+        Placeholder: '%gmp_command_admin_database_backup%'
+        Text: '&2backup [Data Type]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database backup '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bBackup database'
+            - '&bUsage: &c/gmp &6admin database &2backup [Data Type]'
+    'Admin Database Rollback':
+        Placeholder: '%gmp_command_admin_database_rollback%'
+        Text: '&2rollback [Backup File]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database rollback '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bRollback database'
+            - '&bUsage: &c/gmp &6admin database &2rollback [Backup File]'
+    'Admin Database Confirm':
+        Placeholder: '%gmp_command_admin_database_confirm%'
+        Text: '&2confirm'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin database confirm'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bConfirm operation'
+            - '&bUsage: &c/gmp &6admin database &2confirm'
+    ###############################
+    #    UpdateItemDisplayName    #
+    ###############################
+    'Admin UpdateItemDisplayName':
+        Placeholder: '%gmp_command_admin_updateItemDisplayName%'
+        Text: '&c/gmp &6admin &2updateItemDisplayName [LanguageCode] [Path]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin updateItemDisplayName '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bUpdate the display names of all items'
+            - '&bUsage: &c/gmp &6admin &2updateItemDisplayName [LanguageCode] [Path]'
+    'Admin UpdateItemDisplayName Confirm':
+        Placeholder: '%gmp_command_admin_updateItemDisplayName_confirm%'
+        Text: '&c/gmp &6admin &2updateItemDisplayName {arguments}'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp admin updateItemDisplayName {arguments}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to fill'

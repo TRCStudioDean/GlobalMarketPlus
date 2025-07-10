@@ -1,0 +1,231 @@
+Simplified-Chinese:
+    'Money Help':
+        Placeholder: '%gmp_command_money_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp money help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b关于 &c/gmp &6money &b的命令帮助'
+    'Money Pay':
+        Placeholder: '%gmp_command_money_pay%'
+        Text: '&2pay [玩家] [金额]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp money pay '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b向某个玩家支付一定的金额'
+            - '&b使用方法 &c/gmp &6money &2pay [玩家名] [金额]'
+    'Money Set':
+        Placeholder: '%gmp_command_money_set%'
+        Text: '&2set [玩家] [金额]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp money set '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置某个玩家的余额'
+            - '&b使用方法 &c/gmp &6money &2set [玩家名] [金额]'
+    'Money Take':
+        Placeholder: '%gmp_command_money_take%'
+        Text: '&2take [玩家] [金额]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp money take '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b取走某个玩家一定的余额'
+            - '&b使用方法 &c/gmp &6money &2take [玩家名] [金额]'
+    'Money Give':
+        Placeholder: '%gmp_command_money_give%'
+        Text: '&2give [玩家] [金额]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp money give '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b给予某个玩家一定的余额'
+            - '&b使用方法 &c/gmp &6money &2give [玩家名] [金额]'
+    'Money Info':
+        Placeholder: '%gmp_command_money_info%'
+        Text: '&2info [玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp money info '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看某个玩家的余额'
+            - '&b使用方法 &c/gmp &6money &2info [玩家名]'
+    'Money Currency':
+        Placeholder: '%gmp_command_money_currency%'
+        Text: '&2currency [货币系统] &7[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp money currency '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置个人货币系统'
+            - '&b使用方法 &c/gmp &6money &2currency [货币系统] &7[玩家]'
+Traditional-Chinese:
+    'Money Help':
+        Placeholder: '%gmp_command_money_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp money help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b關於 &c/gmp &6money &b的命令幫助'
+    'Money Pay':
+        Placeholder: '%gmp_command_money_pay%'
+        Text: '&2pay [玩家] [金額]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp money pay '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b向某個玩家支付一定的金額'
+            - '&b使用方法 &c/gmp &6money &2pay [玩家名] [金額]'
+    'Money Set':
+        Placeholder: '%gmp_command_money_set%'
+        Text: '&2set [玩家] [金額]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp money set '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定某個玩家的餘額'
+            - '&b使用方法 &c/gmp &6money &2set [玩家名] [金額]'
+    'Money Take':
+        Placeholder: '%gmp_command_money_take%'
+        Text: '&2take [玩家] [金額]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp money take '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b取走某個玩家一定的餘額'
+            - '&b使用方法 &c/gmp &6money &2take [玩家名] [金額]'
+    'Money Give':
+        Placeholder: '%gmp_command_money_give%'
+        Text: '&2give [玩家] [金額]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp money give '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b給予某個玩家一定的餘額'
+            - '&b使用方法 &c/gmp &6money &2give [玩家名] [金額]'
+    'Money Info':
+        Placeholder: '%gmp_command_money_info%'
+        Text: '&2info [玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp money info '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看某個玩家的餘額'
+            - '&b使用方法 &c/gmp &6money &2info [玩家名]'
+    'Money Currency':
+        Placeholder: '%gmp_command_money_currency%'
+        Text: '&2currency [貨幣系統] &7[玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp money currency '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定個人貨幣系統'
+            - '&b使用方法 &c/gmp &6money &2currency [貨幣系統] &7[玩家]'
+English:
+    'Money Help':
+        Placeholder: '%gmp_command_money_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp money help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bAbout &c/gmp &6money&b''s subcommands help'
+    'Money Pay':
+        Placeholder: '%gmp_command_money_pay%'
+        Text: '&2pay [Player] [Amount]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp money pay '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bPay a certain amount to a player'
+            - '&bUsage: &c/gmp &6money &2pay [Player] [Amount]'
+    'Money Set':
+        Placeholder: '%gmp_command_money_set%'
+        Text: '&2set [Player] [Amount]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp money set '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet a player''s balance'
+            - '&bUsage: &c/gmp &6money &2set [Player] [Amount]'
+    'Money Take':
+        Placeholder: '%gmp_command_money_take%'
+        Text: '&2take [Player] [Amount]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp money take '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bTake a certain balance from a player'
+            - '&bUsage: &c/gmp &6money &2take [Player] [Amount]'
+    'Money Give':
+        Placeholder: '%gmp_command_money_give%'
+        Text: '&2give [Player] [Amount]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp money give '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bGive a certain balance to a player'
+            - '&bUsage: &c/gmp &6money &2give [Player] [Amount]'
+    'Money Info':
+        Placeholder: '%gmp_command_money_info%'
+        Text: '&2info [Player]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp money info '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bView a player''s balance'
+            - '&bUsage: &c/gmp &6money &2info [Player]'
+    'Money Currency':
+        Placeholder: '%gmp_command_money_currency%'
+        Text: '&2currency [Currency] &7[Player]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp money currency '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet up a personal currency system'
+            - '&bUsage: &c/gmp &6money &2currency [Currency] &7[Player]'

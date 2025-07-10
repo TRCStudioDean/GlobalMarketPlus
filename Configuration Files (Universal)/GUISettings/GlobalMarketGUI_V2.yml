@@ -1,0 +1,937 @@
+Simplified-Chinese:
+    GUI-Title: '&8&l市场界面 &5&l| &9&l{page}&7&l/&9&l{maxpage} {category} {guiType}'
+    GUI-Size: 54
+    Allow-To-Return: true
+    Buttons-Label: false
+    Auto-Refresh:
+        Enabled: true
+        Delay: 0.5
+    Barrier-Button: 
+        Delay: 3.0
+        Reason-Type:
+            Unafford:Selling: '&c你没有足够的余额！'
+            Unafford:Purchasing: '&c你未拥有这个物品！'
+            Own-Merchandise: '&c这是你自己的商品！'
+            Merchandise-Expired: '&c这个商品已过期，请刷新页面。'
+        Button:
+            Item: BARRIER
+            Name: '{reason}'
+    Shopping-Buttons:
+        Selling-Item:
+            Affordable:
+                Display-Item-Meta: true
+                Auto-Refresh: true
+                Lores:
+                - '!lores!'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6商品类型: {type}'
+                - '  &f&l▶ &6商家名称: &a{player}'
+                - '  &f&l▶ &6商品售价: &e{displayPrice}￥'
+                - '  &f&l▶ &6零售售价: &e{displayRetailPrice}￥'
+                - '  &f&l▶ &6支付方式: &r{currency}'
+                - '  &f&l▶ &6上市时间: &3{uploadTime}'
+                - '  &f&l▶ &6到期时间: &c{expireTime}'
+                - '  &f&l▶ &6剩余时间: &d{expireTimeLeft}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&a点击购买这件商品！'
+                Special-Click-Events:
+                    'Right':
+                        Commands:
+                        - 'gmp merchandise gui {uid}'
+                    'Shift_Left':
+                        Refresh-GUI: true
+                        Commands:
+                        - 'gmp merchandise remove {uid}'
+            Unaffordable:
+                Display-Item-Meta: true
+                Auto-Refresh: true
+                Lores:
+                - '!lores!'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6商品类型: {type}'
+                - '  &f&l▶ &6商家名称: &a{player}'
+                - '  &f&l▶ &6商品售价: &e{displayPrice}￥'
+                - '  &f&l▶ &6零售售价: &e{displayRetailPrice}￥'
+                - '  &f&l▶ &6支付方式: &r{currency}'
+                - '  &f&l▶ &6上市时间: &3{uploadTime}'
+                - '  &f&l▶ &6到期时间: &c{expireTime}'
+                - '  &f&l▶ &6剩余时间: &d{expireTimeLeft}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&c你没有足够的余额！'
+                Special-Click-Events:
+                    'Right':
+                        Commands:
+                        - 'gmp merchandise gui {uid}'
+                    'Shift_Left':
+                        Refresh-GUI: true
+                        Commands:
+                        - 'gmp merchandise remove {uid}'
+        Purchasing-Item:
+            Affordable:
+                Display-Item-Meta: true
+                Auto-Refresh: true
+                Lores:
+                - '!lores!'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6商品类型: {type}'
+                - '  &f&l▶ &6商家名称: &a{player}'
+                - '  &f&l▶ &6商品买价: &e{displayPrice}￥'
+                - '  &f&l▶ &6单个买价: &e{displayRetailPrice}￥'
+                - '  &f&l▶ &6收款货币: &r{currency}'
+                - '  &f&l▶ &6上市时间: &3{uploadTime}'
+                - '  &f&l▶ &6到期时间: &c{expireTime}'
+                - '  &f&l▶ &6剩余时间: &d{expireTimeLeft}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&a点击卖出身上的同款物品！'
+                Special-Click-Events:
+                    'Right':
+                        Commands:
+                        - 'gmp merchandise gui {uid}'
+                    'Shift_Left':
+                        Refresh-GUI: true
+                        Commands:
+                        - 'gmp merchandise remove {uid}'
+            Unaffordable:
+                Display-Item-Meta: true
+                Auto-Refresh: true
+                Lores:
+                - '!lores!'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6商品类型: {type}'
+                - '  &f&l▶ &6商家名称: &a{player}'
+                - '  &f&l▶ &6商品买价: &e{displayPrice}￥'
+                - '  &f&l▶ &6单个买价: &e{displayRetailPrice}￥'
+                - '  &f&l▶ &6收款货币: &r{currency}'
+                - '  &f&l▶ &6上市时间: &3{uploadTime}'
+                - '  &f&l▶ &6到期时间: &c{expireTime}'
+                - '  &f&l▶ &6剩余时间: &d{expireTimeLeft}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&c你未拥有这个物品！'
+                Special-Click-Events:
+                    'Right':
+                        Commands:
+                        - 'gmp merchandise gui {uid}'
+                    'Shift_Left':
+                        Refresh-GUI: true
+                        Commands:
+                        - 'gmp merchandise remove {uid}'
+        Auction:
+            Display-Item-Meta: true
+            Auto-Refresh: true
+            Lores:
+            - '!lores!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6商品类型: {type}'
+            - '  &f&l▶ &6商家名称: &a{player}'
+            - '  &f&l▶ &6起拍价格: &e{displayPrice}￥'
+            - '  &f&l▶ &6当前拍价: &e{displayBiddingPrice}￥'
+            - '  &f&l▶ &6最高出价人: &9{topBidder}'
+            - '  &f&l▶ &6支付方式: &r{currency}'
+            - '  &f&l▶ &6上市时间: &3{uploadTime}'
+            - '  &f&l▶ &6成交时间: &c{expireTime}'
+            - '  &f&l▶ &6剩余时间: &d{expireTimeLeft}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&5&l点击参与竞标！'
+            Special-Click-Events:
+                'Shift_Left':
+                    Refresh-GUI: true
+                    Commands:
+                    - 'gmp merchandise remove {uid}'
+        Location:
+            Slots-Of-X: [2, 3, 4, 5, 6, 7, 8]
+            Slots-Of-Y: [2, 3, 4, 5]
+    Custom-Buttons:
+        '关闭界面':
+            Name: '&4&l关闭界面'
+            Item: STAINED_GLASS_PANE
+            Data: 14
+            Lores:
+            - ''
+            - '&e点击关闭'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        '分割线':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 15
+            Location:
+                Slots: [2, 3, 4, 5, 6, 7, 8, 10, 18, 19, 27, 28, 36, 37, 45, 47, 48, 49, 50, 51, 52]
+        '上架商品':
+            Name: '&7空槽'
+            Lores:
+            - ''
+            - '&8点击查看帮助'
+            Item: STAINED_GLASS_PANE
+            Data: 8
+            Close-GUI: true
+            Messages:
+            - '{prefix}'
+            - '  &7这里是一些基础的 &b&l命令帮助 &7:'
+            - '  &f&l▶ %gmp_market_gui_selling% &5&l| &e出售手中的商品'
+            - '  &f&l▶ %gmp_market_gui_purchasing% &5&l| &e发起手中物品的收购'
+            - '  &f&l▶ %gmp_market_gui_bidding% &5&l| &e发起新的拍卖'
+            Location:
+                Slots-Of-X: [2, 3, 4, 5, 6, 7, 8]
+                Slots-Of-Y: [2, 3, 4, 5]
+        '上一页':
+            Name: '&a&l上一页'
+            Item: ARROW
+            Cooldown-Of-Button-Click: 1
+            Lores:
+            - ''
+            - '&e点击打开第 &a{previousPage} &e页'
+            Commands:
+            - 'gmp market gui {previousPage} {type}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 6
+        '刷新':
+            Name: '&6&l刷新'
+            Item: DOUBLE_PLANT
+            Cooldown-Of-Button-Click: 1
+            Lores:
+            - ''
+            - '&e点击刷新'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 6
+        '下一页':
+            Name: '&a&l下一页'
+            Item: ARROW
+            Cooldown-Of-Button-Click: 1
+            Lores:
+            - ''
+            - '&e点击打开第 &a{nextPage} &e页'
+            Commands:
+            - 'gmp market gui {nextPage} {type}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 6
+        '返回菜单':
+            Name: '&b&l返回上一个菜单'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&e点击返回'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        '商品分类':
+            Name: '&5&l商品分类'
+            Item: ENCHANTMENT_TABLE
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前分类: &a{category}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击查看商品分类'
+            Commands:
+            - 'gmp category gui'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+        '说明':
+            Name: '&e&l说明'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7这里是 &c&lGlobal&4&lMarket&6&lPlus &7的全球市场界面，'
+            - '  &7你可以在这里购买他人或出售自己的商品。'
+            - ''
+            - '  &7这里是一些基础的 &b&l命令帮助 &7:'
+            - '  &f&l▶ &c/market &6sell &8[&e价格&8] &8[数量] &5&l| &e出售手中的商品'
+            - '  &f&l▶ &c/market &6buy &8[&e定金&8] &8[数量] &5&l| &e发起手中物品的收购'
+            - '  &f&l▶ &c/market &6bid &8[&e价格&8] &8[数量] &5&l| &e发起新的拍卖'
+            - ''
+            - '  &7本界面的 &a&l操作按键 &7说明:'
+            - '  &f&l▶ &6左键单击: &b跳转到购买界面'
+            - '  &f&l▶ &6Shift+左键: &b移除商品&7（无权限者仅能移除自己的商品）'
+            - '  &f&l▶ &6右键单击: &b打开商品编辑页面&7（无权限者仅能操作自己的商品）'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '&8版权所有 ©2021-2025 红色创意工作室'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6 
+        '个人邮箱':
+            Name: '&d&l个人邮箱'
+            Item: CHEST
+            Lores:
+            - ''
+            - '&e点击打开个人邮箱'
+            Commands:
+            - 'gmp mailbox gui'
+            Location:
+                Slot-Of-X: 2
+                Slot-Of-Y: 6
+        '个人档案':
+            Name: '&c个人档案'
+            Item: SKULL_ITEM
+            Data: 3
+            Enchantments:
+            - DURABILITY:10
+            Head-Owner: '{player}'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6商家名字: &d{player}'
+            - '  &f&l▶ &6用户组名: &c{group}'
+            - '  &f&l▶ &6当前分类: &3{category}'
+            - '  &f&l▶ &6账户余额: &e{displayBalance}￥'
+            - '  &f&l▶ &6邮箱物品: &a{mails}件'
+            - '  &f&l▶ &6商品件数: &5{merchandises}件'
+            - '  &f&l▶ &6交易次数: &9{statistics_totalTransactionsNumber}次'
+            - '  &f&l▶ &6拍卖次数: &b{statistics_totalAuctionNumber}次'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击打开档案页面'
+            Commands:
+            - 'gmp profile gui {player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 1
+        '所有商店':
+            Name: '&9&l所有商店'
+            Item: COMPASS
+            Lores:
+            - ''
+            - '&e点击查看所有玩家商店'
+            Commands:
+            - 'gmp store list 1 GUI'
+            Location:
+                Slot-Of-X: 8
+                Slot-Of-Y: 6
+Traditional-Chinese:
+    GUI-Title: '&8&l市場界面 &5&l| &9&l{page}&7&l/&9&l{maxpage} {category} {guiType}'
+    GUI-Size: 54
+    Allow-To-Return: true
+    Buttons-Label: false
+    Auto-Refresh:
+        Enabled: true
+        Delay: 0.5
+    Barrier-Button: 
+        Delay: 3.0
+        Reason-Type:
+            Unafford:Selling: '&c你沒有足夠的餘額！ '
+            Unafford:Purchasing: '&c你未擁有這個物品！ '
+            Own-Merchandise: '&c這是你自己的商品！ '
+            Merchandise-Expired: '&c這個商品已過期，請刷新頁面。 '
+        Button:
+            Item: BARRIER
+            Name: '{reason}'
+    Shopping-Buttons:
+        Selling-Item:
+            Affordable:
+                Display-Item-Meta: true
+                Auto-Refresh: true
+                Lores:
+                - '!lores!'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6商品類型: {type}'
+                - '  &f&l▶ &6商家名稱: &a{player}'
+                - '  &f&l▶ &6商品售價: &e{displayPrice}￥'
+                - '  &f&l▶ &6零售售價: &e{displayRetailPrice}￥'
+                - '  &f&l▶ &6支付方式: &r{currency}'
+                - '  &f&l▶ &6上市時間: &3{uploadTime}'
+                - '  &f&l▶ &6到期時間: &c{expireTime}'
+                - '  &f&l▶ &6剩餘時間: &d{expireTimeLeft}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&a點擊購買這件商品！ '
+                Special-Click-Events:
+                    'Right':
+                        Commands:
+                        - 'gmp merchandise gui {uid}'
+                    'Shift_Left':
+                        Refresh-GUI: true
+                        Commands:
+                        - 'gmp merchandise remove {uid}'
+            Unaffordable:
+                Display-Item-Meta: true
+                Auto-Refresh: true
+                Lores:
+                - '!lores!'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6商品類型: {type}'
+                - '  &f&l▶ &6商家名稱: &a{player}'
+                - '  &f&l▶ &6商品售價: &e{displayPrice}￥'
+                - '  &f&l▶ &6零售售價: &e{displayRetailPrice}￥'
+                - '  &f&l▶ &6支付方式: &r{currency}'
+                - '  &f&l▶ &6上市時間: &3{uploadTime}'
+                - '  &f&l▶ &6到期時間: &c{expireTime}'
+                - '  &f&l▶ &6剩餘時間: &d{expireTimeLeft}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&c你沒有足夠的餘額！ '
+                Special-Click-Events:
+                    'Right':
+                        Commands:
+                        - 'gmp merchandise gui {uid}'
+                    'Shift_Left':
+                        Refresh-GUI: true
+                        Commands:
+                        - 'gmp merchandise remove {uid}'
+        Purchasing-Item:
+            Affordable:
+                Display-Item-Meta: true
+                Auto-Refresh: true
+                Lores:
+                - '!lores!'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6商品類型: {type}'
+                - '  &f&l▶ &6商家名稱: &a{player}'
+                - '  &f&l▶ &6商品買價: &e{displayPrice}￥'
+                - '  &f&l▶ &6單個買價: &e{displayRetailPrice}￥'
+                - '  &f&l▶ &6收款貨幣: &r{currency}'
+                - '  &f&l▶ &6上市時間: &3{uploadTime}'
+                - '  &f&l▶ &6到期時間: &c{expireTime}'
+                - '  &f&l▶ &6剩餘時間: &d{expireTimeLeft}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&a點擊賣出身上的同款物品！ '
+                Special-Click-Events:
+                    'Right':
+                        Commands:
+                        - 'gmp merchandise gui {uid}'
+                    'Shift_Left':
+                        Refresh-GUI: true
+                        Commands:
+                        - 'gmp merchandise remove {uid}'
+            Unaffordable:
+                Display-Item-Meta: true
+                Auto-Refresh: true
+                Lores:
+                - '!lores!'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6商品類型: {type}'
+                - '  &f&l▶ &6商家名稱: &a{player}'
+                - '  &f&l▶ &6商品買價: &e{displayPrice}￥'
+                - '  &f&l▶ &6單個買價: &e{displayRetailPrice}￥'
+                - '  &f&l▶ &6收款貨幣: &r{currency}'
+                - '  &f&l▶ &6上市時間: &3{uploadTime}'
+                - '  &f&l▶ &6到期時間: &c{expireTime}'
+                - '  &f&l▶ &6剩餘時間: &d{expireTimeLeft}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&c你未擁有這個物品！ '
+                Special-Click-Events:
+                    'Right':
+                        Commands:
+                        - 'gmp merchandise gui {uid}'
+                    'Shift_Left':
+                        Refresh-GUI: true
+                        Commands:
+                        - 'gmp merchandise remove {uid}'
+        Auction:
+            Display-Item-Meta: true
+            Auto-Refresh: true
+            Lores:
+            - '!lores!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6商品類型: {type}'
+            - '  &f&l▶ &6商家名稱: &a{player}'
+            - '  &f&l▶ &6起拍價格: &e{displayPrice}￥'
+            - '  &f&l▶ &6當前拍價: &e{displayBiddingPrice}￥'
+            - '  &f&l▶ &6最高出價人: &9{topBidder}'
+            - '  &f&l▶ &6支付方式: &r{currency}'
+            - '  &f&l▶ &6上市時間: &3{uploadTime}'
+            - '  &f&l▶ &6成交時間: &c{expireTime}'
+            - '  &f&l▶ &6剩餘時間: &d{expireTimeLeft}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&5&l點擊參與競標！ '
+            Special-Click-Events:
+                'Shift_Left':
+                    Refresh-GUI: true
+                    Commands:
+                    - 'gmp merchandise remove {uid}'
+        Location:
+            Slots-Of-X: [2, 3, 4, 5, 6, 7, 8]
+            Slots-Of-Y: [2, 3, 4, 5]
+    Custom-Buttons:
+        '關閉界面':
+            Name: '&4&l關閉界面'
+            Item: STAINED_GLASS_PANE
+            Data: 14
+            Lores:
+            - ''
+            - '&e點擊關閉'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        '分割線':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 15
+            Location:
+                Slots: [2, 3, 4, 5, 6, 7, 8, 10, 18, 19, 27, 28, 36, 37, 45, 47, 48, 49, 50, 51, 52]
+        '上架商品':
+            Name: '&7空槽'
+            Lores:
+            - ''
+            - '&8點擊查看幫助'
+            Item: STAINED_GLASS_PANE
+            Data: 8
+            Close-GUI: true
+            Messages:
+            - '{prefix}'
+            - '  &7這裡是一些基礎的 &b&l命令幫助 &7:'
+            - '  &f&l▶ %gmp_market_gui_selling% &5&l| &e出售手中的商品'
+            - '  &f&l▶ %gmp_market_gui_purchasing% &5&l| &e發起手中物品的收購'
+            - '  &f&l▶ %gmp_market_gui_bidding% &5&l| &e發起新的拍賣'
+            Location:
+                Slots-Of-X: [2, 3, 4, 5, 6, 7, 8]
+                Slots-Of-Y: [2, 3, 4, 5]
+        '上一頁':
+            Name: '&a&l上一頁'
+            Item: ARROW
+            Cooldown-Of-Button-Click: 1
+            Lores:
+            - ''
+            - '&e點擊打開第 &a{previousPage} &e頁'
+            Commands:
+            - 'gmp market gui {previousPage} {type}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 6
+        '刷新':
+            Name: '&6&l刷新'
+            Item: DOUBLE_PLANT
+            Cooldown-Of-Button-Click: 1
+            Lores:
+            - ''
+            - '&e點擊刷新'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 6
+        '下一頁':
+            Name: '&a&l下一頁'
+            Item: ARROW
+            Cooldown-Of-Button-Click: 1
+            Lores:
+            - ''
+            - '&e點擊打開第 &a{nextPage} &e頁'
+            Commands:
+            - 'gmp market gui {nextPage} {type}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 6
+        '返回菜單':
+            Name: '&b&l返回上一個菜單'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&e點擊返回'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        '商品分類':
+            Name: '&5&l商品分類'
+            Item: ENCHANTMENT_TABLE
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前分類: &a{category}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊查看商品分類'
+            Commands:
+            - 'gmp category gui'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+        '說明':
+            Name: '&e&l說明'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7這裡是 &c&lGlobal&4&lMarket&6&lPlus &7的全球市場界面，'
+            - '  &7你可以在這裡購買他人或出售自己的商品。 '
+            - ''
+            - '  &7這裡是一些基礎的 &b&l命令幫助 &7:'
+            - '  &f&l▶ &c/market &6sell &8[&e價格&8] &8[數量] &5&l| &e出售手中的商品'
+            - '  &f&l▶ &c/market &6buy &8[&e價格&8] &8[數量] &5&l| &e發起手中物品的收購'
+            - '  &f&l▶ &c/market &6bid &8[&e價格&8] &8[數量] &5&l| &e發起新的拍賣'
+            - ''
+            - '  &7本界面的 &a&l操作按鍵 &7說明:'
+            - '  &f&l▶ &6左鍵單擊: &b跳轉到購買界面'
+            - '  &f&l▶ &6Shift+左鍵: &b移除商品&7（無權限者僅能移除自己的商品）'
+            - '  &f&l▶ &6右鍵單擊: &b打開商品編輯頁面&7（無權限者僅能操作自己的商品）'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '&8版權所有 ©2021-2025 紅色創意'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6 
+        '個人郵箱':
+            Name: '&d&l個人郵箱'
+            Item: CHEST
+            Lores:
+            - ''
+            - '&e點擊打開個人郵箱'
+            Commands:
+            - 'gmp mailbox gui'
+            Location:
+                Slot-Of-X: 2
+                Slot-Of-Y: 6
+        '個人檔案':
+            Name: '&c個人檔案'
+            Item: SKULL_ITEM
+            Data: 3
+            Enchantments:
+            - DURABILITY:10
+            Head-Owner: '{player}'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6商家名字: &d{player}'
+            - '  &f&l▶ &6用戶組名: &c{group}'
+            - '  &f&l▶ &6當前分類: &3{category}'
+            - '  &f&l▶ &6賬戶餘額: &e{displayBalance}￥'
+            - '  &f&l▶ &6郵箱物品: &a{mails}件'
+            - '  &f&l▶ &6商品件數: &5{merchandises}件'
+            - '  &f&l▶ &6交易次數: &9{statistics_totalTransactionsNumber}次'
+            - '  &f&l▶ &6拍賣次數: &b{statistics_totalAuctionNumber}次'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊打開檔案頁面'
+            Commands:
+            - 'gmp profile gui {player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 1
+        '所有商店':
+            Name: '&9&l所有商店'
+            Item: COMPASS
+            Lores:
+            - ''
+            - '&e點擊查看所有玩家商店'
+            Commands:
+            - 'gmp store list 1 GUI'
+            Location:
+                Slot-Of-X: 8
+                Slot-Of-Y: 6
+English:
+    GUI-Title: '&8&lGlobalMarket &5&l| &9&l{page}&7&l/&9&l{maxpage} {category} {guiType}'
+    GUI-Size: 54
+    Allow-To-Return: true
+    Buttons-Label: false
+    Auto-Refresh:
+        Enabled: true
+        Delay: 0.5
+    Barrier-Button: 
+        Delay: 3.0
+        Reason-Type:
+            Unafford:Selling: '&cYou don''t have enough balance!'
+            Unafford:Purchasing: '&cYou don''t have this item!'
+            Own-Merchandise: '&cIt''s your merchandise!'
+            Merchandise-Expired: '&cThis merchandise has been expired.'
+        Button:
+            Item: BARRIER
+            Name: '{reason}'
+    Shopping-Buttons:
+        Selling-Item:
+            Affordable:
+                Display-Item-Meta: true
+                Auto-Refresh: true
+                Lores:
+                - '!lores!'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6Type: {type}'
+                - '  &f&l▶ &6Merchant: &a{player}'
+                - '  &f&l▶ &6Price: &e${displayPrice}'
+                - '  &f&l▶ &6Retail price: &e${displayRetailPrice}'
+                - '  &f&l▶ &6Currency: &r{currency}'
+                - '  &f&l▶ &6Upload time: &3{uploadTime}'
+                - '  &f&l▶ &6Expiration time: &c{expireTime}'
+                - '  &f&l▶ &6Time left: &d{expireTimeLeft}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&aClick to open transaction GUI!'
+                Special-Click-Events:
+                    'Right':
+                        Commands:
+                        - 'gmp merchandise gui {uid}'
+                    'Shift_Left':
+                        Refresh-GUI: true
+                        Commands:
+                        - 'gmp merchandise remove {uid}'
+            Unaffordable:
+                Display-Item-Meta: true
+                Auto-Refresh: true
+                Lores:
+                - '!lores!'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6Type: {type}'
+                - '  &f&l▶ &6Merchant: &a{player}'
+                - '  &f&l▶ &6Price: &e${displayPrice}'
+                - '  &f&l▶ &6Retail price: &e${displayRetailPrice}'
+                - '  &f&l▶ &6Currency: &r{currency}'
+                - '  &f&l▶ &6Upload time: &3{uploadTime}'
+                - '  &f&l▶ &6Expiration time: &c{expireTime}'
+                - '  &f&l▶ &6Time left: &d{expireTimeLeft}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&cYou don''t have enough balance!'
+                Special-Click-Events:
+                    'Right':
+                        Commands:
+                        - 'gmp merchandise gui {uid}'
+                    'Shift_Left':
+                        Refresh-GUI: true
+                        Commands:
+                        - 'gmp merchandise remove {uid}'
+        Purchasing-Item:
+            Affordable:
+                Display-Item-Meta: true
+                Auto-Refresh: true
+                Lores:
+                - '!lores!'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6Type: {type}'
+                - '  &f&l▶ &6Merchant: &a{player}'
+                - '  &f&l▶ &6Deposit: &e${displayPrice}'
+                - '  &f&l▶ &6Retail deposit: &e${displayRetailPrice}'
+                - '  &f&l▶ &6Currency: &r{currency}'
+                - '  &f&l▶ &6Upload time: &3{uploadTime}'
+                - '  &f&l▶ &6Expiration time: &c{expireTime}'
+                - '  &f&l▶ &6Time left: &d{expireTimeLeft}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&aClick to sell the same item on your inventory!'
+                Special-Click-Events:
+                    'Right':
+                        Commands:
+                        - 'gmp merchandise gui {uid}'
+                    'Shift_Left':
+                        Refresh-GUI: true
+                        Commands:
+                        - 'gmp merchandise remove {uid}'
+            Unaffordable:
+                Display-Item-Meta: true
+                Auto-Refresh: true
+                Lores:
+                - '!lores!'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6Type: {type}'
+                - '  &f&l▶ &6Merchant: &a{player}'
+                - '  &f&l▶ &6Deposit: &e${displayPrice}'
+                - '  &f&l▶ &6Retail deposit: &e${displayRetailPrice}'
+                - '  &f&l▶ &6Currency: &r{currency}'
+                - '  &f&l▶ &6Upload time: &3{uploadTime}'
+                - '  &f&l▶ &6Expiration time: &c{expireTime}'
+                - '  &f&l▶ &6Time left: &d{expireTimeLeft}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&cYou do not own this item!'
+                Special-Click-Events:
+                    'Right':
+                        Commands:
+                        - 'gmp merchandise gui {uid}'
+                    'Shift_Left':
+                        Refresh-GUI: true
+                        Commands:
+                        - 'gmp merchandise remove {uid}'
+        Auction:
+            Display-Item-Meta: true
+            Auto-Refresh: true
+            Lores:
+            - '!lores!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Type: {type}'
+            - '  &f&l▶ &6Merchant: &a{player}'
+            - '  &f&l▶ &6Start Price: &e${displayPrice}'
+            - '  &f&l▶ &6Bidding Price: &e${displayBiddingPrice}'
+            - '  &f&l▶ &6Top bidder: &9{topBidder}'
+            - '  &f&l▶ &6Currency: &r{currency}'
+            - '  &f&l▶ &6Upload time: &3{uploadTime}'
+            - '  &f&l▶ &6Confirm time: &c{expireTime}'
+            - '  &f&l▶ &6Time left: &d{expireTimeLeft}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&5&lClick to bid! '
+            Special-Click-Events:
+                'Shift_Left':
+                    Refresh-GUI: true
+                    Commands:
+                    - 'gmp merchandise remove {uid}'
+        Location:
+            Slots-Of-X: [2, 3, 4, 5, 6, 7, 8]
+            Slots-Of-Y: [2, 3, 4, 5]
+    Custom-Buttons:
+        'Close':
+            Name: '&4&lClose menu'
+            Item: STAINED_GLASS_PANE
+            Data: 14
+            Lores:
+            - ''
+            - '&eClick to close menu'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        'None':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 15
+            Location:
+                Slots: [2, 3, 4, 5, 6, 7, 8, 10, 18, 19, 27, 28, 36, 37, 45, 47, 48, 49, 50, 51, 52]
+        'Upload':
+            Name: '&7Empty Slot'
+            Lores:
+            - ''
+            - '&8Click for help'
+            Item: STAINED_GLASS_PANE
+            Data: 8
+            Close-GUI: true
+            Messages:
+            - '{prefix}'
+            - '  &7Here is some basic &b&lcommands help&7:'
+            - '  &f&l▶ %gmp_market_gui_selling% &5&l| &eSell item in your hand'
+            - '  &f&l▶ %gmp_market_gui_purchasing% &5&l| &ePurchase item &7(Same as the one on hand)'
+            - '  &f&l▶ %gmp_market_gui_bidding% &5&l| &eStart a new auction.'
+            Location:
+                Slots-Of-X: [2, 3, 4, 5, 6, 7, 8]
+                Slots-Of-Y: [2, 3, 4, 5]
+        'Previous Page':
+            Name: '&a&lPrevious Page'
+            Item: ARROW
+            Cooldown-Of-Button-Click: 1
+            Lores:
+            - ''
+            - '&eClick to open page &a{previousPage}'
+            Commands:
+            - 'gmp market gui {previousPage} {type}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 6
+        'Refresh':
+            Name: '&6&lRefresh'
+            Item: DOUBLE_PLANT
+            Cooldown-Of-Button-Click: 1
+            Lores:
+            - ''
+            - '&eClick to refresh'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 6
+        'Next Page':
+            Name: '&a&lNext Page'
+            Item: ARROW
+            Cooldown-Of-Button-Click: 1
+            Lores:
+            - ''
+            - '&eClick to open page &a{nextPage}'
+            Commands:
+            - 'gmp market gui {nextPage} {type}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 6
+        'Return':
+            Name: '&b&lReturn to previous menu'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&eClick to return to previous menu'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        'Category':
+            Name: '&5&lCategory'
+            Item: ENCHANTMENT_TABLE
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Category: &a{category}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to see available categories'
+            Commands:
+            - 'gmp category gui'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+        'Description':
+            Name: '&e&lDescription'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7Here is &c&lGlobal&4&lMarket&6&lPlus&7''s Market GUI,'
+            - '  &7You can buy or sell what you want here.'
+            - ''
+            - '  &7Here is some basic &b&lcommands help&7:'
+            - '  &f&l▶ &c/market &6sell &8[&ePrice&8] &8[Amount]'
+            - '  &5· &eSell item in your hand'
+            - '  &f&l▶ &c/market &6buy &8[&eDeposit&8] &8[Amount]'
+            - '  &5· &ePurchase item &7(Same as the one on hand)'
+            - '  &f&l▶ &c/market &6bid &8[&ePrice&8] &8[Amount]'
+            - '  &5· &eStart a new auction.'
+            - ''
+            - '  &7Description of &a&lButtons &7on this GUI:'
+            - '  &f&l▶ &6Left Click: &bOpen transaction GUI'
+            - '  &f&l▶ &6Shift+Left Click: &bRemove merchandise'
+            - '  &f&l▶ &6Right Click: &bOpen editor GUI'
+            - '  &7· Players can only operate their owned items.'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '&8Copyright ©2021-2025 TRC Studio'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6 
+        'Mailbox':
+            Name: '&d&lMailbox'
+            Item: CHEST
+            Lores:
+            - ''
+            - '&eClick to open mailbox'
+            Commands:
+            - 'gmp mailbox gui'
+            Location:
+                Slot-Of-X: 2
+                Slot-Of-Y: 6
+        'Profile':
+            Name: '&cProfile'
+            Item: SKULL_ITEM
+            Data: 3
+            Enchantments:
+            - DURABILITY:10
+            Head-Owner: '{player}'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Merchant: &d{player}'
+            - '  &f&l▶ &6Group: &c{group}'
+            - '  &f&l▶ &6Category: &3{category}'
+            - '  &f&l▶ &6Balance: &e${displayBalance}'
+            - '  &f&l▶ &6Mails: &a{mails}'
+            - '  &f&l▶ &6Merchandises: &5{merchandises}'
+            - '  &f&l▶ &6Transactions: &9{statistics_totalTransactionsNumber}'
+            - '  &f&l▶ &6Actions: &b{statistics_totalAuctionNumber}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to open the profile'
+            Commands:
+            - 'gmp profile gui {player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 1
+        'All Stores':
+            Name: '&9&lAll Stores'
+            Item: COMPASS
+            Lores:
+            - ''
+            - '&eClick to view all stores'
+            Commands:
+            - 'gmp store list 1 GUI'
+            Location:
+                Slot-Of-X: 8
+                Slot-Of-Y: 6

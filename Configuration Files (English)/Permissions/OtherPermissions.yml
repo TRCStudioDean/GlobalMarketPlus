@@ -1,0 +1,41 @@
+#Other permissions
+
+#All permission can be customized, please set or change according to the following format:
+#  Default: Default is available for all players, if set to true means all players have this permission
+#  Permission: You know :D
+#  Allowed-Groups: Default allowed groups (please set in Groups.yml)
+
+#Permissions for use currency units
+Currencies:
+    Default:
+        Default: true
+        Permission: globalmarketplus.otherpermission.currencies.default
+        Allowed-Groups: []
+    Vault:
+        Default: true
+        Permission: globalmarketplus.otherpermission.currencies.vault
+        Allowed-Groups: []
+    PlayerPoints:
+        Default: true
+        Permission: globalmarketplus.otherpermission.currencies.playerpoints
+        Allowed-Groups: []
+
+#Permission for bypass item blacklist
+Item-Blacklist-Bypass:
+    Default: false
+    Permission: globalmarketplus.otherpermission.itemblacklistbypass
+    
+#Permission for bypass login command cooldown
+Login-Command-Cooldown-Bypass:
+    Default: false
+    Permission: globalmarketplus.otherpermission.logincommandcooldownbypass
+
+#Permission for bypass command cooldown bypass
+Command-Cooldown-Bypass:
+    Default: false
+    Permission: globalmarketplus.otherpermission.commandcooldownbypass
+    
+#Permission for bypass command delay
+Command-Delay-Bypass:
+    Default: false
+    Permission: globalmarketplus.otherpermission.commanddelaybypass

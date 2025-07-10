@@ -1,0 +1,960 @@
+Simplified-Chinese:
+    GUI-Title: '&8&l商家档案 &5&l| &c&l{target_player}'
+    GUI-Size: 54
+    Allow-To-Return: true
+    Buttons-Label: false
+    Custom-Buttons:
+        '返回菜单':
+            Name: '&b&l返回上一个菜单'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&e点击返回'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        '关闭界面':
+            Name: '&4&l关闭界面'
+            Item: STAINED_GLASS_PANE
+            Data: 14
+            Lores:
+            - ''
+            - '&e点击关闭'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        '背景黑板':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 15
+            Location:
+                Slots: [2, 8, 10, 11, 12, 13, 15, 16, 17, 18, 19, 27, 28, 36, 37, 45, 47, 48, 49, 50, 51, 52, 53]
+        '背景白板':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 0
+            Location:
+                Slots: [20, 21, 22, 24, 25, 26, 29, 35, 38, 39, 43, 44]
+        '背景绿板':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 5
+            Enchantments:
+            - DURABILITY:10
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 2
+        '刷新数据':
+            Name: '&a刷新商家缓存'
+            Item: STORAGE_MINECART
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l说明： &7系统保存了部分玩家的缓存数据'
+            - '  &7以便于更好地管理与高效率地运作插件。'
+            - '  &7保存的数据类型如下但不限于: '
+            - '  &6玩家头颅&7、&6用户组&7、&6玩家ID&7等。'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击刷新'
+            Close-GUI: true
+            Commands:
+            - 'gmp profile refresh {target_player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 3
+        '设置商店简介':
+            Name: '&d设置商店简介'
+            Item: BOOK_AND_QUILL
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l说明: &7只有特定权限组能使用'
+            - '  &7设置后的名字将在玩家访问商店界面时'
+            - '  &7显示自定义商店简介。'
+            - ''
+            - '  &f&l▶ &6当前简介:'
+            - '  &c· &7!description!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击设置'
+            Messages:
+            - '{prefix}%gmp_gui_profile_storedescription%'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 4
+        '设置商店名字':
+            Name: '&d设置商店名字'
+            Item: NAME_TAG
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l说明: &7只有特定权限组能使用'
+            - '  &7设置后的名字将在玩家访问商店界面时'
+            - '  &7所显示的界面标题名字。'
+            - ''
+            - '  &f&l▶ &6当前名字: {target_storeName}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击设置'
+            Messages:
+            - '{prefix}%gmp_gui_profile_storename%'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 4
+        '隐藏商品':
+            Name: '&3隐藏商品'
+            Item: PAINTING
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l说明: &7只有特定权限组能使用'
+            - '  &7启用后自己的商品将不会在市场上显示'
+            - '  &7除了在个人商店里。'
+            - ''
+            - '  &f&l▶ &6状态: {hiddingMerchandises}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击切换状态'
+            Commands:
+            - 'gmp profile set hideMerchandises switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 4
+        '隐藏商家名字':
+            Name: '&3隐藏商家名字'
+            Item: ITEM_FRAME
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l说明: &7只有特定权限组能使用'
+            - '  &7启用后自己的商品将不会显示商家名字'
+            - '  &7除了在个人商店里。'
+            - ''
+            - '  &f&l▶ &6状态: {hiddingName}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击切换状态'
+            Commands:
+            - 'gmp profile set hidemerchantname switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 4
+        '打烊商店':
+            Name: '&3打烊商店'
+            Item: WATCH
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l说明: &7只有特定权限组能使用'
+            - '  &7启用后商家的商店将无法被他人访问'
+            - '  &7除了自己。'
+            - ''
+            - '  &f&l▶ &6状态: {storeClosed}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击切换状态'
+            Commands:
+            - 'gmp profile set storeclosed switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 4
+        '商品排序':
+            Name: '&d设置商品排序'
+            Item: JUKEBOX
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l说明: &7只有特定权限组能使用'
+            - '  &7排序可用于调整商品显示的顺序'
+            - ''
+            - '  &f&l▶ &6当前排序: &b{target_merchandiseSort}'
+            - '  &c· &7{target_merchandiseSortDescription}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击打开排序设置'
+            Commands:
+            - 'gmp profile set merchandiseSort list'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 5
+        '邮件排序':
+            Name: '&d设置邮件排序'
+            Item: ENDER_PORTAL_FRAME
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l说明: &7只有特定权限组能使用'
+            - '  &7排序可用于调整邮件显示的顺序'
+            - ''
+            - '  &f&l▶ &6当前排序: &b{target_itemMailSort}'
+            - '  &c· &7{target_itemMailSortDescription}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击打开排序设置'
+            Commands:
+            - 'gmp profile set itemMailSort list'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 5
+        '上锁邮箱':
+            Name: '&3上锁邮箱'
+            Item: TRIPWIRE_HOOK
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l说明: &7只有特定权限组能使用'
+            - '  &7启用后商家将拒绝一切玩家物品寄件'
+            - '  &7除了系统邮件。'
+            - ''
+            - '  &f&l▶ &6状态: {mailboxLocked}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击切换状态'
+            Commands:
+            - 'gmp profile set mailboxLocked switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 5
+        '个人邮箱':
+            Name: '&d&l个人邮箱'
+            Item: CHEST
+            Lores:
+            - ''
+            - '&e点击打开'
+            Commands:
+            - 'gmp mailbox gui {player}'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 1
+        '个人商店':
+            Name: '&3&l个人商店'
+            Item: ENDER_CHEST
+            Lores:
+            - ''
+            - '&e点击打开个人商店'
+            Commands:
+            - 'gmp store view {player}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 1
+        '个人信息':
+            Name: '&c个人信息'
+            Item: SKULL_ITEM
+            Data: 3
+            Enchantments:
+            - DURABILITY:10
+            Head-Owner: '{player}'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6商家名字: &d{player}'
+            - '  &f&l▶ &6用户组名: &c{group}'
+            - '  &f&l▶ &6当前分类: &3{category}'
+            - '  &f&l▶ &6账户余额: &e{displayBalance}￥'
+            - '  &f&l▶ &6邮箱物品: &a{mails}件'
+            - '  &f&l▶ &6商品件数: &5{merchandises}件'
+            - '  &f&l▶ &6交易次数: &9{statistics_totalTransactionsNumber}次'
+            - '  &f&l▶ &6拍卖次数: &b{statistics_totalAuctionNumber}次'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已是当前页面'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 1
+        '设置分类':
+            Name: '&5&l设置分类'
+            Item: ENCHANTMENT_TABLE
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l说明: &7只有特定权限组能使用'
+            - '  &7分类可用于指定查看商品、邮件等物品'
+            - ''
+            - '  &f&l▶ &6当前分类: {category}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击打开设置界面'
+            Commands:
+            - 'gmp category gui {player}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 1
+        '所有商店':
+            Name: '&9&l所有商店'
+            Item: COMPASS
+            Lores:
+            - ''
+            - '&e点击查看所有玩家商店'
+            Commands:
+            - 'gmp store list 1 GUI'
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 1
+        '说明':
+            Name: '&e&l说明'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7这里是自己或他人的个人档案界面'
+            - '  &7你可以在这里查看个人档案信息'
+            - '  &7以及更改自己或他人的档案设置。'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6 
+        '打开市场':
+            Name: '&c&l打开全球市场'
+            Item: SKULL_ITEM
+            Data: 3
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdjYzY2ODc0MjNkMDU3MGQ1NTZhYzUzZTA2NzZjYjU2M2JiZGQ5NzE3Y2Q4MjY5YmRlYmVkNmY2ZDRlN2JmOCJ9fX0='
+            Lores:
+            - ''
+            - '&e点击打开'
+            Commands:
+            - 'gmp market gui'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+Traditional-Chinese:
+    GUI-Title: '&8&l商家檔案 &5&l| &c&l{target_player}'
+    GUI-Size: 54
+    Allow-To-Return: true
+    Buttons-Label: false
+    Custom-Buttons:
+        '返回菜單':
+            Name: '&b&l返回上一個菜單'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&e點擊返回'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        '關閉界面':
+            Name: '&4&l關閉界面'
+            Item: STAINED_GLASS_PANE
+            Data: 14
+            Lores:
+            - ''
+            - '&e點擊關閉'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        '背景黑板':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 15
+            Location:
+                Slots: [2, 8, 10, 11, 12, 13, 15, 16, 17, 18, 19, 27, 28, 36, 37, 45, 47, 48, 49, 50, 51, 52, 53]
+        '背景白板':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 0
+            Location:
+                Slots: [20, 21, 22, 24, 25, 26, 29, 35, 38, 39, 43, 44]
+        '背景綠板':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 5
+            Enchantments:
+            - DURABILITY:10
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 2
+        '刷新數據':
+            Name: '&a刷新商家緩存'
+            Item: STORAGE_MINECART
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l說明： &7系統保存了部分玩家的緩存數據'
+            - '  &7以便於更好地管理與高效率地運作插件。 '
+            - '  &7保存的數據類型如下但不限於: '
+            - '  &6玩家頭顱&7、&6用戶組&7、&6玩家ID&7等。 '
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊刷新'
+            Close-GUI: true
+            Commands:
+            - 'gmp profile refresh {target_player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 3
+        '設定商店簡介':
+            Name: '&d設定商店簡介'
+            Item: BOOK_AND_QUILL
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l說明: &7只有特定權限組能使用'
+            - '  &7設定後的名字將在玩家訪問商店界面時'
+            - '  &7顯示自定義商店簡介。 '
+            - ''
+            - '  &f&l▶ &6當前簡介:'
+            - '  &c· &7!description!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊設定'
+            Messages:
+            - '{prefix}%gmp_gui_profile_storedescription%'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 4
+        '設定商店名字':
+            Name: '&d設定商店名字'
+            Item: NAME_TAG
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l說明: &7只有特定權限組能使用'
+            - '  &7設定後的名字將在玩家訪問商店界面時'
+            - '  &7所顯示的界面標題名字。 '
+            - ''
+            - '  &f&l▶ &6當前名字: {target_storeName}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊設定'
+            Messages:
+            - '{prefix}%gmp_gui_profile_storename%'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 4
+        '隱藏商品':
+            Name: '&3隱藏商品'
+            Item: PAINTING
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l說明: &7只有特定權限組能使用'
+            - '  &7啟用後自己的商品將不會在市場上顯示'
+            - '  &7除了在個人商店裡。 '
+            - ''
+            - '  &f&l▶ &6狀態: {hiddingMerchandises}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊切換狀態'
+            Commands:
+            - 'gmp profile set hideMerchandises switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 4
+        '隱藏商家名字':
+            Name: '&3隱藏商家名字'
+            Item: ITEM_FRAME
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l說明: &7只有特定權限組能使用'
+            - '  &7啟用後自己的商品將不會顯示商家名字'
+            - '  &7除了在個人商店裡。 '
+            - ''
+            - '  &f&l▶ &6狀態: {hiddingName}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊切換狀態'
+            Commands:
+            - 'gmp profile set hidemerchantname switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 4
+        '打烊商店':
+            Name: '&3打烊商店'
+            Item: WATCH
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l說明: &7只有特定權限組能使用'
+            - '  &7啟用後商家的商店將無法被他人訪問'
+            - '  &7除了自己。 '
+            - ''
+            - '  &f&l▶ &6狀態: {storeClosed}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊切換狀態'
+            Commands:
+            - 'gmp profile set storeclosed switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 4
+        '商品排序':
+            Name: '&d設定商品排序'
+            Item: JUKEBOX
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l說明: &7只有特定權限組能使用'
+            - '  &7排序可用於調整商品顯示的順序'
+            - ''
+            - '  &f&l▶ &6當前排序: &b{target_merchandiseSort}'
+            - '  &c· &7{target_merchandiseSortDescription}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊打開排序設定'
+            Commands:
+            - 'gmp profile set merchandiseSort list'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 5
+        '郵件排序':
+            Name: '&d設定郵件排序'
+            Item: ENDER_PORTAL_FRAME
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l說明: &7只有特定權限組能使用'
+            - '  &7排序可用於調整郵件顯示的順序'
+            - ''
+            - '  &f&l▶ &6當前排序: &b{target_itemMailSort}'
+            - '  &c· &7{target_itemMailSortDescription}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊打開排序設定'
+            Commands:
+            - 'gmp profile set itemMailSort list'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 5
+        '上鎖郵箱':
+            Name: '&3上鎖郵箱'
+            Item: TRIPWIRE_HOOK
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l說明: &7只有特定權限組能使用'
+            - '  &7啟用後商家將拒絕一切玩家物品寄件'
+            - '  &7除了系統郵件。 '
+            - ''
+            - '  &f&l▶ &6狀態: {mailboxLocked}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊切換狀態'
+            Commands:
+            - 'gmp profile set mailboxLocked switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 5
+        '個人郵箱':
+            Name: '&d&l個人郵箱'
+            Item: CHEST
+            Lores:
+            - ''
+            - '&e點擊打開'
+            Commands:
+            - 'gmp mailbox gui {player}'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 1
+        '個人商店':
+            Name: '&3&l個人商店'
+            Item: ENDER_CHEST
+            Lores:
+            - ''
+            - '&e點擊打開個人商店'
+            Commands:
+            - 'gmp store view {player}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 1
+        '個人信息':
+            Name: '&c個人信息'
+            Item: SKULL_ITEM
+            Data: 3
+            Enchantments:
+            - DURABILITY:10
+            Head-Owner: '{player}'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6商家名字: &d{player}'
+            - '  &f&l▶ &6用戶組名: &c{group}'
+            - '  &f&l▶ &6當前分類: &3{category}'
+            - '  &f&l▶ &6賬戶餘額: &e{displayBalance}￥'
+            - '  &f&l▶ &6郵箱物品: &a{mails}件'
+            - '  &f&l▶ &6商品件數: &5{merchandises}件'
+            - '  &f&l▶ &6交易次數: &9{statistics_totalTransactionsNumber}次'
+            - '  &f&l▶ &6拍賣次數: &b{statistics_totalAuctionNumber}次'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a已是當前頁面'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 1
+        '設定分類':
+            Name: '&5&l設定分類'
+            Item: ENCHANTMENT_TABLE
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l說明: &7只有特定權限組能使用'
+            - '  &7分類可用於指定查看商品、郵件等物品'
+            - ''
+            - '  &f&l▶ &6當前分類: {category}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊打開設定界面'
+            Commands:
+            - 'gmp category gui {player}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 1
+        '所有商店':
+            Name: '&9&l所有商店'
+            Item: COMPASS
+            Lores:
+            - ''
+            - '&e點擊查看所有玩家商店'
+            Commands:
+            - 'gmp store list 1 GUI'
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 1
+        '說明':
+            Name: '&e&l說明'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7這裡是自己或他人的個人檔案界面'
+            - '  &7你可以在這裡查看個人檔案信息'
+            - '  &7以及更改自己或他人的檔案設定。 '
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6 
+        '打開市場':
+            Name: '&c&l打開全球市場'
+            Item: SKULL_ITEM
+            Data: 3
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdjYzY2ODc0MjNkMDU3MGQ1NTZhYzUzZTA2NzZjYjU2M2JiZGQ5NzE3Y2Q4MjY5YmRlYmVkNmY2ZDRlN2JmOCJ9fX0='
+            Lores:
+            - ''
+            - '&e點擊打開'
+            Commands:
+            - 'gmp market gui'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+English:
+    GUI-Title: '&8&lProfile &5&l| &c&l{target_player}'
+    GUI-Size: 54
+    Allow-To-Return: true
+    Buttons-Label: false
+    Custom-Buttons:
+        'Return':
+            Name: '&b&lReturn to previous menu'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&eClick to return to previous menu'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        'Close':
+            Name: '&4&lClose menu'
+            Item: STAINED_GLASS_PANE
+            Data: 14
+            Lores:
+            - ''
+            - '&eClick to close menu'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        'Black boards':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 15
+            Location:
+                Slots: [2, 8, 10, 11, 12, 13, 15, 16, 17, 18, 19, 27, 28, 36, 37, 45, 47, 48, 49, 50, 51, 52, 53]
+        'White boards':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 0
+            Location:
+                Slots: [20, 21, 22, 24, 25, 26, 29, 35, 38, 39, 43, 44]
+        'Green boards':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 5
+            Enchantments:
+            - DURABILITY:10
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 2
+        'Refresh':
+            Name: '&aRefresh profile'
+            Item: STORAGE_MINECART
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lDescription: '
+            - '  &7Plugin saved some cached data,'
+            - '  &7for management & efficient operations.'
+            - '  &7Examples as follows but not limited to:'
+            - '  &6Player Head&7, &6Groups&7, &6Player Name&7, etc.'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to refresh'
+            Close-GUI: true
+            Commands:
+            - 'gmp profile refresh {target_player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 3
+        'Set Store Description':
+            Name: '&dSet store''s description'
+            Item: BOOK_AND_QUILL
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lNotice: '
+            - '  &7Only specific groups can use!'
+            - ''
+            - '  &f&l▶ &6Now description:'
+            - '  &c· &7!description!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to set'
+            Messages:
+            - '{prefix}%gmp_gui_profile_storedescription%'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 4
+        'Set Store Name':
+            Name: '&dSet store''s name'
+            Item: NAME_TAG
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lNotice: '
+            - '  &7Only specific groups can use!'
+            - ''
+            - '  &f&l▶ &6Name: {target_storeName}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to set'
+            Messages:
+            - '{prefix}%gmp_gui_profile_storename%'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 4
+        'Hide Merchandises':
+            Name: '&3Hide merchandises'
+            Item: PAINTING
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lDescription: '
+            - '  &7Whether to hide merchandises.'
+            - '  &7Unless in the personal store.'
+            - '  &c&lNotice: '
+            - '  &7Only specific groups can use!'
+            - ''
+            - '  &f&l▶ &6Status: {hiddingMerchandises}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to switch'
+            Commands:
+            - 'gmp profile set hideMerchandises switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 4
+        'Hide Merchant Name':
+            Name: '&3Hide merchant''s name'
+            Item: ITEM_FRAME
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lDescription: '
+            - '  &7Whether to hide the merchant''s name.'
+            - '  &7Unless in the personal store.'
+            - '  &c&lNotice: '
+            - '  &7Only specific groups can use!'
+            - ''
+            - '  &f&l▶ &6Status: {hiddingName}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to switch'
+            Commands:
+            - 'gmp profile set hidemerchantname switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 4
+        'Close Store':
+            Name: '&3Store Closed'
+            Item: WATCH
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lNotice: '
+            - '  &7Only specific groups can use!'
+            - ''
+            - '  &f&l▶ &6Status: {storeClosed}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to switch'
+            Commands:
+            - 'gmp profile set storeclosed switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 4
+        'Merchandise Sort':
+            Name: '&dSet sort method of merchandises'
+            Item: JUKEBOX
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lNotice: '
+            - '  &7Only specific groups can use!'
+            - ''
+            - '  &f&l▶ &6Selected: &b{target_merchandiseSort}'
+            - '  &c· &7{target_merchandiseSortDescription}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to set'
+            Commands:
+            - 'gmp profile set merchandiseSort list'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 5
+        'Mail Sort':
+            Name: '&dSet sort method of mails'
+            Item: ENDER_PORTAL_FRAME
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lNotice: '
+            - '  &7Only specific groups can use!'
+            - ''
+            - '  &f&l▶ &6Selected: &b{target_itemMailSort}'
+            - '  &c· &7{target_itemMailSortDescription}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to set'
+            Commands:
+            - 'gmp profile set itemMailSort list'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 5
+        'Locked Mailbox':
+            Name: '&3Locked nailbox'
+            Item: TRIPWIRE_HOOK
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lNotice: '
+            - '  &7Only specific groups can use!'
+            - ''
+            - '  &f&l▶ &6Status: {mailboxLocked}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to switch'
+            Commands:
+            - 'gmp profile set mailboxLocked switch'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 5
+        'Mailbox':
+            Name: '&d&lMailbox'
+            Item: CHEST
+            Lores:
+            - ''
+            - '&eClick to open'
+            Commands:
+            - 'gmp mailbox gui {player}'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 1
+        'Store':
+            Name: '&3&lStore'
+            Item: ENDER_CHEST
+            Lores:
+            - ''
+            - '&eClick to open the personal store'
+            Commands:
+            - 'gmp store view {player}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 1
+        'Profile':
+            Name: '&cProfile'
+            Item: SKULL_ITEM
+            Data: 3
+            Enchantments:
+            - DURABILITY:10
+            Head-Owner: '{player}'
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Merchant: &d{player}'
+            - '  &f&l▶ &6Group: &c{group}'
+            - '  &f&l▶ &6Category: &3{category}'
+            - '  &f&l▶ &6Balance: &e${displayBalance}'
+            - '  &f&l▶ &6Mails: &a{mails}'
+            - '  &f&l▶ &6Merchandises: &5{merchandises}'
+            - '  &f&l▶ &6Transactions: &9{statistics_totalTransactionsNumber}'
+            - '  &f&l▶ &6Actions: &b{statistics_totalAuctionNumber}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&aIs already the current page'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 1
+        'Category':
+            Name: '&5&lCategory'
+            Item: ENCHANTMENT_TABLE
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lDescription: '
+            - '  &7Categories can be used to '
+            - '  &7filtered merchandises, mail, etc.'
+            - '  &c&lNotice: '
+            - '  &7Only specific groups can use!'
+            - ''
+            - '  &f&l▶ &6Category: {category}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to open settings GUI'
+            Commands:
+            - 'gmp category gui {player}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 1
+        'All Stores':
+            Name: '&9&lAll Stores'
+            Item: COMPASS
+            Lores:
+            - ''
+            - '&eClick to view all stores'
+            Commands:
+            - 'gmp store list 1 GUI'
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 1
+        'Description':
+            Name: '&e&lDescription'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7Here is the profile GUI of yourself or others'
+            - '  &7You can view profile information here'
+            - '  &7as well as changing your own profile settings.'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6 
+        'Open Market':
+            Name: '&c&lOpen Global Market'
+            Item: SKULL_ITEM
+            Data: 3
+            Enchantments:
+            - DURABILITY:10
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdjYzY2ODc0MjNkMDU3MGQ1NTZhYzUzZTA2NzZjYjU2M2JiZGQ5NzE3Y2Q4MjY5YmRlYmVkNmY2ZDRlN2JmOCJ9fX0='
+            Lores:
+            - ''
+            - '&eClick to open'
+            Commands:
+            - 'gmp market gui'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6

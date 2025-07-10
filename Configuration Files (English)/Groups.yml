@@ -1,0 +1,118 @@
+#Priority (top to bottom)
+Priority:
+- Admin
+- VIP
+- Default
+
+Groups:
+    #Example group, you can create more groups.
+    'Default':
+        #Group permission
+        Permission: globalmarketplus.group.default
+        #Whether is default group
+        Default: true
+        #Limit the amount of "Selling" merchandises
+        #Remove option means unlimited
+        Maximum-Of-Merchandises:Selling: 10
+        #Limit the amount of "Purchasing" merchandises
+        #Remove option means unlimited
+        Maximum-Of-Merchandises:Purchasing: 10
+        #Limit the amount of auctions
+        #Remove option means unlimited
+        Maximum-Of-Merchandises:Bidding: 2
+        #Tax Rate (Percent): "Selling"
+        #Remove option means no tax required
+        Tax-Rate:Selling: 0.05
+        #Tax Rate (Percent): "Purchasing"
+        #Remove option means no tax required
+        Tax-Rate:Purchasing: 0.05
+        #Tax Rate (Percent): "Bidding"
+        #Remove option means no tax required
+        Tax-Rate:Bidding: 0.05
+        #Minimum price (Selling merchandises)
+        #Remove option means unlimited
+        Lowest-Price:Selling: 1.0
+        #Maximum price (Selling merchandises)
+        #Remove option means unlimited
+        Highest-Price:Selling: 10000000.0
+        #Minimum price (Purchasing merchandises)
+        #Remove option means unlimited
+        Lowest-Price:Purchasing: 1.0
+        #Maximum price (Purchasing merchandises)
+        #Remove option means unlimited
+        Highest-Price:Purchasing: 10000000.0
+        #Minimum price (Auctions)
+        #Remove option means unlimited
+        Lowest-Price:Bidding: 1.0
+        #Maximum price (Auctions)
+        #Remove option means unlimited
+        Highest-Price:Bidding: 10000000.0
+        #Mail quantity limit
+        #Remove option means unlimited
+        Mail-Quantity-Limit: 30
+        #Mail expiry date
+        #Format: [Duration+Unit]
+        #Example: "1d 14h 5m 14s" means that the product will be removed after 1 day, 14 hours, 5 minutes and 14 seconds after mail sent.
+        Expiration-Date:Mail: 15d
+        #Merchandise expiry date (Selling merchandises)
+        #Format: [Duration+Unit]
+        #Example: "1d 14h 5m 14s" means that the product will be removed after 1 day, 14 hours, 5 minutes and 14 seconds after uploaded to market.
+        Expiration-Date:Selling: 10d
+        #Merchandise expiry date (Purchasing merchandises)
+        #Format: [Duration+Unit]
+        #Example: "1d 14h 5m 14s" means that the product will be removed after 1 day, 14 hours, 5 minutes and 14 seconds after uploaded to market.
+        Expiration-Date:Purchasing: 10d
+        #Merchandise expiry date (Auctions)
+        #Format: [Duration+Unit]
+        Expiration-Date:Bidding: 3m
+        #Multiple economic settings
+        #Explanation: This option is used to set restrictions on players having special attributes when using different currency units. 
+        #If this option is not set, the default parameters will be based on the restrictions of the attributes in the other settings above.
+        #If the relevant options are set, their properties will be independent of the limitations of default attributes, for example:
+        #- Limit: 10 selling items + Vault unit's 4 selling items = Actually a total of 14 items for sale can be upload to market.
+        #- Tax: no tax rate is set, but 1% tax rate in Vault unit -> Only Vault unit has tax rate, while other units will be exempt from taxes
+        Currencies: {}
+            #Default: 
+            #    #The effect of the following settings is consistent with the same named setting in the default properties above.
+            #    Maximum-Of-Merchandises:Selling: 10
+            #    Maximum-Of-Merchandises:Purchasing: 10
+            #    Maximum-Of-Merchandises:Bidding: 2
+            #    Tax-Rate:Selling: 0.05
+            #    Tax-Rate:Purchasing: 0.05
+            #    Tax-Rate:Bidding: 0.05
+            #    Lowest-Price:Selling: 1.0
+            #    Highest-Price:Selling: 10000000.0
+            #    Lowest-Price:Purchasing: 1.0
+            #    Highest-Price:Purchasing: 10000000.0
+            #    Lowest-Price:Bidding: 1.0
+            #    Highest-Price:Bidding: 10000000.0
+            #    Expiration-Date:Selling: 10d
+            #    Expiration-Date:Purchasing: 10d
+            #    Expiration-Date:Bidding: 3m
+            #Currency units that do not require setting can be directly deleted, and the options are kept here for listing purposes only.
+            #Vault: {}
+            #PlayerPoints: {}
+    'VIP':
+        Permission: globalmarketplus.group.vip
+        Default: false
+        Maximum-Of-Merchandises:Selling: 20
+        Maximum-Of-Merchandises:Purchasing: 20
+        Maximum-Of-Merchandises:Bidding: 3
+        Tax-Rate:Selling: 0.02
+        Tax-Rate:Purchasing: 0.02
+        Tax-Rate:Bidding: 0.02
+        Lowest-Price:Selling: 1.0
+        Highest-Price:Selling: 10000000.0
+        Lowest-Price:Purchasing: 1.0
+        Highest-Price:Purchasing: 10000000.0
+        Lowest-Price:Bidding: 1.0
+        Highest-Price:Bidding: 10000000.0
+        Mail-Quantity-Limit: 100
+        Expiration-Date:Mail: 30d
+        Expiration-Date:Selling: 30d
+        Expiration-Date:Purchasing: 30d
+        Expiration-Date:Bidding: 3m
+    'Admin':
+        Permission: globalmarketplus.group.admin
+        Default: false
+        Expiration-Date:Bidding: 3m

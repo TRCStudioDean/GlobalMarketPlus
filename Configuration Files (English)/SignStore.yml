@@ -1,0 +1,28 @@
+#You can set up and create multiple sign scripts with different functions.
+#Notice: You need to enable "Sign-Store" in Config.yml to enable sign store function!
+#Please edit in the following format:
+Sign-Scripts:
+    #If you put a sign and write this text on the first line,
+    #The sign will be automatically recognized as a scripted sign.
+    '[MyStore]':
+        #Permission of creating sign script
+        Permission:
+            Default: false
+            Permission: globalmarketplus.signscript.create
+        #Sign texts 
+        Sign-Text:
+            Line-1: '&0&l[{storeName}&0&l]'
+            Line-2: '&0&lClick Open'
+            Line-3: ''
+            Line-4: ''
+        #Execute commands when clicking sign.
+        #Format: "[Command type]:[command]"
+        #"Command type" can be "op" 、 "server"、 None
+        #Corresponding to "player execute command with OP permission", "execute console command", "player execute command normally".
+        #For example:
+        # "server:say hello" - Execute console command: "say hello"
+        # "op:gamemode creative" - Player execute command with OP permission: "gamemode creative"
+        # "spawn" - Player execute "spawn" command normally.
+        #Support PlaceholderAPI
+        Commands:
+        - 'gmp store view {player}'

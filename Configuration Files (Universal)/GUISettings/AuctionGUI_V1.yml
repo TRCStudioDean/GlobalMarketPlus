@@ -1,0 +1,683 @@
+Simplified-Chinese:
+    GUI-Title: '&8&l拍卖界面'
+    GUI-Size: 45
+    Buttons-Label: false
+    Auto-Refresh:
+        Enabled: true
+        Delay: 0.5
+    Key-Buttons:
+        Auction:
+            Display-Item-Meta: true
+            Auto-Refresh: true
+            Lores:
+            - '!lores!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6商家名称: &a{player}'
+            - '  &f&l▶ &6起拍价格: &e{displayPrice}￥'
+            - '  &f&l▶ &6支付方式: &r{currency}'
+            - '  &f&l▶ &6上市时间: &3{uploadTime}'
+            - '  &f&l▶ &6到期时间: &c{expireTime}'
+            - '  &f&l▶ &6剩余时间: &d{expireTimeLeft}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 2
+        Top-Bidder:
+            Name: '&9&l最高出价人'
+            Auto-Refresh: true
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前拍价: &e{displayBiddingPrice}￥'
+            - '  &c&l· &3出价人: &e{topBidder}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 2
+        Bidding-Price:
+            10:
+                Name: '&a&l+10'
+                Item: PLAYER_HEAD
+                Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA1NmJjMTI0NGZjZmY5OTM0NGYxMmFiYTQyYWMyM2ZlZTZlZjZlMzM1MWQyN2QyNzNjMTU3MjUzMWYifX19'
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6你的价格: &b{dynamicBiddingPrice}￥'
+                - '  &f&l▶ &6当前拍价: &e{displayBiddingPrice}￥'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&e点击 &a+10'
+                Location:
+                    Slot-Of-X: 6
+                    Slot-Of-Y: 3
+            100:
+                Name: '&a&l+100'
+                Item: PLAYER_HEAD
+                Amount: 10
+                Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA1NmJjMTI0NGZjZmY5OTM0NGYxMmFiYTQyYWMyM2ZlZTZlZjZlMzM1MWQyN2QyNzNjMTU3MjUzMWYifX19'
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6你的价格: &b{dynamicBiddingPrice}￥'
+                - '  &f&l▶ &6当前拍价: &e{displayBiddingPrice}￥'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&e点击 &a+100'
+                Location:
+                    Slot-Of-X: 7
+                    Slot-Of-Y: 3
+            1000:
+                Name: '&a&l+1000'
+                Item: PLAYER_HEAD
+                Amount: 64
+                Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA1NmJjMTI0NGZjZmY5OTM0NGYxMmFiYTQyYWMyM2ZlZTZlZjZlMzM1MWQyN2QyNzNjMTU3MjUzMWYifX19'
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6你的价格: &b{dynamicBiddingPrice}￥'
+                - '  &f&l▶ &6当前拍价: &e{displayBiddingPrice}￥'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&e点击 &a+1000'
+                Location:
+                    Slot-Of-X: 8
+                    Slot-Of-Y: 3
+            -10:
+                Name: '&c&l-10'
+                Item: PLAYER_HEAD
+                Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGU0YjhiOGQyMzYyYzg2NGUwNjIzMDE0ODdkOTRkMzI3MmE2YjU3MGFmYmY4MGMyYzViMTQ4Yzk1NDU3OWQ0NiJ9fX0='
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6你的价格: &b{dynamicBiddingPrice}￥'
+                - '  &f&l▶ &6当前拍价: &e{displayBiddingPrice}￥'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&e点击 &c-10'
+                Location:
+                    Slot-Of-X: 4
+                    Slot-Of-Y: 3
+            -100:
+                Name: '&c&l-100'
+                Item: PLAYER_HEAD
+                Amount: 10
+                Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGU0YjhiOGQyMzYyYzg2NGUwNjIzMDE0ODdkOTRkMzI3MmE2YjU3MGFmYmY4MGMyYzViMTQ4Yzk1NDU3OWQ0NiJ9fX0='
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6你的价格: &b{dynamicBiddingPrice}￥'
+                - '  &f&l▶ &6当前拍价: &e{displayBiddingPrice}￥'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&e点击 &c-100'
+                Location:
+                    Slot-Of-X: 3
+                    Slot-Of-Y: 3
+            -1000:
+                Name: '&c&l-1000'
+                Item: PLAYER_HEAD
+                Amount: 64
+                Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGU0YjhiOGQyMzYyYzg2NGUwNjIzMDE0ODdkOTRkMzI3MmE2YjU3MGFmYmY4MGMyYzViMTQ4Yzk1NDU3OWQ0NiJ9fX0='
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6你的价格: &b{dynamicBiddingPrice}￥'
+                - '  &f&l▶ &6当前拍价: &e{displayBiddingPrice}￥'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&e点击 &c-1000'
+                Location:
+                    Slot-Of-X: 2
+                    Slot-Of-Y: 3
+    Custom-Buttons:
+        '背景黑板':
+            Name: '&f'
+            Item: BLACK_STAINED_GLASS_PANE
+            Location:
+                Slots: [2, 3, 4, 5, 6, 7, 8, 10, 18, 19, 27, 28, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45]
+        '背景白板':
+            Name: '&f'
+            Item: WHITE_STAINED_GLASS_PANE
+            Location:
+                Slots: [11, 13, 15, 17, 29, 30, 32, 34, 35]
+        '关闭界面':
+            Name: '&4&l关闭界面'
+            Item: RED_STAINED_GLASS_PANE
+            Lores:
+            - ''
+            - '&e点击关闭'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        '返回菜单':
+            Name: '&b&l返回上一个菜单'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&e点击返回'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        '最高出价人':
+            Name: '&9&l最高出价人'
+            Item: PLAYER_HEAD
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmE0YmJhNjhmYjVlMGU3NjEzYjM2MmU2YTc5MWVjMTMyYmQ1YTZhZTIzZjYxYTlhMjk5ZGRkNzhjNWFmOSJ9fX0='
+            Auto-Refresh: true
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6当前拍价: &e{displayBiddingPrice}￥'
+            - '  &c&l· &3出价人: &7暂无'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 2
+        '刷新界面':
+            Name: '&e刷新界面/重置价格'
+            Item: SUNFLOWER
+            Lores:
+            - ''
+            - '&e点击刷新'
+            Commands:
+            - 'gmp auction gui {uid}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 3
+        '自定义价格':
+            Name: '&6自定义价格'
+            Item: COMPASS
+            Lores:
+            - ''
+            - '&e点击这里'
+            Close-GUI: true
+            Messages:
+            - '%gmp_auction_gui_bidding%'
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 2
+        '点击竞标':
+            Name: '&a&l确认竞标'
+            Item: OAK_SIGN
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6你的价格: &b{dynamicBiddingPrice}￥'
+            - '  &f&l▶ &6当前拍价: &e{displayBiddingPrice}￥'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击确认竞标'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp auction bid {uid} {dynamicBiddingPrice}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 4
+        '成交':
+            Name: '&a&l成交'
+            Item: EMERALD
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l说明: &6&n只有拍卖的主人才可以使用'
+            - '  &7确认成交后， 拍卖将直接结束，'
+            - '  &7最高出价人的价格将作为最终价格。'
+            - '  '
+            - '  &f&l▶ &6当前拍价: &e{displayBiddingPrice}￥'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击确认竞标'
+            Close-GUI: true
+            Commands:
+            - 'gmp auction confirm {uid}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 4
+Traditional-Chinese:
+    GUI-Title: '&8&l拍賣界面'
+    GUI-Size: 45
+    Buttons-Label: false
+    Auto-Refresh:
+        Enabled: true
+        Delay: 0.5
+    Key-Buttons:
+        Auction:
+            Display-Item-Meta: true
+            Auto-Refresh: true
+            Lores:
+            - '!lores!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6商家名稱: &a{player}'
+            - '  &f&l▶ &6起拍價格: &e{displayPrice}￥'
+            - '  &f&l▶ &6支付方式: &r{currency}'
+            - '  &f&l▶ &6上市時間: &3{uploadTime}'
+            - '  &f&l▶ &6到期時間: &c{expireTime}'
+            - '  &f&l▶ &6剩餘時間: &d{expireTimeLeft}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 2
+        Top-Bidder:
+            Name: '&9&l最高出價人'
+            Auto-Refresh: true
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前拍價: &e{displayBiddingPrice}￥'
+            - '  &c&l· &3出價人: &e{topBidder}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 2
+        Bidding-Price:
+            10:
+                Name: '&a&l+10'
+                Item: PLAYER_HEAD
+                Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA1NmJjMTI0NGZjZmY5OTM0NGYxMmFiYTQyYWMyM2ZlZTZlZjZlMzM1MWQyN2QyNzNjMTU3MjUzMWYifX19'
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6你的價格: &b{dynamicBiddingPrice}￥'
+                - '  &f&l▶ &6當前拍價: &e{displayBiddingPrice}￥'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&e點擊 &a+10'
+                Location:
+                    Slot-Of-X: 6
+                    Slot-Of-Y: 3
+            100:
+                Name: '&a&l+100'
+                Item: PLAYER_HEAD
+                Amount: 10
+                Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA1NmJjMTI0NGZjZmY5OTM0NGYxMmFiYTQyYWMyM2ZlZTZlZjZlMzM1MWQyN2QyNzNjMTU3MjUzMWYifX19'
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6你的價格: &b{dynamicBiddingPrice}￥'
+                - '  &f&l▶ &6當前拍價: &e{displayBiddingPrice}￥'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&e點擊 &a+100'
+                Location:
+                    Slot-Of-X: 7
+                    Slot-Of-Y: 3
+            1000:
+                Name: '&a&l+1000'
+                Item: PLAYER_HEAD
+                Amount: 64
+                Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA1NmJjMTI0NGZjZmY5OTM0NGYxMmFiYTQyYWMyM2ZlZTZlZjZlMzM1MWQyN2QyNzNjMTU3MjUzMWYifX19'
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6你的價格: &b{dynamicBiddingPrice}￥'
+                - '  &f&l▶ &6當前拍價: &e{displayBiddingPrice}￥'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&e點擊 &a+1000'
+                Location:
+                    Slot-Of-X: 8
+                    Slot-Of-Y: 3
+            -10:
+                Name: '&c&l-10'
+                Item: PLAYER_HEAD
+                Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGU0YjhiOGQyMzYyYzg2NGUwNjIzMDE0ODdkOTRkMzI3MmE2YjU3MGFmYmY4MGMyYzViMTQ4Yzk1NDU3OWQ0NiJ9fX0='
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6你的價格: &b{dynamicBiddingPrice}￥'
+                - '  &f&l▶ &6當前拍價: &e{displayBiddingPrice}￥'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&e點擊 &c-10'
+                Location:
+                    Slot-Of-X: 4
+                    Slot-Of-Y: 3
+            -100:
+                Name: '&c&l-100'
+                Item: PLAYER_HEAD
+                Amount: 10
+                Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGU0YjhiOGQyMzYyYzg2NGUwNjIzMDE0ODdkOTRkMzI3MmE2YjU3MGFmYmY4MGMyYzViMTQ4Yzk1NDU3OWQ0NiJ9fX0='
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6你的價格: &b{dynamicBiddingPrice}￥'
+                - '  &f&l▶ &6當前拍價: &e{displayBiddingPrice}￥'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&e點擊 &c-100'
+                Location:
+                    Slot-Of-X: 3
+                    Slot-Of-Y: 3
+            -1000:
+                Name: '&c&l-1000'
+                Item: PLAYER_HEAD
+                Amount: 64
+                Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGU0YjhiOGQyMzYyYzg2NGUwNjIzMDE0ODdkOTRkMzI3MmE2YjU3MGFmYmY4MGMyYzViMTQ4Yzk1NDU3OWQ0NiJ9fX0='
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6你的價格: &b{dynamicBiddingPrice}￥'
+                - '  &f&l▶ &6當前拍價: &e{displayBiddingPrice}￥'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&e點擊 &c-1000'
+                Location:
+                    Slot-Of-X: 2
+                    Slot-Of-Y: 3
+    Custom-Buttons:
+        '背景黑板':
+            Name: '&f'
+            Item: BLACK_STAINED_GLASS_PANE
+            Location:
+                Slots: [2, 3, 4, 5, 6, 7, 8, 10, 18, 19, 27, 28, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45]
+        '背景白板':
+            Name: '&f'
+            Item: WHITE_STAINED_GLASS_PANE
+            Location:
+                Slots: [11, 13, 15, 17, 29, 30, 32, 34, 35]
+        '關閉界面':
+            Name: '&4&l關閉界面'
+            Item: RED_STAINED_GLASS_PANE
+            Lores:
+            - ''
+            - '&e點擊關閉'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        '返回菜單':
+            Name: '&b&l返回上一個菜單'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&e點擊返回'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        '最高出價人':
+            Name: '&9&l最高出價人'
+            Item: PLAYER_HEAD
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmE0YmJhNjhmYjVlMGU3NjEzYjM2MmU2YTc5MWVjMTMyYmQ1YTZhZTIzZjYxYTlhMjk5ZGRkNzhjNWFmOSJ9fX0='
+            Auto-Refresh: true
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6當前拍價: &e{displayBiddingPrice}￥'
+            - '  &c&l· &3出價人: &7暫無'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 2
+        '刷新界面':
+            Name: '&e刷新界面/重置價格'
+            Item: SUNFLOWER
+            Lores:
+            - ''
+            - '&e點擊刷新'
+            Commands:
+            - 'gmp auction gui {uid}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 3
+        '自定義價格':
+            Name: '&6自定義價格'
+            Item: COMPASS
+            Lores:
+            - ''
+            - '&e點擊這裡'
+            Close-GUI: true
+            Messages:
+            - '%gmp_auction_gui_bidding%'
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 2
+        '點擊競標':
+            Name: '&a&l確認競標'
+            Item: OAK_SIGN
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6你的價格: &b{dynamicBiddingPrice}￥'
+            - '  &f&l▶ &6當前拍價: &e{displayBiddingPrice}￥'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊確認競標'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp auction bid {uid} {dynamicBiddingPrice}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 4
+        '成交':
+            Name: '&a&l成交'
+            Item: EMERALD
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l說明: &6&n只有拍賣的主人才可以使用'
+            - '  &7確認成交後， 拍賣將直接結束，'
+            - '  &7最高出價人的價格將作為最終價格。 '
+            - '  '
+            - '  &f&l▶ &6當前拍價: &e{displayBiddingPrice}￥'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊確認競標'
+            Close-GUI: true
+            Commands:
+            - 'gmp auction confirm {uid}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 4
+English:
+    GUI-Title: '&8&lAuction House'
+    GUI-Size: 45
+    Buttons-Label: false
+    Auto-Refresh:
+        Enabled: true
+        Delay: 0.5
+    Key-Buttons:
+        Auction:
+            Display-Item-Meta: true
+            Auto-Refresh: true
+            Lores:
+            - '!lores!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Merchant: &a{player}'
+            - '  &f&l▶ &6Price: &e${displayPrice}'
+            - '  &f&l▶ &6Currency: &r{currency}'
+            - '  &f&l▶ &6Upload Time: &3{uploadTime}'
+            - '  &f&l▶ &6Confirm Time: &c{expireTime}'
+            - '  &f&l▶ &6Time Left: &d{expireTimeLeft}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 2
+        Top-Bidder:
+            Name: '&9&lTop Bidder'
+            Auto-Refresh: true
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Bidding Price: &e${displayBiddingPrice}'
+            - '  &c&l· &3Bidder: &e{topBidder}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 2
+        Bidding-Price:
+            10:
+                Name: '&a&l+10'
+                Item: PLAYER_HEAD
+                Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA1NmJjMTI0NGZjZmY5OTM0NGYxMmFiYTQyYWMyM2ZlZTZlZjZlMzM1MWQyN2QyNzNjMTU3MjUzMWYifX19'
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6Your Price: &b${dynamicBiddingPrice}'
+                - '  &f&l▶ &6Bidding Price: &e${displayBiddingPrice}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&eClick to &a+10'
+                Location:
+                    Slot-Of-X: 6
+                    Slot-Of-Y: 3
+            100:
+                Name: '&a&l+100'
+                Item: PLAYER_HEAD
+                Amount: 10
+                Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA1NmJjMTI0NGZjZmY5OTM0NGYxMmFiYTQyYWMyM2ZlZTZlZjZlMzM1MWQyN2QyNzNjMTU3MjUzMWYifX19'
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6Your Price: &b${dynamicBiddingPrice}'
+                - '  &f&l▶ &6Bidding Price: &e${displayBiddingPrice}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&eClick &a+100'
+                Location:
+                    Slot-Of-X: 7
+                    Slot-Of-Y: 3
+            1000:
+                Name: '&a&l+1000'
+                Item: PLAYER_HEAD
+                Amount: 64
+                Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA1NmJjMTI0NGZjZmY5OTM0NGYxMmFiYTQyYWMyM2ZlZTZlZjZlMzM1MWQyN2QyNzNjMTU3MjUzMWYifX19'
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6Your Price: &b${dynamicBiddingPrice}'
+                - '  &f&l▶ &6Bidding Price: &e${displayBiddingPrice}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&eClick &a+1000'
+                Location:
+                    Slot-Of-X: 8
+                    Slot-Of-Y: 3
+            -10:
+                Name: '&c&l-10'
+                Item: PLAYER_HEAD
+                Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGU0YjhiOGQyMzYyYzg2NGUwNjIzMDE0ODdkOTRkMzI3MmE2YjU3MGFmYmY4MGMyYzViMTQ4Yzk1NDU3OWQ0NiJ9fX0='
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6Your Price: &b${dynamicBiddingPrice}'
+                - '  &f&l▶ &6Bidding Price: &e${displayBiddingPrice}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&eClick &c-10'
+                Location:
+                    Slot-Of-X: 4
+                    Slot-Of-Y: 3
+            -100:
+                Name: '&c&l-100'
+                Item: PLAYER_HEAD
+                Amount: 10
+                Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGU0YjhiOGQyMzYyYzg2NGUwNjIzMDE0ODdkOTRkMzI3MmE2YjU3MGFmYmY4MGMyYzViMTQ4Yzk1NDU3OWQ0NiJ9fX0='
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6Your Price: &b${dynamicBiddingPrice}'
+                - '  &f&l▶ &6Bidding Price: &e${displayBiddingPrice}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&eClick &c-100'
+                Location:
+                    Slot-Of-X: 3
+                    Slot-Of-Y: 3
+            -1000:
+                Name: '&c&l-1000'
+                Item: PLAYER_HEAD
+                Amount: 64
+                Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGU0YjhiOGQyMzYyYzg2NGUwNjIzMDE0ODdkOTRkMzI3MmE2YjU3MGFmYmY4MGMyYzViMTQ4Yzk1NDU3OWQ0NiJ9fX0='
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6Your Price: &b${dynamicBiddingPrice}'
+                - '  &f&l▶ &6Bidding Price: &e${displayBiddingPrice}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&eClick &c-1000'
+                Location:
+                    Slot-Of-X: 2
+                    Slot-Of-Y: 3
+    Custom-Buttons:
+        'Black board':
+            Name: '&f'
+            Item: BLACK_STAINED_GLASS_PANE
+            Location:
+                Slots: [2, 3, 4, 5, 6, 7, 8, 10, 18, 19, 27, 28, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45]
+        'White board':
+            Name: '&f'
+            Item: WHITE_STAINED_GLASS_PANE
+            Location:
+                Slots: [11, 13, 15, 17, 29, 30, 32, 34, 35]
+        'Close':
+            Name: '&4&lClose menu'
+            Item: RED_STAINED_GLASS_PANE
+            Lores:
+            - ''
+            - '&eClick to close menu'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        'Return':
+            Name: '&b&lReturn to previous menu'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&eClick to return to previous menu'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        'Top Bidder':
+            Name: '&9&lTop Bidder'
+            Item: PLAYER_HEAD
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmE0YmJhNjhmYjVlMGU3NjEzYjM2MmU2YTc5MWVjMTMyYmQ1YTZhZTIzZjYxYTlhMjk5ZGRkNzhjNWFmOSJ9fX0='
+            Auto-Refresh: true
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Bidding Price: &e${displayBiddingPrice}'
+            - '  &c&l· &3Bidder: &7None'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 2
+        'Refresh':
+            Name: '&eRefresh page/Reset price'
+            Item: SUNFLOWER
+            Lores:
+            - ''
+            - '&eClick to refresh'
+            Commands:
+            - 'gmp auction gui {uid}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 3
+        'Custom Price':
+            Name: '&6Custom price'
+            Item: COMPASS
+            Lores:
+            - ''
+            - '&eClick here'
+            Close-GUI: true
+            Messages:
+            - '%gmp_auction_gui_bidding%'
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 2
+        'Bid':
+            Name: '&a&lBid'
+            Item: OAK_SIGN
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Your Price: &b${dynamicBiddingPrice}'
+            - '  &f&l▶ &6Bidding Price: &e${displayBiddingPrice}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to bid'
+            Refresh-GUI: true
+            Commands:
+            - 'gmp auction bid {uid} {dynamicBiddingPrice}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 4
+        'Confirm':
+            Name: '&a&lConfirm'
+            Item: EMERALD
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lDescription: '
+            - '  &7Click to confirm this auction directly.'
+            - '  &7Top Bidder''s price is final price.'
+            - '  &c&lNotice: '
+            - '  &7&nOnly available to the auction owner'
+            - '  '
+            - '  &f&l▶ &6Bidding Price: &e${displayBiddingPrice}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to confirm'
+            Close-GUI: true
+            Commands:
+            - 'gmp auction confirm {uid}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 4

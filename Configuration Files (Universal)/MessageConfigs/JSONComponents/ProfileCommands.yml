@@ -1,0 +1,919 @@
+Simplified-Chinese:
+    #GUI信息提示
+    'GUI SetStoreName':
+        Placeholder: '%gmp_gui_profile_storename%'
+        Text: '&b&l&n[点击这里设置商店名字]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storeName '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b使用方法 &c/gmp &6profile set storeName [名字]'
+    'GUI SetStoreDescription':
+        Placeholder: '%gmp_gui_profile_storedescription%'
+        Text: '&b&l&n[点击这里设置商店简介]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp profile set storeDescription help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b使用方法 &c/gmp &6profile set storeDescription'
+    #命令
+    'Profile Help':
+        Placeholder: '%gmp_command_profile_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b关于 &c/gmp &6profile &b的命令帮助'
+    'Profile Set':
+        Placeholder: '%gmp_command_profile_set%'
+        Text: '&2set'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b编辑商家档案'
+            - '&b使用方法 &c/gmp &6profile set '
+    'Profile Set hideMerchandises':
+        Placeholder: '%gmp_command_profile_set_hidemerchandises%'
+        Text: '&2hideMerchandises [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set hideMerchandises '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置商家的商品是否在全球市场上显示'
+            - '&b使用方法 &c/gmp &6profile set hideMerchandises [true/false/switch]'
+    'Profile Set hideMerchantName':
+        Placeholder: '%gmp_command_profile_set_hidemerchantname%'
+        Text: '&2hideMerchantName [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set hideMerchantName '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置是否隐藏商家的名字'
+            - '&b使用方法 &c/gmp &6profile set hideMerchantName [true/false/switch]'
+    'Profile Set StoreClosed':
+        Placeholder: '%gmp_command_profile_set_storeclosed%'
+        Text: '&2storeClosed [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storeClosed '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置商店是否打烊，即禁止他人访问该商店'
+            - '&b使用方法 &c/gmp &6profile set storeClosed [true/false/switch]'
+    'Profile Set MailboxLocked':
+        Placeholder: '%gmp_command_profile_set_mailboxlocked%'
+        Text: '&2mailboxLocked [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set mailboxLocked '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置邮箱是否上锁，即禁止他人送件'
+            - '&b使用方法 &c/gmp &6profile set mailboxLocked [true/false/switch]'
+    'Profile Set storeName':
+        Placeholder: '%gmp_command_profile_set_storename%'
+        Text: '&2storeName [商店名字]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storeName '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置商家的商店名字'
+            - '&b如不填写则为重置'
+            - '&b使用方法 &c/gmp &6profile set storeName [名字]'
+    'Profile Set storeDescription':
+        Placeholder: '%gmp_command_profile_set_storedescription%'
+        Text: '&2storeDescription'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storeDescription '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置商家的商店介绍'
+            - '&b使用方法 &c/gmp &6profile set storeDescription'
+    'Profile Set storedescription add':
+        Placeholder: '%gmp_command_profile_set_storedescription_add%'
+        Text: '&2add [本文介绍]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storedescription add '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b添加一行新的介绍'
+            - '&b使用方法 &c/gmp &6profile set storedescription add [本文介绍]'
+    'Profile Set storedescription set':
+        Placeholder: '%gmp_command_profile_set_storedescription_set%'
+        Text: '&2set [行数] [本文介绍]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storedescription set '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置某行的介绍'
+            - '&b使用方法 &c/gmp &6profile set storedescription set [行数] [本文介绍]'
+    'Profile Set storedescription remove':
+        Placeholder: '%gmp_command_profile_set_storedescription_remove%'
+        Text: '&2remove [行数]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storedescription remove '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b移除一行介绍'
+            - '&b使用方法 &c/gmp &6profile set storedescription remove [行数]'
+    'Profile Set merchandiseSort':
+        Placeholder: '%gmp_command_profile_set_merchandisesort%'
+        Text: '&2merchandiseSort'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set merchandiseSort '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置商家显示商品的排序方法'
+            - '&b使用方法 &c/gmp &6profile set merchandiseSort'
+    'Profile Set merchandiseSort set':
+        Placeholder: '%gmp_command_profile_set_merchandisesort_set%'
+        Text: '&2set [排序方法]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set merchandiseSort set '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置商家显示商品的排序方法'
+            - '&b使用方法 &c/gmp &6profile set merchandiseSort set [排序方法]'
+    'Profile Set merchandiseSort reset':
+        Placeholder: '%gmp_command_profile_set_merchandisesort_reset%'
+        Text: '&2reset'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set merchandiseSort reset'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重置商家显示商品的排序方法'
+            - '&b使用方法 &c/gmp &6profile set merchandiseSort reset'
+    'Profile Set merchandiseSort list':
+        Placeholder: '%gmp_command_profile_set_merchandisesort_list%'
+        Text: '&2list'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set merchandiseSort list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有排序方法'
+            - '&b使用方法 &c/gmp &6profile set merchandiseSort list'
+    'Profile Set merchandiseSort list type':
+        Placeholder: '%gmp_command_profile_set_merchandisesort_list_type%'
+        Text: '&b&l{sort}&f: &e{description}'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp profile set merchandiseSort set {sort}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击设置为 &e{sort} &5排序方法'
+    'Profile Set itemMailSort':
+        Placeholder: '%gmp_command_profile_set_itemmailsort%'
+        Text: '&2itemMailSort'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set itemMailSort '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置商家显示邮件的排序方法'
+            - '&b使用方法 &c/gmp &6profile set itemMailSort'
+    'Profile Set itemMailSort set':
+        Placeholder: '%gmp_command_profile_set_itemmailsort_set%'
+        Text: '&2set [排序方法]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set itemMailSort set '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b设置商家显示邮件的排序方法'
+            - '&b使用方法 &c/gmp &6profile set itemMailSort set [排序方法]'
+    'Profile Set itemMailSort reset':
+        Placeholder: '%gmp_command_profile_set_itemmailsort_reset%'
+        Text: '&2reset'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set itemMailSort reset'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重置商家显示邮件的排序方法'
+            - '&b使用方法 &c/gmp &6profile set itemMailSort reset'
+    'Profile Set itemMailSort list':
+        Placeholder: '%gmp_command_profile_set_itemmailsort_list%'
+        Text: '&2list'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set itemMailSort list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有排序方法'
+            - '&b使用方法 &c/gmp &6profile set itemMailSort list'
+    'Profile Set itemMailSort list type':
+        Placeholder: '%gmp_command_profile_set_itemmailsort_list_type%'
+        Text: '&b&l{sort}&f: &e{description}'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp profile set itemMailSort set {sort}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5点击设置为 &e{sort} &5排序方法'
+    'Profile Select':
+        Placeholder: '%gmp_command_profile_select%'
+        Text: '&2select [玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile select '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b选定一个玩家，以对该玩家的档案进行操作'
+            - '&b使用方法 &c/gmp &6profile select'
+    'Profile GUI':
+        Placeholder: '%gmp_command_profile_gui%'
+        Text: '&2gui'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile gui'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b打开商家档案界面'
+            - '&b使用方法 &c/gmp &6profile gui'
+    'Profile Info':
+        Placeholder: '%gmp_command_profile_info%'
+        Text: '&2info'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile info'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看商家档案信息'
+            - '&b使用方法 &c/gmp &6profile info'
+    'Profile Tasks':
+        Placeholder: '%gmp_command_profile_tasks%'
+        Text: '&2tasks'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile tasks'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b处理档案中未处理的任务'
+            - '&b使用方法 &c/gmp &6profile tasks'
+    'Profile Refresh':
+        Placeholder: '%gmp_command_profile_refresh%'
+        Text: '&2refresh [玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile refresh '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b刷新玩家档案'
+            - '&b使用方法 &c/gmp &6profile refresh [玩家]'
+Traditional-Chinese:
+    #GUI信息提示
+    'GUI SetStoreName':
+        Placeholder: '%gmp_gui_profile_storename%'
+        Text: '&b&l&n[點擊這裡設定商店名字]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storeName '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b使用方法 &c/gmp &6profile set storeName [名字]'
+    'GUI SetStoreDescription':
+        Placeholder: '%gmp_gui_profile_storedescription%'
+        Text: '&b&l&n[點擊這裡設定商店簡介]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp profile set storeDescription help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b使用方法 &c/gmp &6profile set storeDescription'
+    #命令
+    'Profile Help':
+        Placeholder: '%gmp_command_profile_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b關於 &c/gmp &6profile &b的命令幫助'
+    'Profile Set':
+        Placeholder: '%gmp_command_profile_set%'
+        Text: '&2set'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b編輯商家檔案'
+            - '&b使用方法 &c/gmp &6profile set '
+    'Profile Set hideMerchandises':
+        Placeholder: '%gmp_command_profile_set_hidemerchandises%'
+        Text: '&2hideMerchandises [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set hideMerchandises '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定商家的商品是否在全球市場上顯示'
+            - '&b使用方法 &c/gmp &6profile set hideMerchandises [true/false/switch]'
+    'Profile Set hideMerchantName':
+        Placeholder: '%gmp_command_profile_set_hidemerchantname%'
+        Text: '&2hideMerchantName [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set hideMerchantName '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定是否隱藏商家的名字'
+            - '&b使用方法 &c/gmp &6profile set hideMerchantName [true/false/switch]'
+    'Profile Set StoreClosed':
+        Placeholder: '%gmp_command_profile_set_storeclosed%'
+        Text: '&2storeClosed [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storeClosed '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定商店是否打烊，即禁止他人訪問該商店'
+            - '&b使用方法 &c/gmp &6profile set storeClosed [true/false/switch]'
+    'Profile Set MailboxLocked':
+        Placeholder: '%gmp_command_profile_set_mailboxlocked%'
+        Text: '&2mailboxLocked [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set mailboxLocked '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定郵箱是否上鎖，即禁止他人送件'
+            - '&b使用方法 &c/gmp &6profile set mailboxLocked [true/false/switch]'
+    'Profile Set storeName':
+        Placeholder: '%gmp_command_profile_set_storename%'
+        Text: '&2storeName [商店名字]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storeName '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定商家的商店名字'
+            - '&b如不填寫則為重置'
+            - '&b使用方法 &c/gmp &6profile set storeName [名字]'
+    'Profile Set storeDescription':
+        Placeholder: '%gmp_command_profile_set_storedescription%'
+        Text: '&2storeDescription'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storeDescription '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定商家的商店介紹'
+            - '&b使用方法 &c/gmp &6profile set storeDescription'
+    'Profile Set storedescription add':
+        Placeholder: '%gmp_command_profile_set_storedescription_add%'
+        Text: '&2add [本文介紹]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storedescription add '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b添加一行新的介紹'
+            - '&b使用方法 &c/gmp &6profile set storedescription add [本文介紹]'
+    'Profile Set storedescription set':
+        Placeholder: '%gmp_command_profile_set_storedescription_set%'
+        Text: '&2set [行數] [本文介紹]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storedescription set '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定某行的介紹'
+            - '&b使用方法 &c/gmp &6profile set storedescription set [行數] [本文介紹]'
+    'Profile Set storedescription remove':
+        Placeholder: '%gmp_command_profile_set_storedescription_remove%'
+        Text: '&2remove [行數]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storedescription remove '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b移除一行介紹'
+            - '&b使用方法 &c/gmp &6profile set storedescription remove [行數]'
+    'Profile Set merchandiseSort':
+        Placeholder: '%gmp_command_profile_set_merchandisesort%'
+        Text: '&2merchandiseSort'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set merchandiseSort '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定商家顯示商品的排序方法'
+            - '&b使用方法 &c/gmp &6profile set merchandiseSort'
+    'Profile Set merchandiseSort set':
+        Placeholder: '%gmp_command_profile_set_merchandisesort_set%'
+        Text: '&2set [排序方法]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set merchandiseSort set '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定商家顯示商品的排序方法'
+            - '&b使用方法 &c/gmp &6profile set merchandiseSort set [排序方法]'
+    'Profile Set merchandiseSort reset':
+        Placeholder: '%gmp_command_profile_set_merchandisesort_reset%'
+        Text: '&2reset'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set merchandiseSort reset'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重置商家顯示商品的排序方法'
+            - '&b使用方法 &c/gmp &6profile set merchandiseSort reset'
+    'Profile Set merchandiseSort list':
+        Placeholder: '%gmp_command_profile_set_merchandisesort_list%'
+        Text: '&2list'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set merchandiseSort list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有排序方法'
+            - '&b使用方法 &c/gmp &6profile set merchandiseSort list'
+    'Profile Set merchandiseSort list type':
+        Placeholder: '%gmp_command_profile_set_merchandisesort_list_type%'
+        Text: '&b&l{sort}&f: &e{description}'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp profile set merchandiseSort set {sort}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊設定為 &e{sort} &5排序方法'
+    'Profile Set itemMailSort':
+        Placeholder: '%gmp_command_profile_set_itemmailsort%'
+        Text: '&2itemMailSort'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set itemMailSort '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定商家顯示郵件的排序方法'
+            - '&b使用方法 &c/gmp &6profile set itemMailSort'
+    'Profile Set itemMailSort set':
+        Placeholder: '%gmp_command_profile_set_itemmailsort_set%'
+        Text: '&2set [排序方法]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set itemMailSort set '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b設定商家顯示郵件的排序方法'
+            - '&b使用方法 &c/gmp &6profile set itemMailSort set [排序方法]'
+    'Profile Set itemMailSort reset':
+        Placeholder: '%gmp_command_profile_set_itemmailsort_reset%'
+        Text: '&2reset'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set itemMailSort reset'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b重置商家顯示郵件的排序方法'
+            - '&b使用方法 &c/gmp &6profile set itemMailSort reset'
+    'Profile Set itemMailSort list':
+        Placeholder: '%gmp_command_profile_set_itemmailsort_list%'
+        Text: '&2list'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set itemMailSort list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b列出所有排序方法'
+            - '&b使用方法 &c/gmp &6profile set itemMailSort list'
+    'Profile Set itemMailSort list type':
+        Placeholder: '%gmp_command_profile_set_itemmailsort_list_type%'
+        Text: '&b&l{sort}&f: &e{description}'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp profile set itemMailSort set {sort}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5點擊設定為 &e{sort} &5排序方法'
+    'Profile Select':
+        Placeholder: '%gmp_command_profile_select%'
+        Text: '&2select [玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile select '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b選定一個玩家，以對該玩家的檔案進行操作'
+            - '&b使用方法 &c/gmp &6profile select'
+    'Profile GUI':
+        Placeholder: '%gmp_command_profile_gui%'
+        Text: '&2gui'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile gui'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b打開商家檔案界面'
+            - '&b使用方法 &c/gmp &6profile gui'
+    'Profile Tasks':
+        Placeholder: '%gmp_command_profile_tasks%'
+        Text: '&2tasks'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile tasks'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b處理檔案中未處理的任務'
+            - '&b使用方法 &c/gmp &6profile tasks'
+    'Profile Info':
+        Placeholder: '%gmp_command_profile_info%'
+        Text: '&2info'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile info'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b查看商家檔案信息'
+            - '&b使用方法 &c/gmp &6profile info'
+    'Profile Refresh':
+        Placeholder: '%gmp_command_profile_refresh%'
+        Text: '&2refresh [玩家]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile refresh '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b刷新玩家檔案'
+            - '&b使用方法 &c/gmp &6profile refresh [玩家]'
+English:
+    'GUI SetStoreName':
+        Placeholder: '%gmp_gui_profile_storename%'
+        Text: '&b&l&n[Click here to set store name]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storeName '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bUsage: &c/gmp &6profile set storeName [Name]'
+    'GUI SetStoreDescription':
+        Placeholder: '%gmp_gui_profile_storedescription%'
+        Text: '&b&l&n[Click here to set store description]'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp profile set storeDescription help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bUsage: &c/gmp &6profile set storeDescription'
+    'Profile Help':
+        Placeholder: '%gmp_command_profile_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile help'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bAbout &c/gmp &6profile&b''s subcommands help'
+    'Profile Set':
+        Placeholder: '%gmp_command_profile_set%'
+        Text: '&2set'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bEdit profile'
+            - '&bUsage: &c/gmp &6profile set '
+    'Profile Set hideMerchandises':
+        Placeholder: '%gmp_command_profile_set_hidemerchandises%'
+        Text: '&2hideMerchandises [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set hideMerchandises '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet whether the merchandise is displayed in the global market'
+            - '&bUsage: &c/gmp &6profile set hideMerchandises [true/false/switch]'
+    'Profile Set hideMerchantName':
+        Placeholder: '%gmp_command_profile_set_hidemerchantname%'
+        Text: '&2hideMerchantName [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set hideMerchantName '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet whether to hide the merchant''s name'
+            - '&bUsage: &c/gmp &6profile set hideMerchantName [true/false/switch]'
+    'Profile Set StoreClosed':
+        Placeholder: '%gmp_command_profile_set_storeclosed%'
+        Text: '&2storeClosed [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storeClosed '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet whether the store is closed'
+            - '&bUsage: &c/gmp &6profile set storeClosed [true/false/switch]'
+    'Profile Set MailboxLocked':
+        Placeholder: '%gmp_command_profile_set_mailboxlocked%'
+        Text: '&2mailboxLocked [true/false/switch]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set mailboxLocked '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet whether the mailbox is locked'
+            - '&bUsage: &c/gmp &6profile set mailboxLocked [true/false/switch]'
+    'Profile Set storeName':
+        Placeholder: '%gmp_command_profile_set_storename%'
+        Text: '&2storeName [Name]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storeName '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet the merchant''s store name'
+            - '&bIf not filled, it will be reset'
+            - '&bUsage: &c/gmp &6profile set storeName [Name]'
+    'Profile Set storeDescription':
+        Placeholder: '%gmp_command_profile_set_storedescription%'
+        Text: '&2storeDescription'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storeDescription '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet up the merchant''s store description'
+            - '&bUsage: &c/gmp &6profile set storeDescription'
+    'Profile Set storedescription add':
+        Placeholder: '%gmp_command_profile_set_storedescription_add%'
+        Text: '&2add [Text]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storedescription add '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bAdd a new text description'
+            - '&bUsage: &c/gmp &6profile set storedescription add [Text]'
+    'Profile Set storedescription set':
+        Placeholder: '%gmp_command_profile_set_storedescription_set%'
+        Text: '&2set [Line] [Text]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storedescription set '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet the description of a row'
+            - '&bUsage: &c/gmp &6profile set storedescription set [Line] [Text]'
+    'Profile Set storedescription remove':
+        Placeholder: '%gmp_command_profile_set_storedescription_remove%'
+        Text: '&2remove [Line]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set storedescription remove '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bRemove a line'
+            - '&bUsage: &c/gmp &6profile set storedescription remove [line]'
+    'Profile Set merchandiseSort':
+        Placeholder: '%gmp_command_profile_set_merchandisesort%'
+        Text: '&2merchandiseSort'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set merchandiseSort '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet the sorting method by the merchant'
+            - '&bUsage: &c/gmp &6profile set merchandiseSort'
+    'Profile Set merchandiseSort set':
+        Placeholder: '%gmp_command_profile_set_merchandisesort_set%'
+        Text: '&2set [Sort Method]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set merchandiseSort set '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet the merchandise sorting method by the merchant'
+            - '&bUsage: &c/gmp &6profile set merchandiseSort set [Sort Method]'
+    'Profile Set merchandiseSort reset':
+        Placeholder: '%gmp_command_profile_set_merchandisesort_reset%'
+        Text: '&2reset'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set merchandiseSort reset'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bReset the merchandise sorting method by the merchant'
+            - '&bUsage: &c/gmp &6profile set merchandiseSort reset'
+    'Profile Set merchandiseSort list':
+        Placeholder: '%gmp_command_profile_set_merchandisesort_list%'
+        Text: '&2list'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set merchandiseSort list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bList all of merchandise sort methods'
+            - '&bUsage: &c/gmp &6profile set merchandiseSort list'
+    'Profile Set merchandiseSort list type':
+        Placeholder: '%gmp_command_profile_set_merchandisesort_list_type%'
+        Text: '&b&l{sort}&f: &e{description}'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp profile set merchandiseSort set {sort}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to set to &e{sort} &5sort method'
+    'Profile Set itemMailSort':
+        Placeholder: '%gmp_command_profile_set_itemmailsort%'
+        Text: '&2itemMailSort'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set itemMailSort '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet the mail sorting method by the merchant'
+            - '&bUsage: &c/gmp &6profile set itemMailSort'
+    'Profile Set itemMailSort set':
+        Placeholder: '%gmp_command_profile_set_itemmailsort_set%'
+        Text: '&2set [Sort Method]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set itemMailSort set '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSet the mail sorting method by the merchant'
+            - '&bUsage: &c/gmp &6profile set itemMailSort set [Sort Method]'
+    'Profile Set itemMailSort reset':
+        Placeholder: '%gmp_command_profile_set_itemmailsort_reset%'
+        Text: '&2reset'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set itemMailSort reset'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bReset the mail sorting method by the merchant'
+            - '&bUsage: &c/gmp &6profile set itemMailSort reset'
+    'Profile Set itemMailSort list':
+        Placeholder: '%gmp_command_profile_set_itemmailsort_list%'
+        Text: '&2list'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile set itemMailSort list'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bList all of mail sort methods'
+            - '&bUsage: &c/gmp &6profile set itemMailSort list'
+    'Profile Set itemMailSort list type':
+        Placeholder: '%gmp_command_profile_set_itemmailsort_list_type%'
+        Text: '&b&l{sort}&f: &e{description}'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp profile set itemMailSort set {sort}'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&5Click to set to &e{sort} &5sort method'
+    'Profile Select':
+        Placeholder: '%gmp_command_profile_select%'
+        Text: '&2select [Player]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile select '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSelect a player to operate on that player''s profile'
+            - '&bUsage: &c/gmp &6profile select'
+    'Profile GUI':
+        Placeholder: '%gmp_command_profile_gui%'
+        Text: '&2gui'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile gui'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bOpen profile GUI'
+            - '&bUsage: &c/gmp &6profile gui'
+    'Profile Tasks':
+        Placeholder: '%gmp_command_profile_tasks%'
+        Text: '&2tasks'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile tasks'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bProcessing unprocessed tasks in the profile'
+            - '&bUsage: &c/gmp &6profile tasks'
+    'Profile Info':
+        Placeholder: '%gmp_command_profile_info%'
+        Text: '&2info'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile info'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bView merchant profile information'
+            - '&bUsage: &c/gmp &6profile info'
+    'Profile Refresh':
+        Placeholder: '%gmp_command_profile_refresh%'
+        Text: '&2refresh [Player]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp profile refresh '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bRefresh merchant''s profile'
+            - '&bUsage: &c/gmp &6profile refresh [Player]'

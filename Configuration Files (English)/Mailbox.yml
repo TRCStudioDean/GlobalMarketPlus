@@ -1,0 +1,62 @@
+#Player mailbox settings
+#Command: "/gmp mailbox"
+
+#Mails sort methods
+#- ACCORDING_TO_THE_STATE: Sort by mails state (Normal mails come first, then picked up mails, then expired mails)
+#- ACCORDING_TO_SENDING_TIME: Sort by sending time (Most recently sent mail first)
+#- ACCORDING_TO_EXPIRE_TIME: Sort by expiration time (the ones that will be deleted from the mailbox first)
+#- ACCORDING_TO_ITEM_AMOUNT: According to item amount (larger number comes first)
+#- RANDOM: Sort by random
+Default-Sorting: ACCORDING_TO_THE_STATE
+
+#Whether to automatically delete expired mails
+Auto-Delete-Expired-Mails: false
+
+#Whether to enable the join message to prompt for not picked up mails
+Join-Messages: true
+
+#Whether to clear cache when player quiting
+Clear-Cache-When-Quiting: true
+
+#Automatically delete mail when picking up
+Auto-Delete-When-Picking-Up: false
+
+#Whether return movable buttons to mailbox
+#By default, when the player's inventory is full, items will be dropped on the ground
+#When this option is enabled, items will be sent to the player mailbox
+Return-Movable-Buttons-to-Mailbox: false
+
+#Item parameter blacklist (prohibit certain items containing special parameters from being send to player)
+Item-Parameters-Blacklist:
+    Enabled: false
+    #Whitelist mode
+    #When enabled, items in the collection belong to here, 
+    #otherwise all items outside the collection belong to here.
+    Whitelist: false
+    #Whether to scanning items in shulker box.
+    Scan-Shulker-Box: true
+    #List of item IDs (the following items will be banned)
+    #Below 1.12.2, some items can use "[Item ID]:[Data Number]" to distinguish different types of items under the same item ID
+    #For example, the Enchanted Golden Apple is "GOLDEN_APPLE:1", while the regular Golden Apple is "GOLDEN-APPLE:0"
+    #Elements with prefix 'regex:' will be considered as regular expression matches.
+    Materials:
+    - COMMAND_BLOCK
+    - BEDROCK
+    - BARRIER
+    #Display Name (Items containing the following keywords in the display name will be banned)
+    #Elements with prefix 'regex:' will be considered as regular expression matches.
+    Display-Name-Keywords: 
+    - 'Private Item'
+    #Display lore (item introduction line containing the following keywords will be banned)
+    #Elements with prefix 'regex:' will be considered as regular expression matches.
+    Display-Lore-Keywords: 
+    - 'Private'
+    #Enchantment list (if the item contains any of the enchantments in the list, it will be banned)
+    #Elements with prefix 'regex:' will be considered as regular expression matches.
+    Enchantments: []
+    #Special Options (1.8+) (Items that contain any of the special options on the list will be banned)
+    #Available (1.16.5): HIDE_ENCHANTS, HIDE_ATTRIBUTES, HIDE_UNBREAKABLE, HIDE_DESTROYS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS
+    Options: 
+    - 'HIDE_ENCHANTS'
+    #Custom model data (1.14+) (Items that contain the following custom model data will be banned)
+    Custom-Model-Data: []

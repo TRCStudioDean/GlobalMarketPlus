@@ -1,0 +1,26 @@
+#Command aliases
+#This option can be used to enable the use of aliases for some commands
+#Format: [Alias]: [Original]
+#You can freely add new command aliases in this format
+#Note: It is recommended to restart the server after changing the settings
+Aliases:
+    #/gmp market -> /market
+    "market": "gmp market"
+    #/gmp auction -> /auction
+    "auction": "gmp auction"
+    #/gmp category -> /category
+    "category": "gmp category"
+    #/gmp mailbox -> /mailbox
+    "mailbox": "gmp mailbox"
+    #/gmp money -> /money
+    "money": "gmp money"
+    #/gmp merchandise -> /merchandise
+    "merchandise": "gmp merchandise"
+    #/gmp profile -> /profile
+    "profile": "gmp profile"
+    #/gmp store -> /store
+    "store": "gmp store"
+    #/gmp transaction -> /transaction
+    "transaction": "gmp transaction"
+    #/gmp money pay -> /pay
+    "pay": "gmp money pay"

@@ -1,0 +1,235 @@
+Simplified-Chinese:
+    GUI-Title: '&8&l批量上架 &5&l| &d&l收购'
+    GUI-Size: 54
+    Buttons-Label: false
+    GUI-Effects:
+        On-Open:
+            Open-Delay: 0.5
+            Messages:
+            - '{prefix}&b你正在使用 &r{currency} &b作为货币系统，上架后所有将以此为货币单位。'
+            ClientSounds:
+                'sound':
+                    Sound: ENTITY_EXPERIENCE_ORB_PICKUP
+                    Delay: 0
+                    Volume: 1
+                    Pitch: 1
+    Allow-Move-Buttons:
+        Enabled: true
+        Return-Moved-Buttons: true
+    Function-Buttons:
+        Equality-Upload:
+            Name: '&9&l等价收购'
+            Item: 'PLAYER_HEAD'
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ0N2RkODU2ZDY0YmVlZjdiNzE0ZTE5ZDI5NDdlZThhZThkOTk5NTczZDNmYTM5NzY4NzdhYmQ2MTEyMSJ9fX0='
+            Lores:
+            - ''
+            - '&c&l等价模式说明: &7点击本按钮后'
+            - '&7放入的物品将全部以 &e{money}￥ &7的价格上架'
+            - '&7收取税额: &e{money}&bx&e市场税率&bx&e物品数量 &7。'
+            - ''
+            - '&a点击等价批量上架'
+            Location:
+                Slot: 48
+        Average-Upload:
+            Name: '&9&l均价收购'
+            Item: 'PLAYER_HEAD'
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmM4Y2RjYmI5ODkzNjgxZDg1ODRiMzFlYTA2NDMzZjkzNTI0ODA1NDVlYTkzOGE5ZTZlZGVhOWFjNDkzM2Y5NiJ9fX0='
+            Lores:
+            - ''
+            - '&c&l均价模式说明: &7点击本按钮后'
+            - '&7放入的物品将全部以 &e{money}￥&b/&e物品数量 &7的价格上架'
+            - '&7收取税额: &e{money}&bx&e市场税率 &7。'
+            - ''
+            - '&a点击均价批量上架'
+            Location:
+                Slot: 52
+    Custom-Buttons:
+        '分割线':
+            Name: '&f'
+            Item: BLACK_STAINED_GLASS_PANE
+            Location:
+                Slots: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 18, 19, 27, 28, 36, 37, 45, 47, 49, 50, 51, 53]
+        '说明':
+            Name: '&e&l说明'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7这里是 &c&lGlobal&4&lMarket&6&lPlus &7的批量上架界面，'
+            - '  &7将物品放到界面内，点击上架按钮即可批量上架。'
+            - '  &c&l请注意&7，每一格都会作为单独的商品上架，'
+            - '  &7若有需要堆叠的物品，请注意堆叠后放入同一格。'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6 
+        '打开市场':
+            Name: '&c&l打开全球市场'
+            Item: PLAYER_HEAD
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdjYzY2ODc0MjNkMDU3MGQ1NTZhYzUzZTA2NzZjYjU2M2JiZGQ5NzE3Y2Q4MjY5YmRlYmVkNmY2ZDRlN2JmOCJ9fX0='
+            Lores:
+            - ''
+            - '&e点击打开'
+            Commands:
+            - 'gmp market gui'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+Traditional-Chinese:
+    GUI-Title: '&8&l批量上架 &5&l| &d&l收購'
+    GUI-Size: 54
+    Buttons-Label: false
+    GUI-Effects:
+        On-Open:
+            Open-Delay: 0.5
+            Messages:
+            - '{prefix}&b你正在使用 &r{currency} &b作為貨幣系統，上架後所有將以此為貨幣單位。 '
+            ClientSounds:
+                'sound':
+                    Sound: ENTITY_EXPERIENCE_ORB_PICKUP
+                    Delay: 0
+                    Volume: 1
+                    Pitch: 1
+    Allow-Move-Buttons:
+        Enabled: true
+        Return-Moved-Buttons: true
+    Function-Buttons:
+        Equality-Upload:
+            Name: '&9&l等價收購'
+            Item: 'PLAYER_HEAD'
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ0N2RkODU2ZDY0YmVlZjdiNzE0ZTE5ZDI5NDdlZThhZThkOTk5NTczZDNmYTM5NzY4NzdhYmQ2MTEyMSJ9fX0='
+            Lores:
+            - ''
+            - '&c&l等價模式說明: &7點擊本按鈕後'
+            - '&7放入的物品將全部以 &e{money}￥ &7的價格上架'
+            - '&7收取稅額: &e{money}&bx&e市場稅率&bx&e物品數量 &7。 '
+            - ''
+            - '&a點擊等價批量上架'
+            Location:
+                Slot: 48
+        Average-Upload:
+            Name: '&9&l均價收購'
+            Item: 'PLAYER_HEAD'
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmM4Y2RjYmI5ODkzNjgxZDg1ODRiMzFlYTA2NDMzZjkzNTI0ODA1NDVlYTkzOGE5ZTZlZGVhOWFjNDkzM2Y5NiJ9fX0='
+            Lores:
+            - ''
+            - '&c&l均價模式說明: &7點擊本按鈕後'
+            - '&7放入的物品將全部以 &e{money}￥&b/&e物品數量 &7的價格上架'
+            - '&7收取稅額: &e{money}&bx&e市場稅率 &7。 '
+            - ''
+            - '&a點擊均價批量上架'
+            Location:
+                Slot: 52
+    Custom-Buttons:
+        '分割線':
+            Name: '&f'
+            Item: BLACK_STAINED_GLASS_PANE
+            Location:
+                Slots: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 18, 19, 27, 28, 36, 37, 45, 47, 49, 50, 51, 53]
+        '說明':
+            Name: '&e&l說明'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7這裡是 &c&lGlobal&4&lMarket&6&lPlus &7的批量上架界面，'
+            - '  &7將物品放到界面內，點擊上架按鈕即可批量上架。 '
+            - '  &c&l請注意&7，每一格都會作為單獨的商品上架，'
+            - '  &7若有需要堆疊的物品，請注意堆疊後放入同一格。 '
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6 
+        '打開市場':
+            Name: '&c&l打開全球市場'
+            Item: PLAYER_HEAD
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdjYzY2ODc0MjNkMDU3MGQ1NTZhYzUzZTA2NzZjYjU2M2JiZGQ5NzE3Y2Q4MjY5YmRlYmVkNmY2ZDRlN2JmOCJ9fX0='
+            Lores:
+            - ''
+            - '&e點擊打開'
+            Commands:
+            - 'gmp market gui'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+English:
+    GUI-Title: '&8&lUpload Inventory &5&l| &d&lPurchasing'
+    GUI-Size: 54
+    Buttons-Label: false
+    GUI-Effects:
+        On-Open:
+            Open-Delay: 0.5
+            Messages:
+            - '{prefix}&bYou are using &r{currency} &bas the currency system, after upload all will use this as the currency unit.'
+            ClientSounds:
+                'sound':
+                    Sound: ENTITY_EXPERIENCE_ORB_PICKUP
+                    Delay: 0
+                    Volume: 1
+                    Pitch: 1
+    Allow-Move-Buttons:
+        Enabled: true
+        Return-Moved-Buttons: true
+    Function-Buttons:
+        Equality-Upload:
+            Name: '&9&lEquality upload'
+            Item: 'PLAYER_HEAD'
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ0N2RkODU2ZDY0YmVlZjdiNzE0ZTE5ZDI5NDdlZThhZThkOTk5NTczZDNmYTM5NzY4NzdhYmQ2MTEyMSJ9fX0='
+            Lores:
+            - ''
+            - '&c&lDescription: '
+            - '&7&7After clicking this button,'
+            - '&7all items in the GUI will be uploaded.'
+            - ''
+            - '&dPrice: &e${money}'
+            - '&dTaxed: &e${money}&bx&eTax Rate&bx&eItem Amount'
+            - ''
+            - '&aClick to upload'
+            Location:
+                Slot: 48
+        Average-Upload:
+            Name: '&9&lAverage upload'
+            Item: 'PLAYER_HEAD'
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmM4Y2RjYmI5ODkzNjgxZDg1ODRiMzFlYTA2NDMzZjkzNTI0ODA1NDVlYTkzOGE5ZTZlZGVhOWFjNDkzM2Y5NiJ9fX0='
+            Lores:
+            - ''
+            - '&c&lDescription: '
+            - '&7&7After clicking this button,'
+            - '&7all items in the GUI will be uploaded.'
+            - ''
+            - '&dPrice: &e${money}&b/&eAmount &7.'
+            - '&dTaxed: &e${money}&bx&eTax Rate &7.'
+            - ''
+            - '&aClick to upload'
+            Location:
+                Slot: 52
+    Custom-Buttons:
+        'None':
+            Name: '&f'
+            Item: BLACK_STAINED_GLASS_PANE
+            Location:
+                Slots: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 18, 19, 27, 28, 36, 37, 45, 47, 49, 50, 51, 53]
+        'Description':
+            Name: '&e&lDescription'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7Here is &c&lGlobal&4&lMarket&6&lPlus&7''s upload inventory,'
+            - '  &7Put the items in the GUI to upload in batches.'
+            - '  &c&lNotice: &7each slot will be listed as a merchandise,'
+            - '  &7If there are items that need to be stacked, '
+            - '  &7please put them into the same grid after stacking.'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6 
+        'Open Market':
+            Name: '&c&lOpen Global Market'
+            Item: PLAYER_HEAD
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdjYzY2ODc0MjNkMDU3MGQ1NTZhYzUzZTA2NzZjYjU2M2JiZGQ5NzE3Y2Q4MjY5YmRlYmVkNmY2ZDRlN2JmOCJ9fX0='
+            Lores:
+            - ''
+            - '&eClick to open'
+            Commands:
+            - 'gmp market gui'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6

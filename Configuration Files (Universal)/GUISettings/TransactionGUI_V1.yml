@@ -1,0 +1,540 @@
+Simplified-Chinese:
+    GUI-Title: '&8&l商品交易 &6&l| {transactionType}'
+    GUI-Size: 54
+    Allow-To-Return: true
+    Buttons-Label: false
+    Auto-Refresh:
+        Enabled: true
+        Delay: 0.5
+    Key-Buttons:
+        Merchandise:
+            Selling:
+                Display-Item-Meta: true
+                Auto-Refresh: true
+                Amount: '{displayAmount}'
+                Lores:
+                - '!lores!'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6商品类型: {type}'
+                - '  &f&l▶ &6商家名称: &a{player}'
+                - '  &f&l▶ &6商品价格: &e{displayPrice}￥'
+                - '  &f&l▶ &6零售价格: &e{displayRetailPrice}￥'
+                - '  &f&l▶ &6支付方式: &r{currency}'
+                - '  &f&l▶ &6上市时间: &3{uploadTime}'
+                - '  &f&l▶ &6到期时间: &c{expireTime}'
+                - '  &f&l▶ &6剩余时间: &d{expireTimeLeft}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                Location:
+                    Slot-Of-X: 5
+                    Slot-Of-Y: 3
+            Purchasing:
+                Display-Item-Meta: true
+                Auto-Refresh: true
+                Amount: '{displayAmount}'
+                Lores:
+                - '!lores!'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6商品类型: {type}'
+                - '  &f&l▶ &6商家名称: &a{player}'
+                - '  &f&l▶ &6商品买价: &e{displayPrice}￥'
+                - '  &f&l▶ &6单个买价: &e{displayRetailPrice}￥'
+                - '  &f&l▶ &6收款货币: &r{currency}'
+                - '  &f&l▶ &6上市时间: &3{uploadTime}'
+                - '  &f&l▶ &6到期时间: &c{expireTime}'
+                - '  &f&l▶ &6剩余时间: &d{expireTimeLeft}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                Location:
+                    Slot-Of-X: 5
+                    Slot-Of-Y: 3
+        Shulker-Box-View:
+            Name: '&d&l查看潜影盒内容'
+            Item: ENDER_EYE
+            Lores:
+            - ''
+            - '&e点击查看'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 1
+        Amount-Increase: 
+            1:
+                Name: '&a&l增加一个'
+                Item: ARROW
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6当前数量: &a{displayAmount}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&e点击增加一个'
+                Location:
+                    Slot-Of-X: 6
+                    Slot-Of-Y: 6
+        Amount-Decrease:
+            1:
+                Name: '&c&l减少一个'
+                Item: ARROW
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6当前数量: &a{displayAmount}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&e点击减少一个'
+                Location:
+                    Slot-Of-X: 4
+                    Slot-Of-Y: 6
+    Custom-Buttons:
+        '背景黑板':
+            Name: '&f'
+            Item: BLACK_STAINED_GLASS_PANE
+            Location:
+                Slots: [2, 3, 4, 5, 6, 7, 8, 10, 18, 19, 27, 28, 36, 37, 46, 47, 48, 52, 53]
+        '背景白板':
+            Name: '&f'
+            Item: WHITE_STAINED_GLASS_PANE
+            Location:
+                Slots: [11, 12, 13, 14, 15, 16, 17, 20, 21, 22, 24, 25, 26, 29, 30, 31, 32, 33, 34, 35, 38, 40, 41, 42, 44]
+        '关闭界面':
+            Name: '&4&l关闭界面'
+            Item: RED_STAINED_GLASS_PANE
+            Lores:
+            - ''
+            - '&e点击关闭'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        '返回菜单':
+            Name: '&b&l返回上一个菜单'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&e点击返回'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        '确认交易':
+            Name: '&a确认交易'
+            Item: PLAYER_HEAD
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0='
+            Commands:
+            - 'gmp transaction confirm {uid} {transaction_amount}'
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 5
+        '取消交易':
+            Name: '&c取消交易'
+            Item: PLAYER_HEAD
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ=='
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 5
+        '刷新界面':
+            Name: '&e刷新界面/重置数量'
+            Item: MAGMA_CREAM
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l注意: &7若使用了调整购买数量的按钮'
+            - '  &7将默认为零售交易模式， 点击此按钮'
+            - '  &7刷新并回归到原价购买。'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击刷新'
+            Commands:
+            - 'gmp transaction gui {uid}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 6
+        '说明':
+            Name: '&e&l说明'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7这里是 &c&lGlobal&4&lMarket&6&lPlus &7的商品交易界面。'
+            - '  &7如果商品存在零售价，则可以调整零售数量并以零售价格交易。'
+            - '  &7点击刷新按钮可以恢复默认/重置零售数量。'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6
+        '查找相似':
+            Name: '&d&l查找相似商品'
+            Item: COMPASS
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7这个按钮可以查找同样为 &b{itemDisplayType} &7类型，'
+            - '  &7且价格范围在 &a{calculate:{price}-0.5*{price}}￥ - {calculate:{price}+0.5*{price}}￥ &7以内的相似商品。'
+            - '  &7你也可以使用命令 &c/gmp &2market search &7自行查找相似商品。'
+            - '  &7点击后会跳转至其它界面，点击左上角按钮即可返回。'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击查找'
+            Commands:
+            - 'gmp market search item:{itemType} price:{calculate:{price}-0.5*{price}}:{calculate:{price}+0.5*{price}}'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+Traditional-Chinese:
+    GUI-Title: '&8&l商品交易 &6&l| {transactionType}'
+    GUI-Size: 54
+    Allow-To-Return: true
+    Buttons-Label: false
+    Auto-Refresh:
+        Enabled: true
+        Delay: 0.5
+    Key-Buttons:
+        Merchandise:
+            Selling:
+                Display-Item-Meta: true
+                Auto-Refresh: true
+                Amount: '{displayAmount}'
+                Lores:
+                - '!lores!'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6商品類型: {type}'
+                - '  &f&l▶ &6商家名稱: &a{player}'
+                - '  &f&l▶ &6商品價格: &e{displayPrice}￥'
+                - '  &f&l▶ &6零售價格: &e{displayRetailPrice}￥'
+                - '  &f&l▶ &6支付方式: &r{currency}'
+                - '  &f&l▶ &6上市時間: &3{uploadTime}'
+                - '  &f&l▶ &6到期時間: &c{expireTime}'
+                - '  &f&l▶ &6剩餘時間: &d{expireTimeLeft}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                Location:
+                    Slot-Of-X: 5
+                    Slot-Of-Y: 3
+            Purchasing:
+                Display-Item-Meta: true
+                Auto-Refresh: true
+                Amount: '{displayAmount}'
+                Lores:
+                - '!lores!'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6商品類型: {type}'
+                - '  &f&l▶ &6商家名稱: &a{player}'
+                - '  &f&l▶ &6商品買價: &e{displayPrice}￥'
+                - '  &f&l▶ &6單個買價: &e{displayRetailPrice}￥'
+                - '  &f&l▶ &6收款貨幣: &r{currency}'
+                - '  &f&l▶ &6上市時間: &3{uploadTime}'
+                - '  &f&l▶ &6到期時間: &c{expireTime}'
+                - '  &f&l▶ &6剩餘時間: &d{expireTimeLeft}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                Location:
+                    Slot-Of-X: 5
+                    Slot-Of-Y: 3
+        Shulker-Box-View:
+            Name: '&d&l查看界伏盒內容'
+            Item: ENDER_EYE
+            Lores:
+            - ''
+            - '&e點擊查看'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 1
+        Amount-Increase: 
+            1:
+                Name: '&a&l增加一個'
+                Item: ARROW
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6當前數量: &a{displayAmount}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&e點擊增加一個'
+                Location:
+                    Slot-Of-X: 6
+                    Slot-Of-Y: 6
+        Amount-Decrease:
+            1:
+                Name: '&c&l減少一個'
+                Item: ARROW
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6當前數量: &a{displayAmount}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&e點擊減少一個'
+                Location:
+                    Slot-Of-X: 4
+                    Slot-Of-Y: 6
+    Custom-Buttons:
+        '背景黑板':
+            Name: '&f'
+            Item: BLACK_STAINED_GLASS_PANE
+            Location:
+                Slots: [2, 3, 4, 5, 6, 7, 8, 10, 18, 19, 27, 28, 36, 37, 46, 47, 48, 52, 53]
+        '背景白板':
+            Name: '&f'
+            Item: WHITE_STAINED_GLASS_PANE
+            Location:
+                Slots: [11, 12, 13, 14, 15, 16, 17, 20, 21, 22, 24, 25, 26, 29, 30, 31, 32, 33, 34, 35, 38, 40, 41, 42, 44]
+        '關閉界面':
+            Name: '&4&l關閉界面'
+            Item: RED_STAINED_GLASS_PANE
+            Lores:
+            - ''
+            - '&e點擊關閉'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        '返回菜單':
+            Name: '&b&l返回上一個菜單'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&e點擊返回'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        '確認交易':
+            Name: '&a確認交易'
+            Item: PLAYER_HEAD
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0='
+            Commands:
+            - 'gmp transaction confirm {uid} {transaction_amount}'
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 5
+        '取消交易':
+            Name: '&c取消交易'
+            Item: PLAYER_HEAD
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ=='
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 5
+        '刷新界面':
+            Name: '&e刷新界面/重置數量'
+            Item: MAGMA_CREAM
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l注意: &7若使用了調整購買數量的按鈕'
+            - '  &7將默認為零售交易模式， 點擊此按鈕'
+            - '  &7刷新並回歸到原價購買。 '
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊刷新'
+            Commands:
+            - 'gmp transaction gui {uid}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 6
+        '說明':
+            Name: '&e&l說明'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ' &7這裡是 &c&lGlobal&4&lMarket&6&lPlus &7的商品交易介面。 '
+            - ' &7如果商品存在零售價，則可以調整零售數量並以零售價格交易。 '
+            - ' &7點擊刷新按鈕可以恢復預設/重置零售數量。 '
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6
+        '查找相似':
+            Name: '&d&l找類似商品'
+            Item: COMPASS
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ' &7這個按鈕可以找同樣為 &b{itemDisplayType} &7型，'
+            - ' &7且價格範圍在 &a${calculate:{price}-0.5*{price}} - ${calculate:{price}+0.5*{price}} &7以內的相似商品。 '
+            - ' &7你也可以使用指令 &c/gmp &2market search &7自行找類似商品。 '
+            - ' &7點擊後會跳轉至其它介面，點擊左上角按鈕即可返回。 '
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊查找'
+            Commands:
+            - 'gmp market search item:{itemType} price:{calculate:{price}-0.5*{price}}:{calculate:{price}+0.5*{price}}'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+English:
+    GUI-Title: '&8&lTransaction &6&l| {transactionType}'
+    GUI-Size: 54
+    Allow-To-Return: true
+    Buttons-Label: false
+    Auto-Refresh:
+        Enabled: true
+        Delay: 0.5
+    Key-Buttons:
+        Merchandise:
+            Selling:
+                Display-Item-Meta: true
+                Auto-Refresh: true
+                Amount: '{displayAmount}'
+                Lores:
+                - '!lores!'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6Type: {type}'
+                - '  &f&l▶ &6Merchant: &a{player}'
+                - '  &f&l▶ &6Price: &e${displayPrice}'
+                - '  &f&l▶ &6Retail price: &e${displayRetailPrice}'
+                - '  &f&l▶ &6Currency: &r{currency}'
+                - '  &f&l▶ &6Upload time: &3{uploadTime}'
+                - '  &f&l▶ &6Expiration time: &c{expireTime}'
+                - '  &f&l▶ &6Time left: &d{expireTimeLeft}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                Location:
+                    Slot-Of-X: 5
+                    Slot-Of-Y: 3
+            Purchasing:
+                Display-Item-Meta: true
+                Auto-Refresh: true
+                Amount: '{displayAmount}'
+                Lores:
+                - '!lores!'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6Type: {type}'
+                - '  &f&l▶ &6Merchant: &a{player}'
+                - '  &f&l▶ &6Deposit: &e${displayPrice}'
+                - '  &f&l▶ &6Retail deposit: &e${displayRetailPrice}'
+                - '  &f&l▶ &6Currency: &r{currency}'
+                - '  &f&l▶ &6Upload time: &3{uploadTime}'
+                - '  &f&l▶ &6Expiration time: &c{expireTime}'
+                - '  &f&l▶ &6Time left: &d{expireTimeLeft}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                Location:
+                    Slot-Of-X: 5
+                    Slot-Of-Y: 3
+        Shulker-Box-View:
+            Name: '&d&lShulker box''s contents'
+            Item: ENDER_EYE
+            Lores:
+            - ''
+            - '&eClick to view'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 1
+        Amount-Increase: 
+            1:
+                Name: '&a&lIncrease 1'
+                Item: ARROW
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6Amount: &a{displayAmount}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&eClick to increase'
+                Location:
+                    Slot-Of-X: 6
+                    Slot-Of-Y: 6
+        Amount-Decrease:
+            1:
+                Name: '&c&lDecrease 1'
+                Item: ARROW
+                Lores:
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - '  &f&l▶ &6Amount: &a{displayAmount}'
+                - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+                - ''
+                - '&eClick to decrease'
+                Location:
+                    Slot-Of-X: 4
+                    Slot-Of-Y: 6
+    Custom-Buttons:
+        'Black boards':
+            Name: '&f'
+            Item: BLACK_STAINED_GLASS_PANE
+            Location:
+                Slots: [2, 3, 4, 5, 6, 7, 8, 10, 18, 19, 27, 28, 36, 37, 46, 47, 48, 52, 53]
+        'White boards':
+            Name: '&f'
+            Item: WHITE_STAINED_GLASS_PANE
+            Location:
+                Slots: [11, 12, 13, 14, 15, 16, 17, 20, 21, 22, 24, 25, 26, 29, 30, 31, 32, 33, 34, 35, 38, 40, 41, 42, 44]
+        'Close':
+            Name: '&4&lClose menu'
+            Item: RED_STAINED_GLASS_PANE
+            Lores:
+            - ''
+            - '&eClick to close menu'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        'Return':
+            Name: '&b&lReturn to previous menu'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&eClick to return to previous menu'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        'Confirm':
+            Name: '&aConfirm'
+            Item: PLAYER_HEAD
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0='
+            Commands:
+            - 'gmp transaction confirm {uid} {transaction_amount}'
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 5
+        'Cancel':
+            Name: '&cCancel'
+            Item: PLAYER_HEAD
+            Head-Textures: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ=='
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 5
+        'Refresh':
+            Name: '&eRefresh page/Reset amount'
+            Item: MAGMA_CREAM
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lNote: '
+            - '  &7If you change the buy/sell quantity,'
+            - '  &7Click to refresh to default amount.'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to refresh'
+            Commands:
+            - 'gmp transaction gui {uid}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 6
+        'Description':
+            Name: '&e&lDescription'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7Here is &c&lGlobal&4&lMarket&6&lPlus&7''s transaction GUI,'
+            - '  &7If the item has a retail price, the retail amount'
+            - '  &7can be adjusted and traded at the retail price.'
+            - '  &7Click the refresh button to reset retail amount.'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6
+        'Search similarities':
+            Name: '&d&lSearch similarities'
+            Item: COMPASS
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7This button can search for similar item of'
+            - '  &7the same &b{itemDisplayType} &7type, and'
+            - '  &7with a price range of &a${calculate:{price}-0.5*{price}} - ${calculate:{price}+0.5*{price}}'
+            - '  &7You can also use the command &c/gmp &2market search'
+            - '  &7&7to search for similar products on your own.'
+            - '  &7After clicking, it will jump to other GUI.'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to search'
+            Commands:
+            - 'gmp market search item:{itemType} price:{calculate:{price}-0.5*{price}}:{calculate:{price}+0.5*{price}}'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6

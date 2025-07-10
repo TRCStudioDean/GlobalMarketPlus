@@ -1,0 +1,206 @@
+#Default category
+Default: 'Default'
+
+Categories:
+    #Default category
+    #You can try to create other categories like this.
+    Default:
+        #Display name
+        Display-Name: '&7&lAll'
+        #Whitelist mode
+        #When enabled, items in the collection belong to this category, 
+        #otherwise all items outside the collection belong to this category.
+        Whitelist: false
+        #Permission to use this category (If false means no permission is required)
+        Permission: false
+        #Whether to matching items in shulker box.
+        Match-Shulker-Box: true
+        #Currency names (DEFAULT, VAULT, PLAYERPOINT)
+        Currencies: []
+        #Merchandise's type (SELLING, PURCHASING, BIDDING)
+        Merchandise-Type: []
+        #Mail's state (NORMAL, PICKED_UP, EXPIRED）
+        Item-Mail-State: []
+        #Item ID list
+        #Some items can use "[Item ID]:[Data Number]" to distinguish different types of items under the same item ID
+        #For example, the Enchanted Golden Apple is "GOLDEN_APPLE:1", while the regular Golden Apple is "GOLDEN-APPLE:0"
+        #Elements with prefix 'regex:' will be considered as regular expression matches.
+        Materials: []
+        #Display Name (Items containing the following keywords in the display name will belong to this category)
+        #Elements with prefix 'regex:' will be considered as regular expression matches.
+        Display-Name-Keywords: []
+        #Display lore (item introduction line containing the following keywords will belong to this category)
+        #Elements with prefix 'regex:' will be considered as regular expression matches.
+        Display-Lore-Keywords: []
+        #Enchantment list (if the item contains any of the enchantments in the list, it will belong to this category)
+        #Elements with prefix 'regex:' will be considered as regular expression matches.
+        Enchantments: []
+        #Special Options (1.8+) (Items that contain any of the special options on the list will belong to this category)
+        #Available (1.16.5): HIDE_ENCHANTS, HIDE_ATTRIBUTES, HIDE_UNBREAKABLE, HIDE_DESTROYS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS
+        Options: []
+        #Module list (fill in the names of other categories)
+        #The role is to use content from other categories
+        Modules: []
+        #Internal modules (Bukkit's category, cannot be changed)
+        #Currently available: 
+        #Foods (all food), Blocks (all blocks), Record (all records), Interactive (functional blocks such as buttons, furnaces, enchanting tables, etc)
+        Internal-Modules: []
+        #Serialized item (command /gmp admin item)
+        #Write the serialized item name, and the same item will belong to this category (pay attention to the capitalization of the matching name)
+        Serialized-Items: []
+    Others: 
+        Display-Name: '&3&lOthers'
+        Whitelist: false
+        Permission: false
+        Match-Shulker-Box: true
+        Modules:
+        - Armors
+        - Weapons
+        - Tools
+        - Foods
+        - Potions
+        - Blocks
+        - Disc
+        - Materials
+    Armors:
+        Display-Name: '&6&lArmors'
+        Whitelist: true
+        Permission: false
+        Match-Shulker-Box: true
+        Materials:
+        - LEATHER_HELMET
+        - LEATHER_CHESTPLATE
+        - LEATHER_LEGGINGS
+        - LEATHER_BOOTS
+        - GOLD_HELMET
+        - GOLD_CHESTPLATE
+        - GOLD_LEGGINGS
+        - GOLD_BOOTS
+        - CHAINMAIL_HELMET
+        - CHAINMAIL_CHESTPLATE
+        - CHAINMAIL_LEGGINGS
+        - CHAINMAIL_BOOTS
+        - IRON_HELMET
+        - IRON_CHESTPLATE
+        - IRON_LEGGINGS
+        - IRON_BOOTS
+        - TURTLE_HELMET
+        - DIAMOND_HELMET
+        - DIAMOND_CHESTPLATE
+        - DIAMOND_LEGGINGS
+        - DIAMOND_BOOTS
+    Weapons:
+        Display-Name: '&d&lWeapons'
+        Whitelist: true
+        Permission: false
+        Match-Shulker-Box: true
+        Materials:
+        - WOODEN_SWORD
+        - STONE_SWORD
+        - IRON_SWORD
+        - GOLD_SWORD
+        - DIAMOND_SWORD
+        - WOODEN_AXE
+        - STONE_AXE
+        - IRON_AXE
+        - GOLD_AXE
+        - DIAMOND_AXE
+        - BOW
+        - SHIELD
+        - ARROW
+    Tools:
+        Display-Name: '&c&lTools'
+        Whitelist: true
+        Permission: false
+        Match-Shulker-Box: true
+        Materials:
+        - WOODEN_PICKAXE
+        - WOODEN_AXE
+        - WOODEN_SHOVEL
+        - WOODEN_HOE
+        - GOLD_PICKAXE
+        - GOLD_AXE
+        - GOLD_SHOVEL
+        - GOLD_HOE
+        - STONE_PICKAXE
+        - STONE_AXE
+        - STONE_SHOVEL
+        - STONE_HOE
+        - DIAMOND_PICKAXE
+        - DIAMOND_AXE
+        - DIAMOND_SHOVEL
+        - DIAMOND_HOE
+        - IRON_PICKAXE
+        - IRON_AXE
+        - IRON_SHOVEL
+        - IRON_HOE
+        - FISHING_ROD
+        - SHEARS
+        - LEASH
+        - NAME_TAG
+        - FLINT_AND_STEEL
+        - COMPASS
+        - WATCH
+    Foods:
+        Display-Name: '&1&lFoods'
+        Whitelist: true
+        Permission: false
+        Match-Shulker-Box: true
+        Internal-Modules:
+        - 'Foods'
+    Potions:
+        Display-Name: '&b&lPotions'
+        Whitelist: true
+        Permission: false
+        Match-Shulker-Box: true
+        Materials:
+        - POTION
+        - SPLASH_POTION
+        - LINGERING_POTION
+    Blocks:
+        Display-Name: '&5&lBlocks'
+        Whitelist: true
+        Permission: false
+        Match-Shulker-Box: true
+        Internal-Modules:
+        - 'Blocks'
+    Disc:
+        Display-Name: '&e&lDisc'
+        Whitelist: true
+        Permission: false
+        Match-Shulker-Box: true
+        Internal-Modules:
+        - 'Record'
+    Materials:
+        Display-Name: '&2&lMaterials'
+        Whitelist: true
+        Permission: false
+        Match-Shulker-Box: true
+        Materials:
+        - 'TURTLE_EGG'
+        - 'CONDUIT'
+        - 'SCUTE'
+        - 'COAL'
+        - 'CHARCOAL'
+        - 'DIAMOND'
+        - 'EMERALD'
+        - 'LAPIS_LAZULI'
+        - 'QUARTZ'
+        - 'AMETHYST_SHARD'
+        - 'RAW_IRON'
+        - 'RAW_GOLD'
+        - 'IRON_INGOT'
+        - 'GOLD_INGOT'
+        - 'RAW_COPPER'
+        - 'COPPER_INGOT'
+        - 'NETHERITE_INGOT'
+        - 'NETHERITE_SCRAP'
+        - 'NETHER_BRICK'
+        - 'NAUTILUS_SHELL'
+        - 'HEART_OF_THE_SEA'
+        - 'FLINT'
+        - 'CLAY_BALL'
+        - 'BRICK'
+        - 'SNOWBALL'
+        - 'SLIME_BALL'
+        

@@ -1,0 +1,206 @@
+#GlobalMarket settings
+#Commands: "/gmp market" and "/gmp merchandise"
+
+#Sort methods
+#- ACCORDING_TO_UPLOAD_TIME: Sort by upload time (latest uploaded merchandise first)
+#- ACCORDING_TO_EXPIRE_TIME: Sort by expiration time (the ones that will be removed from the market first)
+#- ACCORDING_TO_PRICE: According to price (expensive first)
+#- ACCORDING_TO_ITEM_AMOUNT: According to item amount (larger number comes first)
+#- RANDOM: Sort by random
+Default-Sorting: ACCORDING_TO_UPLOAD_TIME 
+
+#Cooldown time after using command to set merchandise parameters
+#Since setting parameters will need to generate database IO, this option can prevent frequent clicks from causing lag.
+Cooldown-Of-Parameters-Setting: 5.0
+
+#Number of decimal places to retain
+#This setting applies to the maximum number of decimal places for prices, balances, etc
+Retaining-Decimal-Places: 2
+
+#Distance length of number section marks
+#Number section marks can enhance the visualization of numbers such as prices and balances.
+#Example: 1000000 -> 1,000,000
+#Setting it to 0 means there is no section mark.
+Number-Section-Marks-Distance-Length: 3
+
+#Whether there is a corresponding item and prompt when the merchandise uploading
+#For example, Player123 sells a diamond, and there is an acquisition item for diamonds in the market, then ask the player whether to trade directly
+Merchandises-Match-When-Uploading: true
+
+#Whether to scan all items in the Shulker Box during uploading (equivalent to sell inventory)
+Scan-Shulker-Box-When-Uploading: true
+
+#Whether to enable post tax transactions (if yes, it means that the tax will be charged when the merchandise is uploaded)
+#Only sold and auctioned are valid.
+Transaction-After-Taxes: true
+
+#Whether to refund the tax amount of the merchandise when removing
+#This option only takes effect when the 'Transaction After Taxes' option above is enabled.
+Refund-Taxes-Upon-Merchandise-Removal: false
+
+#Marketing mode name.
+#When using sell/buy command, you can specify a marketing mode to upload the corresponding merchandise.
+#Format: /gmp market sell [Mode]:[Price] [Amount]
+#Example: /gmp market sell retail:100 -> Put the item on the market at a retail price of 100
+#Please set the default marketing mode in the transaction settings below.
+Marketing-Mode-Name:
+    Wholesale: 'wholesale'
+    Retail: 'retail'
+
+#Auction automatic overtime
+Auction-Automatic-Overtime:
+    Enabled: false
+    #The priority is from top to bottom
+    Policies:
+        #Example settings, you can create more policies like this:
+        'example1':
+            #Each auction only has 3 overtime (which means the maximum overtime does not exceed 1 minute and 30 seconds)
+            Limit: 3
+            Overtime: 30s
+            #The broadcast messages
+            Broadcast: 
+            - '{prefix}&e{topBidder} &atriggered &e{policy}&a''s auction overtime, so this auction has an overtime {overtime}!'
+            #All options are optional, if left blank, it will be considered as all situations
+            Conditions:
+                #Remaining time is less than 10 seconds
+                Time-Remaining: 10s
+                #Current bidding price is greater than 100
+                Bidding-Price: 100
+                #Using Vault for currency
+                Currency: Vault
+                #Number of auctions is greater than 3
+                Number-Of-Auctions: 3
+        'example2':
+            Overtime: 30s
+            Conditions:
+                Time-Remaining: 10s
+                Bidding-Price: 50
+
+#Transaction settings
+Transaction:
+    #Selling items
+    Selling:
+        #After the transaction is completed, whether the items obtained from the transaction are mailed to the buyer's mailbox
+        #If false, send directly to the player's inventory
+        #However, if the player's inventory is full, it will still be sent to the mailbox
+        Send-To-Mailbox: false
+        #If there is no designated wholesale or retail mode when listing the merchandise,
+        #Enabling this option defaults to retail mode, otherwise it is wholesale mode.
+        Default-To-Retail-Mode: false
+    #Purchasing items
+    Purchasing:
+        #Whether the control merchandise is consistent with the seller's item NBT parameters
+        #If false, only match if the IDs of the two items are the same
+        Comparison-Products: true
+        #If there is no designated wholesale or retail mode when listing the merchandise,
+        #Enabling this option defaults to retail mode, otherwise it is wholesale mode.
+        Default-To-Retail-Mode: false
+    #Auctions
+    Auctions:
+        #When the auction's remaining time is less than that time, it is forbidden to continue bidding.
+        Retention-Times: 0s
+        #When the new auction price appears, how long should the seller wait to confirm.
+        Cooldown-Of-Bids-Confirm: 0s
+        #Whether allowed for auctions to be removed even after bidding.
+        Allow-Remove-After-Bidding: true
+
+#Merchandise default parameters (referring to the default parameters of the merchandise after the merchandise is upload to the global market)
+Default-Parameters:
+    #The time to wait for the player to enter a new price when repricing a merchandise price
+    Repricing-Time: 30s
+    #The time to wait for the player to enter a new price when repricing a merchandise retail price
+    Retail-Price-Repricing-Time: 30s
+    #Whether to hide merchant name
+    Hide-Merchant-Name: false
+    #Whether to hide on the market (Only displayed in personal store)
+    Hide-Merchandise: false
+    #Whether never expire
+    Never-Expire: false
+    #Whether unlimited
+    Unlimited: false
+
+#Item parameter blacklist (prohibit certain items containing special parameters from being put on the market)
+Item-Parameters-Blacklist:
+    Enabled: false
+    #Whitelist mode
+    #When enabled, items in the collection belong to here, 
+    #otherwise all items outside the collection belong to here.
+    Whitelist: false
+    #Whether to scanning items in shulker box.
+    Scan-Shulker-Box: true
+    #List of item IDs (the following items will be banned)
+    #Below 1.12.2, some items can use "[Item ID]:[Data Number]" to distinguish different types of items under the same item ID
+    #For example, the Enchanted Golden Apple is "GOLDEN_APPLE:1", while the regular Golden Apple is "GOLDEN-APPLE:0"
+    #Elements with prefix 'regex:' will be considered as regular expression matches.
+    Materials:
+    - COMMAND_BLOCK
+    - BEDROCK
+    - BARRIER
+    #Display Name (Items containing the following keywords in the display name will be banned)
+    #Elements with prefix 'regex:' will be considered as regular expression matches.
+    Display-Name-Keywords: 
+    - 'Private Item'
+    #Display lore (item introduction line containing the following keywords will be banned)
+    #Elements with prefix 'regex:' will be considered as regular expression matches.
+    Display-Lore-Keywords: 
+    - 'Private'
+    #Enchantment list (if the item contains any of the enchantments in the list, it will be banned)
+    #Elements with prefix 'regex:' will be considered as regular expression matches.
+    Enchantments: []
+    #Special Options (1.8+) (Items that contain any of the special options on the list will be banned)
+    #Available (1.16.5): HIDE_ENCHANTS, HIDE_ATTRIBUTES, HIDE_UNBREAKABLE, HIDE_DESTROYS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS
+    Options: 
+    - 'HIDE_ENCHANTS'
+    #Custom model data (1.14+) (Items that contain the following custom model data will be banned)
+    Custom-Model-Data: []
+
+#Price limit, this function can be used to limit the price of a certain type of item
+#Note: The limited price range is for a single item
+#For example, if the limit is set at 100-1000, the limit of 64 items is 6400-64000
+Limitation-Of-Price:
+    Enabled: false
+    #Selling items
+    #Format: [Item name]: [Minimum price]-[Maximum price]
+    #Or it can be [Item name]: [Price]
+    #Supports using items from Serialized-Items.yml
+    #Example: 'Earth': 100-1000 It means that the price is limited between 100-1000
+    #Example：'Earth': 10000-Infinity It means that the price is limited between 10000 to infinity
+    #1.12.2 below versions, if it contains a special serial number, you can use [item name: serial number ID]
+    #Example: WOOL:15: 100-1000 It means that the price of black wool is limited between 100-1000
+    Selling:
+        COAL: 10-100
+        IRON_INGOT: 20-100
+        GOLD_INGOT: 30-200
+        REDSTONE: 10-100
+        DIAMOND: 50-500
+        EMERALD: 50-500
+    #Purchasing items
+    #Format: [Item name]: [Minimum price]-[Maximum price]
+    #Or it can be [Item name]: [Price]
+    #Supports using items from Serialized-Items.yml
+    #Example: 'Earth': 100-1000 It means that the price is limited between 100-1000
+    #Example：'Earth': 10000-Infinity It means that the price is limited between 10000 to infinity
+    #1.12.2 below versions, if it contains a special serial number, you can use [item name: serial number ID]
+    #Example: WOOL:15: 100-1000 It means that the price of black wool is limited between 100-1000
+    Purchasing:
+        COAL: 10-100
+        IRON_INGOT: 20-100
+        GOLD_INGOT: 30-200
+        REDSTONE: 10-100
+        DIAMOND: 50-500
+        EMERALD: 50-500
+    #Bidding items
+    #Format: [Item name]: [Minimum price]-[Maximum price]
+    #Or it can be [Item name]: [Price]
+    #Supports using items from Serialized-Items.yml
+    #Example: 'Earth': 100-1000 It means that the price is limited between 100-1000
+    #Example：'Earth': 10000-Infinity It means that the price is limited between 10000 to infinity
+    #1.12.2 below versions, if it contains a special serial number, you can use [item name: serial number ID]
+    #Example: WOOL:15: 100-1000 It means that the price of black wool is limited between 100-1000
+    Bidding:
+        COAL: 10-100
+        IRON_INGOT: 20-100
+        GOLD_INGOT: 30-200
+        REDSTONE: 10-100
+        DIAMOND: 50-500
+        EMERALD: 50-500

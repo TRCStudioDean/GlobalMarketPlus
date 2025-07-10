@@ -1,0 +1,403 @@
+#Commands permissions
+
+#All permission can be customized, please set or change according to the following format:
+#  Default: Default is available for all players, if set to true means all players have this permission
+#  Permission: You know :D
+#  Allowed-Groups: Default allowed groups (please set in Groups.yml)
+
+Help: 
+    Permission: globalmarketplus.command.help
+    Default: true
+#Reload plugin or functions
+Reload: 
+    Permission: globalmarketplus.command.reload
+    Default: false
+    Help:
+        Permission: globalmarketplus.command.reload.help
+        Default: false
+    All:
+        Permission: globalmarketplus.command.reload.all
+        Default: false
+    Config:
+        Permission: globalmarketplus.command.reload.config
+        Default: false
+    Database:
+        Permission: globalmarketplus.command.reload.database
+        Default: false
+    Messages:
+        Permission: globalmarketplus.command.reload.messages
+        Default: false
+    GUI:
+        Permission: globalmarketplus.command.reload.gui
+        Default: false
+    PlayerData:
+        Permission: globalmarketplus.command.reload.playerdata
+        Default: false
+    Market:
+        Permission: globalmarketplus.command.reload.market
+        Default: false
+    Recorder:
+        Permission: globalmarketplus.command.reload.recorder
+        Default: false
+    Group:
+        Permission: globalmarketplus.command.reload.group
+        Default: false
+    Category:
+        Permission: globalmarketplus.command.reload.category
+        Default: false
+#Market commands.
+#Among them, "/market bid" redirect to "/auction start", please edit this permission in the Auction permission setting.
+Market:
+    Permission: globalmarketplus.command.market
+    Default: true
+    Help:
+        Permission: globalmarketplus.command.market.help
+        Default: true
+    GUI:
+        Permission: globalmarketplus.command.market.gui
+        Default: true
+    Sell:
+        Permission: globalmarketplus.command.market.sell
+        Default: true
+    Buy:
+        Permission: globalmarketplus.command.market.buy
+        Default: true
+    Search:
+        Permission: globalmarketplus.command.market.search
+        Default: true
+    SellInventory:
+        Permission: globalmarketplus.command.market.sellinventory
+        Default: true
+    BuyInventory:
+        Permission: globalmarketplus.command.market.buyinventory
+        Default: true
+#Mailbox commands.
+#The "For-Others" option in some commands refers to whether the command applies to other player's mailboxes,
+#otherwise it can only be used within the scope of one's own mailboxes
+Mailbox:
+    Permission: globalmarketplus.command.mailbox
+    Default: true
+    Send:
+        Permission: globalmarketplus.command.mailbox.send
+        Default: true
+        Send-All:
+            Permission: globalmarketplus.command.mailbox.send-all
+            Default: false
+    Select:
+        Permission: globalmarketplus.command.mailbox.select
+        Default: false
+    GUI:
+        Permission: globalmarketplus.command.mailbox.gui
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.mailbox.gui.for-others
+            Default: false
+    List:
+        Permission: globalmarketplus.command.mailbox.list
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.mailbox.list.for-others
+            Default: false
+    PickUp:
+        Permission: globalmarketplus.command.mailbox.pickup
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.mailbox.pickup.for-others
+            Default: false
+    Delete:
+        Permission: globalmarketplus.command.mailbox.delete
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.mailbox.delete.for-others
+            Default: false
+#Auction commands.
+#The "For-Others" option in some commands refers to whether the command applies to other player's merchandises,
+#otherwise it can only be used within the scope of your own merchandises
+Auction:
+    Permission: globalmarketplus.command.auction
+    Default: true
+    Start:
+        Permission: globalmarketplus.command.auction.start
+        Default: true
+    Bid:
+        Permission: globalmarketplus.command.auction.bid
+        Default: true
+    GUI:
+        Permission: globalmarketplus.command.auction.gui
+        Default: true
+    Overtime:
+        Permission: globalmarketplus.command.auction.overtime
+        Default: false
+        For-Others:
+            Permission: globalmarketplus.command.auction.end.for-others
+            Default: false
+    Confirm:
+        Permission: globalmarketplus.command.auction.confirm
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.auction.confirm.for-others
+            Default: false
+#Merchandise commands.
+#The "For-Others" option in some commands refers to whether the command applies to other player's merchandises,
+#otherwise it can only be used within the scope of your own merchandises
+Merchandise:
+    Permission: globalmarketplus.command.merchandise
+    Default: true
+    Set:
+        Permission: globalmarketplus.command.merchandise.set
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.merchandise.set.for-others
+            Default: false
+    Shulker-Box:
+        Permission: globalmarketplus.command.merchandise.shulkerbox
+        Default: true
+    Remove:
+        Permission: globalmarketplus.command.merchandise.remove
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.merchandise.remove.for-others
+            Default: false
+        Bidding:
+            Permission: globalmarketplus.command.merchandise.remove.bidding
+            Default: false
+    Info:
+        Permission: globalmarketplus.command.merchandise.info
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.merchandise.info.for-others
+            Default: true
+    GUI:
+        Permission: globalmarketplus.command.merchandise.gui
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.merchandise.gui.for-others
+            Default: false
+    List:
+        Permission: globalmarketplus.command.merchandise.list
+        Default: true
+    List-All:
+        Permission: globalmarketplus.command.merchandise.listall
+        Default: false
+#Profile commands.
+#The "For-Others" option in some commands refers to whether the command applies to other player's profile,
+#otherwise it can only work on your own profile
+Profile:
+    Permission: globalmarketplus.command.profile
+    Default: true
+    Help:
+        Permission: globalmarketplus.command.profile.help
+        Default: true
+    Select:
+        Permission: globalmarketplus.command.profile.select
+        Default: false
+    Set:
+        Permission: globalmarketplus.command.profile.set
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.profile.set.for-others
+            Default: false
+    Tasks:
+        Permission: globalmarketplus.command.profile.tasks
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.profile.tasks.for-others
+            Default: false
+    Info:
+        Permission: globalmarketplus.command.profile.info
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.profile.info.for-others
+            Default: false
+    Refresh:
+        Permission: globalmarketplus.command.profile.refresh
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.profile.refresh.for-others
+            Default: false
+    GUI:
+        Permission: globalmarketplus.command.profile.gui
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.profile.gui.for-others
+            Default: false
+#Transaction commands.
+Transaction:
+    Permission: globalmarketplus.command.transaction
+    Default: true
+    Help:
+        Permission: globalmarketplus.command.transaction.help
+        Default: true
+    GUI:
+        Permission: globalmarketplus.command.transaction.gui
+        Default: true
+    Confirm:
+        Permission: globalmarketplus.command.transaction.confirm
+        Default: true
+#Store commands.
+Store:
+    Permission: globalmarketplus.command.store
+    Default: true
+    View:
+        Permission: globalmarketplus.command.store.view
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.store.view.for-others
+            Default: true
+    Info:
+        Permission: globalmarketplus.command.store.info
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.store.info.for-others
+            Default: false
+    List:
+        Permission: globalmarketplus.command.store.list
+        Default: true
+        GUI:
+            Permission: globalmarketplus.command.store.list.gui
+            Default: true
+    Style:
+        Permission: globalmarketplus.command.store.style
+        Default: true
+        Create:
+            Permission: globalmarketplus.command.store.style.create
+            Default: false
+        List:
+            Permission: globalmarketplus.command.store.style.list
+            Default: true
+        Use:
+            Permission: globalmarketplus.command.store.style.use
+            Default: true
+            For-Others:
+                Permission: globalmarketplus.command.store.style.use.for-others
+                Default: false
+        Reset:
+            Permission: globalmarketplus.command.store.style.reset
+            Default: true
+            For-Others:
+                Permission: globalmarketplus.command.store.style.reset.for-others
+                Default: false
+        Delete:
+            Permission: globalmarketplus.command.store.style.delete
+            Default: false
+        View:
+            Permission: globalmarketplus.command.store.style.view
+            Default: true
+#Category commands.
+#The "For-Others" option in some commands refers to whether the command applies to other player's settings,
+#otherwise it can only work on your own settings
+Category:
+    Permission: globalmarketplus.command.category
+    Default: true
+    Help:
+        Permission: globalmarketplus.command.category.help
+        Default: true
+    Set:
+        Permission: globalmarketplus.command.category.set
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.category.set.for-others
+            Default: false
+    Reset:
+        Permission: globalmarketplus.command.category.reset
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.category.reset.for-others
+            Default: false
+    Info:
+        Permission: globalmarketplus.command.category.info
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.category.info.for-others
+            Default: false
+    GUI:
+        Permission: globalmarketplus.command.category.gui
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.category.gui.for-others
+            Default: false
+    List:
+        Permission: globalmarketplus.command.category.list
+        Default: true
+#GUI commands.
+GUI:
+    Permission: globalmarketplus.command.gui
+    Default: true
+    Help:
+        Permission: globalmarketplus.command.gui.help
+        Default: true
+    Open:
+        #/gmp gui open [GUI Name] [PlayerName] [JSON parameters]
+        Permission: globalmarketplus.command.gui.open
+        Default: true
+        Self:
+            Permission: globalmarketplus.command.gui.open.self
+            Default: true
+        For-Others:
+            Permission: globalmarketplus.command.gui.open.for-others
+            Default: false
+        JSON:
+            Permission: globalmarketplus.command.gui.open.json
+            Default: false
+    Back:
+        Permission: globalmarketplus.command.gui.back
+        Default: true
+    List:
+        Permission: globalmarketplus.command.gui.list
+        Default: false
+#Money commands.
+Money:
+    Permission: globalmarketplus.command.money
+    Default: true
+    Help:
+        Permission: globalmarketplus.command.money.help
+        Default: true
+    Info:
+        Permission: globalmarketplus.command.money.info
+        Default: true
+    Pay:
+        Permission: globalmarketplus.command.money.pay
+        Default: true
+    Set:
+        Permission: globalmarketplus.command.money.set
+        Default: false
+    Give:
+        Permission: globalmarketplus.command.money.give
+        Default: false
+    Take:
+        Permission: globalmarketplus.command.money.take
+        Default: false
+    Currency:
+        Permission: globalmarketplus.command.money.currency
+        Default: true
+        For-Others:
+            Permission: globalmarketplus.command.money.currency.for-others
+            Default: false
+#Admin commands.
+Admin:
+    Permission: globalmarketplus.command.admin
+    Default: false
+    Help:
+        Permission: globalmarketplus.command.admin.help
+        Default: false
+    Item:
+        Permission: globalmarketplus.command.admin.item
+        Default: false
+    Group:
+        Permission: globalmarketplus.command.admin.group
+        Default: false
+    Cache:
+        Permission: globalmarketplus.command.admin.cache
+        Default: false
+    Database:
+        Permission: globalmarketplus.command.admin.database
+        Default: false
+    Recorder:
+        Permission: globalmarketplus.command.admin.recorder
+        Default: false
+    Item-Blacklist:
+        Permission: globalmarketplus.command.admin.itemblacklist
+        Default: false
+    Update-Item-Display-Name:
+        Permission: globalmarketplus.command.admin.updateitemdisplayname
+        Default: false

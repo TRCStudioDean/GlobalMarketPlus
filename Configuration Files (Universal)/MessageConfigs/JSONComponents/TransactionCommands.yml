@@ -1,0 +1,99 @@
+Simplified-Chinese:
+    'Transaction Help':
+        Placeholder: '%gmp_command_transaction_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp transaction help '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b关于 &c/gmp &6transaction &b的命令帮助'
+    'Transaction GUI':
+        Placeholder: '%gmp_command_transaction_gui%'
+        Text: '&2gui [商品UID] &7[数量]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp transaction gui '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b打开某件商品的交易页面'
+            - '&b使用方法 &c/gmp &6transaction gui [商品UID] &7[数量]'
+    'Transaction Confirm':
+        Placeholder: '%gmp_command_transaction_confirm%'
+        Text: '&2confirm [商品UID] &7[数量]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp transaction confirm '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b确认与某件商品的交易'
+            - '&b使用方法 &c/gmp &6transaction confirm [商品UID] &7[数量]'
+English:
+    'Transaction Help':
+        Placeholder: '%gmp_command_transaction_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp transaction help '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bAbout &c/gmp &6transaction&b''s subcommands help'
+    'Transaction GUI':
+        Placeholder: '%gmp_command_transaction_gui%'
+        Text: '&2gui [UID] &7[Amount]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp transaction gui '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bOpen the transaction page for a merchandise'
+            - '&bUsage: &c/gmp &6transaction gui [UID] &7[Amount]'
+    'Transaction Confirm':
+        Placeholder: '%gmp_command_transaction_confirm%'
+        Text: '&2confirm [UID] &7[Amount]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp transaction confirm '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bConfirm a transaction'
+            - '&bUsage: &c/gmp &6transaction confirm [UID] &7[Amount]'
+Traditional-Chinese:
+    'Transaction Help':
+        Placeholder: '%gmp_command_transaction_help%'
+        Text: '&2help'
+        ClickEvent:
+            Action: RUN_COMMAND
+            Value: '/gmp transaction help '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b關於 &c/gmp &6transaction &b的命令幫助'
+    'Transaction GUI':
+        Placeholder: '%gmp_command_transaction_gui%'
+        Text: '&2gui [商品UID] &7[數量]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp transaction gui '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b打開某件商品的交易頁面'
+            - '&b使用方法 &c/gmp &6transaction gui [商品UID] &7[數量]'
+    'Transaction Confirm':
+        Placeholder: '%gmp_command_transaction_confirm%'
+        Text: '&2confirm [商品UID] &7[數量]'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp transaction confirm '
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b確認與某件商品的交易'
+            - '&b使用方法 &c/gmp &6transaction confirm [商品UID] &7[數量]'

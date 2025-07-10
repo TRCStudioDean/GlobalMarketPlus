@@ -1,0 +1,799 @@
+Simplified-Chinese:
+    GUI-Title: '&8&l个人邮箱 &5&l| &9&l{page}&7&l/&9&l{maxpage}'
+    GUI-Size: 54
+    Allow-To-Return: true
+    Buttons-Label: false
+    Auto-Refresh:
+        Enabled: true
+        Delay: 0.5
+    Item-Mail-Buttons:
+        Normal:
+            Display-Item-Meta: true
+            Auto-Refresh: true
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '!lores!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6物品类型: &3&l邮件'
+            - '  &f&l▶ &6邮件状态: &e&l可签收'
+            - '  &f&l▶ &6物品来源: {source}'
+            - '  &f&l▶ &6发送时间: &3{sendingTime}'
+            - '  &f&l▶ &6到期时间: &c{expireTime}'
+            - '  &f&l▶ &6剩余时间: &d{expireTimeLeft}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a&l左键签收 &6&l| &c&l右键删除'
+            Special-Click-Events:
+                'Left':
+                    Refresh-GUI: true
+                    Commands:
+                    - 'gmp mailbox pickup {uid} {target_player}'
+                'Right':
+                    Close-GUI: true
+                    Commands:
+                    - 'gmp mailbox delete {uid} {target_player}'
+        PickedUp:
+            Display-Item-Meta: true
+            Auto-Refresh: true
+            Lores:
+            - '!lores!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6物品类型: &3&l邮件'
+            - '  &f&l▶ &6邮件状态: &a&l已签收'
+            - '  &f&l▶ &6物品来源: {source}'
+            - '  &f&l▶ &6发送时间: &3{sendingTime}'
+            - '  &f&l▶ &6到期时间: &c{expireTime}'
+            - '  &f&l▶ &6剩余时间: &d{expireTimeLeft}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a&l已签收✔ &6&l| &c&l右键删除'
+            Special-Click-Events:
+                'Right':
+                    Refresh-GUI: true
+                    Commands:
+                    - 'gmp mailbox delete {uid} {target_player}'
+        Expired:
+            Display-Item-Meta: true
+            Auto-Refresh: true
+            Lores:
+            - '!lores!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6物品类型: &3&l邮件'
+            - '  &f&l▶ &6邮件状态: &c&l已过期'
+            - '  &f&l▶ &6物品来源: {source}'
+            - '  &f&l▶ &6发送时间: &3{sendingTime}'
+            - '  &f&l▶ &6到期时间: &c{expireTime}'
+            - '  &f&l▶ &6剩余时间: &d{expireTimeLeft}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&c&l已过期✘ &6&l| &c&l右键删除'
+            Refresh-GUI: true
+            Special-Click-Events:
+                'Right':
+                    Refresh-GUI: true
+                    Commands:
+                    - 'gmp mailbox delete {uid} {target_player}'
+        Location:
+            Slots-Of-X: [2, 3, 4, 5, 6, 7, 8]
+            Slots-Of-Y: [3, 4, 5]
+    Custom-Buttons:
+        '返回菜单':
+            Name: '&b&l返回上一个菜单'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&e点击返回'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        '关闭界面':
+            Name: '&4&l关闭界面'
+            Item: STAINED_GLASS_PANE
+            Data: 14
+            Lores:
+            - ''
+            - '&e点击关闭'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        '背景黑板':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 15
+            Location:
+                Slots: [2, 8, 10, 11, 13, 14, 15, 16, 17, 18, 19, 27, 28, 36, 37, 45, 47, 48, 52, 53]
+        '背景灰板':
+            Name: '&7空槽'
+            Item: STAINED_GLASS_PANE
+            Data: 8
+            Lores:
+            - ''
+            - '&8&o等待新邮件...'
+            Location:
+                Slots-Of-X: [2, 3, 4, 5, 6, 7, 8]
+                Slots-Of-Y: [3, 4, 5]
+        '背景绿板':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 5
+            Enchantments:
+            - DURABILITY:10
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 2
+        '个人邮箱':
+            Name: '&d&l个人邮箱'
+            Item: CHEST
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - ''
+            - '&a已是当前页面'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 1
+        '个人商店':
+            Name: '&3&l个人商店'
+            Item: ENDER_CHEST
+            Lores:
+            - ''
+            - '&e点击打开个人商店'
+            Commands:
+            - 'gmp store view {player}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 1
+        '个人档案':
+            Name: '&c个人档案'
+            Item: SKULL_ITEM
+            Data: 3
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6商家名字: &d{player}'
+            - '  &f&l▶ &6用户组名: &c{group}'
+            - '  &f&l▶ &6当前分类: &3{category}'
+            - '  &f&l▶ &6账户余额: &e{displayBalance}￥'
+            - '  &f&l▶ &6邮箱物品: &a{mails}件'
+            - '  &f&l▶ &6商品件数: &5{merchandises}件'
+            - '  &f&l▶ &6交易次数: &9{statistics_totalTransactionsNumber}次'
+            - '  &f&l▶ &6拍卖次数: &b{statistics_totalAuctionNumber}次'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击打开档案页面'
+            Commands:
+            - 'gmp profile gui {player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 1
+        '设置分类':
+            Name: '&5&l设置分类'
+            Item: ENCHANTMENT_TABLE
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l说明: &7只有特定权限组能使用'
+            - '  &7分类可用于指定查看商品、邮件等物品'
+            - ''
+            - '  &f&l▶ &6当前分类: {category}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e点击打开设置界面'
+            Commands:
+            - 'gmp category gui {player}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 1
+        '所有商店':
+            Name: '&9&l所有商店'
+            Item: COMPASS
+            Lores:
+            - ''
+            - '&e点击查看所有玩家商店'
+            Commands:
+            - 'gmp store list 1 GUI'
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 1
+        '说明':
+            Name: '&e&l说明'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7这里是 &c&lGlobal&4&lMarket&6&lPlus &7的个人邮箱，'
+            - '  &7你可以在这里查看所有 &a&l个人邮件 &7。'
+            - '  &7包含 &d购买&7、&e赠送&7、&b出售&7、&c下架&7的邮件'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6
+        '上一页':
+            Name: '&a&l上一页'
+            Item: ARROW
+            Cooldown-Of-Button-Click: 1
+            Lores:
+            - ''
+            - '&e点击打开第 &a{previousPage} &e页'
+            Commands:
+            - 'gmp mailbox gui {target_player} {previousPage}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 6
+        '刷新':
+            Name: '&6&l刷新'
+            Item: DOUBLE_PLANT
+            Cooldown-Of-Button-Click: 1
+            Lores:
+            - ''
+            - '&e点击刷新'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 6
+        '下一页':
+            Name: '&a&l下一页'
+            Item: ARROW
+            Cooldown-Of-Button-Click: 1
+            Lores:
+            - ''
+            - '&e点击打开第 &a{nextPage} &e页'
+            Commands:
+            - 'gmp mailbox gui {target_player} {nextPage}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 6
+        '一键操作':
+            Name: '&e&l一键操作'
+            Item: MAGMA_CREAM
+            Lores:
+            - ''
+            - '&a左键签收全部 &6&l| &c右键删除全部'
+            Special-Click-Events:
+                'Left':
+                    Refresh-GUI: true
+                    Commands:
+                    - 'gmp mailbox pickup all {target_player}'
+                'Right':
+                    Refresh-GUI: true
+                    Commands:
+                    - 'gmp mailbox delete all {target_player}'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+Traditional-Chinese:
+    GUI-Title: '&8&l個人郵箱 &5&l| &9&l{page}&7&l/&9&l{maxpage}'
+    GUI-Size: 54
+    Allow-To-Return: true
+    Buttons-Label: false
+    Auto-Refresh:
+        Enabled: true
+        Delay: 0.5
+    Item-Mail-Buttons:
+        Normal:
+            Display-Item-Meta: true
+            Auto-Refresh: true
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '!lores!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6物品類型: &3&l郵件'
+            - '  &f&l▶ &6郵件狀態: &e&l可簽收'
+            - '  &f&l▶ &6物品來源: {source}'
+            - '  &f&l▶ &6發送時間: &3{sendingTime}'
+            - '  &f&l▶ &6到期時間: &c{expireTime}'
+            - '  &f&l▶ &6剩餘時間: &d{expireTimeLeft}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a&l左鍵簽收 &6&l| &c&l右鍵刪除'
+            Special-Click-Events:
+                'Left':
+                    Refresh-GUI: true
+                    Commands:
+                    - 'gmp mailbox pickup {uid} {target_player}'
+                'Right':
+                    Close-GUI: true
+                    Commands:
+                    - 'gmp mailbox delete {uid} {target_player}'
+        PickedUp:
+            Display-Item-Meta: true
+            Auto-Refresh: true
+            Lores:
+            - '!lores!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6物品類型: &3&l郵件'
+            - '  &f&l▶ &6郵件狀態: &a&l已簽收'
+            - '  &f&l▶ &6物品來源: {source}'
+            - '  &f&l▶ &6發送時間: &3{sendingTime}'
+            - '  &f&l▶ &6到期時間: &c{expireTime}'
+            - '  &f&l▶ &6剩餘時間: &d{expireTimeLeft}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a&l已簽收✔ &6&l| &c&l右鍵刪除'
+            Special-Click-Events:
+                'Right':
+                    Refresh-GUI: true
+                    Commands:
+                    - 'gmp mailbox delete {uid} {target_player}'
+        Expired:
+            Display-Item-Meta: true
+            Auto-Refresh: true
+            Lores:
+            - '!lores!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6物品類型: &3&l郵件'
+            - '  &f&l▶ &6郵件狀態: &c&l已過期'
+            - '  &f&l▶ &6物品來源: {source}'
+            - '  &f&l▶ &6發送時間: &3{sendingTime}'
+            - '  &f&l▶ &6到期時間: &c{expireTime}'
+            - '  &f&l▶ &6剩餘時間: &d{expireTimeLeft}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&c&l已過期✘ &6&l| &c&l右鍵刪除'
+            Refresh-GUI: true
+            Special-Click-Events:
+                'Right':
+                    Refresh-GUI: true
+                    Commands:
+                    - 'gmp mailbox delete {uid} {target_player}'
+        Location:
+            Slots-Of-X: [2, 3, 4, 5, 6, 7, 8]
+            Slots-Of-Y: [3, 4, 5]
+    Custom-Buttons:
+        '返回菜單':
+            Name: '&b&l返回上一個菜單'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&e點擊返回'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        '關閉界面':
+            Name: '&4&l關閉界面'
+            Item: STAINED_GLASS_PANE
+            Data: 14
+            Lores:
+            - ''
+            - '&e點擊關閉'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        '背景黑板':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 15
+            Location:
+                Slots: [2, 8, 10, 11, 13, 14, 15, 16, 17, 18, 19, 27, 28, 36, 37, 45, 47, 48, 52, 53]
+        '背景灰板':
+            Name: '&7空槽'
+            Item: STAINED_GLASS_PANE
+            Data: 8
+            Lores:
+            - ''
+            - '&8&o等待新郵件...'
+            Location:
+                Slots-Of-X: [2, 3, 4, 5, 6, 7, 8]
+                Slots-Of-Y: [3, 4, 5]
+        '背景綠板':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 5
+            Enchantments:
+            - DURABILITY:10
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 2
+        '個人郵箱':
+            Name: '&d&l個人郵箱'
+            Item: CHEST
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - ''
+            - '&a已是當前頁面'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 1
+        '個人商店':
+            Name: '&3&l個人商店'
+            Item: ENDER_CHEST
+            Lores:
+            - ''
+            - '&e點擊打開個人商店'
+            Commands:
+            - 'gmp store view {player}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 1
+        '個人檔案':
+            Name: '&c個人檔案'
+            Item: SKULL_ITEM
+            Data: 3
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6商家名字: &d{player}'
+            - '  &f&l▶ &6用戶組名: &c{group}'
+            - '  &f&l▶ &6當前分類: &3{category}'
+            - '  &f&l▶ &6賬戶餘額: &e{displayBalance}￥'
+            - '  &f&l▶ &6郵箱物品: &a{mails}件'
+            - '  &f&l▶ &6商品件數: &5{merchandises}件'
+            - '  &f&l▶ &6交易次數: &9{statistics_totalTransactionsNumber}次'
+            - '  &f&l▶ &6拍賣次數: &b{statistics_totalAuctionNumber}次'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊打開檔案頁面'
+            Commands:
+            - 'gmp profile gui {player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 1
+        '設定分類':
+            Name: '&5&l設定分類'
+            Item: ENCHANTMENT_TABLE
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&l說明: &7只有特定權限組能使用'
+            - '  &7分類可用於指定查看商品、郵件等物品'
+            - ''
+            - '  &f&l▶ &6當前分類: {category}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&e點擊打開設定界面'
+            Commands:
+            - 'gmp category gui {player}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 1
+        '所有商店':
+            Name: '&9&l所有商店'
+            Item: COMPASS
+            Lores:
+            - ''
+            - '&e點擊查看所有玩家商店'
+            Commands:
+            - 'gmp store list 1 GUI'
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 1
+        '說明':
+            Name: '&e&l說明'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7這裡是 &c&lGlobal&4&lMarket&6&lPlus &7的個人郵箱，'
+            - '  &7你可以在這裡查看所有 &a&l個人郵件 &7。 '
+            - '  &7包含 &d購買&7、&e贈送&7、&b出售&7、&c下架&7的郵件'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6
+        '上一頁':
+            Name: '&a&l上一頁'
+            Item: ARROW
+            Cooldown-Of-Button-Click: 1
+            Lores:
+            - ''
+            - '&e點擊打開第 &a{previousPage} &e頁'
+            Commands:
+            - 'gmp mailbox gui {target_player} {previousPage}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 6
+        '刷新':
+            Name: '&6&l刷新'
+            Item: DOUBLE_PLANT
+            Cooldown-Of-Button-Click: 1
+            Lores:
+            - ''
+            - '&e點擊刷新'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 6
+        '下一頁':
+            Name: '&a&l下一頁'
+            Item: ARROW
+            Cooldown-Of-Button-Click: 1
+            Lores:
+            - ''
+            - '&e點擊打開第 &a{nextPage} &e頁'
+            Commands:
+            - 'gmp mailbox gui {target_player} {nextPage}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 6
+        '一鍵操作':
+            Name: '&e&l一鍵操作'
+            Item: MAGMA_CREAM
+            Lores:
+            - ''
+            - '&a左鍵簽收全部 &6&l| &c右鍵刪除全部'
+            Special-Click-Events:
+                'Left':
+                    Refresh-GUI: true
+                    Commands:
+                    - 'gmp mailbox pickup all {target_player}'
+                'Right':
+                    Refresh-GUI: true
+                    Commands:
+                    - 'gmp mailbox delete all {target_player}'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
+English:
+    GUI-Title: '&8&lMailbox &9&l{page}&7&l/&9&l{maxpage}'
+    GUI-Size: 54
+    Allow-To-Return: true
+    Buttons-Label: false
+    Auto-Refresh:
+        Enabled: true
+        Delay: 0.5
+    Item-Mail-Buttons:
+        Normal:
+            Display-Item-Meta: true
+            Auto-Refresh: true
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - '!lores!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Type: &3&lMail'
+            - '  &f&l▶ &6Status: &e&lPickup possible'
+            - '  &f&l▶ &6Item source: {source}'
+            - '  &f&l▶ &6Sending time: &3{sendingTime}'
+            - '  &f&l▶ &6Expiration time: &c{expireTime}'
+            - '  &f&l▶ &6Time left: &d{expireTimeLeft}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a&lLeft Click to Pickup'
+            - '&c&lRight Click to Delete'
+            Special-Click-Events:
+                'Left':
+                    Refresh-GUI: true
+                    Commands:
+                    - 'gmp mailbox pickup {uid} {target_player}'
+                'Right':
+                    Close-GUI: true
+                    Commands:
+                    - 'gmp mailbox delete {uid} {target_player}'
+        PickedUp:
+            Display-Item-Meta: true
+            Auto-Refresh: true
+            Lores:
+            - '!lores!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Type: &3&lMail'
+            - '  &f&l▶ &6Status: &a&lPicked up'
+            - '  &f&l▶ &6Item source: {source}'
+            - '  &f&l▶ &6Sending time: &3{sendingTime}'
+            - '  &f&l▶ &6Expiration time: &c{expireTime}'
+            - '  &f&l▶ &6Time left: &d{expireTimeLeft}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&a&lPicked up √'
+            - '&c&lRight Click to Delete'
+            Special-Click-Events:
+                'Right':
+                    Refresh-GUI: true
+                    Commands:
+                    - 'gmp mailbox delete {uid} {target_player}'
+        Expired:
+            Display-Item-Meta: true
+            Auto-Refresh: true
+            Lores:
+            - '!lores!'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Type: &3&lMail'
+            - '  &f&l▶ &6Status: &c&lExpired'
+            - '  &f&l▶ &6Item source: {source}'
+            - '  &f&l▶ &6Sending time: &3{sendingTime}'
+            - '  &f&l▶ &6Expiration time: &c{expireTime}'
+            - '  &f&l▶ &6Time left: &d{expireTimeLeft}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&c&lExpired'
+            - '&c&lRight Click to Delete'
+            Refresh-GUI: true
+            Special-Click-Events:
+                'Right':
+                    Refresh-GUI: true
+                    Commands:
+                    - 'gmp mailbox delete {uid} {target_player}'
+        Location:
+            Slots-Of-X: [2, 3, 4, 5, 6, 7, 8]
+            Slots-Of-Y: [3, 4, 5]
+    Custom-Buttons:
+        'Return':
+            Name: '&b&lReturn to previous menu'
+            Item: BOOK
+            Lores:
+            - ''
+            - '&eClick to return to previous menu'
+            Commands:
+            - 'gmp gui back'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 1
+        'Close':
+            Name: '&4&lClose menu'
+            Item: STAINED_GLASS_PANE
+            Data: 14
+            Lores:
+            - ''
+            - '&eClick to close menu'
+            Close-GUI: true
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 1
+        'Black boards':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 15
+            Location:
+                Slots: [2, 8, 10, 11, 13, 14, 15, 16, 17, 18, 19, 27, 28, 36, 37, 45, 47, 48, 52, 53]
+        'Gray boards':
+            Name: '&7Empty Slot'
+            Item: STAINED_GLASS_PANE
+            Data: 8
+            Lores:
+            - ''
+            - '&8&oWaiting for new mail...'
+            Location:
+                Slots-Of-X: [2, 3, 4, 5, 6, 7, 8]
+                Slots-Of-Y: [3, 4, 5]
+        'Green boards':
+            Name: '&f'
+            Item: STAINED_GLASS_PANE
+            Data: 5
+            Enchantments:
+            - DURABILITY:10
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 2
+        'Mailbox':
+            Name: '&d&lMailbox'
+            Item: CHEST
+            Enchantments:
+            - DURABILITY:10
+            Lores:
+            - ''
+            - '&aIs already the current page'
+            Location:
+                Slot-Of-X: 3
+                Slot-Of-Y: 1
+        'Store':
+            Name: '&3&lStore'
+            Item: ENDER_CHEST
+            Lores:
+            - ''
+            - '&eClick to open the personal store'
+            Commands:
+            - 'gmp store view {player}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 1
+        'Profile':
+            Name: '&cProfile'
+            Item: SKULL_ITEM
+            Data: 3
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &f&l▶ &6Merchant: &d{player}'
+            - '  &f&l▶ &6Group: &c{group}'
+            - '  &f&l▶ &6Category: &3{category}'
+            - '  &f&l▶ &6Balance: &e${displayBalance}'
+            - '  &f&l▶ &6Mails: &a{mails}'
+            - '  &f&l▶ &6Merchandises: &5{merchandises}'
+            - '  &f&l▶ &6Transactions: &9{statistics_totalTransactionsNumber}'
+            - '  &f&l▶ &6Actions: &b{statistics_totalAuctionNumber}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to open the profile'
+            Commands:
+            - 'gmp profile gui {player}'
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 1
+        'Category':
+            Name: '&5&lCategory'
+            Item: ENCHANTMENT_TABLE
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &c&lDescription: '
+            - '  &7Categories can be used to '
+            - '  &7filtered merchandises, mail, etc.'
+            - '  &c&lNotice: '
+            - '  &7Only specific groups can use!'
+            - ''
+            - '  &f&l▶ &6Category: {category}'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - ''
+            - '&eClick to open settings GUI'
+            Commands:
+            - 'gmp category gui {player}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 1
+        'All Stores':
+            Name: '&9&lAll Stores'
+            Item: COMPASS
+            Lores:
+            - ''
+            - '&eClick to view all stores'
+            Commands:
+            - 'gmp store list 1 GUI'
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 1
+        'Description':
+            Name: '&e&lDescription'
+            Item: MAP
+            Lores:
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            - '  &7Here is &c&lGlobal&4&lMarket&6&lPlus&7''s Mailbox,'
+            - '  &7You can view all &a&lpersonal mails &7here.'
+            - '  &7Including &dbuy&7, &egift&7, &bsell&7, &cremove &7etc.'
+            - '&8&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+            Location:
+                Slot-Of-X: 1
+                Slot-Of-Y: 6
+        'Previous Page':
+            Name: '&a&lPrevious Page'
+            Item: ARROW
+            Cooldown-Of-Button-Click: 1
+            Lores:
+            - ''
+            - '&eClick to open page &a{previousPage}'
+            Commands:
+            - 'gmp mailbox gui {target_player} {previousPage}'
+            Location:
+                Slot-Of-X: 4
+                Slot-Of-Y: 6
+        'Refresh':
+            Name: '&6&lRefresh'
+            Item: DOUBLE_PLANT
+            Cooldown-Of-Button-Click: 1
+            Lores:
+            - ''
+            - '&eClick to refresh'
+            Refresh-GUI: true
+            Location:
+                Slot-Of-X: 5
+                Slot-Of-Y: 6
+        'Next Page':
+            Name: '&a&lNext Page'
+            Item: ARROW
+            Cooldown-Of-Button-Click: 1
+            Lores:
+            - ''
+            - '&eClick to open page &a{nextPage}'
+            Commands:
+            - 'gmp mailbox gui {target_player} {nextPage}'
+            Location:
+                Slot-Of-X: 6
+                Slot-Of-Y: 6
+        'One-Click Operation':
+            Name: '&e&lOne-click operation'
+            Item: MAGMA_CREAM
+            Lores:
+            - ''
+            - '&aLeft click to pick all up'
+            - '&cRight click to delete all'
+            Special-Click-Events:
+                'Left':
+                    Refresh-GUI: true
+                    Commands:
+                    - 'gmp mailbox pickup all {target_player}'
+                'Right':
+                    Refresh-GUI: true
+                    Commands:
+                    - 'gmp mailbox delete all {target_player}'
+            Location:
+                Slot-Of-X: 9
+                Slot-Of-Y: 6
