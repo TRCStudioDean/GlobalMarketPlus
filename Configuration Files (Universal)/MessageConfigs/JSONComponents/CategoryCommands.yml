@@ -31,6 +31,17 @@ Simplified-Chinese:
             Hover-Values: 
             - '&b重置玩家的商品分类'
             - '&b使用方法 &c/gmp &6category reset [玩家]'
+    'Category Switch':
+        Placeholder: '%gmp_command_category_switch%'
+        Text: '&2switch'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp category switch'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b切换到下一个分类'
+            - '&b使用方法 &c/gmp &6category switch'
     'Category Info':
         Placeholder: '%gmp_command_category_info%'
         Text: '&2info &7[玩家]'
@@ -107,6 +118,17 @@ Traditional-Chinese:
             Hover-Values: 
             - '&b重置玩家的商品分類'
             - '&b使用方法 &c/gmp &6category reset [玩家]'
+    'Category Switch':
+        Placeholder: '%gmp_command_category_switch%'
+        Text: '&2switch'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp category switch'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&b切換到下一個分類'
+            - '&b使用方法 &c/gmp &6category switch'
     'Category Info':
         Placeholder: '%gmp_command_category_info%'
         Text: '&2info &7[玩家]'
@@ -183,6 +205,17 @@ English:
             Hover-Values: 
             - '&bReset the player''s category'
             - '&bUsage: &c/gmp &6category reset [Player]'
+    'Category Switch':
+        Placeholder: '%gmp_command_category_switch%'
+        Text: '&2switch'
+        ClickEvent:
+            Action: SUGGEST_COMMAND
+            Value: '/gmp category switch'
+        HoverEvent:
+            Action: SHOW_TEXT
+            Hover-Values: 
+            - '&bSwitch to the next category'
+            - '&bUsage: &c/gmp &6category switch'
     'Category Info':
         Placeholder: '%gmp_command_category_info%'
         Text: '&2info &7[Player]'

@@ -57,7 +57,7 @@ Simplified-Chinese:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 4
+                Slot-Of-X: 3
                 Slot-Of-Y: 3
         '盔甲-已选定':
             Show-Only-When-Selected: true
@@ -76,7 +76,7 @@ Simplified-Chinese:
             - ''
             - '&a已选定: &6{category_selected}'
             Location:
-                Slot-Of-X: 4
+                Slot-Of-X: 3
                 Slot-Of-Y: 3
         '武器-未选定':
             Show-Only-When-Selected: false
@@ -94,7 +94,7 @@ Simplified-Chinese:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 5
+                Slot-Of-X: 4
                 Slot-Of-Y: 3
         '武器-已选定':
             Show-Only-When-Selected: true
@@ -113,7 +113,7 @@ Simplified-Chinese:
             - ''
             - '&a已选定: &6{category_selected}'
             Location:
-                Slot-Of-X: 5
+                Slot-Of-X: 4
                 Slot-Of-Y: 3
         '工具-未选定':
             Show-Only-When-Selected: false
@@ -131,7 +131,7 @@ Simplified-Chinese:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 6
+                Slot-Of-X: 5
                 Slot-Of-Y: 3
         '工具-已选定':
             Show-Only-When-Selected: true
@@ -150,7 +150,7 @@ Simplified-Chinese:
             - ''
             - '&a已选定: &6{category_selected}'
             Location:
-                Slot-Of-X: 6
+                Slot-Of-X: 5
                 Slot-Of-Y: 3
         '食物-未选定':
             Show-Only-When-Selected: false
@@ -168,7 +168,7 @@ Simplified-Chinese:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 5
+                Slot-Of-X: 4
                 Slot-Of-Y: 5
         '食物-已选定':
             Show-Only-When-Selected: true
@@ -187,7 +187,7 @@ Simplified-Chinese:
             - ''
             - '&a已选定: &6{category_selected}'
             Location:
-                Slot-Of-X: 5
+                Slot-Of-X: 4
                 Slot-Of-Y: 5
         '药水-未选定':
             Show-Only-When-Selected: false
@@ -205,7 +205,7 @@ Simplified-Chinese:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 4
+                Slot-Of-X: 3
                 Slot-Of-Y: 5
         '药水-已选定':
             Show-Only-When-Selected: true
@@ -224,7 +224,7 @@ Simplified-Chinese:
             - ''
             - '&a已选定: &6{category_selected}'
             Location:
-                Slot-Of-X: 4
+                Slot-Of-X: 3
                 Slot-Of-Y: 5
         '方块-未选定':
             Show-Only-When-Selected: false
@@ -242,7 +242,7 @@ Simplified-Chinese:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 4
+                Slot-Of-X: 3
                 Slot-Of-Y: 4
         '方块-已选定':
             Show-Only-When-Selected: true
@@ -261,7 +261,7 @@ Simplified-Chinese:
             - ''
             - '&a已选定: &6{category_selected}'
             Location:
-                Slot-Of-X: 4
+                Slot-Of-X: 3
                 Slot-Of-Y: 4
         '唱片-未选定':
             Show-Only-When-Selected: false
@@ -279,7 +279,7 @@ Simplified-Chinese:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 5
+                Slot-Of-X: 4
                 Slot-Of-Y: 4
         '唱片-已选定':
             Show-Only-When-Selected: true
@@ -298,7 +298,7 @@ Simplified-Chinese:
             - ''
             - '&a已选定: &6{category_selected}'
             Location:
-                Slot-Of-X: 5
+                Slot-Of-X: 4
                 Slot-Of-Y: 4
         '资源-未选定':
             Show-Only-When-Selected: false
@@ -316,7 +316,7 @@ Simplified-Chinese:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 6
+                Slot-Of-X: 5
                 Slot-Of-Y: 4
         '资源-已选定':
             Show-Only-When-Selected: true
@@ -335,7 +335,7 @@ Simplified-Chinese:
             - ''
             - '&a已选定: &6{category_selected}'
             Location:
-                Slot-Of-X: 6
+                Slot-Of-X: 5
                 Slot-Of-Y: 4
         '其它-未选定':
             Show-Only-When-Selected: false
@@ -353,7 +353,7 @@ Simplified-Chinese:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 6
+                Slot-Of-X: 5
                 Slot-Of-Y: 5
         '其它-已选定':
             Show-Only-When-Selected: true
@@ -372,7 +372,7 @@ Simplified-Chinese:
             - ''
             - '&a已选定: &6{category_selected}'
             Location:
-                Slot-Of-X: 6
+                Slot-Of-X: 5
                 Slot-Of-Y: 5
     Custom-Buttons:
         '返回菜单':
@@ -405,7 +405,7 @@ Simplified-Chinese:
             Name: '&f'
             Item: WHITE_STAINED_GLASS_PANE
             Location:
-                Slots-Of-X: [2, 3, 7, 8]
+                Slots-Of-X: [2, 6, 7, 8]
                 Slots-Of-Y: [3, 4, 5]
         '背景绿板':
             Name: '&f'
@@ -417,6 +417,22 @@ Simplified-Chinese:
             Location:
                 Slot-Of-X: 6
                 Slot-Of-Y: 2
+        '切换分类': 
+            Name: '&e&l切换到下一个分类'
+            Item: ENDER_EYE
+            Cooldown-Of-Button-Click: 1
+            Refresh-GUI: true
+            Lores:
+            - ''
+            - '&7点击后会自动切换到下一个分类'
+            - '&7当前选择的分类: {category}'
+            - ''
+            - '&e点击切换'
+            Commands:
+            - 'gmp category switch'
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 4
         '个人邮箱':
             Name: '&d&l个人邮箱'
             Item: CHEST
@@ -562,7 +578,7 @@ Traditional-Chinese:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 4
+                Slot-Of-X: 3
                 Slot-Of-Y: 3
         '盔甲-已選定':
             Show-Only-When-Selected: true
@@ -581,7 +597,7 @@ Traditional-Chinese:
             - ''
             - '&a已選定: &6{category_selected}'
             Location:
-                Slot-Of-X: 4
+                Slot-Of-X: 3
                 Slot-Of-Y: 3
         '武器-未選定':
             Show-Only-When-Selected: false
@@ -599,7 +615,7 @@ Traditional-Chinese:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 5
+                Slot-Of-X: 4
                 Slot-Of-Y: 3
         '武器-已選定':
             Show-Only-When-Selected: true
@@ -618,7 +634,7 @@ Traditional-Chinese:
             - ''
             - '&a已選定: &6{category_selected}'
             Location:
-                Slot-Of-X: 5
+                Slot-Of-X: 4
                 Slot-Of-Y: 3
         '工具-未選定':
             Show-Only-When-Selected: false
@@ -636,7 +652,7 @@ Traditional-Chinese:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 6
+                Slot-Of-X: 5
                 Slot-Of-Y: 3
         '工具-已選定':
             Show-Only-When-Selected: true
@@ -655,7 +671,7 @@ Traditional-Chinese:
             - ''
             - '&a已選定: &6{category_selected}'
             Location:
-                Slot-Of-X: 6
+                Slot-Of-X: 5
                 Slot-Of-Y: 3
         '食物-未選定':
             Show-Only-When-Selected: false
@@ -673,7 +689,7 @@ Traditional-Chinese:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 5
+                Slot-Of-X: 4
                 Slot-Of-Y: 5
         '食物-已選定':
             Show-Only-When-Selected: true
@@ -692,7 +708,7 @@ Traditional-Chinese:
             - ''
             - '&a已選定: &6{category_selected}'
             Location:
-                Slot-Of-X: 5
+                Slot-Of-X: 4
                 Slot-Of-Y: 5
         '藥水-未選定':
             Show-Only-When-Selected: false
@@ -710,7 +726,7 @@ Traditional-Chinese:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 4
+                Slot-Of-X: 3
                 Slot-Of-Y: 5
         '藥水-已選定':
             Show-Only-When-Selected: true
@@ -729,7 +745,7 @@ Traditional-Chinese:
             - ''
             - '&a已選定: &6{category_selected}'
             Location:
-                Slot-Of-X: 4
+                Slot-Of-X: 3
                 Slot-Of-Y: 5
         '方塊-未選定':
             Show-Only-When-Selected: false
@@ -747,7 +763,7 @@ Traditional-Chinese:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 4
+                Slot-Of-X: 3
                 Slot-Of-Y: 4
         '方塊-已選定':
             Show-Only-When-Selected: true
@@ -766,7 +782,7 @@ Traditional-Chinese:
             - ''
             - '&a已選定: &6{category_selected}'
             Location:
-                Slot-Of-X: 4
+                Slot-Of-X: 3
                 Slot-Of-Y: 4
         '唱片-未選定':
             Show-Only-When-Selected: false
@@ -784,7 +800,7 @@ Traditional-Chinese:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 5
+                Slot-Of-X: 4
                 Slot-Of-Y: 4
         '唱片-已選定':
             Show-Only-When-Selected: true
@@ -803,7 +819,7 @@ Traditional-Chinese:
             - ''
             - '&a已選定: &6{category_selected}'
             Location:
-                Slot-Of-X: 5
+                Slot-Of-X: 4
                 Slot-Of-Y: 4
         '資源-未選定':
             Show-Only-When-Selected: false
@@ -821,7 +837,7 @@ Traditional-Chinese:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 6
+                Slot-Of-X: 5
                 Slot-Of-Y: 4
         '資源-已選定':
             Show-Only-When-Selected: true
@@ -840,7 +856,7 @@ Traditional-Chinese:
             - ''
             - '&a已選定: &6{category_selected}'
             Location:
-                Slot-Of-X: 6
+                Slot-Of-X: 5
                 Slot-Of-Y: 4
         '其它-未選定':
             Show-Only-When-Selected: false
@@ -858,7 +874,7 @@ Traditional-Chinese:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 6
+                Slot-Of-X: 5
                 Slot-Of-Y: 5
         '其它-已選定':
             Show-Only-When-Selected: true
@@ -877,7 +893,7 @@ Traditional-Chinese:
             - ''
             - '&a已選定: &6{category_selected}'
             Location:
-                Slot-Of-X: 6
+                Slot-Of-X: 5
                 Slot-Of-Y: 5
     Custom-Buttons:
         '返回菜單':
@@ -910,7 +926,7 @@ Traditional-Chinese:
             Name: '&f'
             Item: WHITE_STAINED_GLASS_PANE
             Location:
-                Slots-Of-X: [2, 3, 7, 8]
+                Slots-Of-X: [2, 6, 7, 8]
                 Slots-Of-Y: [3, 4, 5]
         '背景綠板':
             Name: '&f'
@@ -922,6 +938,22 @@ Traditional-Chinese:
             Location:
                 Slot-Of-X: 6
                 Slot-Of-Y: 2
+        '切換分類': 
+            Name: '&e&l切換到下一個分類'
+            Item: ENDER_EYE
+            Cooldown-Of-Button-Click: 1
+            Refresh-GUI: true
+            Lores:
+            - ''
+            - '&7點擊後會自動切換到下一個分類'
+            - '&7目前選擇的分類: {category}'
+            - ''
+            - '&e點擊切換'
+            Commands:
+            - 'gmp category switch'
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 4
         '個人郵箱':
             Name: '&d&l個人郵箱'
             Item: CHEST
@@ -1067,7 +1099,7 @@ English:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 4
+                Slot-Of-X: 3
                 Slot-Of-Y: 3
         'Armors-Selected':
             Show-Only-When-Selected: true
@@ -1086,7 +1118,7 @@ English:
             - ''
             - '&aSelected: &6{category_selected}'
             Location:
-                Slot-Of-X: 4
+                Slot-Of-X: 3
                 Slot-Of-Y: 3
         'Weapons-NoSelected':
             Show-Only-When-Selected: false
@@ -1104,7 +1136,7 @@ English:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 5
+                Slot-Of-X: 4
                 Slot-Of-Y: 3
         'Weapons-Selected':
             Show-Only-When-Selected: true
@@ -1123,7 +1155,7 @@ English:
             - ''
             - '&aSelected: &6{category_selected}'
             Location:
-                Slot-Of-X: 5
+                Slot-Of-X: 4
                 Slot-Of-Y: 3
         'Tools-NoSelected':
             Show-Only-When-Selected: false
@@ -1141,7 +1173,7 @@ English:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 6
+                Slot-Of-X: 5
                 Slot-Of-Y: 3
         'Tools-Selected':
             Show-Only-When-Selected: true
@@ -1160,7 +1192,7 @@ English:
             - ''
             - '&aSelected: &6{category_selected}'
             Location:
-                Slot-Of-X: 6
+                Slot-Of-X: 5
                 Slot-Of-Y: 3
         'Foods-NoSelected':
             Show-Only-When-Selected: false
@@ -1178,7 +1210,7 @@ English:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 5
+                Slot-Of-X: 4
                 Slot-Of-Y: 5
         'Foods-Selected':
             Show-Only-When-Selected: true
@@ -1197,7 +1229,7 @@ English:
             - ''
             - '&aSelected: &6{category_selected}'
             Location:
-                Slot-Of-X: 5
+                Slot-Of-X: 4
                 Slot-Of-Y: 5
         'Potions-NoSelected':
             Show-Only-When-Selected: false
@@ -1215,7 +1247,7 @@ English:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 4
+                Slot-Of-X: 3
                 Slot-Of-Y: 5
         'Potions-Selected':
             Show-Only-When-Selected: true
@@ -1234,7 +1266,7 @@ English:
             - ''
             - '&aSelected: &6{category_selected}'
             Location:
-                Slot-Of-X: 4
+                Slot-Of-X: 3
                 Slot-Of-Y: 5
         'Blocks-NoSelected':
             Show-Only-When-Selected: false
@@ -1252,7 +1284,7 @@ English:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 4
+                Slot-Of-X: 3
                 Slot-Of-Y: 4
         'Blocks-Selected':
             Show-Only-When-Selected: true
@@ -1271,7 +1303,7 @@ English:
             - ''
             - '&aSelected: &6{category_selected}'
             Location:
-                Slot-Of-X: 4
+                Slot-Of-X: 3
                 Slot-Of-Y: 4
         'Disc-NoSelected':
             Show-Only-When-Selected: false
@@ -1289,7 +1321,7 @@ English:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 5
+                Slot-Of-X: 4
                 Slot-Of-Y: 4
         'Disc-Selected':
             Show-Only-When-Selected: true
@@ -1308,7 +1340,7 @@ English:
             - ''
             - '&aSelected: &6{category_selected}'
             Location:
-                Slot-Of-X: 5
+                Slot-Of-X: 4
                 Slot-Of-Y: 4
         'Materials-NoSelected':
             Show-Only-When-Selected: false
@@ -1326,7 +1358,7 @@ English:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 6
+                Slot-Of-X: 5
                 Slot-Of-Y: 4
         'Materials-Selected':
             Show-Only-When-Selected: true
@@ -1345,7 +1377,7 @@ English:
             - ''
             - '&aSelected: &6{category_selected}'
             Location:
-                Slot-Of-X: 6
+                Slot-Of-X: 5
                 Slot-Of-Y: 4
         'Others-NoSelected':
             Show-Only-When-Selected: false
@@ -1363,7 +1395,7 @@ English:
             Commands:
             - 'gmp category set {categoryName} {target_player}'
             Location:
-                Slot-Of-X: 6
+                Slot-Of-X: 5
                 Slot-Of-Y: 5
         'Others-Selected':
             Show-Only-When-Selected: true
@@ -1382,7 +1414,7 @@ English:
             - ''
             - '&aSelected: &6{category_selected}'
             Location:
-                Slot-Of-X: 6
+                Slot-Of-X: 5
                 Slot-Of-Y: 5
     Custom-Buttons:
         'Return':
@@ -1415,7 +1447,7 @@ English:
             Name: '&f'
             Item: WHITE_STAINED_GLASS_PANE
             Location:
-                Slots-Of-X: [2, 3, 7, 8]
+                Slots-Of-X: [2, 6, 7, 8]
                 Slots-Of-Y: [3, 4, 5]
         'Green boards':
             Name: '&f'
@@ -1427,6 +1459,23 @@ English:
             Location:
                 Slot-Of-X: 6
                 Slot-Of-Y: 2
+        'Switch category': 
+            Name: '&e&lSwitch to the next category'
+            Item: ENDER_EYE
+            Cooldown-Of-Button-Click: 1
+            Refresh-GUI: true
+            Lores:
+            - ''
+            - '&7After clicking, it will automatically'
+            - '&7switch to the next category.'
+            - '&7Now selected: {category}'
+            - ''
+            - '&eClick to switch'
+            Commands:
+            - 'gmp category switch'
+            Location:
+                Slot-Of-X: 7
+                Slot-Of-Y: 4
         'Mailbox':
             Name: '&d&lMailbox'
             Item: CHEST

@@ -39,9 +39,19 @@ Automatic-Processing-of-Offline-Tasks:
 #2. CMI + Vault (when this plugin and CMI enabled MySQL storage method)
 Change-Balance-Only-When-Online: false
 
-#Whether to enable reading player head textures from GUIs to save to database
-#This option is recommended to be enabled only in versions 1.7.x - 1.12.x
-Load-Head-Textures-From-GUIs: false
+#Minecraft Profile Settings
+#The plugin will automatically retrieve the corresponding official player profile data
+#for caching in the database every time a new merchant profile is created/refreshed
+#through Minecraft's official server, such as obtaining the player's skull skin texture address.
+Minecraft-Profile-Settings:
+    Enabled: true
+    #If you need to modify it (such as building your own skin website),
+    #please ensure that the JSON format obtained from the link is consistent
+    #with the official JSON format, otherwise the plugin may not recognize it!
+    Link: "https://sessionserver.mojang.com/session/minecraft/profile/{uuid}"
+    #Whether to enable offline mode support enabled (i.e. online mode is turned off and there is no external login verification)
+    #After being turned off, if the player's UUID is in offline player format UUID, this feature will also be automatically turned off.
+    Offline-Support: false
 
 Store-Settings:
     #Maximum name words number

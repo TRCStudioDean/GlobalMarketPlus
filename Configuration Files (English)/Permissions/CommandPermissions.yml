@@ -298,6 +298,9 @@ Category:
         For-Others:
             Permission: globalmarketplus.command.category.set.for-others
             Default: false
+    Switch:
+        Permission: globalmarketplus.command.category.switch
+        Default: true
     Reset:
         Permission: globalmarketplus.command.category.reset
         Default: true

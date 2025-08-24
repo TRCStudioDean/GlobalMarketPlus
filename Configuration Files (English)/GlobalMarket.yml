@@ -123,8 +123,8 @@ Default-Parameters:
 Item-Parameters-Blacklist:
     Enabled: false
     #Whitelist mode
-    #When enabled, items in the collection belong to here, 
-    #otherwise all items outside the collection belong to here.
+    #When enabled, items that meet the following attributes are allowed to put on the market,
+    #otherwise items that meet the following attributes are not allowed to put on the market.
     Whitelist: false
     #Whether to scanning items in shulker box.
     Scan-Shulker-Box: true

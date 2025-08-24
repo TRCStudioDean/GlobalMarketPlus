@@ -881,6 +881,7 @@ Simplified-Chinese:
             - '  &f&l▶ %gmp_command_category_list% &b&l| &9列出所有分类'
             - '  &f&l▶ %gmp_command_category_set% &b&l| &9设置玩家的分类'
             - '  &f&l▶ %gmp_command_category_reset% &b&l| &9重置玩家的分类'
+            - '  &f&l▶ %gmp_command_category_switch% &b&l| &9切换到下一个分类'
             - '  &f&l▶ %gmp_command_category_info% &b&l| &9查看玩家使用的分类'
             - '  &f&l▶ %gmp_command_category_gui% &b&l| &9打开自己或他人的分类设置GUI'
             - '  &5&l上一页: %gmp_command_help%'
@@ -894,6 +895,9 @@ Simplified-Chinese:
             Reset:
                 Usage: '{prefix}&e正确使用方法: &c/gmp &6category %gmp_command_category_reset%'
                 Successfully-Reset: '{prefix}&a已将 &e{player} &a的分类设置为默认。'
+            Switch:
+                Switched: '{prefix}&a已将你的分类切换到 &r{category} &a。'
+                No-Available: '{prefix}&c你没有能够自动切换的分类。'
             Info:
                 Usage: '{prefix}&e正确使用方法: &c/gmp &6category %gmp_command_category_info%'
                 Info: '{prefix}&a玩家 &e{player} &a的分类为 &r{category} &a。'
@@ -2564,6 +2568,7 @@ Traditional-Chinese:
             - '  &f&l▶ %gmp_command_category_list% &b&l| &9列出所有分類'
             - '  &f&l▶ %gmp_command_category_set% &b&l| &9設定玩家的分類'
             - '  &f&l▶ %gmp_command_category_reset% &b&l| &9重置玩家的分類'
+            - '  &f&l▶ %gmp_command_category_switch% &b&l| &9切換到下一個分類'
             - '  &f&l▶ %gmp_command_category_info% &b&l| &9查看玩家使用的分類'
             - '  &f&l▶ %gmp_command_category_gui% &b&l| &9打開自己或他人的分類設定GUI'
             - '  &5&l上一頁: %gmp_command_help%'
@@ -2577,6 +2582,9 @@ Traditional-Chinese:
             Reset:
                 Usage: '{prefix}&e正確使用方法: &c/gmp &6category %gmp_command_category_reset%'
                 Successfully-Reset: '{prefix}&a已將 &e{player} &a的分類設定為默認。 '
+            Switch:
+                Switched: '{prefix}&a已將你的分類切換到 &r{category} &a。'
+                No-Available: '{prefix}&c你沒有能夠自動切換的分類。'
             Info:
                 Usage: '{prefix}&e正確使用方法: &c/gmp &6category %gmp_command_category_info%'
                 Info: '{prefix}&a玩家 &e{player} &a的分類為 &r{category} &a。 '
@@ -4243,6 +4251,7 @@ English:
             - '  &f&l▶ %gmp_command_category_list% &b&l| &9List all of categories'
             - '  &f&l▶ %gmp_command_category_set% &b&l| &9Set the player''s category'
             - '  &f&l▶ %gmp_command_category_reset% &b&l| &9Reset the player''s category'
+            - '  &f&l▶ %gmp_command_category_switch% &b&l| &9Switch to the next category'
             - '  &f&l▶ %gmp_command_category_info% &b&l| &9View the player''s category'
             - '  &f&l▶ %gmp_command_category_gui% &b&l| &9Open categories GUI'
             - '  &5&lPrevious Page: %gmp_command_help%'
@@ -4256,6 +4265,9 @@ English:
             Reset:
                 Usage: '{prefix}&eUsage: &c/gmp &6category %gmp_command_category_reset%'
                 Successfully-Reset: '{prefix}&aSuccessfully reset &e{player}&a''s category.'
+            Switch:
+                Switched: '{prefix}&aYour category has been switched to &r{category}&a.'
+                No-Available: '{prefix}&cYou do not have a category that can automatically switch.'
             Info:
                 Usage: '{prefix}&eUsage: &c/gmp &6category %gmp_command_category_info%'
                 Info: '{prefix}&aPlayer &e{player}&a''s category is &r{category} &a.'
