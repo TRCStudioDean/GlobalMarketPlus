@@ -29,6 +29,8 @@ Categories:
         Permission: false
         #Whether to matching items in shulker box.
         Match-Shulker-Box: true
+        #Whether to matching items in bundle.
+        Match-Bundle: true
         #Currency names (DEFAULT, VAULT, PLAYERPOINT)
         Currencies: []
         #Merchandise's type (SELLING, PURCHASING, BIDDING)
@@ -67,6 +69,7 @@ Categories:
         Whitelist: false
         Permission: false
         Match-Shulker-Box: true
+        Match-Bundle: true
         Modules:
         - Armors
         - Weapons
@@ -81,6 +84,7 @@ Categories:
         Whitelist: true
         Permission: false
         Match-Shulker-Box: true
+        Match-Bundle: true
         Materials:
         - LEATHER_HELMET
         - LEATHER_CHESTPLATE
@@ -94,6 +98,10 @@ Categories:
         - CHAINMAIL_CHESTPLATE
         - CHAINMAIL_LEGGINGS
         - CHAINMAIL_BOOTS
+        - COPPER_HELMET
+        - COPPER_CHESTPLATE
+        - COPPER_LEGGINGS
+        - COPPER_BOOTS
         - IRON_HELMET
         - IRON_CHESTPLATE
         - IRON_LEGGINGS
@@ -112,18 +120,29 @@ Categories:
         Whitelist: true
         Permission: false
         Match-Shulker-Box: true
+        Match-Bundle: true
         Materials:
         - WOODEN_SWORD
         - STONE_SWORD
         - IRON_SWORD
+        - COPPER_SWORD
         - GOLDEN_SWORD
         - DIAMOND_SWORD
         - NETHERITE_SWORD
         - WOODEN_AXE
         - STONE_AXE
+        - COPPER_AXE
         - IRON_AXE
         - GOLDEN_AXE
         - DIAMOND_AXE
+        - NETHERITE_AXE
+        - WOODEN_SPEAR
+        - STONE_SPEAR
+        - COPPER_SPEAR
+        - IRON_SPEAR
+        - GOLDEN_SPEAR
+        - DIAMOND_SPEAR
+        - NETHERITE_SPEAR
         - BOW
         - TRIDENT
         - CROSSBOW
@@ -137,6 +156,7 @@ Categories:
         Whitelist: true
         Permission: false
         Match-Shulker-Box: true
+        Match-Bundle: true
         Materials:
         - WOODEN_PICKAXE
         - WOODEN_AXE
@@ -149,7 +169,10 @@ Categories:
         - STONE_PICKAXE
         - STONE_AXE
         - STONE_SHOVEL
-        - STONE_HOE
+        - COPPER_PICKAXE
+        - COPPER_AXE
+        - COPPER_SHOVEL
+        - COPPER_HOE
         - DIAMOND_PICKAXE
         - DIAMOND_AXE
         - DIAMOND_SHOVEL
@@ -176,6 +199,7 @@ Categories:
         Whitelist: true
         Permission: false
         Match-Shulker-Box: true
+        Match-Bundle: true
         Internal-Modules:
         - 'Foods'
     Potions:
@@ -183,6 +207,7 @@ Categories:
         Whitelist: true
         Permission: false
         Match-Shulker-Box: true
+        Match-Bundle: true
         Materials:
         - POTION
         - SPLASH_POTION
@@ -192,6 +217,7 @@ Categories:
         Whitelist: true
         Permission: false
         Match-Shulker-Box: true
+        Match-Bundle: true
         Internal-Modules:
         - 'Blocks'
     Disc:
@@ -199,6 +225,7 @@ Categories:
         Whitelist: true
         Permission: false
         Match-Shulker-Box: true
+        Match-Bundle: true
         Internal-Modules:
         - 'Record'
     Materials:
@@ -206,8 +233,12 @@ Categories:
         Whitelist: true
         Permission: false
         Match-Shulker-Box: true
+        Match-Bundle: true
         Materials:
         - 'TURTLE_EGG'
+        - 'EGG'
+        - 'BROWN_EGG'
+        - 'BLUE_EGG'
         - 'CONDUIT'
         - 'SCUTE'
         - 'COAL'
@@ -233,4 +264,7 @@ Categories:
         - 'BRICK'
         - 'SNOWBALL'
         - 'SLIME_BALL'
-        
+        - 'RESIN_CLUMP'
+        - 'RABBIT_HIDE'
+        - 'LEATHER'
+        - 'ECHO_SHARD'

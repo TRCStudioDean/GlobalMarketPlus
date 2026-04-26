@@ -33,8 +33,8 @@ Item-Parameters-Blacklist:
     #When enabled, items that meet the following attributes are allowed to send to player,
     #otherwise items that meet the following attributes are not allowed to send to player.
     Whitelist: false
-    #Whether to scanning items in shulker box.
-    Scan-Shulker-Box: true
+    #Whether to scanning items in container.
+    Scan-Container: true
     #List of item IDs (the following items will be banned)
     #Below 1.12.2, some items can use "[Item ID]:[Data Number]" to distinguish different types of items under the same item ID
     #For example, the Enchanted Golden Apple is "GOLDEN_APPLE:1", while the regular Golden Apple is "GOLDEN-APPLE:0"

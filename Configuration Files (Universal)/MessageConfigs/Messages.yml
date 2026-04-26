@@ -19,6 +19,7 @@ Simplified-Chinese:
     No-Permission-To-Use-Currency-Unit: '{prefix}&c你没有权限使用货币单位 &e{currency}&c，请尝试其它货币单位！'
     Cooldown-Of-Button-Click: '{prefix}&c你的点击速度过快，请等待 &e{second} &c秒。'
     Cooldown-Of-Command: '{prefix}&c请等待 &e{second} &c秒后再使用这个命令。'
+    Disabled-World: '{prefix}&c当前世界已被禁用，无法执行该命令。'
     Command-Delay-In-Process: '{prefix}&e当前有未执行完的命令，请稍后重试。'
     Unable-To-Wholesale: '{prefix}&c你没有权限使用商品整售功能。'
     Unable-To-Retail: '{prefix}&c你没有权限使用商品零售功能。'
@@ -26,8 +27,6 @@ Simplified-Chinese:
     No-Item-Display-List:Language-Code-Exist: '{prefix}&e当前语言没有可用的物品显示名列表，你可以使用命令进行下载: %gmp_command_admin_updateItemDisplayName_confirm% &7<---点击填充'
     No-Item-Display-List:Language-Code-Not-Exist: '{prefix}&e当前语言没有可用的物品显示名列表，你可以使用命令选择你需要的语言进行下载: %gmp_command_admin_updateItemDisplayName% &7<---点击填充'
     Unprocessed-Tasks: '{prefix}&a你有 &e{number} &a个未处理的任务，是否现在处理？ %gmp_unprocessed_tasks%'
-    Asynchronous-Command-Executing: '{prefix}&e这个命令正在执行中，请稍后重试。'
-    Asynchronous-Player-Task-Executing: '{prefix}&e这个任务正在执行中，请稍后重试。'
     Separated-Tasks: '{prefix}&c任务 &d{task} &c无法在这个服务器进行处理，请到 &d{serverName} &c服务器再进行处理。'
     Deleting-Outdated-Records: '{prefix}&a正在清理记录器中的过时记录...'
     Deleted-Outdated-Records: '{prefix}&a已清除 &e{records} &a个过时记录。'
@@ -333,7 +332,7 @@ Simplified-Chinese:
                 Maximum: '{prefix}&c你能同时拍卖的物品数量已经达到了上限！ &8（{merchandises}件）'
                 Failed: '{prefix}&c上架失败， 无法上传你的商品到市场， 请稍后重试。&7（也许是操作频繁导致？）'
                 Successfully-Upload:
-                - '!broadcast!&8&l[{type}&8&l] &a玩家 &e{player} &a发起了新的拍卖 &r{item}&a，起拍价 &e{price}￥ &a。 %gmp_auction_bidding%'
+                - '!broadcast!&8&l[{type}&8&l] &a玩家 &e{player} &a发起了新的拍卖 &r{item}&a，起拍价 &e{price}￥ &a。 %gmp_auction_bidding% %gmp_auction_gui_bidding%'
                 - '&e▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬[ &c&lGlobal&4&lMarket&6&lPlus &e]▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
                 - '                     {type}商品'
                 - ''
@@ -356,7 +355,7 @@ Simplified-Chinese:
                 Low-Price: '{prefix}&c你的出价 &e{price} &c过低， 你需要超过当前最高拍价 &e{biddingPrice} &c才可以竞标。'
                 In-Retention-Times: '{prefix}&c此拍卖已进入保留时间，无法进行竞拍。'
                 Failed: '{prefix}&c竞标失败，同时竞标的人数过多，请重试。'
-                Bidding: '!broadcast!&8&l[&5&l拍卖&8&l] &a玩家 &e{player} &a出价 &e{price}￥ &a竞拍商品 &r{item} &a。 点击这里打开: %gmp_auction_bidding%'
+                Bidding: '!broadcast!&8&l[&5&l拍卖&8&l] &a玩家 &e{player} &a出价 &e{price}￥ &a竞拍商品 &r{item} &a。 点击这里打开: %gmp_auction_bidding% %gmp_auction_gui_bidding%'
             GUI:
                 Usage: '{prefix}&e正确使用方法: &c/gmp &6auction %gmp_command_auction_gui%'
                 Opened: []
@@ -369,7 +368,7 @@ Simplified-Chinese:
                 - '{prefix}&c无效的时间 &e{time} &c！'
                 - '&c· &b时间格式: &7[时长+单位]'
                 - '&c· &b示例：1d 即1天，1h 即1小时， 1m即一分钟， 1s即一秒。'
-                Overtime: '!broadcast!&8&l[&5&l拍卖&8&l] &a商品 &r{item} &a的拍卖加时 &9{time}&a，结算时间剩余 &d{expireTimeLeft} %gmp_auction_bidding%'
+                Overtime: '!broadcast!&8&l[&5&l拍卖&8&l] &a商品 &r{item} &a的拍卖加时 &9{time}&a，结算时间剩余 &d{expireTimeLeft} %gmp_auction_bidding% %gmp_auction_gui_bidding%'
             Confirm:
                 Usage: '{prefix}&e正确使用方法: &c/gmp &6auction %gmp_command_auction_confirm%'
                 Cooldown: '{prefix}&c距离上一次竞拍间隔过短，请等待 &e{second} &c秒后再确认。'
@@ -1643,7 +1642,7 @@ Simplified-Chinese:
         Merchandise-Auction:
             Bidding-Override:
                 Merchant: '&8&l[&5&l拍卖&8&l] &a你的拍卖 &r{item} &a的竞拍价 &e{biddingPrice}￥ &a已被玩家 &d{topBidder} &a以更高价 &e{price}￥ &a覆盖。 如果想确定拍卖成交请点击: %gmp_auction_bidding%'
-                Original-Bidder: '&8&l[&5&l拍卖&8&l] &c你在拍卖 &r{item} &c中的出价 &e{biddingPrice}￥ &c已被玩家 &d{topBidder} &c以更高价 &e{price}￥ &c覆盖，已退还定金。 如需继续竞标请点击: %gmp_auction_bidding%'
+                Original-Bidder: '&8&l[&5&l拍卖&8&l] &c你在拍卖 &r{item} &c中的出价 &e{biddingPrice}￥ &c已被玩家 &d{topBidder} &c以更高价 &e{price}￥ &c覆盖，已退还定金。 如需继续竞标请点击: %gmp_auction_bidding% %gmp_auction_gui_bidding%'
             Auction-Confirm:
                 Broadcast: '&8&l[&5&l拍卖&8&l] &a商品 &r{item} &a的拍卖已成交， 恭喜 &d{topBidder} &a以最高价 &e{price}￥ &a拍下了此商品。'
                 Merchant: '&8&l[&5&l拍卖&8&l] &a你的拍卖 &r{item} &a的拍卖已成交， 你获得了 &e{price}￥ &a，收取税额 &e{taxed}￥ &a。'
@@ -1667,6 +1666,10 @@ Simplified-Chinese:
         Merchandise-Matched:
             Selling: '&8&l[&6&l发现同款商品&8&l] &a在全球市场上找到了与你出售的商品&e&l相同&a的&d&l收购&a， 是否查看？ %gmp_merchandise_matched% %gmp_merchandise_confirm%'
             Purchasing: '&8&l[&6&l发现同款商品&8&l] &a在全球市场上找到了与你收购的商品&e&l相同&a的&b&l出售&a， 是否查看？ %gmp_merchandise_matched% %gmp_merchandise_confirm%'
+    Object-Locked:
+        Merchandise-Locked: '{prefix}&e该商品操作过于频繁，请稍后重试。'
+        Command-Locked: '{prefix}&e这个命令正在执行中，请稍后重试。'
+        GUI-Locked: '{prefix}&e按钮操作过于频繁，请稍后重试。'
     Sign-Store-Messages:
         Successfully-Created: '{prefix}&a你已成功创建了商店告示牌 &b{sign}'
         Unable-To-Create: '{prefix}&c无法创建商店告示牌 &b{sign}&c，您缺少相关权限。'
@@ -1706,9 +1709,8 @@ Traditional-Chinese:
     No-Permission-To-Use-Currency-Unit: '{prefix}&c你沒有權限使用貨幣單位 &e{currency}&c，請嘗試其它貨幣單位！ '
     Cooldown-Of-Button-Click: '{prefix}&c你的點擊速度過快，請等待 &e{second} &c秒。'
     Cooldown-Of-Command: '{prefix}&c請等待 &e{second} &c秒後再使用這個命令。'
+    Disabled-World: '{prefix}&c當前世界已被禁用，無法執行該命令。'
     Command-Delay-In-Process: '{prefix}&e目前有未執行完的命令，請稍後重試。'
-    Asynchronous-Command-Executing: '{prefix}&e這個指令正在執行中，請稍後重試。'
-    Asynchronous-Player-Task-Executing: '{prefix}&e這個任務正在執行中，請稍後重試。'
     No-Item-Display-List:Language-Code-Exist: '{prefix}&e當前語言沒有可用的物品顯示名列表，你可以使用命令進行下載: %gmp_command_admin_updateItemDisplayName_confirm% &7<---點擊填充'
     No-Item-Display-List:Language-Code-Not-Exist: '{prefix}&e當前語言沒有可用的物品顯示名列表，你可以使用命令選擇你需要的語言進行下載: %gmp_command_admin_updateItemDisplayName% &7<-- -點選填充'
     Unprocessed-Tasks: '{prefix}&a你有 &e{number} &a個未處理的任務，是否現在處理？ %gmp_unprocessed_tasks%'
@@ -2020,7 +2022,7 @@ Traditional-Chinese:
                 Maximum: '{prefix}&c你能同時拍賣的物品數量已經達到了上限！ &8（{merchandises}件）'
                 Failed: '{prefix}&c上架失敗， 無法上傳你的商品到市場， 請稍後重試。 &7（也許是操作頻繁導致？）'
                 Successfully-Upload:
-                - '!broadcast!&8&l[{type}&8&l] &a玩家 &e{player} &a發起了新的拍賣 &r{item}&a，起拍價 &e{price}$ &a。 %gmp_auction_bidding%'
+                - '!broadcast!&8&l[{type}&8&l] &a玩家 &e{player} &a發起了新的拍賣 &r{item}&a，起拍價 &e{price}$ &a。 %gmp_auction_bidding% %gmp_auction_gui_bidding%'
                 - '&e▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬[ &c&lGlobal&4&lMarket&6&lPlus &e]▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
                 - '                     {type}商品'
                 - ''
@@ -2043,7 +2045,7 @@ Traditional-Chinese:
                 Low-Price: '{prefix}&c你的出價 &e{price} &c過低， 你需要超過當前最高拍價 &e{biddingPrice} &c才可以競標。 '
                 In-Retention-Times: '{prefix}&c此拍賣已進入保留時間，無法進行競拍。'
                 Failed: '{prefix}&c競標失敗，同時競標的人數過多，請重試。 '
-                Bidding: '!broadcast!&8&l[&5&l拍賣&8&l] &a玩家 &b{player} &a出價 &e{price}$ &a競拍商品 &r{item} &a。點擊這裡打開: %gmp_auction_bidding%'
+                Bidding: '!broadcast!&8&l[&5&l拍賣&8&l] &a玩家 &b{player} &a出價 &e{price}$ &a競拍商品 &r{item} &a。點擊這裡打開: %gmp_auction_bidding% %gmp_auction_gui_bidding%'
             GUI:
                 Usage: '{prefix}&e正確使用方法: &c/gmp &6auction %gmp_command_auction_gui%'
                 Opened: []
@@ -2056,7 +2058,7 @@ Traditional-Chinese:
                 - '{prefix}&c無效的時間 &e{time} &c！ '
                 - '&c· &b時間格式: &7[時長+單位]'
                 - '&c· &b示例：1d 即1天，1h 即1小時， 1m即一分鐘， 1s即一秒。 '
-                Overtime: '!broadcast!&8&l[&5&l拍賣&8&l] &a商品 &r{item} &a的拍賣加時 &9{time}&a，結算時間剩餘 &d{expireTimeLeft} %gmp_auction_bidding%'
+                Overtime: '!broadcast!&8&l[&5&l拍賣&8&l] &a商品 &r{item} &a的拍賣加時 &9{time}&a，結算時間剩餘 &d{expireTimeLeft} %gmp_auction_bidding% %gmp_auction_gui_bidding%'
             Confirm:
                 Usage: '{prefix}&e正確使用方法: &c/gmp &6auction %gmp_command_auction_confirm%'
                 Cooldown: '{prefix}&c距離上一次競拍間隔過短，請等待 &e{second} &c秒後再確認。'
@@ -3330,7 +3332,7 @@ Traditional-Chinese:
         Merchandise-Auction:
             Bidding-Override:
                 Merchant: '&8&l[&5&l拍賣&8&l] &a你的拍賣 &r{item} &a的競拍價 &e{biddingPrice}$ &a已被玩家 &d{topBidder} &a以更高價 &e{price}$ &a覆蓋。如果想確定拍賣成交請點擊: %gmp_auction_bidding%'
-                Original-Bidder: '&8&l[&5&l拍賣&8&l] &c你在拍賣 &r{item} &c中的出價 &e{biddingPrice}$ &c已被玩家 &d{topBidder} &c以更高價 &e{price}$ &c覆蓋，已退還定金。如需繼續競標請點擊: %gmp_auction_bidding%'
+                Original-Bidder: '&8&l[&5&l拍賣&8&l] &c你在拍賣 &r{item} &c中的出價 &e{biddingPrice}$ &c已被玩家 &d{topBidder} &c以更高價 &e{price}$ &c覆蓋，已退還定金。如需繼續競標請點擊: %gmp_auction_bidding% %gmp_auction_gui_bidding%'
             Auction-Confirm:
                 Broadcast: '&8&l[&5&l拍賣&8&l] &a商品 &r{item} &a的拍賣已成交， 恭喜 &d{topBidder} &a以最高價 &e{price}$ &a拍下了此商品。'
                 Merchant: '&8&l[&5&l拍賣&8&l] &a你的拍賣 &r{item} &a的拍賣已成交， 你獲得了 &e{price}$ &a，收取稅額 &e{taxed}$ &a。 '
@@ -3354,6 +3356,10 @@ Traditional-Chinese:
         Merchandise-Matched:
             Selling: '&8&l[&6&l發現同款商品&8&l] &a在全球市場上找到了與你出售的商品&e&l相同&a的&d&l收購&a， 是否查看？ %gmp_merchandise_matched% %gmp_merchandise_confirm%'
             Purchasing: '&8&l[&6&l發現同款商品&8&l] &a在全球市場上找到了與你收購的商品&e&l相同&a的&b&l出售&a， 是否查看？ %gmp_merchandise_matched% %gmp_merchandise_confirm%'
+    Object-Locked:
+        Merchandise-Locked: '{prefix}&e該商品操作過於頻繁，請稍後重試。'
+        Command-Locked: '{prefix}&e這個指令正在執行中，請稍後重試。'
+        GUI-Locked: '{prefix}&e按鈕操作過於頻繁，請稍後重試。'
     Sign-Store-Messages:
         Successfully-Created: '{prefix}&a你已成功創建了商店告示牌 &b{sign}'
         Unable-To-Create: '{prefix}&c無法創建商店告示牌 &b{sign}&c，您缺少相關權限。 '
@@ -3393,9 +3399,8 @@ English:
     No-Permission-To-Use-Currency-Unit: '{prefix}&cYou don''t have permission to use currency unit: &e{currency}&c, please use other currency units.'
     Cooldown-Of-Button-Click: '{prefix}&cPlease wait &e{second}s &cbefore clicking this!'
     Cooldown-Of-Command: '{prefix}&cPlease wait &e{second}s &cbefore use this command!'
+    Disabled-World: '{prefix}&cCurrent world has been disabled and the command cannot be executed.'
     Command-Delay-In-Process: '{prefix}&eThere are currently unfinished commands, please try again later.'
-    Asynchronous-Command-Executing: '{prefix}&eThis command is currently being executed, please try again later.'
-    Asynchronous-Player-Task-Executing: '{prefix}&eThis task is currently being executed, please try again later.'
     No-Item-Display-List:Language-Code-Exist: '{prefix}&eThere is no available item display name list in the current language. You can use the command to download it: %gmp_command_admin_updateItemDisplayName_confirm% &7<---Click to fill'
     No-Item-Display-List:Language-Code-Not-Exist: '{prefix}&eThere is no available item display name list in the current language. You can use the command to select the language you need to download: %gmp_command_admin_updateItemDisplayName% &7<---Click to fill'
     Unprocessed-Tasks: '{prefix}&aYou have &e{number} &aunprocessed tasks. Do you want to process them now? %gmp_unprocessed_tasks%'
@@ -3501,7 +3506,7 @@ English:
                 Maximum: '{prefix}&cYou have reached the maximum number of merchandises! &8({merchandises})'
                 Failed: '{prefix}&cUnable to upload your product to the market, please try again later. &7(Maybe it is caused by frequent operations?)'
                 Successfully-Upload:
-                - '!broadcast!&8&l[{type}&8&l] &aPlayer &e{player} &alisted a new merchandise &r{item} &ato global market, price: &e${price} &a. %gmp_auction_bidding%'
+                - '!broadcast!&8&l[{type}&8&l] &aPlayer &e{player} &alisted a new merchandise &r{item} &ato global market, price: &e${price} &a. %gmp_command_market_transaction%'
                 - '&e▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬[ &c&lGlobal&4&lMarket&6&lPlus &e]▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
                 - '                     {type}'
                 - ''
@@ -3526,7 +3531,7 @@ English:
                 Maximum: '{prefix}&cYou have reached the maximum number of merchandises! &8({merchandises})'
                 Failed: '{prefix}&cUnable to upload your product to the market, please try again later. &7(Maybe it is caused by frequent operations?)'
                 Successfully-Upload: 
-                - '!broadcast!&8&l[{type}&8&l] &aPlayer &e{player} &alisted a new merchandise &r{item} &ato global market, price: &e${deposit} &a. %gmp_auction_bidding%'
+                - '!broadcast!&8&l[{type}&8&l] &aPlayer &e{player} &alisted a new merchandise &r{item} &ato global market, price: &e${deposit} &a. %gmp_command_market_transaction%'
                 - '&e▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬[ &c&lGlobal&4&lMarket&6&lPlus &e]▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
                 - '                     {type}'
                 - ''
@@ -3704,7 +3709,7 @@ English:
                 Maximum: '{prefix}&cYou have reached the maximum number of auction! &8({merchandises})'
                 Failed: '{prefix}&cUnable to upload your product to the market, please try again later. &7(Maybe it is caused by frequent operations?)'
                 Successfully-Upload:
-                - '!broadcast!&8&l[{type}&8&l] &aPlayer &e{player} &alaunched a new auction &r{item}&a, starting price &e${price} &a. %gmp_auction_bidding%'
+                - '!broadcast!&8&l[{type}&8&l] &aPlayer &e{player} &alaunched a new auction &r{item}&a, starting price &e${price} &a. %gmp_auction_bidding% %gmp_auction_gui_bidding%'
                 - '&e▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬[ &c&lGlobal&4&lMarket&6&lPlus &e]▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
                 - '                     {type}'
                 - ''
@@ -3727,7 +3732,7 @@ English:
                 Low-Price: '{prefix}&cYour bid &e{price} &cis too low. You need to exceed the current highest bid &e{biddingPrice} &cto bid. '
                 In-Retention-Times: '{prefix}&cThis auction has entered the retention period and cannot be auctioned.'
                 Failed: '{prefix}&cBidding failed, too many people bidding at the same time, please try again. '
-                Bidding: '!broadcast!&8&l[&5&lAuction&8&l] &aPlayer &b{player} &abid &e${price} &ain auction &r{item} &a. Click here to open: %gmp_auction_bidding%'
+                Bidding: '!broadcast!&8&l[&5&lAuction&8&l] &aPlayer &b{player} &abid &e${price} &ain auction &r{item} &a. Click here to open: %gmp_auction_bidding% %gmp_auction_gui_bidding%'
             GUI:
                 Usage: '{prefix}&eUsage: &c/gmp &6auction %gmp_command_auction_gui%'
                 Opened: []
@@ -3738,7 +3743,7 @@ English:
                 Not-An-Time:
                 - '{prefix}&e{time} &cnot a time! '
                 - '&c· &bTime format: &7[Duration+Unit]'
-                Overtime: '!broadcast!&8&l[&5&lAuction&8&l] &aAuction &r{item} &aextra time &9{time}&a, confirmation time remaining &d{expireTimeLeft} %gmp_auction_bidding%'
+                Overtime: '!broadcast!&8&l[&5&lAuction&8&l] &aAuction &r{item} &aextra time &9{time}&a, confirmation time remaining &d{expireTimeLeft} %gmp_auction_bidding% %gmp_auction_gui_bidding%'
             Confirm:
                 Usage: '{prefix}&eUsage: &c/gmp &6auction %gmp_command_auction_confirm%'
                 Cooldown: '{prefix}&cThe interval from the last auction is too short. Please wait &e{second} &csecond(s) before confirming.'
@@ -5016,11 +5021,10 @@ English:
         - '&aIf you want to continue to wholesale, please reprice this item.'
         Shopping-Sent-Mailbox: '&8&l[&a&lNew Mail&8&l] &aYour purchase &r{item} &ahas been sent to your mailbox. %gmp_mailbox_pickup% %gmp_mailbox_delete% %gmp_mailbox_gui%'
         Returned-To-Mailbox: '&8&l[&a&lNew Mail&8&l] &aYour item &r{item} &ahas been returned to your mailbox. %gmp_mailbox_pickup% %gmp_mailbox_delete% %gmp_mailbox_gui%'
-        Bidding-Override: '&8&l[&5&lAuction&8&l] &cYour bid &e${biddingPrice} &cin the auction &r{item} &chas been override by the player &d{topBidder} &cwith a higher price &e${price} &c, and the deposit has been refunded. To continue bidding please click: %gmp_auction_bidding%'
         Merchandise-Auction:
             Bidding-Override:
                 Merchant: '&8&l[&5&lAuction&8&l] &cBidding price &e${biddingPrice} &cin your auction &r{item} &chas been override by the player &d{topBidder} &cwith a higher price &e${price}, if you want to confirm this auction please click here: %gmp_auction_bidding%'
-                Original-Bidder: '&8&l[&5&lAuction&8&l] &cYour bidding price &e${biddingPrice} &cin the auction &r{item} &chas been override by the player &d{topBidder} &cwith a higher price &e${price} &c, and the deposit has been refunded. To continue bidding please click: %gmp_auction_bidding%'
+                Original-Bidder: '&8&l[&5&lAuction&8&l] &cYour bidding price &e${biddingPrice} &cin the auction &r{item} &chas been override by the player &d{topBidder} &cwith a higher price &e${price} &c, and the deposit has been refunded. To continue bidding please click: %gmp_auction_bidding% %gmp_auction_gui_bidding%'
             Auction-Confirm:
                 Broadcast: '&8&l[&5&lAuction&8&l] &aThe auction of item &r{item} &ahas been confirmed, congratulations &d{topBidder} &agot this item at the highest price &e${price} &a.'
                 Merchant: '&8&l[&5&lAuction&8&l] &aThe auction of item &r{item} &ahas been confirm, and you have received &e${price} &a, taxed &e${taxed} &a.'
@@ -5044,6 +5048,10 @@ English:
         Merchandise-Matched:
             Selling: '&8&l[&6&lSame Item&8&l] &Found the matched item from global market, do you want to check it? %gmp_merchandise_matched% %gmp_merchandise_confirm%'
             Purchasing: '&8&l[&6&lSame Item&8&l] &aFound the matched item from global market, do you want to check it? %gmp_merchandise_matched% %gmp_merchandise_confirm%'
+    Object-Locked:
+        Merchandise-Locked: '{prefix}&eThe operation for this item is too frequent. Please try again later.'
+        Command-Locked: '{prefix}&eThe command is currently in progress. Please try again later.'
+        GUI-Locked: '{prefix}&eButton operations are too frequent, please try again later.'
     Sign-Store-Messages:
         Successfully-Created: '{prefix}&aYou created a new sign store &b{sign}&c.'
         Unable-To-Create: '{prefix}&cYou are not have permission to create sign store: &b{sign}&c.'

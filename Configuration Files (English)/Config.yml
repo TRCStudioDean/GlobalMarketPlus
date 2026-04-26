@@ -151,6 +151,27 @@ Serialization-Settings:
         Merchant: false
         Mailbox: false
         Recorder: false
+    
+#Async thread settings
+#If you don't know what an asynchronous thread is, please don't modify this option!
+Async-Thread-Settings: 
+    #Updater thread delay, mainly dealing with dynamic GUI, mail and commodity status update.
+    #For example, check whether the merchandises has expired, if yes will be automatically removed.
+    Updater-Thread-Delay: 1.0
+    #Task thread delay, which mainly handles new tasks submitted. (mainly tasks such as commands, events, database IO operations, etc)
+    Task-Thread-Delay: 0.05
+    #FAF(Fire And Forget) thread delay, which mainly handles tasks that are not strongly related to the main functions.
+    FAF-Thread-Delay: 0.1
+    #Global Async Task mode.
+    #After enabled, each task in the plugin will automatically switch threads based on its performance overhead.
+    #Note: This feature is effective when dealing with large amounts of data and external databases are enabled,
+    #      but it may result in slower response times for some features. 
+    #      (For example, some commands may have higher execution delays)
+    #      Recommended scenarios for enabling:
+    #      - Large database (such as hundreds of products on sale or many registered players)
+    #      - External database or database synchronization (using MySQL to synchronize data across multiple minecraft servers)
+    #      Can be disabled: Server with fewer player, fewer merchandises, and default storage mode.
+    Global-Async-Task: true
         
 #SQLite storage (Default)
 SQLite-Storage:
@@ -274,17 +295,27 @@ Multi-Server-Message-Channel:
 
 #Commands cooling after entering the server (unit: seconds)
 #How many seconds do players need to wait after entering the server to use the commands of this plugin
+#Unless they have the relevant permissions. (in the OtherPermissions.yml file)
 Commands-Cooldown-After-Login: 3
 
+#Enable virtualized GUI mode (Recommended)
+#In this mode, all GUI interactions will be converted to packet mode,
+#and the server side will not actually have data such as buttons in the GUI,
+#Prevent the bug where players can move buttons from the GUI to their backpacks under extreme conditions.
+#However, to ensure safety, when this mode is enabled and detects unavailability, 
+#the Enabled-All-GUI-Buttons-Label function below will be automatically activated.
+Virtual-GUI-Mode: true
+
 #Whether to enable label recognition for all buttons in all GUIs
+#PS: We strongly recommend enabling the Virtual GUI Mode settings above unless virtualization is unavailable.
 #This feature will add identification codes to each button in the GUI on Lore,
 #which can prevent players from removing buttons from the GUI into inventory under the influence of special environments or MODs.
-#It is recommended to enable this option for MOD servers or servers with mixed plugins.
 #You can also enable the "Buttons-Label" option in the GUI settings to take effect separately for a particular GUI.
 Enabled-All-GUI-Buttons-Label: false
 
 #Commands cooling (unit: seconds)
-#Writing down the sub commands that require adding cooling here can prevent players from frequently executing commands.
+#Type the sub-commands that require adding cooling here can prevent players from frequently executing commands.
+#Unless they have the relevant permissions. (in the OtherPermissions.yml file)
 Commands-Cooldown:
     Enabled: true
     #Command list. The format is: "[Command]: [Cooldown]"
@@ -305,23 +336,11 @@ Commands-Cooldown:
     - 'category set': 1.0
     - 'profile set': 1.0
     
-#Async thread settings
-#If you don't know what an asynchronous thread is, please don't modify this option!
-Async-Thread-Settings: 
-    #Updater thread delay, mainly dealing with dynamic GUI, mail and commodity status update
-    #For example, check whether the merchandises has expired, if yes will be automatically removed.
-    Updater-Thread-Delay: 1.0
-    #Task thread delay, which mainly handles new tasks submitted (mainly tasks such as commands, events, database IO operations, etc)
-    Task-Thread-Delay: 0.1
-    #Asynchronous command settings
-    #After enabling the asynchrony of these commands, they will run on asynchronous threads.
-    #Some commands have not undergone asynchronous debugging, so under normal circumstances, 
-    #please change the following options with the support and assistance of technical personnel
-    #Example: 
-    #Async-Commands
-    #- 'admin recorder' represents that the command '/gmp admin recorder' is an asynchronous command task.
-    Async-Commands:
-    - 'admin recorder'
+#Disabled worlds list
+#The world in the list cannot use any functions.
+#Unless they have the relevant permissions. (in the OtherPermissions.yml file)
+Disabled-Worlds:
+- 'example_world'
 
 #Database management settings
 #Use with the command "/gmp admin database"
@@ -377,6 +396,7 @@ Database-Management:
 
 #Command Delay
 #After the player executes the command, the command will enter a delay and the player's online status will be rechecked after the delay before executing the command.
+#Unless they have the relevant permissions. (in the OtherPermissions.yml file)
 #This option is used to prevent players from triggering bugs that only exist in certain special environments. It is recommended to use it with the help of developers.
 Commands-Delay:
     Enabled: false 

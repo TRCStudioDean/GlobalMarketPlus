@@ -27,8 +27,8 @@ Number-Section-Marks-Distance-Length: 3
 #For example, Player123 sells a diamond, and there is an acquisition item for diamonds in the market, then ask the player whether to trade directly
 Merchandises-Match-When-Uploading: true
 
-#Whether to scan all items in the Shulker Box during uploading (equivalent to sell inventory)
-Scan-Shulker-Box-When-Uploading: true
+#Whether to scan all items in the container during uploading (such as shulker box or bundle. equivalent to sell inventory)
+Scan-Container-When-Uploading: true
 
 #Whether to enable post tax transactions (if yes, it means that the tax will be charged when the merchandise is uploaded)
 #Only sold and auctioned are valid.
@@ -126,8 +126,8 @@ Item-Parameters-Blacklist:
     #When enabled, items that meet the following attributes are allowed to put on the market,
     #otherwise items that meet the following attributes are not allowed to put on the market.
     Whitelist: false
-    #Whether to scanning items in shulker box.
-    Scan-Shulker-Box: true
+    #Whether to scanning items in container.
+    Scan-Container: true
     #List of item IDs (the following items will be banned)
     #Below 1.12.2, some items can use "[Item ID]:[Data Number]" to distinguish different types of items under the same item ID
     #For example, the Enchanted Golden Apple is "GOLDEN_APPLE:1", while the regular Golden Apple is "GOLDEN-APPLE:0"

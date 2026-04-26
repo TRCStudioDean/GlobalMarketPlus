@@ -25,6 +25,11 @@ Item-Blacklist-Bypass:
     Default: false
     Permission: globalmarketplus.otherpermission.itemblacklistbypass
     
+#Permission for bypass disabled worlds
+Disabled-Worlds-Bypass:
+    Default: false
+    Permission: globalmarketplus.otherpermission.disabledworldsbypass
+    
 #Permission for bypass login command cooldown
 Login-Command-Cooldown-Bypass:
     Default: false
